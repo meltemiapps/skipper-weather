@@ -40,6 +40,7 @@ struct LearnView: View {
                             ModuleRow(module: module)
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("module.\(module.id)")
                     }
                 }
                 .padding()
@@ -99,12 +100,14 @@ struct ModuleView: View {
                             .glassCard()
                         }
                         .buttonStyle(.plain)
+                        .accessibilityIdentifier("lesson.\(lesson.id)")
                     }
                     NavigationLink(value: Route.quiz(module.id)) {
                         Label(t("quiz.start"), systemImage: "checkmark.seal")
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.glassProminent)
+                    .foregroundStyle(Palette.onAccent)
                     .controlSize(.large)
                     .padding(.top, 8)
                 }
@@ -165,6 +168,7 @@ struct LessonView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.glassProminent)
+                    .foregroundStyle(Palette.onAccent)
                     .controlSize(.large)
                     .sensoryFeedback(.success, trigger: model.isComplete(lesson.id))
                 }

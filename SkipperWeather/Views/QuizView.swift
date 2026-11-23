@@ -119,6 +119,7 @@ struct QuizRunView: View {
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.glassProminent)
+            .foregroundStyle(Palette.onAccent)
             .controlSize(.large)
             .disabled(s.phase == .answering && s.selected == nil)
             .padding(.top, 4)
@@ -149,6 +150,7 @@ struct QuizRunView: View {
             }
             Button(t("quiz.again")) { restart() }
                 .buttonStyle(.glassProminent)
+                .foregroundStyle(Palette.onAccent)
                 .controlSize(.large)
         }
         .frame(maxWidth: .infinity)

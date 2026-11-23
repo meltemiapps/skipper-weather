@@ -47,6 +47,8 @@ enum Palette {
     static let amber = Color(red: 1.0, green: 0.77, blue: 0.42)
     static let good = Color(red: 0.49, green: 0.89, blue: 0.6)
     static let bad = Color(red: 1.0, green: 0.42, blue: 0.42)
+    /// Dark text for labels on accent-tinted prominent glass buttons.
+    static let onAccent = Color(red: 0.02, green: 0.1, blue: 0.18)
 
     static func beaufort(_ force: Int) -> Color {
         switch force {
