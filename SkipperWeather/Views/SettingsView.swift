@@ -41,6 +41,7 @@ struct SettingsView: View {
 
                 Section {
                     NavigationLink(t("settings.about")) { AboutView() }
+                        .accessibilityIdentifier("settings.about")
                     Button(t("settings.resetProgress"), role: .destructive) { confirmReset = true }
                 }
             }

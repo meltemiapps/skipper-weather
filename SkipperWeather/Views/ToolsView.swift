@@ -10,6 +10,7 @@ struct ToolsView: View {
             ScrollView {
                 VStack(spacing: 12) {
                     toolLink(t("tools.beaufort"), "wind", BeaufortToolView())
+                        .accessibilityIdentifier("tool.beaufort")
                     toolLink(t("tools.tendency"), "gauge.with.dots.needle.67percent", TendencyToolView())
                     toolLink(t("tools.converter"), "arrow.left.arrow.right", ConverterToolView())
                 }
