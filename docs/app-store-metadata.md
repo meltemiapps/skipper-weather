@@ -6,6 +6,7 @@
 **Category:** Education (secondary: Weather)
 **Age rating:** 4+
 **Price:** Free
+**Availability:** All territories except China mainland
 **Privacy label:** Data Not Collected
 **Privacy policy URL:** https://meltemiapps.github.io/skipper-weather/privacy.html
 **Support / marketing URL:** https://github.com/meltemiapps/skipper-weather
