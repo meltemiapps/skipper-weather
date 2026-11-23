@@ -31,7 +31,7 @@ struct Localizer {
 @MainActor
 @Observable
 final class AppModel {
-    static let supportedLanguages = ["en", "el", "es", "it", "fr", "pt-PT", "de", "nl", "pl", "ru", "sr", "da", "sv", "nb", "fi", "ar"]
+    nonisolated static let supportedLanguages = ["en", "el", "es", "it", "fr", "pt-PT", "de", "nl", "pl", "ru", "sr", "da", "sv", "nb", "fi", "ar"]
     static let nativeNames: [String: String] = [
         "en": "English", "el": "Ελληνικά", "es": "Español", "it": "Italiano", "fr": "Français",
         "pt-PT": "Português", "de": "Deutsch", "nl": "Nederlands", "pl": "Polski", "ru": "Русский",
