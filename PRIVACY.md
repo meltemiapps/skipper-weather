@@ -1,4 +1,4 @@
-# Privacy Policy — Skipper Weather (Unofficial Study Guide)
+# Privacy Policy — Skipper Weather Study Guide (unofficial)
 
 Last updated: 23 November 2026
 

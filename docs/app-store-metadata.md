@@ -1,6 +1,7 @@
 # App Store metadata (English, v1.0)
 
-**Name (30):** Skipper Weather — Study Guide
+**Name (27 of 30):** Skipper Weather Study Guide
+**Home-screen name:** Skipper Weather
 **Subtitle (30):** Unofficial marine weather prep
 **Category:** Education (secondary: Weather)
 **Age rating:** 4+
@@ -14,7 +15,7 @@
 **Promotional text (170):** Learn marine weather the practical way: pressure, fronts, fog, sea breezes and Beaufort, with quizzes and tools. Free, private and open source.
 
 **Description:**
-Skipper Weather is a free, open-source study guide for anyone learning marine weather at skipper level.
+Skipper Weather Study Guide is a free, open-source study guide for anyone learning marine weather at skipper level.
 
 LEARN
 • 8 modules and 16 lessons: pressure and wind, depressions and fronts, clouds and weather signs, fog and visibility, sea and land breezes, Beaufort and sea state, forecasts and terminology, and weather for passage planning

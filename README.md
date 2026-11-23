@@ -1,4 +1,4 @@
-# Skipper Weather — Unofficial Study Guide
+# Skipper Weather Study Guide (unofficial)
 
 An open-source iPhone and iPad app for learning marine weather at skipper level: pressure and wind, fronts, clouds, fog, sea breezes, Beaufort and sea state, forecast terminology and weather for passage planning.
 
@@ -33,7 +33,7 @@ scripts/ship-testflight.sh
 Or push a `v*` tag to run `.github/workflows/testflight.yml` on a self-hosted macOS runner.
 
 ### Before first release
-1. Create the app record in App Store Connect (bundle ID `com.meltemiapps.skipperweather`, name “Skipper Weather — Study Guide”).
+1. Create the app record in App Store Connect (bundle ID `com.meltemiapps.skipperweather`, name “Skipper Weather Study Guide”; home-screen name stays “Skipper Weather”).
 2. Update `AppLinks` in `SkipperWeather/App/AppModel.swift` if the repository or GitHub Pages URL differs.
 3. Enable GitHub Pages from `/docs` so the privacy policy is live at the URL in `AppLinks.privacyPolicy`.
 
