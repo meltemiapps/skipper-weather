@@ -1,0 +1,602 @@
+{
+  "language": "en",
+  "modules": [
+    {
+      "id": "pressure",
+      "title": "Pressure and wind",
+      "summary": "Why air moves, how isobars show it, and how to read wind from a chart.",
+      "symbol": "gauge.with.dots.needle.50percent",
+      "lessons": [
+        {
+          "id": "pressure.basics",
+          "title": "Highs, lows and isobars",
+          "paragraphs": [
+            "Air pressure is the weight of the atmosphere above you. At sea level it averages about 1013 hPa, but it changes as air masses warm, cool, rise and sink.",
+            "Isobars on a surface chart join places of equal pressure, usually drawn every 4 hPa. Where isobars are close together the pressure changes quickly over a short distance, and the wind is strong. Where they are far apart, the wind is light.",
+            "Areas of high pressure (anticyclones) usually bring settled weather with light winds. Areas of low pressure (depressions) bring cloud, rain and stronger winds."
+          ],
+          "keyPoints": [
+            "Average sea-level pressure is about 1013 hPa.",
+            "Close isobars mean strong wind; wide spacing means light wind.",
+            "Highs tend to be settled; lows tend to be unsettled and windy."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "pressure.buysballot",
+          "title": "Buys Ballot's law",
+          "paragraphs": [
+            "Because the Earth rotates, air does not flow straight from high to low pressure. In the Northern Hemisphere it is turned to the right, so wind blows anticlockwise around a low and clockwise around a high, roughly parallel to the isobars.",
+            "Near the surface, friction slows the wind, so it crosses the isobars slightly inwards towards the low: about 10–15° over the sea and about 30° over land, where it is also noticeably lighter.",
+            "Buys Ballot's law turns this into a quick check: stand with your back to the true wind and low pressure is on your left in the Northern Hemisphere. In the Southern Hemisphere it is on your right."
+          ],
+          "keyPoints": [
+            "Northern Hemisphere: anticlockwise around lows, clockwise around highs.",
+            "Surface wind crosses isobars towards the low, more over land than sea.",
+            "Back to the wind, low pressure on your left (Northern Hemisphere)."
+          ],
+          "diagram": "buysBallot"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.pressure.1",
+          "prompt": "On a surface chart, isobars are packed closely together over your sailing area. What should you expect?",
+          "options": ["Strong winds", "Light and variable winds", "Fog", "Rising temperatures"],
+          "answer": 0,
+          "explanation": "Close isobars show a steep pressure gradient, which drives strong wind."
+        },
+        {
+          "id": "q.pressure.2",
+          "prompt": "In the Northern Hemisphere, which way does the wind circulate around a depression?",
+          "options": ["Clockwise", "Anticlockwise", "Straight into the centre", "It depends on the season"],
+          "answer": 1,
+          "explanation": "The Earth's rotation turns moving air to the right, giving an anticlockwise circulation around a low."
+        },
+        {
+          "id": "q.pressure.3",
+          "prompt": "You stand with your back to the true wind in the English Channel. Where is the low pressure?",
+          "options": ["Directly ahead", "On your right", "On your left", "Directly behind"],
+          "answer": 2,
+          "explanation": "Buys Ballot's law: in the Northern Hemisphere, with your back to the wind, low pressure is on your left."
+        },
+        {
+          "id": "q.pressure.4",
+          "prompt": "Why does the surface wind cross the isobars at a larger angle over land than over the sea?",
+          "options": ["Land is warmer", "Greater friction over land", "Lower pressure over land", "The Coriolis effect is stronger over land"],
+          "answer": 1,
+          "explanation": "Rougher land surfaces create more friction, slowing the wind and turning it further towards low pressure."
+        },
+        {
+          "id": "q.pressure.5",
+          "prompt": "What is the approximate average sea-level pressure?",
+          "options": ["983 hPa", "1000 hPa", "1013 hPa", "1040 hPa"],
+          "answer": 2,
+          "explanation": "The standard average is about 1013 hPa."
+        }
+      ]
+    },
+    {
+      "id": "fronts",
+      "title": "Depressions and fronts",
+      "summary": "The life of a mid-latitude low and the weather each front brings.",
+      "symbol": "wind",
+      "lessons": [
+        {
+          "id": "fronts.depression",
+          "title": "How a depression develops",
+          "paragraphs": [
+            "Mid-latitude depressions form where cold polar air meets warm tropical air. A wave develops on the boundary, pressure falls at its tip, and the air begins to circulate.",
+            "The warm air pushes forward as a warm front, followed by a wedge of warm air called the warm sector. Behind it, colder air advances as a cold front. Cold fronts usually move faster, eventually lifting the warm air off the surface to form an occlusion.",
+            "Most depressions in north-west Europe move roughly eastwards or north-eastwards. Watching which side of you the centre will pass tells you how the wind will shift."
+          ],
+          "keyPoints": [
+            "Depressions form on the boundary between cold and warm air.",
+            "Sequence: warm front, warm sector, cold front.",
+            "A cold front catching a warm front forms an occlusion."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "fronts.passage",
+          "title": "Weather as fronts pass",
+          "paragraphs": [
+            "A warm front gives a long warning. High cirrus thickens into cirrostratus, often with a halo round the sun or moon, then lowers to altostratus and nimbostratus. Pressure falls steadily, the wind backs and freshens, and rain becomes continuous with poor visibility.",
+            "In the warm sector the wind veers, pressure steadies, and the weather is often mild and overcast with drizzle and poor visibility, sometimes fog over cold water.",
+            "A cold front arrives more abruptly. Expect a band of heavy rain, possible squalls, a sharp veer in the wind and a rise in pressure. Behind it the air is clearer and colder, with good visibility, cumulus clouds and gusty showers."
+          ],
+          "keyPoints": [
+            "Warm front: lowering cloud, falling pressure, backing wind, steady rain.",
+            "Warm sector: mild, overcast, poor visibility.",
+            "Cold front: squalls, sharp veer, rising pressure, then clearer gusty air."
+          ],
+          "diagram": "warmFront"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.fronts.1",
+          "prompt": "Cirrus clouds are thickening into a milky layer with a halo around the sun. What is likely approaching?",
+          "options": ["A ridge of high pressure", "A warm front", "Sea fog", "A sea breeze"],
+          "answer": 1,
+          "explanation": "Thickening high cloud and a halo (cirrostratus) are classic early signs of an approaching warm front."
+        },
+        {
+          "id": "q.fronts.2",
+          "prompt": "What usually happens to the wind as a cold front passes in the Northern Hemisphere?",
+          "options": ["It backs and eases", "It veers sharply", "It stays the same", "It drops to calm for several hours"],
+          "answer": 1,
+          "explanation": "The wind veers sharply at a cold front, often with squalls."
+        },
+        {
+          "id": "q.fronts.3",
+          "prompt": "Which conditions are typical of the warm sector?",
+          "options": ["Clear skies and excellent visibility", "Mild, overcast and poor visibility", "Thunderstorms and hail", "Very cold, dry air"],
+          "answer": 1,
+          "explanation": "Warm, moist air in the warm sector usually gives low cloud, drizzle and poor visibility."
+        },
+        {
+          "id": "q.fronts.4",
+          "prompt": "What forms when a cold front catches up with a warm front?",
+          "options": ["A trough", "A ridge", "An occlusion", "A col"],
+          "answer": 2,
+          "explanation": "The faster cold front lifts the warm sector off the surface, forming an occluded front."
+        },
+        {
+          "id": "q.fronts.5",
+          "prompt": "After a cold front has cleared, what weather is typical?",
+          "options": ["Continuous rain", "Fog", "Clearer, colder air with gusty showers", "Rising temperatures and calm"],
+          "answer": 2,
+          "explanation": "Behind a cold front the air is colder and unstable, giving good visibility and showers."
+        }
+      ]
+    },
+    {
+      "id": "clouds",
+      "title": "Clouds and weather signs",
+      "summary": "Reading the sky and the barometer for what is coming next.",
+      "symbol": "cloud.sun",
+      "lessons": [
+        {
+          "id": "clouds.types",
+          "title": "Cloud families",
+          "paragraphs": [
+            "Clouds are grouped by height and shape. High clouds (cirrus, cirrostratus, cirrocumulus) are thin and icy. Medium clouds (altostratus, altocumulus) sit at middle levels. Low clouds include stratus, stratocumulus and nimbostratus, the thick grey rain cloud.",
+            "Layered (stratiform) clouds form when a broad mass of air is lifted gently, as at a warm front. Heaped (cumuliform) clouds form when air is unstable and rises in strong currents.",
+            "Cumulonimbus is the cloud to respect. It towers high, often with an anvil-shaped top, and can bring heavy showers, hail, thunder and sudden violent gusts."
+          ],
+          "keyPoints": [
+            "High, medium and low clouds have distinct names and meanings.",
+            "Layered cloud means gentle lift; heaped cloud means unstable air.",
+            "Cumulonimbus can produce squalls, hail and lightning."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "clouds.barometer",
+          "title": "The barometer as a forecaster",
+          "paragraphs": [
+            "A single barometer reading tells you little. The trend over the past three hours, known as the tendency, tells you much more. Record the pressure in the log every hour on passage.",
+            "Descriptors are used for the 3-hour change: steady (less than 0.1 hPa), slowly (0.1–1.5 hPa), no qualifier (1.6–3.5 hPa), quickly (3.6–6.0 hPa) and very rapidly (more than 6.0 hPa).",
+            "A fast fall usually means strengthening wind is on the way. A rapid rise after a low has passed can also bring strong, gusty wind. The old saying 'long foretold, long last; short notice, soon past' is a useful reminder."
+          ],
+          "keyPoints": [
+            "The 3-hour tendency matters more than a single reading.",
+            "A fall of more than 6 hPa in 3 hours is 'falling very rapidly'.",
+            "Fast changes in either direction can mean strong wind."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.clouds.1",
+          "prompt": "Which cloud is most associated with squalls, hail and thunder?",
+          "options": ["Cirrus", "Stratus", "Cumulonimbus", "Altostratus"],
+          "answer": 2,
+          "explanation": "Cumulonimbus clouds are deep, unstable clouds that produce severe gusts, hail and lightning."
+        },
+        {
+          "id": "q.clouds.2",
+          "prompt": "Pressure has fallen 7 hPa in the last 3 hours. How is this described?",
+          "options": ["Falling slowly", "Falling", "Falling quickly", "Falling very rapidly"],
+          "answer": 3,
+          "explanation": "A change of more than 6.0 hPa in 3 hours is described as very rapid."
+        },
+        {
+          "id": "q.clouds.3",
+          "prompt": "Heaped, cauliflower-like clouds suggest what about the air?",
+          "options": ["It is stable", "It is unstable", "It is very dry", "It is sinking"],
+          "answer": 1,
+          "explanation": "Cumuliform cloud forms when unstable air rises in strong convective currents."
+        },
+        {
+          "id": "q.clouds.4",
+          "prompt": "Why log the barometer every hour on passage?",
+          "options": ["It is a legal requirement", "To see the tendency, which helps forecast wind changes", "To calibrate the instrument", "To measure humidity"],
+          "answer": 1,
+          "explanation": "Regular readings show the trend, which is a far better guide than a single reading."
+        },
+        {
+          "id": "q.clouds.5",
+          "prompt": "Which is a low cloud?",
+          "options": ["Cirrocumulus", "Altocumulus", "Stratocumulus", "Cirrostratus"],
+          "answer": 2,
+          "explanation": "Stratocumulus is a low cloud. The 'cirro-' and 'alto-' prefixes indicate high and medium levels."
+        }
+      ]
+    },
+    {
+      "id": "fog",
+      "title": "Fog and visibility",
+      "summary": "How sea fog and radiation fog form, and when they clear.",
+      "symbol": "cloud.fog",
+      "lessons": [
+        {
+          "id": "fog.types",
+          "title": "Radiation fog and advection fog",
+          "paragraphs": [
+            "Fog forms when air is cooled to its dew point, so its water vapour condenses into tiny droplets near the surface.",
+            "Radiation fog forms over land on clear, calm nights as the ground loses heat. It often drifts into harbours and river mouths around dawn, then usually burns off by late morning as the sun warms the land. It rarely extends far out to sea.",
+            "Advection (sea) fog forms when warm, moist air moves over a colder sea surface. It is common in spring and early summer, can cover large areas and persist for days, and is not cleared by wind alone. Only a change of air mass, usually a shift in wind direction, will clear it."
+          ],
+          "keyPoints": [
+            "Fog forms when air cools to its dew point.",
+            "Radiation fog: land, clear calm nights, clears in the morning.",
+            "Sea fog: warm moist air over cold sea; can persist in moderate wind."
+          ],
+          "diagram": "fog"
+        },
+        {
+          "id": "fog.visibility",
+          "title": "Visibility terms",
+          "paragraphs": [
+            "Marine forecasts use set terms for visibility. Very poor means less than 1,000 metres (fog). Poor means 1,000 metres to 2 nautical miles. Moderate means 2 to 5 nautical miles. Good means more than 5 nautical miles.",
+            "When fog is forecast, plan your passage for it: know your position accurately, keep clear of shipping lanes where possible, prepare your sound signals, radar reflector and lookout, and consider whether to sail at all."
+          ],
+          "keyPoints": [
+            "Fog: less than 1,000 metres.",
+            "Poor: 1,000 m to 2 nm. Moderate: 2–5 nm. Good: over 5 nm.",
+            "Plan for fog before you leave, not after it arrives."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.fog.1",
+          "prompt": "Warm, moist air is flowing over a cold sea in May. What is the main risk?",
+          "options": ["Radiation fog", "Sea (advection) fog", "Thunderstorms", "Sea breeze"],
+          "answer": 1,
+          "explanation": "Warm moist air cooled by a cold sea surface forms advection fog, common in spring."
+        },
+        {
+          "id": "q.fog.2",
+          "prompt": "A clear, calm night has produced fog in the harbour. What is it likely to do?",
+          "options": ["Persist for several days", "Clear as the sun warms the land in the morning", "Thicken as the wind increases", "Spread far out to sea"],
+          "answer": 1,
+          "explanation": "Radiation fog forms over land at night and usually burns off by late morning."
+        },
+        {
+          "id": "q.fog.3",
+          "prompt": "What visibility does the term 'poor' describe in a marine forecast?",
+          "options": ["Less than 1,000 metres", "1,000 metres to 2 nautical miles", "2 to 5 nautical miles", "More than 5 nautical miles"],
+          "answer": 1,
+          "explanation": "Poor visibility is 1,000 metres to 2 nautical miles."
+        },
+        {
+          "id": "q.fog.4",
+          "prompt": "What usually clears sea fog?",
+          "options": ["A moderate increase in wind speed", "Sunrise", "A change of air mass or wind direction", "Falling tide"],
+          "answer": 2,
+          "explanation": "Sea fog can persist in quite strong winds; it clears when a different air mass arrives."
+        },
+        {
+          "id": "q.fog.5",
+          "prompt": "Fog forms when air is cooled to which temperature?",
+          "options": ["Freezing point", "Dew point", "Sea temperature", "Wet-bulb maximum"],
+          "answer": 1,
+          "explanation": "At the dew point, water vapour condenses into droplets."
+        }
+      ]
+    },
+    {
+      "id": "breezes",
+      "title": "Sea and land breezes",
+      "summary": "Local winds driven by the difference between land and sea temperature.",
+      "symbol": "sun.haze",
+      "lessons": [
+        {
+          "id": "breezes.sea",
+          "title": "The sea breeze",
+          "paragraphs": [
+            "On a sunny day the land heats faster than the sea. Warm air over the land rises, and cooler air flows in from the sea to replace it. This is the sea breeze.",
+            "It typically starts in late morning, peaks in mid-afternoon at around Force 3–4, though it can be stronger, and dies away in the evening. Cumulus clouds forming over the land are often the first sign.",
+            "The sea breeze works best when the gradient wind is light. Over the afternoon it tends to veer in the Northern Hemisphere. It combines with, or opposes, the gradient wind, so an offshore gradient wind can delay or cancel it."
+          ],
+          "keyPoints": [
+            "Driven by land heating faster than the sea.",
+            "Typically late morning to evening, often Force 3–4.",
+            "Strongest when the gradient wind is light."
+          ],
+          "diagram": "seaBreeze"
+        },
+        {
+          "id": "breezes.land",
+          "title": "Land breeze and coastal effects",
+          "paragraphs": [
+            "At night the land cools faster than the sea, so the flow can reverse: a land breeze blows gently off the shore. It is usually weaker than a sea breeze, but it can be strengthened where cold air drains down valleys.",
+            "Coastlines also bend and accelerate the wind. Headlands can cause acceleration zones, and high ground can produce strong, gusty downslope winds in its lee. Wind tends to blow more parallel to a high coastline."
+          ],
+          "keyPoints": [
+            "A land breeze blows offshore at night and is usually light.",
+            "Valleys can funnel and strengthen night-time drainage winds.",
+            "Headlands and high ground create local acceleration and gusts."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.breezes.1",
+          "prompt": "What drives a sea breeze?",
+          "options": ["The tide", "Land heating faster than the sea", "A passing cold front", "The Coriolis effect alone"],
+          "answer": 1,
+          "explanation": "Warm air rising over heated land draws in cooler air from the sea."
+        },
+        {
+          "id": "q.breezes.2",
+          "prompt": "When is a sea breeze usually strongest?",
+          "options": ["Just before dawn", "Mid-afternoon", "Midnight", "Early morning"],
+          "answer": 1,
+          "explanation": "It builds through the day and peaks in mid-afternoon when the land is hottest."
+        },
+        {
+          "id": "q.breezes.3",
+          "prompt": "Which gradient wind is most likely to stop a sea breeze developing?",
+          "options": ["A light onshore wind", "A strong offshore wind", "Calm conditions", "A light wind along the coast"],
+          "answer": 1,
+          "explanation": "A strong offshore gradient wind opposes the sea breeze and can cancel it."
+        },
+        {
+          "id": "q.breezes.4",
+          "prompt": "What is often the first visual sign of a developing sea breeze?",
+          "options": ["Cumulus forming over the land", "A halo round the sun", "Fog over the sea", "Lenticular cloud"],
+          "answer": 0,
+          "explanation": "Rising warm air over the land forms cumulus, marking the start of the circulation."
+        },
+        {
+          "id": "q.breezes.5",
+          "prompt": "Which statement about the land breeze is true?",
+          "options": ["It is usually stronger than a sea breeze", "It blows onshore at night", "It blows offshore at night and is usually light", "It only occurs in winter"],
+          "answer": 2,
+          "explanation": "Cooling land at night reverses the flow, giving a usually light offshore breeze."
+        }
+      ]
+    },
+    {
+      "id": "beaufort",
+      "title": "Beaufort and sea state",
+      "summary": "Wind forces, what they look like and what they mean for a small yacht.",
+      "symbol": "water.waves",
+      "lessons": [
+        {
+          "id": "beaufort.scale",
+          "title": "The Beaufort scale",
+          "paragraphs": [
+            "The Beaufort scale describes wind from Force 0 (calm) to Force 12 (hurricane force), each linked to a band of mean wind speed and a typical sea state. Marine forecasts use it widely.",
+            "Forecast speeds are mean winds. Gusts can be considerably stronger, especially in showers, near cumulonimbus and in the lee of high land, so plan for the gusts, not just the mean.",
+            "For many small yachts, Force 5–6 is when reefing and heavy-weather preparation become important. Gale warnings are issued for Force 8 or more, or for gusts of 43 knots or more."
+          ],
+          "keyPoints": [
+            "Force 0 to Force 12, each with a speed band and sea description.",
+            "Forecast winds are means; gusts can be much stronger.",
+            "Gale warnings: Force 8 or more."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "beaufort.sea",
+          "title": "Sea state and wind against tide",
+          "paragraphs": [
+            "Wave height depends on wind strength, the distance it blows over open water (the fetch) and how long it has been blowing. A strong offshore wind may leave the sea close inshore quite flat, while the same wind with a long fetch builds large waves.",
+            "When the wind blows against a tidal stream, waves become shorter, steeper and more likely to break. This can turn a manageable sea into a dangerous one, especially near headlands and over shallow banks. Time passages so that wind and tide run together where you can."
+          ],
+          "keyPoints": [
+            "Wave height depends on wind strength, fetch and duration.",
+            "Wind against tide gives short, steep, breaking seas.",
+            "Plan passages to avoid wind against tide at headlands."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.beaufort.1",
+          "prompt": "What is the mean wind speed range for Force 6?",
+          "options": ["17–21 knots", "22–27 knots", "28–33 knots", "34–40 knots"],
+          "answer": 1,
+          "explanation": "Force 6 (strong breeze) is 22–27 knots."
+        },
+        {
+          "id": "q.beaufort.2",
+          "prompt": "From which force are gale warnings issued?",
+          "options": ["Force 6", "Force 7", "Force 8", "Force 10"],
+          "answer": 2,
+          "explanation": "Gale warnings are issued for Force 8 or more (or gusts of 43 knots or more)."
+        },
+        {
+          "id": "q.beaufort.3",
+          "prompt": "Wind is blowing against a strong tidal stream off a headland. What sea state should you expect?",
+          "options": ["Long, smooth swell", "Short, steep, breaking waves", "Flat calm", "No change"],
+          "answer": 1,
+          "explanation": "Wind against tide shortens and steepens waves, making them more likely to break."
+        },
+        {
+          "id": "q.beaufort.4",
+          "prompt": "What does 'fetch' mean?",
+          "options": ["The height of a wave", "The distance wind blows over open water", "The time between waves", "The angle of the wind to the coast"],
+          "answer": 1,
+          "explanation": "Fetch is the distance of open water over which the wind has blown."
+        },
+        {
+          "id": "q.beaufort.5",
+          "prompt": "A forecast gives Force 4. Why plan for more than that?",
+          "options": ["Forecasts always underestimate", "Forecast winds are means and gusts can be stronger", "Beaufort numbers are rounded down", "Wind always increases at night"],
+          "answer": 1,
+          "explanation": "Forecasts give mean speeds; gusts, especially in showers, can be much stronger."
+        }
+      ]
+    },
+    {
+      "id": "forecasts",
+      "title": "Forecasts and terminology",
+      "summary": "Where to get forecasts and what the standard words mean.",
+      "symbol": "antenna.radiowaves.left.and.right",
+      "lessons": [
+        {
+          "id": "forecasts.sources",
+          "title": "Getting a forecast",
+          "paragraphs": [
+            "Use the official marine forecasts issued by your national meteorological service, and check them regularly before and during a passage. They are broadcast on radio, by coastguard VHF and NAVTEX, and published online.",
+            "Weather apps and computer models are useful for detail and timing, but treat them as a supplement. Compare several sources, notice when they disagree, and pay attention to warnings.",
+            "Write the forecast down, including the time it was issued, and compare it with what you see on the water."
+          ],
+          "keyPoints": [
+            "Official marine forecasts come first; apps are a supplement.",
+            "Check before and during a passage, and log the issue time.",
+            "Compare the forecast with what you observe."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "forecasts.terms",
+          "title": "Timing and wind terms",
+          "paragraphs": [
+            "Timing words in a forecast have set meanings, counted from the time of issue: imminent means within 6 hours, soon means 6 to 12 hours, and later means more than 12 hours.",
+            "A wind that veers changes direction clockwise, for example from south-west to west. A wind that backs changes direction anticlockwise, for example from west to south-west.",
+            "Cyclonic means the wind will change direction considerably as a depression passes close by. Variable means the direction is unsettled, usually in light winds."
+          ],
+          "keyPoints": [
+            "Imminent: within 6 h. Soon: 6–12 h. Later: more than 12 h.",
+            "Veering is clockwise; backing is anticlockwise.",
+            "Cyclonic: large direction changes near a low's centre."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.forecasts.1",
+          "prompt": "A warning says a gale is 'imminent'. When is it expected?",
+          "options": ["Within 6 hours of issue", "6 to 12 hours after issue", "More than 12 hours after issue", "Within 24 hours"],
+          "answer": 0,
+          "explanation": "Imminent means within 6 hours of the time of issue."
+        },
+        {
+          "id": "q.forecasts.2",
+          "prompt": "The wind changes from south-west to west. What has it done?",
+          "options": ["Backed", "Veered", "Become cyclonic", "Become variable"],
+          "answer": 1,
+          "explanation": "A clockwise change of direction is called veering."
+        },
+        {
+          "id": "q.forecasts.3",
+          "prompt": "What does 'soon' mean in a marine forecast?",
+          "options": ["Within 6 hours", "6 to 12 hours from issue", "More than 12 hours", "Tomorrow"],
+          "answer": 1,
+          "explanation": "Soon means 6 to 12 hours from the time of issue."
+        },
+        {
+          "id": "q.forecasts.4",
+          "prompt": "How should weather apps be used for passage planning?",
+          "options": ["Instead of official forecasts", "As a supplement to official marine forecasts", "Only for temperature", "They should never be used"],
+          "answer": 1,
+          "explanation": "Apps help with detail and timing, but official marine forecasts and warnings come first."
+        },
+        {
+          "id": "q.forecasts.5",
+          "prompt": "What does 'cyclonic' indicate in a forecast?",
+          "options": ["Hurricane-force winds", "Considerable change in wind direction as a low passes close by", "Light and variable winds", "A tropical storm"],
+          "answer": 1,
+          "explanation": "Cyclonic means the wind direction will change considerably near the centre of a depression."
+        }
+      ]
+    },
+    {
+      "id": "planning",
+      "title": "Weather for passage planning",
+      "summary": "Turning a forecast into a go or no-go decision for your boat and crew.",
+      "symbol": "map",
+      "lessons": [
+        {
+          "id": "planning.decision",
+          "title": "Making the go or no-go decision",
+          "paragraphs": [
+            "A forecast only becomes useful when you apply it to your boat, your crew and your route. Ask what the strongest likely wind will be, including gusts, which way it will blow relative to your course and the tide, and how long the passage will take.",
+            "Set your limits before you look at the forecast, not after. An experienced crew in a well-found yacht may be comfortable in conditions that would overwhelm a tired or inexperienced crew.",
+            "Identify ports of refuge along the route, considering which ones are safe to enter in the forecast wind and sea. Have a plan B and agree in advance what will trigger it."
+          ],
+          "keyPoints": [
+            "Apply the forecast to your boat, crew and route.",
+            "Set limits before reading the forecast.",
+            "Know your bolt-holes and when you will use them."
+          ],
+          "diagram": null
+        },
+        {
+          "id": "planning.underway",
+          "title": "Weather on passage",
+          "paragraphs": [
+            "Keep updating the picture once you are under way. Get each new forecast, log the barometer, and watch the sky and sea for signs that conditions differ from what was forecast.",
+            "Reef early: it is easier to shake out a reef than to put one in when the boat is already overpowered. Prepare the boat and crew before a front arrives: secure gear below, prepare food and drink, brief the crew and consider lifejackets and harnesses.",
+            "If the weather is worse than expected, reassess honestly. Turning back or diverting is good seamanship, not failure."
+          ],
+          "keyPoints": [
+            "Keep collecting forecasts and observations under way.",
+            "Reef early and prepare before the weather arrives.",
+            "Changing plan is good seamanship."
+          ],
+          "diagram": null
+        }
+      ],
+      "questions": [
+        {
+          "id": "q.planning.1",
+          "prompt": "When should you set your personal wind limits for a passage?",
+          "options": ["After reading the forecast", "Before reading the forecast", "Once at sea", "Only if a gale is forecast"],
+          "answer": 1,
+          "explanation": "Setting limits beforehand avoids talking yourself into conditions you would otherwise reject."
+        },
+        {
+          "id": "q.planning.2",
+          "prompt": "Why should you reef early?",
+          "options": ["It makes the boat faster", "It is easier to shake out a reef than to put one in when overpowered", "It saves fuel", "It is required by law"],
+          "answer": 1,
+          "explanation": "Reefing in rising wind and sea is hard work and riskier; shaking out a reef is easy."
+        },
+        {
+          "id": "q.planning.3",
+          "prompt": "What should you consider when choosing a port of refuge?",
+          "options": ["Only distance", "Whether it is safe to enter in the forecast wind and sea", "Restaurant options", "Whether it has a fuel berth"],
+          "answer": 1,
+          "explanation": "Some harbours become dangerous to enter in strong onshore winds or against the tide."
+        },
+        {
+          "id": "q.planning.4",
+          "prompt": "Conditions are worse than forecast and the crew is tiring. What is the seamanlike response?",
+          "options": ["Press on to the planned destination", "Reassess and divert or turn back if needed", "Increase sail to arrive sooner", "Wait for the next forecast before deciding anything"],
+          "answer": 1,
+          "explanation": "Changing plan in response to conditions is good seamanship."
+        },
+        {
+          "id": "q.planning.5",
+          "prompt": "Which is part of preparing for an approaching front?",
+          "options": ["Opening hatches for ventilation", "Securing gear below and briefing the crew", "Shaking out reefs", "Turning off the instruments"],
+          "answer": 1,
+          "explanation": "Preparing the boat and crew before the weather arrives makes the front much easier to handle."
+        }
+      ]
+    }
+  ]
+}

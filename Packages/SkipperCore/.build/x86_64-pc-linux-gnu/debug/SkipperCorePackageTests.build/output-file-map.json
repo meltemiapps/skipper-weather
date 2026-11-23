@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.build/master.swiftdeps"
+  },
+  "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.derived/runner.swift": {
+    "dependencies": "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.build/runner.d",
+    "object": "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.build/runner.swift.o",
+    "swiftmodule": "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/home/claude/skipper-weather/Packages/SkipperCore/.build/x86_64-pc-linux-gnu/debug/SkipperCorePackageTests.build/runner.swiftdeps"
+  }
+}

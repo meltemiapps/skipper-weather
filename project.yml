@@ -1,0 +1,81 @@
+name: SkipperWeather
+options:
+  bundleIdPrefix: com.meltemiapps
+  deploymentTarget:
+    iOS: "26.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+  xcodeVersion: "26.0"
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ${DEVELOPMENT_TEAM}
+    CODE_SIGN_STYLE: Automatic
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    SWIFT_EMIT_LOC_STRINGS: NO
+
+packages:
+  SkipperCore:
+    path: Packages/SkipperCore
+
+targets:
+  SkipperWeather:
+    type: application
+    platform: iOS
+    sources:
+      - path: SkipperWeather
+    dependencies:
+      - package: SkipperCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meltemiapps.skipperweather
+        PRODUCT_NAME: SkipperWeather
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Skipper Weather
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    info:
+      path: SkipperWeather/Info.plist
+      properties:
+        CFBundleLocalizations: [en, el, es, it, fr, pt-PT, de, nl, pl, ru, sr, da, sv, nb, fi, ar]
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.education
+        UILaunchScreen: {}
+        UIRequiresFullScreen: false
+
+  SkipperWeatherTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SkipperWeatherTests
+    dependencies:
+      - target: SkipperWeather
+      - package: SkipperCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meltemiapps.skipperweather.tests
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: $(TEST_HOST)
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/SkipperWeather.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SkipperWeather
+
+schemes:
+  SkipperWeather:
+    build:
+      targets:
+        SkipperWeather: all
+        SkipperWeatherTests: [test]
+    test:
+      targets:
+        - SkipperWeatherTests
+      gatherCoverageData: true
+    archive:
+      config: Release

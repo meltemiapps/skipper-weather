@@ -1,0 +1,178 @@
+import SwiftUI
+import SkipperCore
+
+struct LearnView: View {
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        let t = model.strings
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 14) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(t("learn.progress")).font(.headline)
+                        ProgressView(value: model.progress).tint(Palette.accent)
+                        Text(t.format("learn.completeOf", model.completedCount, model.content.allLessons.count))
+                            .font(.subheadline).foregroundStyle(.secondary)
+                    }
+                    .glassCard()
+
+                    if let next = model.nextLesson {
+                        NavigationLink(value: Route.lesson(next.id)) {
+                            HStack(spacing: 12) {
+                                Image(systemName: "play.fill").font(.title3).foregroundStyle(Palette.amber)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(t("learn.continue")).font(.caption.weight(.semibold)).foregroundStyle(Palette.amber)
+                                    Text(next.title).font(.headline).multilineTextAlignment(.leading)
+                                }
+                                Spacer(minLength: 0)
+                                Image(systemName: "chevron.forward").foregroundStyle(.secondary)
+                            }
+                            .glassCard(tint: Palette.amber)
+                        }
+                        .buttonStyle(.plain)
+                    }
+
+                    Text(t("learn.modules")).font(.title3.bold()).padding(.top, 6)
+
+                    ForEach(model.content.modules) { module in
+                        NavigationLink(value: Route.module(module.id)) {
+                            ModuleRow(module: module)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding()
+            }
+            .screen()
+            .navigationTitle(t("tab.learn"))
+            .navigationDestination(for: Route.self) { RouteDestination(route: $0) }
+        }
+    }
+}
+
+struct ModuleRow: View {
+    @Environment(AppModel.self) private var model
+    let module: Module
+
+    var body: some View {
+        let done = module.lessons.filter { model.isComplete($0.id) }.count
+        HStack(spacing: 14) {
+            Image(systemName: module.symbol)
+                .font(.title2)
+                .frame(width: 44, height: 44)
+                .foregroundStyle(Palette.accent)
+                .glassEffect(.regular, in: .circle)
+            VStack(alignment: .leading, spacing: 4) {
+                Text(module.title).font(.headline)
+                Text(module.summary).font(.subheadline).foregroundStyle(.secondary).lineLimit(2)
+            }
+            Spacer(minLength: 0)
+            Text("\(done)/\(module.lessons.count)")
+                .font(.caption.monospacedDigit().weight(.semibold))
+                .foregroundStyle(done == module.lessons.count ? Palette.good : .secondary)
+        }
+        .glassCard()
+        .accessibilityElement(children: .combine)
+    }
+}
+
+struct ModuleView: View {
+    @Environment(AppModel.self) private var model
+    let moduleID: String
+
+    var body: some View {
+        let t = model.strings
+        if let module = model.content.module(id: moduleID) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(module.summary).foregroundStyle(.secondary)
+                    ForEach(module.lessons) { lesson in
+                        NavigationLink(value: Route.lesson(lesson.id)) {
+                            HStack {
+                                Image(systemName: model.isComplete(lesson.id) ? "checkmark.circle.fill" : "circle")
+                                    .foregroundStyle(model.isComplete(lesson.id) ? Palette.good : .secondary)
+                                Text(lesson.title).font(.headline).multilineTextAlignment(.leading)
+                                Spacer(minLength: 0)
+                                Image(systemName: "chevron.forward").foregroundStyle(.secondary)
+                            }
+                            .glassCard()
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    NavigationLink(value: Route.quiz(module.id)) {
+                        Label(t("quiz.start"), systemImage: "checkmark.seal")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.glassProminent)
+                    .controlSize(.large)
+                    .padding(.top, 8)
+                }
+                .padding()
+            }
+            .screen()
+            .navigationTitle(module.title)
+        }
+    }
+}
+
+struct LessonView: View {
+    @Environment(AppModel.self) private var model
+    let lessonID: String
+
+    var body: some View {
+        let t = model.strings
+        if let lesson = model.lesson(id: lessonID) {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    if model.contentIsFallback {
+                        Label(t("lesson.englishOnly"), systemImage: "globe")
+                            .font(.footnote)
+                            .glassCard(cornerRadius: 16, tint: Palette.amber)
+                    }
+
+                    if let diagram = lesson.diagram {
+                        DiagramView(id: diagram)
+                            .frame(height: 220)
+                            .glassCard()
+                            .accessibilityLabel(lesson.title)
+                    }
+
+                    ForEach(Array(lesson.paragraphs.enumerated()), id: \.offset) { _, paragraph in
+                        Text(paragraph).font(.body).lineSpacing(3)
+                    }
+
+                    if !lesson.keyPoints.isEmpty {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(t("lesson.keyPoints"))
+                                .font(.caption.weight(.bold)).textCase(.uppercase).foregroundStyle(Palette.accent)
+                            ForEach(lesson.keyPoints, id: \.self) { point in
+                                Label {
+                                    Text(point)
+                                } icon: {
+                                    Image(systemName: "checkmark").foregroundStyle(Palette.good)
+                                }
+                            }
+                        }
+                        .glassCard(tint: Palette.accent)
+                    }
+
+                    Button {
+                        model.setComplete(lesson.id, !model.isComplete(lesson.id))
+                    } label: {
+                        Label(model.isComplete(lesson.id) ? t("lesson.completed") : t("lesson.markComplete"),
+                              systemImage: model.isComplete(lesson.id) ? "checkmark.circle.fill" : "circle")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.glassProminent)
+                    .controlSize(.large)
+                    .sensoryFeedback(.success, trigger: model.isComplete(lesson.id))
+                }
+                .padding()
+            }
+            .screen()
+            .navigationTitle(lesson.title)
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}

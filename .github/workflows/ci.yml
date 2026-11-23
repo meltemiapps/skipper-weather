@@ -1,0 +1,15 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  core:
+    # Hosted Linux runner: proves the core logic, content and translations on every PR.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: swift-actions/setup-swift@v2
+        with: { swift-version: "5.10" }
+      - run: python3 tools/build_strings.py && git diff --exit-code SkipperWeather/Resources/*.xcstrings
+      - run: cd Packages/SkipperCore && swift test
