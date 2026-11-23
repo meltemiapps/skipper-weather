@@ -1,1 +1,6 @@
 __pycache__/
+.DS_Store
+build/
+Packages/SkipperCore/.build/
+SkipperWeather.xcodeproj/
+SkipperWeather/Info.plist
