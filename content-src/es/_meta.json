@@ -1,0 +1,348 @@
+{
+  "language": "es",
+  "glossary": [
+    {
+      "id": "isobar",
+      "term": "Isobara",
+      "definition": "Línea en un mapa que une puntos de igual presión a nivel del mar, normalmente trazada cada 4 hPa."
+    },
+    {
+      "id": "pressureGradient",
+      "term": "Gradiente de presión",
+      "definition": "Ritmo al que cambia la presión con la distancia. Isobaras muy juntas indican un gradiente fuerte y viento intenso."
+    },
+    {
+      "id": "synopticChart",
+      "term": "Mapa sinóptico",
+      "definition": "Mapa de presión en superficie con isobaras, altas, bajas y frentes en un momento determinado."
+    },
+    {
+      "id": "depression",
+      "term": "Borrasca (baja)",
+      "definition": "Zona de baja presión con circulación antihoraria en el hemisferio norte, que trae nubes, lluvia y viento."
+    },
+    {
+      "id": "anticyclone",
+      "term": "Anticiclón (alta)",
+      "definition": "Zona de alta presión con circulación horaria en el hemisferio norte, normalmente con tiempo estable y vientos flojos."
+    },
+    {
+      "id": "trough",
+      "term": "Vaguada",
+      "definition": "Prolongación alargada de bajas presiones. Suele traer chubascos, turbonadas y un rolar del viento a la derecha."
+    },
+    {
+      "id": "ridge",
+      "term": "Dorsal",
+      "definition": "Prolongación alargada de altas presiones que suele dar un breve periodo de buen tiempo entre borrascas."
+    },
+    {
+      "id": "col",
+      "term": "Collado (pantano barométrico)",
+      "definition": "Zona de gradiente débil entre dos altas y dos bajas, con vientos flojos y variables; posible niebla o tormentas."
+    },
+    {
+      "id": "warmFront",
+      "term": "Frente cálido",
+      "definition": "Borde delantero de una masa de aire cálido que avanza y asciende suavemente sobre el aire más frío que tiene delante."
+    },
+    {
+      "id": "coldFront",
+      "term": "Frente frío",
+      "definition": "Borde delantero de una masa de aire frío que avanza y se introduce por debajo del aire cálido que tiene delante."
+    },
+    {
+      "id": "occlusion",
+      "term": "Frente ocluido",
+      "definition": "Se forma cuando el frente frío alcanza al cálido y eleva el sector cálido por encima de la superficie."
+    },
+    {
+      "id": "warmSector",
+      "term": "Sector cálido",
+      "definition": "Cuña de aire cálido y húmedo entre el frente cálido y el frente frío de una borrasca."
+    },
+    {
+      "id": "veering",
+      "term": "Rolar a la derecha (dextrógiro)",
+      "definition": "Cambio de la dirección del viento en el sentido de las agujas del reloj, por ejemplo de suroeste a oeste."
+    },
+    {
+      "id": "backing",
+      "term": "Rolar a la izquierda (levógiro)",
+      "definition": "Cambio de la dirección del viento en sentido contrario a las agujas del reloj, por ejemplo de oeste a suroeste."
+    },
+    {
+      "id": "coriolis",
+      "term": "Efecto Coriolis",
+      "definition": "Desviación aparente del aire en movimiento causada por la rotación de la Tierra: hacia la derecha en el hemisferio norte."
+    },
+    {
+      "id": "geostrophic",
+      "term": "Viento geostrófico",
+      "definition": "Viento teórico por encima de la capa de fricción, paralelo a isobaras rectas cuando se equilibran el gradiente de presión y la fuerza de Coriolis."
+    },
+    {
+      "id": "buysBallot",
+      "term": "Ley de Buys Ballot",
+      "definition": "De espaldas al viento en el hemisferio norte, la baja presión queda a su izquierda."
+    },
+    {
+      "id": "squall",
+      "term": "Turbonada",
+      "definition": "Aumento brusco del viento de al menos 16 nudos que alcanza 22 nudos o más y dura al menos un minuto, a menudo con cambio de dirección."
+    },
+    {
+      "id": "gust",
+      "term": "Racha",
+      "definition": "Aumento breve de la velocidad del viento, de segundos de duración, por encima del viento medio."
+    },
+    {
+      "id": "dewPoint",
+      "term": "Punto de rocío",
+      "definition": "Temperatura a la que debe enfriarse el aire, a presión constante, para saturarse."
+    },
+    {
+      "id": "relativeHumidity",
+      "term": "Humedad relativa",
+      "definition": "Cantidad de vapor de agua en el aire como porcentaje del máximo que puede contener a esa temperatura."
+    },
+    {
+      "id": "advectionFog",
+      "term": "Niebla de advección (niebla marina)",
+      "definition": "Niebla que se forma cuando aire cálido y húmedo se desplaza sobre un mar más frío que su punto de rocío."
+    },
+    {
+      "id": "radiationFog",
+      "term": "Niebla de radiación",
+      "definition": "Niebla que se forma sobre tierra en noches despejadas y en calma, cuando el suelo enfría el aire hasta su punto de rocío."
+    },
+    {
+      "id": "frontalFog",
+      "term": "Niebla frontal",
+      "definition": "Niebla o nubes muy bajas que se forman cuando la lluvia del aire cálido satura el aire más frío de debajo, sobre todo por delante de los frentes cálidos."
+    },
+    {
+      "id": "seaBreeze",
+      "term": "Brisa marina (virazón)",
+      "definition": "Viento diurno del mar hacia tierra causado porque la tierra se calienta más deprisa que el mar."
+    },
+    {
+      "id": "landBreeze",
+      "term": "Brisa terral (terral)",
+      "definition": "Viento nocturno de tierra hacia el mar causado porque la tierra se enfría más deprisa que el mar."
+    },
+    {
+      "id": "katabatic",
+      "term": "Viento catabático",
+      "definition": "Viento producido por aire frío y denso que desciende por las laderas, normalmente de noche; puede ser fuerte y repentino en valles y fiordos."
+    },
+    {
+      "id": "anabatic",
+      "term": "Viento anabático",
+      "definition": "Viento flojo ladera arriba causado por el calentamiento diurno de las pendientes."
+    },
+    {
+      "id": "funnelling",
+      "term": "Efecto embudo (Venturi)",
+      "definition": "Aceleración del viento cuando se estrecha entre relieves, islas o a lo largo de un estrecho."
+    },
+    {
+      "id": "fetch",
+      "term": "Fetch (alcance)",
+      "definition": "Distancia de mar abierto sobre la que sopla el viento en una dirección constante."
+    },
+    {
+      "id": "swell",
+      "term": "Mar de fondo",
+      "definition": "Olas largas y regulares que han salido de la zona donde se generaron."
+    },
+    {
+      "id": "windWaves",
+      "term": "Mar de viento",
+      "definition": "Olas generadas por el viento local, normalmente más cortas y empinadas que el mar de fondo."
+    },
+    {
+      "id": "significantWaveHeight",
+      "term": "Altura significativa de ola",
+      "definition": "Altura media del tercio de olas más altas; algunas olas pueden alcanzar casi el doble."
+    },
+    {
+      "id": "windAgainstTide",
+      "term": "Viento contra corriente",
+      "definition": "Viento que sopla en sentido contrario a la corriente de marea, acortando y empinando las olas."
+    },
+    {
+      "id": "beaufort",
+      "term": "Escala Beaufort",
+      "definition": "Escala de fuerza del viento de 0 (calma) a 12 (temporal huracanado), asociada a la velocidad media y al estado de la mar."
+    },
+    {
+      "id": "tendency",
+      "term": "Tendencia barométrica",
+      "definition": "Variación de la presión en las tres horas anteriores, descrita como estable, subiendo o bajando, de lentamente a muy rápidamente."
+    },
+    {
+      "id": "instability",
+      "term": "Inestabilidad",
+      "definition": "Estado en el que el aire ascendente sigue más cálido que su entorno y continúa subiendo, formando nubes de desarrollo y chubascos."
+    },
+    {
+      "id": "inversion",
+      "term": "Inversión térmica",
+      "definition": "Capa en la que la temperatura aumenta con la altura, atrapando debajo calima, niebla y contaminación."
+    },
+    {
+      "id": "grib",
+      "term": "Archivo GRIB",
+      "definition": "Datos de un modelo numérico de predicción en malla, como viento y presión en horas fijas, que se visualizan en programas de navegación o meteorología."
+    },
+    {
+      "id": "windBarb",
+      "term": "Barba de viento",
+      "definition": "Símbolo cuyo eje apunta hacia donde viene el viento; media barba 5 nudos, barba entera 10 nudos, banderola 50 nudos."
+    },
+    {
+      "id": "cyclonic",
+      "term": "Ciclónico",
+      "definition": "Término de predicción: el viento cambiará mucho de dirección al pasar cerca una borrasca."
+    },
+    {
+      "id": "meltemi",
+      "term": "Meltemi (vientos etesios)",
+      "definition": "Viento persistente del norte en verano sobre el mar Egeo, a menudo de fuerza 5 a 7 y a veces de temporal."
+    },
+    {
+      "id": "bora",
+      "term": "Bora",
+      "definition": "Viento catabático del nordeste, frío y muy racheado, en la costa oriental del Adriático, que puede llegar casi sin aviso."
+    },
+    {
+      "id": "mistral",
+      "term": "Mistral",
+      "definition": "Viento frío y seco del norte o noroeste canalizado por el valle del Ródano hacia el golfo de León."
+    },
+    {
+      "id": "sirocco",
+      "term": "Siroco (Jugo)",
+      "definition": "Viento cálido del sur o sudeste procedente del norte de África, húmedo al llegar a Europa, a menudo con polvo y mala visibilidad."
+    }
+  ],
+  "diagramLabels": {
+    "low": "B",
+    "high": "A",
+    "warmFront": "Frente cálido",
+    "coldFront": "Frente frío",
+    "occludedFront": "Oclusión",
+    "warmSector": "Sector cálido",
+    "coldAir": "Aire frío",
+    "warmAir": "Aire cálido",
+    "trough": "Vaguada",
+    "ridge": "Dorsal",
+    "col": "Collado",
+    "isobars": "Isobaras",
+    "observer": "Usted",
+    "cirrus": "Cirros",
+    "cirrostratus": "Cirrostratos",
+    "altostratus": "Altostratos",
+    "nimbostratus": "Nimbostratos",
+    "cumulus": "Cúmulos",
+    "cumulonimbus": "Cumulonimbos",
+    "stratus": "Estratos",
+    "rain": "Lluvia",
+    "showers": "Chubascos",
+    "drizzle": "Llovizna",
+    "squall": "Turbonada",
+    "gustFront": "Frente de racha",
+    "anvil": "Yunque",
+    "downdraught": "Corriente descendente",
+    "updraught": "Corriente ascendente",
+    "geostrophic": "Viento geostrófico",
+    "overSea": "Sobre el mar ≈15°",
+    "overLand": "Sobre tierra ≈30°",
+    "friction": "Fricción",
+    "pressureGradient": "Gradiente de presión",
+    "coriolis": "Coriolis",
+    "backToWind": "De espaldas al viento",
+    "lowOnLeft": "Baja a la izquierda",
+    "seaBreeze": "Brisa marina",
+    "landBreeze": "Brisa terral",
+    "katabatic": "Catabático",
+    "anabatic": "Anabático",
+    "day": "Día",
+    "night": "Noche",
+    "land": "Tierra",
+    "sea": "Mar",
+    "coldSea": "Mar frío",
+    "warmSea": "Mar cálido",
+    "funnelling": "Efecto embudo",
+    "convergence": "Convergencia",
+    "divergence": "Divergencia",
+    "strongerWind": "Viento más fuerte",
+    "lighterWind": "Viento más flojo",
+    "meltemi": "Meltemi",
+    "bora": "Bora",
+    "mistral": "Mistral",
+    "sirocco": "Siroco",
+    "radiationFog": "Niebla de radiación",
+    "advectionFog": "Niebla de advección",
+    "frontalFog": "Niebla frontal",
+    "airTemperature": "Temperatura del aire",
+    "dewPoint": "Punto de rocío",
+    "seaTemperature": "Temperatura del mar",
+    "saturation": "Saturación",
+    "windWithTide": "Viento a favor de la corriente",
+    "windAgainstTide": "Viento contra corriente",
+    "tide": "Corriente",
+    "wind": "Viento",
+    "swell": "Mar de fondo",
+    "windWaves": "Mar de viento",
+    "fetch": "Fetch",
+    "wavelength": "Longitud de onda",
+    "waveHeight": "Altura",
+    "falling": "Bajando",
+    "rising": "Subiendo",
+    "steady": "Estable",
+    "hours": "Horas",
+    "hPa": "hPa",
+    "stable": "Estable",
+    "unstable": "Inestable",
+    "parcel": "Aire ascendente",
+    "calm": "Calma",
+    "knots": "kn",
+    "halfBarb": "5 kn",
+    "fullBarb": "10 kn",
+    "pennant": "50 kn",
+    "force": "Fuerza",
+    "polarMaritime": "Polar marítima",
+    "tropicalMaritime": "Tropical marítima",
+    "polarContinental": "Polar continental",
+    "tropicalContinental": "Tropical continental",
+    "highCloud": "Nubes altas",
+    "mediumCloud": "Nubes medias",
+    "lowCloud": "Nubes bajas",
+    "height": "Altura",
+    "inversion": "Inversión",
+    "visFog": "Niebla < 1.000 m",
+    "visPoor": "Mala 1.000 m–2 mn",
+    "visModerate": "Regular 2–5 mn",
+    "visGood": "Buena > 5 mn",
+    "issued": "Emisión",
+    "imminent": "Inminente < 6 h",
+    "soon": "Pronto 6–12 h",
+    "later": "Más tarde > 12 h",
+    "departure": "Salida",
+    "destination": "Destino",
+    "refuge": "Refugio",
+    "front": "Frente",
+    "gridPoint": "Punto de malla",
+    "modelWind": "Viento del modelo",
+    "gusts": "Sin rachas",
+    "heaveTo": "Al pairo",
+    "backedHeadsail": "Foque acuartelado",
+    "helmToWindward": "Timón a barlovento",
+    "lighterAround": "Más flojo",
+    "strongerAround": "Más fuerte",
+    "passesNorth": "Centro al norte: rola a la izquierda y luego a la derecha",
+    "passesSouth": "Centro al sur: rola a la izquierda sin parar"
+  }
+}

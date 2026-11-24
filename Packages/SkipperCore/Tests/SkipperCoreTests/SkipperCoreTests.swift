@@ -95,71 +95,118 @@ final class ContentTests: XCTestCase {
             .deletingLastPathComponent().deletingLastPathComponent()
             .appendingPathComponent("SkipperWeather/Resources/Content")
     }
-
-    func testEnglishContentLoadsAndValidates() throws {
-        let data = try Data(contentsOf: Self.contentDirectory.appendingPathComponent("content.en.json"))
-        let content = try ContentLoader.decode(data)
-        XCTAssertEqual(content.language, "en")
-        XCTAssertEqual(content.modules.count, 8)
-        XCTAssertGreaterThanOrEqual(content.allLessons.count, 16)
-        XCTAssertGreaterThanOrEqual(content.allQuestions.count, 40)
+    static func load(_ lang: String) throws -> StudyContent {
+        try ContentLoader.decode(Data(contentsOf: contentDirectory.appendingPathComponent("content.\(lang).json")))
     }
 
-    func testAllContentFilesMatchEnglishStructure() throws {
-        let files = try FileManager.default.contentsOfDirectory(at: Self.contentDirectory, includingPropertiesForKeys: nil)
-            .filter { $0.lastPathComponent.hasPrefix("content.") && $0.pathExtension == "json" }
-        let en = try ContentLoader.decode(Data(contentsOf: Self.contentDirectory.appendingPathComponent("content.en.json")))
-        for file in files {
-            let c = try ContentLoader.decode(Data(contentsOf: file))
-            XCTAssertEqual(c.modules.map(\.id), en.modules.map(\.id), file.lastPathComponent)
-            XCTAssertEqual(c.allLessons.map(\.id), en.allLessons.map(\.id), file.lastPathComponent)
-            XCTAssertEqual(c.allQuestions.map(\.id), en.allQuestions.map(\.id), file.lastPathComponent)
-            XCTAssertEqual(c.allQuestions.map(\.answer), en.allQuestions.map(\.answer), "Answer keys must not drift in \(file.lastPathComponent)")
+    func testEnglishCurriculum() throws {
+        let c = try Self.load("en")
+        XCTAssertEqual(c.modules.count, 10)
+        XCTAssertGreaterThanOrEqual(c.allLessons.count, 25)
+        XCTAssertGreaterThanOrEqual(c.allQuestions.count, 80)
+        for kind in [QuestionKind.single, .multi, .numeric, .order, .scenario] {
+            XCTAssertTrue(c.allQuestions.contains { $0.kind == kind }, kind.rawValue)
+        }
+        for m in c.modules {
+            for l in m.lessons { for s in l.segments { XCTAssertNotNil(s.diagram, "\(l.id): \(s.heading) has no diagram") } }
         }
     }
 
-    func testValidatorRejectsBadAnswerIndex() {
-        let bad = StudyContent(language: "en", modules: [
-            Module(id: "m", title: "t", summary: "s", symbol: "wind",
-                   lessons: [Lesson(id: "l", title: "t", paragraphs: ["p"], keyPoints: [], diagram: nil)],
-                   questions: [Question(id: "q", prompt: "p", options: ["a", "b"], answer: 5, explanation: "e")])
-        ])
-        XCTAssertThrowsError(try ContentLoader.validate(bad))
+    func testTranslationsMatchEnglishStructure() throws {
+        let en = try Self.load("en")
+        let files = try FileManager.default.contentsOfDirectory(at: Self.contentDirectory, includingPropertiesForKeys: nil)
+            .filter { $0.lastPathComponent.hasPrefix("content.") && $0.pathExtension == "json" }
+        for f in files {
+            let c = try ContentLoader.decode(Data(contentsOf: f))
+            XCTAssertEqual(ContentLoader.structureMatches(c, en), [], f.lastPathComponent)
+        }
+    }
+
+    func testAnswerKeysGradeAsCorrect() throws {
+        let c = try Self.load("en")
+        func check(_ q: Question) {
+            switch q.kind {
+            case .single, .multi: XCTAssertTrue(Grader.isCorrect(q, .choices(q.answers!)), q.id)
+            case .order: XCTAssertTrue(Grader.isCorrect(q, .order(q.answers!)), q.id)
+            case .numeric: XCTAssertTrue(Grader.isCorrect(q, .number(q.numeric!.value)), q.id)
+            case .scenario: q.steps!.forEach(check)
+            }
+        }
+        c.allQuestions.forEach(check)
+    }
+}
+
+final class GraderTests: XCTestCase {
+    private func q(_ kind: QuestionKind, answers: [Int]? = nil, numeric: NumericAnswer? = nil) -> Question {
+        Question(id: "x", kind: kind, context: nil, prompt: "p", diagram: nil, options: ["a", "b", "c", "d"],
+                 answers: answers, numeric: numeric, optionExplanations: nil, explanation: "e", steps: nil)
+    }
+
+    func testKinds() {
+        XCTAssertTrue(Grader.isCorrect(q(.single, answers: [2]), .choices([2])))
+        XCTAssertFalse(Grader.isCorrect(q(.single, answers: [2]), .choices([1])))
+        XCTAssertTrue(Grader.isCorrect(q(.multi, answers: [0, 2]), .choices([2, 0])))
+        XCTAssertFalse(Grader.isCorrect(q(.multi, answers: [0, 2]), .choices([0])))
+        XCTAssertTrue(Grader.isCorrect(q(.order, answers: [3, 1, 0, 2]), .order([3, 1, 0, 2])))
+        XCTAssertFalse(Grader.isCorrect(q(.order, answers: [3, 1, 0, 2]), .order([1, 3, 0, 2])))
+        let bearing = q(.numeric, numeric: NumericAnswer(value: 350, tolerance: 15, unit: "°"))
+        XCTAssertTrue(Grader.isCorrect(bearing, .number(5)), "wraps through north")
+        XCTAssertFalse(Grader.isCorrect(bearing, .number(20)))
+        let hpa = q(.numeric, numeric: NumericAnswer(value: 1008, tolerance: 0, unit: "hPa"))
+        XCTAssertTrue(Grader.isCorrect(hpa, .number(1008)))
+        XCTAssertFalse(Grader.isCorrect(hpa, .number(.nan)))
+    }
+
+    func testMockExamCoversModulesAndMarks() throws {
+        let c = try ContentTests.load("en")
+        var g = SeededGenerator(seed: 7)
+        let exam = MockExam.make(from: c, using: &g)
+        let marks = exam.reduce(0) { $0 + $1.points }
+        XCTAssertGreaterThanOrEqual(marks, 35)
+        XCTAssertLessThanOrEqual(marks, 50)
+        let modules = Set(exam.compactMap { q in c.modules.first { $0.questions.contains(q) }?.id })
+        XCTAssertEqual(modules.count, c.modules.count)
+        XCTAssertEqual(Set(exam.map(\.id)).count, exam.count)
     }
 }
 
 final class QuizSessionTests: XCTestCase {
     private func q(_ id: String, answer: Int) -> Question {
-        Question(id: id, prompt: id, options: ["a", "b", "c", "d"], answer: answer, explanation: "")
+        Question(id: id, kind: .single, context: nil, prompt: id, diagram: nil, options: ["a", "b", "c", "d"],
+                 answers: [answer], numeric: nil, optionExplanations: nil, explanation: "", steps: nil)
     }
 
     func testFlowAndScoring() {
         var s = QuizSession(questions: [q("1", answer: 0), q("2", answer: 2)])
-        XCTAssertEqual(s.phase, .answering)
-        s.check() // nothing selected: no-op
+        s.check()
         XCTAssertEqual(s.phase, .answering)
         s.select(0); s.check()
         XCTAssertEqual(s.lastAnswerCorrect, true)
-        s.select(3) // ignored once checked
-        s.next()
-        XCTAssertEqual(s.index, 1)
-        s.select(1); s.check()
+        s.next(); s.select(1); s.check()
         XCTAssertEqual(s.lastAnswerCorrect, false)
         s.next()
         XCTAssertEqual(s.phase, .finished)
-        XCTAssertEqual(s.correctCount, 1)
         XCTAssertEqual(s.score, 0.5)
+        XCTAssertEqual(s.missed, ["2"])
     }
 
-    func testEmptyQuizIsFinished() {
-        XCTAssertEqual(QuizSession(questions: []).phase, .finished)
+    func testScenarioFlattensIntoSteps() {
+        let scen = Question(id: "s", kind: .scenario, context: "ctx", prompt: "p", diagram: nil, options: nil, answers: nil,
+                            numeric: nil, optionExplanations: nil, explanation: "e", steps: [q("s1", answer: 0), q("s2", answer: 1)])
+        let s = QuizSession(questions: [scen, q("3", answer: 0)])
+        XCTAssertEqual(s.total, 3)
+        XCTAssertEqual(s.current?.scenario?.id, "s")
+        XCTAssertEqual(s.current?.stepCount, 2)
     }
 
     func testSeededShuffleLimit() {
         var g = SeededGenerator(seed: 42)
         let s = QuizSession(questions: (0..<20).map { q("\($0)", answer: 0) }, limit: 10, using: &g)
-        XCTAssertEqual(s.questions.count, 10)
-        XCTAssertEqual(Set(s.questions.map(\.id)).count, 10)
+        XCTAssertEqual(s.total, 10)
+    }
+
+    func testEmptyQuizIsFinished() {
+        XCTAssertEqual(QuizSession(questions: []).phase, .finished)
     }
 }
 

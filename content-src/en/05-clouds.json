@@ -1,0 +1,245 @@
+{
+  "id": "clouds",
+  "title": "Clouds, stability and squalls",
+  "summary": "Why air rises or stays put, what each cloud tells you, and how to handle squalls and thunderstorms.",
+  "symbol": "cloud.bolt.rain",
+  "lessons": [
+    {
+      "id": "clouds.stability",
+      "title": "Stability and instability",
+      "segments": [
+        {
+          "heading": "Rising air",
+          "paragraphs": [
+            "Rising air expands and cools: about 3 °C per 1,000 ft (roughly 10 °C per km) while dry, and about half that once cloud forms, because condensation releases heat.",
+            "If rising air stays warmer than its surroundings it keeps rising: the air is unstable, giving heaped cumulus, showers, gusts and good visibility. If it becomes colder than its surroundings it sinks back: the air is stable, giving layer cloud, drizzle, haze and steady winds."
+          ],
+          "keyPoints": [
+            "Unstable: cumulus, showers, gusts, good visibility.",
+            "Stable: stratus, drizzle, haze or fog, steady wind.",
+            "Cold air over warm sea becomes unstable."
+          ],
+          "diagram": {
+            "id": "stability"
+          }
+        },
+        {
+          "heading": "Cloud families",
+          "paragraphs": [
+            "High cloud (cirrus, cirrostratus, cirrocumulus) is made of ice and often heralds a front. Medium cloud (altostratus, altocumulus) signals thickening frontal cloud or mid-level instability; castellated altocumulus on a summer morning can precede thunderstorms.",
+            "Low cloud includes stratus, stratocumulus and nimbostratus. Cumulus and cumulonimbus are heaped clouds whose bases are low but whose tops may tower to the tropopause."
+          ],
+          "diagram": {
+            "id": "cloudLevels"
+          }
+        }
+      ]
+    },
+    {
+      "id": "clouds.cb",
+      "title": "Cumulonimbus, squalls and thunderstorms",
+      "segments": [
+        {
+          "heading": "Anatomy of a cumulonimbus",
+          "paragraphs": [
+            "A mature cumulonimbus has a strong updraught feeding it and a downdraught of cold, rain-laden air beneath. The downdraught spreads out at the surface as a gust front that can arrive well before the rain, bringing a sudden squall and a wind shift of up to 90° or more.",
+            "The anvil spreads downwind at the top of the cloud. Hail, lightning and waterspouts are possible. A squall is defined as a sudden increase in wind of at least 16 knots, reaching at least 22 knots and lasting at least a minute."
+          ],
+          "diagram": {
+            "id": "cumulonimbus"
+          }
+        },
+        {
+          "heading": "Tactics",
+          "paragraphs": [
+            "Watch the sky to windward and track approaching cells on radar if you have it. Reef or reduce sail before the gust front arrives; a darkening, ragged base and a line of disturbed water mark it.",
+            "In lightning, stay below, keep clear of the mast, shrouds and chainplates, disconnect sensitive electronics if possible and keep a handheld VHF and GPS in the oven or another metal box. Expect wind to drop after the squall and the direction to settle back."
+          ],
+          "keyPoints": [
+            "The gust front arrives before the rain.",
+            "Reef before, not during, the squall.",
+            "Lightning: stay below and away from the rig."
+          ],
+          "diagram": {
+            "id": "cumulonimbus",
+            "variant": "tactics"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cl.1",
+      "kind": "single",
+      "prompt": "Cold air flows over a much warmer sea. What weather is most likely?",
+      "diagram": {
+        "id": "stability"
+      },
+      "options": [
+        "Fog and drizzle",
+        "Cumulus, showers and gusty winds",
+        "Clear skies and calm",
+        "Steady rain from nimbostratus"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is stable air over a colder surface.",
+        "Correct: heating from below makes the air unstable.",
+        "Instability creates cloud and gusts.",
+        "Nimbostratus is frontal, stable layer cloud."
+      ],
+      "explanation": "Air heated from below becomes unstable: heaped cloud, showers, good visibility and gusts."
+    },
+    {
+      "id": "q.cl.2",
+      "kind": "single",
+      "prompt": "Which part of a cumulonimbus brings the first sudden wind shift?",
+      "diagram": {
+        "id": "cumulonimbus"
+      },
+      "options": [
+        "The anvil",
+        "The gust front from the downdraught",
+        "The updraught",
+        "The lightning"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The anvil is high and downwind.",
+        "Correct: cold outflow spreads ahead of the rain.",
+        "The updraught draws air in gently.",
+        "Lightning does not create the squall."
+      ],
+      "explanation": "The downdraught spreads out at the surface as a gust front, often arriving before the rain."
+    },
+    {
+      "id": "q.cl.3",
+      "kind": "multi",
+      "prompt": "Which signs suggest the air is stable? Select all that apply.",
+      "options": [
+        "Layer cloud",
+        "Drizzle",
+        "Towering cumulus",
+        "Haze or fog",
+        "Very gusty wind"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Correct.",
+        "Towers mean instability.",
+        "Correct: pollutants and moisture are trapped.",
+        "Gusts come from vertical mixing in unstable air."
+      ],
+      "explanation": "Stable air resists vertical movement: layer cloud, drizzle, haze, fog and relatively steady winds."
+    },
+    {
+      "id": "q.cl.4",
+      "kind": "numeric",
+      "prompt": "A dry parcel of air at 18 °C rises 2,000 ft without forming cloud. Using 3 °C per 1,000 ft, what is its temperature, in °C?",
+      "numeric": {
+        "value": 12,
+        "tolerance": 0.5,
+        "unit": "°C"
+      },
+      "explanation": "2,000 ft at 3 °C per 1,000 ft is a 6 °C fall: 18 minus 6 is 12 °C."
+    },
+    {
+      "id": "q.cl.5",
+      "kind": "single",
+      "prompt": "Under full sail on a reach, you see a dark, ragged line of cloud approaching with a band of ruffled white water ahead of it. What do you do?",
+      "options": [
+        "Hold on and reef when it arrives",
+        "Reef now and prepare for a sudden shift",
+        "Hoist more sail to outrun it",
+        "Head straight for it to get through quickly"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Reefing in the squall is dangerous and slow.",
+        "Correct: reduce sail before the gust front.",
+        "You will not outrun a squall line.",
+        "Steering into it gains nothing."
+      ],
+      "explanation": "The ruffled water is the gust front. Reduce sail, secure gear and be ready for the wind to shift sharply."
+    },
+    {
+      "id": "q.cl.6",
+      "kind": "single",
+      "prompt": "What is the WMO definition of a squall?",
+      "options": [
+        "Any gust over 30 knots",
+        "A sudden increase of at least 16 knots, reaching at least 22 knots, lasting at least a minute",
+        "Wind of Force 8 or more",
+        "A rain shower with wind"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Gusts are brief and defined differently.",
+        "Correct.",
+        "That is a gale.",
+        "Not the definition."
+      ],
+      "explanation": "A squall is longer than a gust: it lasts at least a minute and then dies away."
+    },
+    {
+      "id": "q.cl.7",
+      "kind": "single",
+      "prompt": "On a summer morning you see castellated altocumulus (turrets on mid-level cloud). What does it suggest?",
+      "options": [
+        "A settled day",
+        "Mid-level instability and a risk of thunderstorms later",
+        "Sea fog",
+        "An approaching warm front only"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Turrets indicate instability aloft.",
+        "Correct.",
+        "Unrelated to sea fog.",
+        "Not specifically frontal."
+      ],
+      "explanation": "Castellanus shows unstable air aloft; with daytime heating, thunderstorms often follow later in the day."
+    },
+    {
+      "id": "q.cl.8",
+      "kind": "multi",
+      "prompt": "A thunderstorm is overhead. Which precautions are sensible? Select all that apply.",
+      "options": [
+        "Stay below, away from the mast and chainplates",
+        "Hold the backstay for stability",
+        "Put a handheld VHF and GPS in a metal box such as the oven",
+        "Disconnect sensitive electronics if possible",
+        "Go up the mast to check the antenna"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Rigging can carry lightning current.",
+        "Correct: protects backups from a strike.",
+        "Correct.",
+        "Never go aloft in lightning."
+      ],
+      "explanation": "Minimise contact with the rig, protect backup electronics and stay below where possible."
+    }
+  ]
+}

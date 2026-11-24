@@ -1,0 +1,348 @@
+{
+  "language": "en",
+  "glossary": [
+    {
+      "id": "isobar",
+      "term": "Isobar",
+      "definition": "A line on a chart joining places of equal sea-level pressure, usually drawn every 4 hPa."
+    },
+    {
+      "id": "pressureGradient",
+      "term": "Pressure gradient",
+      "definition": "The rate at which pressure changes with distance. Close isobars mean a steep gradient and strong wind."
+    },
+    {
+      "id": "synopticChart",
+      "term": "Synoptic chart",
+      "definition": "A surface pressure chart showing isobars, highs, lows and fronts at one moment in time."
+    },
+    {
+      "id": "depression",
+      "term": "Depression (low)",
+      "definition": "An area of low pressure with anticlockwise circulation in the Northern Hemisphere, bringing cloud, rain and wind."
+    },
+    {
+      "id": "anticyclone",
+      "term": "Anticyclone (high)",
+      "definition": "An area of high pressure with clockwise circulation in the Northern Hemisphere, usually settled with light winds."
+    },
+    {
+      "id": "trough",
+      "term": "Trough",
+      "definition": "An elongated extension of low pressure. Often brings showers, squalls and a veer in the wind."
+    },
+    {
+      "id": "ridge",
+      "term": "Ridge",
+      "definition": "An elongated extension of high pressure, often giving a short spell of fine weather between depressions."
+    },
+    {
+      "id": "col",
+      "term": "Col",
+      "definition": "A slack area between two highs and two lows, with light, variable winds; fog or thunderstorms are possible."
+    },
+    {
+      "id": "warmFront",
+      "term": "Warm front",
+      "definition": "The leading edge of advancing warm air, which rises gently over the colder air ahead of it."
+    },
+    {
+      "id": "coldFront",
+      "term": "Cold front",
+      "definition": "The leading edge of advancing cold air, which undercuts the warm air ahead of it."
+    },
+    {
+      "id": "occlusion",
+      "term": "Occluded front",
+      "definition": "Formed when the cold front catches up with the warm front and lifts the warm sector off the surface."
+    },
+    {
+      "id": "warmSector",
+      "term": "Warm sector",
+      "definition": "The wedge of warm, moist air between the warm front and the cold front of a depression."
+    },
+    {
+      "id": "veering",
+      "term": "Veering",
+      "definition": "A clockwise change of wind direction, for example from south-west to west."
+    },
+    {
+      "id": "backing",
+      "term": "Backing",
+      "definition": "An anticlockwise change of wind direction, for example from west to south-west."
+    },
+    {
+      "id": "coriolis",
+      "term": "Coriolis effect",
+      "definition": "The apparent deflection of moving air caused by the Earth's rotation: to the right in the Northern Hemisphere."
+    },
+    {
+      "id": "geostrophic",
+      "term": "Geostrophic wind",
+      "definition": "The theoretical wind above the friction layer, blowing parallel to straight isobars where pressure-gradient and Coriolis forces balance."
+    },
+    {
+      "id": "buysBallot",
+      "term": "Buys Ballot's law",
+      "definition": "With your back to the wind in the Northern Hemisphere, low pressure is on your left."
+    },
+    {
+      "id": "squall",
+      "term": "Squall",
+      "definition": "A sudden increase in wind of at least 16 knots, reaching 22 knots or more and lasting at least a minute, often with a shift in direction."
+    },
+    {
+      "id": "gust",
+      "term": "Gust",
+      "definition": "A brief increase in wind speed lasting seconds, above the mean wind."
+    },
+    {
+      "id": "dewPoint",
+      "term": "Dew point",
+      "definition": "The temperature to which air must be cooled, at constant pressure, for it to become saturated."
+    },
+    {
+      "id": "relativeHumidity",
+      "term": "Relative humidity",
+      "definition": "The amount of water vapour in the air as a percentage of the maximum it could hold at that temperature."
+    },
+    {
+      "id": "advectionFog",
+      "term": "Advection fog (sea fog)",
+      "definition": "Fog formed when warm, moist air moves over a sea surface colder than the air's dew point."
+    },
+    {
+      "id": "radiationFog",
+      "term": "Radiation fog",
+      "definition": "Fog formed over land on clear, calm nights as the ground cools the air above it to its dew point."
+    },
+    {
+      "id": "frontalFog",
+      "term": "Frontal fog",
+      "definition": "Fog or very low cloud formed when rain falling from warm air saturates the colder air beneath, mainly ahead of warm fronts."
+    },
+    {
+      "id": "seaBreeze",
+      "term": "Sea breeze",
+      "definition": "A daytime onshore wind caused by land heating faster than the sea."
+    },
+    {
+      "id": "landBreeze",
+      "term": "Land breeze",
+      "definition": "A night-time offshore wind caused by land cooling faster than the sea."
+    },
+    {
+      "id": "katabatic",
+      "term": "Katabatic wind",
+      "definition": "A wind caused by cold, dense air draining downhill, usually at night; can be strong and sudden in valleys and fjords."
+    },
+    {
+      "id": "anabatic",
+      "term": "Anabatic wind",
+      "definition": "A light upslope wind caused by daytime heating of hillsides."
+    },
+    {
+      "id": "funnelling",
+      "term": "Funnelling (venturi effect)",
+      "definition": "Acceleration of wind where it is squeezed between high ground, islands or along a strait."
+    },
+    {
+      "id": "fetch",
+      "term": "Fetch",
+      "definition": "The distance of open water over which the wind blows in a constant direction."
+    },
+    {
+      "id": "swell",
+      "term": "Swell",
+      "definition": "Long, regular waves that have travelled out of the area where they were generated."
+    },
+    {
+      "id": "windWaves",
+      "term": "Wind waves (wind sea)",
+      "definition": "Waves generated by the local wind, usually shorter and steeper than swell."
+    },
+    {
+      "id": "significantWaveHeight",
+      "term": "Significant wave height",
+      "definition": "The mean height of the highest third of waves; individual waves can be nearly twice this height."
+    },
+    {
+      "id": "windAgainstTide",
+      "term": "Wind against tide",
+      "definition": "Wind blowing against the direction of the tidal stream, which shortens and steepens waves."
+    },
+    {
+      "id": "beaufort",
+      "term": "Beaufort scale",
+      "definition": "A scale of wind force from 0 (calm) to 12 (hurricane force) linked to mean wind speed and sea state."
+    },
+    {
+      "id": "tendency",
+      "term": "Pressure tendency",
+      "definition": "The change in pressure over the previous three hours, described as steady, rising or falling, slowly to very rapidly."
+    },
+    {
+      "id": "instability",
+      "term": "Instability",
+      "definition": "A state in which rising air stays warmer than its surroundings and keeps rising, forming heaped cloud and showers."
+    },
+    {
+      "id": "inversion",
+      "term": "Temperature inversion",
+      "definition": "A layer in which temperature increases with height, trapping haze, fog and pollution beneath it."
+    },
+    {
+      "id": "grib",
+      "term": "GRIB file",
+      "definition": "Gridded numerical weather model data, such as wind and pressure at set times, viewed in navigation or weather software."
+    },
+    {
+      "id": "windBarb",
+      "term": "Wind barb",
+      "definition": "A chart symbol whose shaft points to where the wind is coming from; half barb 5 knots, full barb 10 knots, pennant 50 knots."
+    },
+    {
+      "id": "cyclonic",
+      "term": "Cyclonic",
+      "definition": "Forecast term: the wind will change direction considerably as a depression passes close by."
+    },
+    {
+      "id": "meltemi",
+      "term": "Meltemi (Etesian)",
+      "definition": "A persistent northerly summer wind over the Aegean Sea, often Force 5 to 7 and occasionally gale force."
+    },
+    {
+      "id": "bora",
+      "term": "Bora",
+      "definition": "A cold, very gusty north-easterly fall wind on the eastern Adriatic coast, which can arrive with little warning."
+    },
+    {
+      "id": "mistral",
+      "term": "Mistral",
+      "definition": "A cold, dry northerly to north-westerly wind funnelled down the Rhône valley into the Gulf of Lion."
+    },
+    {
+      "id": "sirocco",
+      "term": "Sirocco",
+      "definition": "A hot southerly to south-easterly wind from North Africa, humid by the time it reaches Europe, often bringing dust and poor visibility."
+    }
+  ],
+  "diagramLabels": {
+    "low": "L",
+    "high": "H",
+    "warmFront": "Warm front",
+    "coldFront": "Cold front",
+    "occludedFront": "Occlusion",
+    "warmSector": "Warm sector",
+    "coldAir": "Cold air",
+    "warmAir": "Warm air",
+    "trough": "Trough",
+    "ridge": "Ridge",
+    "col": "Col",
+    "isobars": "Isobars",
+    "observer": "You",
+    "cirrus": "Cirrus",
+    "cirrostratus": "Cirrostratus",
+    "altostratus": "Altostratus",
+    "nimbostratus": "Nimbostratus",
+    "cumulus": "Cumulus",
+    "cumulonimbus": "Cumulonimbus",
+    "stratus": "Stratus",
+    "rain": "Rain",
+    "showers": "Showers",
+    "drizzle": "Drizzle",
+    "squall": "Squall",
+    "gustFront": "Gust front",
+    "anvil": "Anvil",
+    "downdraught": "Downdraught",
+    "updraught": "Updraught",
+    "geostrophic": "Geostrophic wind",
+    "overSea": "Over sea ≈15°",
+    "overLand": "Over land ≈30°",
+    "friction": "Friction",
+    "pressureGradient": "Pressure gradient",
+    "coriolis": "Coriolis",
+    "backToWind": "Back to the wind",
+    "lowOnLeft": "Low on your left",
+    "seaBreeze": "Sea breeze",
+    "landBreeze": "Land breeze",
+    "katabatic": "Katabatic",
+    "anabatic": "Anabatic",
+    "day": "Day",
+    "night": "Night",
+    "land": "Land",
+    "sea": "Sea",
+    "coldSea": "Cold sea",
+    "warmSea": "Warm sea",
+    "funnelling": "Funnelling",
+    "convergence": "Convergence",
+    "divergence": "Divergence",
+    "strongerWind": "Stronger wind",
+    "lighterWind": "Lighter wind",
+    "meltemi": "Meltemi",
+    "bora": "Bora",
+    "mistral": "Mistral",
+    "sirocco": "Sirocco",
+    "radiationFog": "Radiation fog",
+    "advectionFog": "Advection fog",
+    "frontalFog": "Frontal fog",
+    "airTemperature": "Air temperature",
+    "dewPoint": "Dew point",
+    "seaTemperature": "Sea temperature",
+    "saturation": "Saturation",
+    "windWithTide": "Wind with tide",
+    "windAgainstTide": "Wind against tide",
+    "tide": "Tide",
+    "wind": "Wind",
+    "swell": "Swell",
+    "windWaves": "Wind waves",
+    "fetch": "Fetch",
+    "wavelength": "Wavelength",
+    "waveHeight": "Height",
+    "falling": "Falling",
+    "rising": "Rising",
+    "steady": "Steady",
+    "hours": "Hours",
+    "hPa": "hPa",
+    "stable": "Stable",
+    "unstable": "Unstable",
+    "parcel": "Rising air",
+    "calm": "Calm",
+    "knots": "kn",
+    "halfBarb": "5 kn",
+    "fullBarb": "10 kn",
+    "pennant": "50 kn",
+    "force": "Force",
+    "polarMaritime": "Polar maritime",
+    "tropicalMaritime": "Tropical maritime",
+    "polarContinental": "Polar continental",
+    "tropicalContinental": "Tropical continental",
+    "highCloud": "High cloud",
+    "mediumCloud": "Medium cloud",
+    "lowCloud": "Low cloud",
+    "height": "Height",
+    "inversion": "Inversion",
+    "visFog": "Fog < 1,000 m",
+    "visPoor": "Poor 1,000 m–2 nm",
+    "visModerate": "Moderate 2–5 nm",
+    "visGood": "Good > 5 nm",
+    "issued": "Issued",
+    "imminent": "Imminent < 6 h",
+    "soon": "Soon 6–12 h",
+    "later": "Later > 12 h",
+    "departure": "Departure",
+    "destination": "Destination",
+    "refuge": "Refuge",
+    "front": "Front",
+    "gridPoint": "Grid point",
+    "modelWind": "Model wind",
+    "gusts": "Gusts not shown",
+    "heaveTo": "Hove-to",
+    "backedHeadsail": "Backed headsail",
+    "helmToWindward": "Helm to windward",
+    "lighterAround": "Lighter",
+    "strongerAround": "Stronger",
+    "passesNorth": "Centre passes north: back, then veer",
+    "passesSouth": "Centre passes south: steady backing"
+  }
+}

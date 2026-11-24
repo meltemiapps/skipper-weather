@@ -1,0 +1,269 @@
+{
+  "id": "atmosphere",
+  "title": "The atmosphere and pressure",
+  "summary": "What pressure is, how it is measured and charted, and why the barometer is a skipper's first forecasting tool.",
+  "symbol": "gauge.with.dots.needle.50percent",
+  "lessons": [
+    {
+      "id": "atmosphere.pressure",
+      "title": "Air pressure and isobars",
+      "segments": [
+        {
+          "heading": "What pressure is",
+          "paragraphs": [
+            "Air pressure is the weight of the column of atmosphere above a point. At mean sea level the standard value is 1013.25 hPa (hectopascals, numerically identical to millibars). Real values in north-west Europe usually lie between about 950 hPa in a deep depression and 1045 hPa in a strong anticyclone.",
+            "Pressure falls with height, by about 1 hPa for every 8 metres near the surface. Barometers are therefore corrected to mean sea level so that readings from different places can be compared on one chart."
+          ],
+          "keyPoints": [
+            "Standard sea-level pressure is 1013.25 hPa; 1 hPa equals 1 mb.",
+            "Typical range: about 950 to 1045 hPa.",
+            "Readings are reduced to mean sea level before charting."
+          ],
+          "diagram": {
+            "id": "airColumn"
+          }
+        },
+        {
+          "heading": "Isobars and the pressure gradient",
+          "paragraphs": [
+            "Isobars join points of equal sea-level pressure, normally drawn every 4 hPa. Their spacing shows the pressure gradient: the closer the isobars, the faster pressure changes with distance and the stronger the wind.",
+            "A geostrophic wind scale printed on the chart converts isobar spacing to wind speed at the latitude concerned. The same spacing gives a stronger wind at lower latitudes, because the Coriolis effect that balances the gradient is weaker there.",
+            "Isobar shapes reveal pressure features: closed circles around a low or a high, U-shaped troughs pointing out from lows, inverted-U ridges pointing out from highs, and the slack saddle of a col."
+          ],
+          "keyPoints": [
+            "Close isobars: steep gradient, strong wind.",
+            "Use the chart's geostrophic scale to estimate wind from spacing.",
+            "Same spacing gives more wind at lower latitudes."
+          ],
+          "diagram": {
+            "id": "pressureFeatures"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atmosphere.barometer",
+      "title": "The barometer and pressure tendency",
+      "segments": [
+        {
+          "heading": "Reading the tendency",
+          "paragraphs": [
+            "A single barometer reading says little. The tendency, the change over the previous three hours, says much more. On passage, log the barometer every hour and plot it.",
+            "Standard descriptors for the three-hour change are: steady (less than 0.1 hPa), rising or falling slowly (0.1 to 1.5 hPa), rising or falling (1.6 to 3.5 hPa), quickly (3.6 to 6.0 hPa) and very rapidly (more than 6.0 hPa)."
+          ],
+          "keyPoints": [
+            "Log the barometer hourly; the trend matters, not the number.",
+            "More than 6 hPa in 3 hours is 'very rapidly'."
+          ],
+          "diagram": {
+            "id": "barograph",
+            "variant": "front"
+          }
+        },
+        {
+          "heading": "What the trace tells you",
+          "paragraphs": [
+            "A steady fall usually signals an approaching depression or warm front; the faster the fall, the stronger the wind that is likely to follow. A sharp rise after a fall often marks the passage of a cold front or trough, with a veer and squally showers.",
+            "A rapid rise after a deep low can bring a spell of strong, gusty wind on its own, because the gradient behind the system is steep. Remember the old guide: long foretold, long last; short notice, soon past."
+          ],
+          "keyPoints": [
+            "Fast fall: wind on the way.",
+            "Sharp rise with a veer: cold front or trough passed.",
+            "A rapid rise can also bring strong wind."
+          ],
+          "diagram": {
+            "id": "barograph",
+            "variant": "rapidRise"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atmosphere.airmasses",
+      "title": "Air masses",
+      "segments": [
+        {
+          "heading": "Where air comes from",
+          "paragraphs": [
+            "An air mass is a large body of air with similar temperature and humidity, taking its character from where it formed: polar or tropical, maritime or continental. Its track over the sea or land then modifies it.",
+            "Polar maritime air, typically from the north-west, is cool and unstable over warmer sea: good visibility, cumulus and showers, gusty winds. Tropical maritime air from the south-west is warm and moist; cooled from below it becomes stable, with low cloud, drizzle and poor visibility or fog. Continental air is drier, hot in summer and bitterly cold in winter."
+          ],
+          "keyPoints": [
+            "Polar maritime: cool, showery, good visibility, gusty.",
+            "Tropical maritime: mild, moist, low cloud, drizzle, fog risk.",
+            "Fronts are the boundaries between air masses."
+          ],
+          "diagram": {
+            "id": "airMasses"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.atm.1",
+      "kind": "single",
+      "prompt": "Your barometer has fallen from 1012 hPa to 1005 hPa in the last three hours. How is this tendency described?",
+      "options": [
+        "Falling slowly",
+        "Falling",
+        "Falling quickly",
+        "Falling very rapidly"
+      ],
+      "answers": [
+        3
+      ],
+      "optionExplanations": [
+        "Slowly is 0.1 to 1.5 hPa in three hours.",
+        "Falling without qualifier is 1.6 to 3.5 hPa.",
+        "Quickly is 3.6 to 6.0 hPa.",
+        "Correct: 7 hPa is more than 6.0 hPa in three hours."
+      ],
+      "explanation": "A fall of 7 hPa in three hours is 'falling very rapidly' and strongly suggests a gale is approaching."
+    },
+    {
+      "id": "q.atm.2",
+      "kind": "single",
+      "prompt": "Two charts show identical isobar spacing, one at 60°N and one at 40°N. Where is the geostrophic wind stronger?",
+      "options": [
+        "At 60°N",
+        "At 40°N",
+        "The same at both",
+        "It depends on the season"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Coriolis is stronger at higher latitude, so less wind is needed to balance the gradient.",
+        "Correct: weaker Coriolis at lower latitude means a stronger wind for the same gradient.",
+        "Wind for a given gradient depends on latitude.",
+        "Season does not change this relationship."
+      ],
+      "explanation": "Geostrophic balance is between the pressure-gradient force and Coriolis. Coriolis weakens towards the equator, so the same gradient produces more wind."
+    },
+    {
+      "id": "q.atm.3",
+      "kind": "multi",
+      "prompt": "Which observations are typical of a polar maritime air mass over the sea? Select all that apply.",
+      "options": [
+        "Good visibility",
+        "Cumulus and showers",
+        "Persistent drizzle",
+        "Gusty winds",
+        "Widespread sea fog"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correct: cool, clean air gives good visibility.",
+        "Correct: cool air over warmer sea is unstable.",
+        "Drizzle belongs to stable, moist tropical maritime air.",
+        "Correct: instability mixes stronger wind down to the surface.",
+        "Sea fog needs warm, moist air over a colder sea."
+      ],
+      "explanation": "Polar maritime air is heated from below by the sea, so it is unstable: heaped cloud, showers, gusts and good visibility between showers."
+    },
+    {
+      "id": "q.atm.4",
+      "kind": "numeric",
+      "prompt": "Pressure at 06:00 was 1016 hPa and is falling at a steady 2 hPa per hour. What will it read at 10:00, in hPa?",
+      "numeric": {
+        "value": 1008,
+        "tolerance": 0,
+        "unit": "hPa"
+      },
+      "explanation": "Four hours at 2 hPa per hour is an 8 hPa fall: 1016 minus 8 is 1008 hPa. That is 'falling quickly' to 'very rapidly'; prepare for a strong blow."
+    },
+    {
+      "id": "q.atm.5",
+      "kind": "single",
+      "prompt": "On a synoptic chart, what do U-shaped isobars extending outwards from a low usually indicate?",
+      "diagram": {
+        "id": "pressureFeatures"
+      },
+      "options": [
+        "A ridge",
+        "A col",
+        "A trough",
+        "An anticyclone"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "A ridge extends from a high.",
+        "A col is the slack area between two highs and two lows.",
+        "Correct: a trough is an extension of low pressure.",
+        "An anticyclone is a closed high."
+      ],
+      "explanation": "Troughs extend from lows and often bring showers, squalls and a veer as they pass."
+    },
+    {
+      "id": "q.atm.6",
+      "kind": "single",
+      "prompt": "After a deep depression has passed, the barometer rises 5 hPa in three hours. What should you expect?",
+      "options": [
+        "Calm conditions immediately",
+        "A spell of strong, gusty wind",
+        "Thick fog",
+        "A backing wind and steady rain"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "A rapid rise means a steep gradient, not calm.",
+        "Correct: the steep gradient behind the low drives strong, gusty wind.",
+        "Fog is unlikely in fresh, mixed air behind a low.",
+        "Backing and steady rain go with an approaching warm front."
+      ],
+      "explanation": "Rapid rises can be as windy as rapid falls. Behind a deep low, the tight gradient and unstable polar air bring strong, gusty winds."
+    },
+    {
+      "id": "q.atm.7",
+      "kind": "single",
+      "prompt": "Why are barometer readings corrected to mean sea level?",
+      "options": [
+        "To remove the effect of temperature",
+        "So readings at different heights can be compared",
+        "To convert inches to hectopascals",
+        "Because sea level pressure never changes"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The correction is for height, not temperature.",
+        "Correct: pressure falls with height, so readings are reduced to a common level.",
+        "Unit conversion is separate.",
+        "Sea-level pressure changes constantly."
+      ],
+      "explanation": "Pressure falls about 1 hPa per 8 m near the surface, so readings are reduced to mean sea level before being plotted."
+    },
+    {
+      "id": "q.atm.8",
+      "kind": "order",
+      "prompt": "Put these tendency descriptors in order of increasing three-hour pressure change.",
+      "options": [
+        "Falling quickly",
+        "Steady",
+        "Falling very rapidly",
+        "Falling slowly",
+        "Falling"
+      ],
+      "answers": [
+        1,
+        3,
+        4,
+        0,
+        2
+      ],
+      "explanation": "Steady (under 0.1), slowly (0.1 to 1.5), falling (1.6 to 3.5), quickly (3.6 to 6.0), very rapidly (over 6.0 hPa)."
+    }
+  ]
+}

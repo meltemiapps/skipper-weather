@@ -1,0 +1,308 @@
+{
+  "id": "forecasts",
+  "title": "Charts, GRIB files and marine forecasts",
+  "summary": "Reading synoptic and forecast charts, wind barbs and GRIB data, and decoding marine forecast language.",
+  "symbol": "map",
+  "lessons": [
+    {
+      "id": "forecasts.charts",
+      "title": "Synoptic and forecast charts",
+      "segments": [
+        {
+          "heading": "Symbols",
+          "paragraphs": [
+            "On surface charts a warm front is drawn with semicircles (red in colour charts), a cold front with triangles (blue), and an occlusion with alternating triangles and semicircles (purple), the symbols pointing in the direction of movement. Troughs are shown as plain or dashed lines. Highs and lows are marked H and L with their central pressure.",
+            "Analysis charts show the situation at a stated time; forecast (prognostic) charts show the expected pattern 24, 48 or more hours ahead. Always note the validity time and compare successive charts to see how systems are moving and deepening."
+          ],
+          "diagram": {
+            "id": "synopticSymbols"
+          }
+        },
+        {
+          "heading": "Turning a chart into a forecast",
+          "paragraphs": [
+            "Estimate the wind at your position from the isobar spacing (geostrophic scale), then reduce and back it for the surface. Note where the fronts are, their likely speed and what they will bring. Work out from the system's track whether the wind will back or veer.",
+            "Look for tight isobars around troughs and lows, kinks indicating secondary lows, and cols where the wind will be light and variable."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasts.grib",
+      "title": "Wind barbs and GRIB files",
+      "segments": [
+        {
+          "heading": "Wind barbs",
+          "paragraphs": [
+            "A wind barb's shaft points into the direction the wind is coming from. Feathers on the end show speed: a half barb is 5 knots, a full barb 10 knots and a pennant (triangle) 50 knots. Two full barbs and a half barb mean 25 knots.",
+            "Arrows in many apps point the other way, downwind; always check the legend."
+          ],
+          "keyPoints": [
+            "Shaft points to where the wind comes from.",
+            "Half barb 5 kn, full barb 10 kn, pennant 50 kn."
+          ],
+          "diagram": {
+            "id": "windBarbs"
+          }
+        },
+        {
+          "heading": "Using GRIB data wisely",
+          "paragraphs": [
+            "GRIB files contain raw output from numerical weather models on a grid, such as wind, pressure, rain and waves at set time steps. They are compact and easy to download at sea, and they are excellent for timing systems and routing.",
+            "Their limits: they are mean winds, not gusts; they smooth out fronts, squalls, sea breezes and funnelling; and grid spacing may miss local effects entirely. Check the model run time, compare more than one model, and always read the official forecast and warnings, which forecasters have checked and corrected. Add a margin of at least a Beaufort force near fronts, showers and headlands."
+          ],
+          "keyPoints": [
+            "GRIB is model output: mean winds, no human check.",
+            "Misses gusts, squalls and local effects.",
+            "Compare models and read official forecasts and warnings."
+          ],
+          "diagram": {
+            "id": "gribGrid"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasts.language",
+      "title": "Marine forecast language",
+      "segments": [
+        {
+          "heading": "Structure and timing",
+          "paragraphs": [
+            "Marine and shipping forecasts typically give gale warnings, a general synopsis, then for each area: wind direction and force, sea state, weather and visibility.",
+            "Timing words are counted from the time of issue: imminent means within 6 hours, soon 6 to 12 hours, later more than 12 hours. Gale warnings are issued for Force 8 or more, or gusts of 43 knots or more. 'Cyclonic' means considerable change of wind direction near a depression's centre. 'Becoming' signals a change, often in direction or strength.",
+            "Write the forecast down, note the issue time and compare it with what you see. A forecast that is behind the observed weather is your cue to expect the next stage early."
+          ],
+          "keyPoints": [
+            "Imminent < 6 h, soon 6–12 h, later > 12 h.",
+            "Gale warning: Force 8 or gusts 43 kn or more.",
+            "Log the issue time and compare with observations."
+          ],
+          "diagram": {
+            "id": "forecastTimeline"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fc.1",
+      "kind": "numeric",
+      "prompt": "A wind barb has one pennant, two full barbs and one half barb. What wind speed does it show, in knots?",
+      "diagram": {
+        "id": "windBarbs"
+      },
+      "numeric": {
+        "value": 75,
+        "tolerance": 0,
+        "unit": "kn"
+      },
+      "explanation": "Pennant 50 + two full barbs 20 + half barb 5 = 75 knots."
+    },
+    {
+      "id": "q.fc.2",
+      "kind": "single",
+      "prompt": "A wind barb's shaft points towards the north-west. Which way is the wind blowing?",
+      "options": [
+        "From the north-west",
+        "From the south-east",
+        "Towards the north-west",
+        "It cannot be determined"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: the shaft points to where the wind comes from.",
+        "That is the opposite.",
+        "That would be a south-easterly.",
+        "Barbs show direction explicitly."
+      ],
+      "explanation": "The barb shaft points into the wind: a north-westerly."
+    },
+    {
+      "id": "q.fc.3",
+      "kind": "single",
+      "prompt": "A gale warning issued at 06:00 says 'imminent'. When is the gale expected?",
+      "options": [
+        "Before 12:00",
+        "Between 12:00 and 18:00",
+        "After 18:00",
+        "Tomorrow"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: within 6 hours of issue.",
+        "That is 'soon'.",
+        "That is 'later'.",
+        "That is beyond 'later'."
+      ],
+      "explanation": "Imminent means within 6 hours of the time of issue."
+    },
+    {
+      "id": "q.fc.4",
+      "kind": "multi",
+      "prompt": "Which features are likely to be poorly represented in a GRIB file? Select all that apply.",
+      "options": [
+        "Squalls under cumulonimbus",
+        "Funnelling between islands",
+        "Large-scale movement of a depression",
+        "Sea breezes",
+        "Gusts"
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correct: too small for most model grids.",
+        "Correct: local topography is smoothed.",
+        "Models handle large systems well.",
+        "Correct: often missed or underplayed.",
+        "Correct: GRIB winds are means."
+      ],
+      "explanation": "GRIB data excels at large-scale timing and is weak on local, small-scale and gust effects."
+    },
+    {
+      "id": "q.fc.5",
+      "kind": "single",
+      "prompt": "On a chart, a line with alternating triangles and semicircles on the same side marks what?",
+      "diagram": {
+        "id": "synopticSymbols"
+      },
+      "options": [
+        "A trough",
+        "An occluded front",
+        "A stationary front",
+        "A ridge"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Troughs are plain lines.",
+        "Correct.",
+        "A stationary front has symbols on opposite sides.",
+        "Ridges are not normally drawn with symbols."
+      ],
+      "explanation": "Occlusion: alternating triangles and semicircles on the same side, pointing in the direction of movement."
+    },
+    {
+      "id": "q.fc.6",
+      "kind": "scenario",
+      "context": "You are at the position marked on a forecast chart for 12:00 tomorrow. A cold front lies 120 miles to your west, moving east at 20 knots. Isobars at your position run SSW–NNE, close together, with low pressure to the north-west.",
+      "prompt": "Interpret the chart.",
+      "diagram": {
+        "id": "depression",
+        "variant": "chart"
+      },
+      "explanation": "Strong southerly to south-south-westerly winds in the warm sector, a cold front arriving in about six hours, then a sharp veer to west or north-west with squalls.",
+      "steps": [
+        {
+          "id": "q.fc.6a",
+          "kind": "single",
+          "prompt": "What surface wind direction do you expect at 12:00?",
+          "options": [
+            "South to south-south-west",
+            "North-easterly",
+            "East-south-easterly",
+            "North-westerly"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: SSW along the isobars, backed slightly towards south at the surface.",
+            "That would place the low to the south-east.",
+            "Far too much backing.",
+            "That comes after the cold front."
+          ],
+          "explanation": "Low to the north-west with isobars running SSW–NNE gives a south-south-westerly geostrophic wind; friction backs it towards south at the surface."
+        },
+        {
+          "id": "q.fc.6b",
+          "kind": "numeric",
+          "prompt": "Roughly how many hours after 12:00 will the cold front reach you?",
+          "numeric": {
+            "value": 6,
+            "tolerance": 0.5,
+            "unit": "h"
+          },
+          "explanation": "120 miles at 20 knots is 6 hours: around 18:00."
+        },
+        {
+          "id": "q.fc.6c",
+          "kind": "single",
+          "prompt": "What change should you prepare for when it arrives?",
+          "options": [
+            "Sharp veer to west or north-west with squalls and heavy rain",
+            "Gradual backing to south-east",
+            "Calm and fog",
+            "Steady drizzle and falling pressure"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct.",
+            "Backing comes ahead of a warm front.",
+            "Not typical of a cold front.",
+            "That describes the warm sector or a warm front approach."
+          ],
+          "explanation": "Cold front: sharp veer, squalls, heavy rain, rising pressure, then clearer showery air."
+        }
+      ]
+    },
+    {
+      "id": "q.fc.7",
+      "kind": "single",
+      "prompt": "The GRIB shows 18 knots for your crossing, but the official forecast says 'south-west 5 to 6, occasionally 7 in squally showers'. What do you plan for?",
+      "options": [
+        "18 knots, since GRIB is more precise",
+        "Gusts and squalls up to Force 7 and above",
+        "Lighter winds, since forecasts exaggerate",
+        "Average the two at 15 knots"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "GRIB gives smoothed mean winds.",
+        "Correct: plan for the squalls the model cannot resolve.",
+        "Forecasters add the detail models miss.",
+        "Averaging ignores the squall risk."
+      ],
+      "explanation": "Plan for the official forecast's worst case; GRIB mean winds understate squalls."
+    },
+    {
+      "id": "q.fc.8",
+      "kind": "single",
+      "prompt": "What does 'cyclonic' mean in a forecast?",
+      "options": [
+        "Hurricane-force winds",
+        "Considerable change of wind direction as a depression passes close by",
+        "Light and variable",
+        "A tropical cyclone"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Not a strength term.",
+        "Correct.",
+        "That is 'variable'.",
+        "Not in mid-latitude marine forecasts."
+      ],
+      "explanation": "Cyclonic warns that the wind direction will change considerably near a low's centre."
+    }
+  ]
+}

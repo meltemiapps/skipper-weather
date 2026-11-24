@@ -1,0 +1,265 @@
+{
+  "id": "fog",
+  "title": "Fog, humidity and visibility",
+  "summary": "Dew point and humidity, the three types of fog that matter at sea, and how to predict and manage poor visibility.",
+  "symbol": "cloud.fog",
+  "lessons": [
+    {
+      "id": "fog.dewpoint",
+      "title": "Dew point and humidity",
+      "segments": [
+        {
+          "heading": "Saturation",
+          "paragraphs": [
+            "Warm air can hold more water vapour than cold air. Relative humidity is the vapour present as a percentage of the maximum at that temperature. The dew point is the temperature to which the air must be cooled to become saturated, at which point condensation forms cloud, mist or fog.",
+            "The difference between air temperature and dew point, the spread, is the key fog indicator. A spread of 2 °C or less with cooling still to come means fog is likely. Many forecasts and GRIB files give dew point directly; on board, a hygrometer or an electronic sensor gives humidity and dew point."
+          ],
+          "keyPoints": [
+            "Dew point: the temperature at which the air saturates.",
+            "Small temperature–dew point spread: fog risk.",
+            "Cooling the air or adding moisture both lead to fog."
+          ],
+          "diagram": {
+            "id": "dewPoint"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fog.types",
+      "title": "Types of fog",
+      "segments": [
+        {
+          "heading": "Radiation fog",
+          "paragraphs": [
+            "Forms over land on clear nights with light winds (about 2 to 8 knots) and moist air, as the ground radiates heat and cools the air above it to its dew point. Most common in autumn and winter.",
+            "It drifts down rivers into harbours and estuaries around dawn and usually clears by mid-morning as the sun warms the land. It rarely extends more than a few miles out to sea."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "radiation"
+          }
+        },
+        {
+          "heading": "Advection fog (sea fog)",
+          "paragraphs": [
+            "Forms when warm, moist air flows over a sea surface colder than the air's dew point. Common in spring and early summer when the sea is still cold, and in warm sectors. It can cover large areas, persist for days, and survive wind up to Force 5 or 6.",
+            "It clears only when the air mass changes, typically after a cold front brings drier air, or when the wind shifts to come off the land. Sunshine alone does not clear it at sea."
+          ],
+          "keyPoints": [
+            "Needs sea temperature below the air's dew point.",
+            "Persists in moderate wind; clears only with a change of air mass."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "advection"
+          }
+        },
+        {
+          "heading": "Frontal fog",
+          "paragraphs": [
+            "Ahead of a warm front, rain falling from the warm air evaporates into the colder air below and saturates it, producing fog or very low cloud that may reach the sea surface. Hill and coastal fog is also common in warm sectors where moist air is lifted over land."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "frontal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fog.seamanship",
+      "title": "Visibility and seamanship",
+      "segments": [
+        {
+          "heading": "Forecast terms and decisions",
+          "paragraphs": [
+            "Marine forecasts describe visibility as very poor or fog (less than 1,000 metres), poor (1,000 metres to 2 nautical miles), moderate (2 to 5 nautical miles) and good (more than 5 nautical miles).",
+            "If fog is forecast, consider not sailing, or plan a route away from shipping lanes and into shallower water where large ships cannot go. Fix your position before visibility closes in, hoist the radar reflector, use radar and AIS, post a dedicated lookout and listener, make sound signals, and keep the crew in lifejackets on deck."
+          ],
+          "diagram": {
+            "id": "visibilityScale"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fog.1",
+      "kind": "single",
+      "context": "May, off a western coast. Air temperature 14 °C, dew point 12 °C, sea temperature 10 °C, south-westerly Force 4.",
+      "prompt": "What is the fog risk at sea?",
+      "diagram": {
+        "id": "fog",
+        "variant": "advection"
+      },
+      "options": [
+        "Low: the wind is too strong for fog",
+        "High: the sea is colder than the air's dew point",
+        "Low: fog only forms at night",
+        "Radiation fog will form at dawn"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Sea fog survives Force 4 and more.",
+        "Correct: 10 °C sea is below the 12 °C dew point.",
+        "Advection fog forms day or night.",
+        "Radiation fog forms over land, not at sea."
+      ],
+      "explanation": "Air cooled by the sea to 10 °C falls below its 12 °C dew point: advection fog is likely and may persist."
+    },
+    {
+      "id": "q.fog.2",
+      "kind": "numeric",
+      "prompt": "Air temperature 9 °C, dew point 7.5 °C. What is the spread, in °C?",
+      "numeric": {
+        "value": 1.5,
+        "tolerance": 0.1,
+        "unit": "°C"
+      },
+      "explanation": "9 minus 7.5 is 1.5 °C. A spread under 2 °C with further cooling expected means fog is likely."
+    },
+    {
+      "id": "q.fog.3",
+      "kind": "single",
+      "prompt": "An estuary harbour is thick with fog at 07:00 after a clear, calm autumn night. What will most likely happen?",
+      "diagram": {
+        "id": "fog",
+        "variant": "radiation"
+      },
+      "options": [
+        "It will persist for days",
+        "It will clear by mid-morning as the land warms",
+        "It will thicken as the wind increases",
+        "It extends 50 miles to sea"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is typical of sea fog.",
+        "Correct: radiation fog burns off.",
+        "A rising wind usually lifts or disperses radiation fog.",
+        "Radiation fog rarely extends far offshore."
+      ],
+      "explanation": "Radiation fog forms over land at night and usually clears by mid-morning."
+    },
+    {
+      "id": "q.fog.4",
+      "kind": "single",
+      "prompt": "What usually clears advection fog at sea?",
+      "options": [
+        "Sunrise",
+        "An increase of wind to Force 4",
+        "A change of air mass, such as behind a cold front",
+        "The turn of the tide"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "The sun does not warm the sea surface enough.",
+        "Sea fog can persist in Force 5 to 6.",
+        "Correct.",
+        "Tide does not change the air."
+      ],
+      "explanation": "Only drier or warmer-relative air removes the cause; that usually means a front or a wind shift off the land."
+    },
+    {
+      "id": "q.fog.5",
+      "kind": "order",
+      "prompt": "Put these visibility terms in order from worst to best.",
+      "options": [
+        "Moderate",
+        "Good",
+        "Fog / very poor",
+        "Poor"
+      ],
+      "answers": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "explanation": "Fog/very poor (under 1,000 m), poor (1,000 m to 2 nm), moderate (2 to 5 nm), good (over 5 nm)."
+    },
+    {
+      "id": "q.fog.6",
+      "kind": "multi",
+      "prompt": "Fog is forecast for a passage across a busy shipping lane. Which actions are sound? Select all that apply.",
+      "options": [
+        "Fix position before visibility drops",
+        "Plan to cross the lane in fog to save time",
+        "Hoist a radar reflector and use radar and AIS",
+        "Post a dedicated lookout and listen",
+        "Consider delaying or re-routing into shallow water"
+      ],
+      "answers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Crossing a shipping lane blind is a major risk.",
+        "Correct.",
+        "Correct.",
+        "Correct: large ships cannot follow you into shallow water."
+      ],
+      "explanation": "Reduce exposure to shipping, maximise detectability and know your position."
+    },
+    {
+      "id": "q.fog.7",
+      "kind": "single",
+      "prompt": "Why does fog often form ahead of a warm front?",
+      "diagram": {
+        "id": "fog",
+        "variant": "frontal"
+      },
+      "options": [
+        "Rain from warm air evaporates into the cold air below and saturates it",
+        "The front cools the sea",
+        "The wind drops to calm",
+        "The barometer rises"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: frontal fog.",
+        "The sea does not cool quickly.",
+        "Wind is usually freshening ahead of a warm front.",
+        "Pressure falls ahead of a warm front."
+      ],
+      "explanation": "Moisture added by rain brings the cold air ahead of the front to saturation."
+    },
+    {
+      "id": "q.fog.8",
+      "kind": "single",
+      "prompt": "Relative humidity is 98% at 22:00 with a clear sky and a light breeze over land. What is likely by morning?",
+      "diagram": {
+        "id": "dewPoint"
+      },
+      "options": [
+        "Radiation fog",
+        "A sea breeze",
+        "Thunderstorms",
+        "Advection fog over the open sea"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: near-saturated air plus overnight cooling.",
+        "Sea breezes are daytime.",
+        "No instability is indicated.",
+        "This is cooling over land, not air moving over a cold sea."
+      ],
+      "explanation": "Clear skies allow radiative cooling; at 98% humidity only a small temperature fall reaches the dew point."
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "id": "planning",
+  "title": "Passage planning and heavy weather",
+  "summary": "Building a weather picture, choosing a window, ports of refuge, and heavy-weather preparation and tactics.",
+  "symbol": "sailboat",
+  "lessons": [
+    {
+      "id": "planning.window",
+      "title": "Choosing a weather window",
+      "segments": [
+        {
+          "heading": "Building the picture",
+          "paragraphs": [
+            "Start several days out: follow the synoptic and forecast charts to understand the pattern and how it is evolving. Closer to departure, add the official marine forecast, inshore forecasts, gale warnings and GRIB data from more than one model. Note where forecasts disagree; disagreement is a measure of uncertainty.",
+            "Then apply it to your boat and crew. What is the strongest likely wind including gusts, from which direction relative to your course and the tidal streams, for how long, and with what sea state at headlands and in the approach to your destination?"
+          ],
+          "keyPoints": [
+            "Follow the pattern for days, not just the latest forecast.",
+            "Model disagreement means uncertainty: add margin.",
+            "Translate wind and sea into conditions on your route."
+          ],
+          "diagram": {
+            "id": "passagePlan"
+          }
+        },
+        {
+          "heading": "Limits, timing and refuges",
+          "paragraphs": [
+            "Set personal limits for wind, sea and visibility before you read the forecast, and agree them with the crew. Time departure so that the passage ends in daylight and the worst of any front or wind shift is met in open water, not at a lee-shore harbour entrance.",
+            "List ports of refuge along the route, noting which are safe to enter in the forecast wind direction, at what states of tide, and in darkness. Remember that a forecast veer can turn a refuge into a dangerous entrance."
+          ],
+          "diagram": {
+            "id": "passagePlan",
+            "variant": "refuge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "planning.heavy",
+      "title": "Heavy-weather preparation and tactics",
+      "segments": [
+        {
+          "heading": "Before it arrives",
+          "paragraphs": [
+            "Reef early. Stow and secure everything below and on deck, close hatches and seacocks not in use, rig jackstays and ensure everyone wears lifejackets and harnesses on deck. Prepare hot food and drinks and simple snacks, set a watch rota that protects the crew from fatigue, and brief everyone on the plan and on seasickness management.",
+            "Fix your position and plan sea room: the greatest danger in heavy weather is usually the land, not the sea."
+          ],
+          "keyPoints": [
+            "Reef early and secure the boat.",
+            "Lifejackets, harnesses, jackstays.",
+            "Feed and rest the crew; keep sea room."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "8"
+          }
+        },
+        {
+          "heading": "Tactics",
+          "paragraphs": [
+            "Options include continuing under deeply reefed sail, heaving-to (backed headsail, eased main, helm lashed to windward) to rest the crew and ride the seas comfortably, running off under minimal sail with warps or a drogue to control speed, and in survival conditions a sea anchor from the bow.",
+            "The right choice depends on the boat, the crew, the sea room and the direction of the nearest danger. Steering at an angle to breaking crests, rather than square to them, reduces the risk of a knockdown. Whatever you choose, decide early while the crew still has energy."
+          ],
+          "diagram": {
+            "id": "heavyWeather"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.pl.1",
+      "kind": "single",
+      "prompt": "Three models disagree by 12 hours on when a front will arrive. What does this tell you?",
+      "options": [
+        "Use the most optimistic model",
+        "Forecast uncertainty is high; build in a margin or wait",
+        "Average them and leave on the average",
+        "Ignore models and use the barometer only"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Picking the best case is wishful thinking.",
+        "Correct.",
+        "An average hides the spread.",
+        "The barometer complements, not replaces, forecasts."
+      ],
+      "explanation": "Disagreement between models quantifies uncertainty. Plan for the earlier arrival or delay."
+    },
+    {
+      "id": "q.pl.2",
+      "kind": "single",
+      "prompt": "When should you set your personal wind limits for a passage?",
+      "options": [
+        "After reading the forecast",
+        "Before reading the forecast",
+        "Once at sea",
+        "Only if a gale is forecast"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That invites talking yourself into it.",
+        "Correct.",
+        "Too late.",
+        "Limits apply to all conditions."
+      ],
+      "explanation": "Fixed limits set in advance protect against optimistic reading of a marginal forecast."
+    },
+    {
+      "id": "q.pl.3",
+      "kind": "multi",
+      "prompt": "A gale is forecast in 8 hours and you are committed to the passage. Which preparations should you make now? Select all that apply.",
+      "options": [
+        "Reef before the wind rises",
+        "Prepare hot food and flasks",
+        "Open hatches for ventilation",
+        "Rig jackstays and wear harnesses",
+        "Plan to stay well offshore away from a lee shore"
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Correct.",
+        "Hatches must be closed and secured.",
+        "Correct.",
+        "Correct: sea room is safety."
+      ],
+      "explanation": "Prepare the boat, the crew and the plan before conditions deteriorate."
+    },
+    {
+      "id": "q.pl.4",
+      "kind": "single",
+      "prompt": "What is heaving-to?",
+      "options": [
+        "Running downwind under bare poles",
+        "Backed headsail, eased mainsail and helm lashed to windward so the boat lies quietly",
+        "Motoring into the wind at full power",
+        "Anchoring in deep water"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is running off.",
+        "Correct.",
+        "Not heaving-to.",
+        "Not heaving-to."
+      ],
+      "explanation": "Heaving-to stops the boat in a comfortable attitude, giving the crew a rest and time to deal with problems."
+    },
+    {
+      "id": "q.pl.5",
+      "kind": "scenario",
+      "context": "You plan a 60-mile passage along a south-facing coast. Forecast: 'West 4 to 5, increasing 6 to 7 later, veering north-west.' Your planned destination harbour has a bar entrance facing west, dangerous in strong westerlies and on the ebb. An alternative harbour, 40 miles along, faces south-east with an all-tide entrance.",
+      "prompt": "Make the plan.",
+      "explanation": "Avoid the exposed west-facing bar in a rising westerly; the south-east-facing harbour is sheltered from the forecast west to north-west wind.",
+      "steps": [
+        {
+          "id": "q.pl.5a",
+          "kind": "single",
+          "prompt": "Why is the planned destination a poor choice?",
+          "options": [
+            "The bar faces the rising westerly and may break on the ebb",
+            "It is too far",
+            "It has no fuel",
+            "Harbours are always dangerous at night"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct.",
+            "Distance is not the main issue.",
+            "Irrelevant to safety here.",
+            "Too general."
+          ],
+          "explanation": "A west-facing bar with a strong westerly and an ebb running out can break dangerously."
+        },
+        {
+          "id": "q.pl.5b",
+          "kind": "single",
+          "prompt": "Will the south-east-facing harbour stay sheltered after the veer to north-west?",
+          "options": [
+            "Yes: its entrance faces away from both westerly and north-westerly winds",
+            "No: the veer makes it a lee shore",
+            "Only at high water",
+            "Only in daylight"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct.",
+            "A north-westerly blows offshore at a south-east-facing entrance.",
+            "It is an all-tide entrance.",
+            "Not the deciding factor."
+          ],
+          "explanation": "An entrance facing south-east is in the lee of both west and north-west winds."
+        },
+        {
+          "id": "q.pl.5c",
+          "kind": "single",
+          "prompt": "What is the sound decision?",
+          "options": [
+            "Plan for the alternative harbour as the destination from the start",
+            "Head for the bar and decide on arrival",
+            "Delay until the gale is blowing to check its strength",
+            "Anchor off the bar"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: shorter, sheltered, all-tide.",
+            "Deciding at a breaking bar is too late.",
+            "Waiting into the gale reduces options.",
+            "An open anchorage off a lee bar is dangerous."
+          ],
+          "explanation": "Choose the destination that stays safe in the forecast's worst stage."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.6",
+      "kind": "single",
+      "prompt": "In heavy weather offshore, what is usually the greatest danger?",
+      "options": [
+        "The waves themselves",
+        "The land: a lee shore and loss of sea room",
+        "Running out of food",
+        "Cold"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Waves are a risk, but well-found boats cope with sea room.",
+        "Correct.",
+        "Manageable with preparation.",
+        "Manageable with clothing."
+      ],
+      "explanation": "Sea room is safety. Most heavy-weather losses involve the land."
+    },
+    {
+      "id": "q.pl.7",
+      "kind": "single",
+      "prompt": "Running off before large breaking seas, the boat is surfing dangerously fast. What helps?",
+      "options": [
+        "Hoisting more sail",
+        "Streaming warps or a drogue to slow her",
+        "Steering exactly square to every crest at full speed",
+        "Turning beam-on to the seas"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "More sail increases speed.",
+        "Correct.",
+        "Excess speed risks pitchpoling or broaching.",
+        "Beam-on risks a knockdown."
+      ],
+      "explanation": "Controlling speed with drag devices reduces the risk of broaching or pitchpoling."
+    },
+    {
+      "id": "q.pl.8",
+      "kind": "single",
+      "prompt": "Conditions are worse than forecast and the crew is tiring. What is the seamanlike response?",
+      "options": [
+        "Press on to the plan",
+        "Reassess: divert, heave-to or turn back as needed",
+        "Increase sail to arrive sooner",
+        "Wait for the next forecast before doing anything"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The plan was based on a forecast that is now wrong.",
+        "Correct.",
+        "More sail adds risk.",
+        "Act on what you see now."
+      ],
+      "explanation": "Changing plan in response to conditions is good seamanship."
+    }
+  ]
+}

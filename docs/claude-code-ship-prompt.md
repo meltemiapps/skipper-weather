@@ -1,20 +1,20 @@
 # Claude Code prompt: build, test and ship Skipper Weather Study Guide to TestFlight
 
-Paste everything below the line into Claude Code on the Mac mini, started in `/Volumes/P310-01/Developer` (or `~/Developer`, a symlink to it). Run it in auto mode.
+Paste everything below the line into Claude Code on the Mac mini, started in your home folder. Run it in auto mode.
 
 ---
 
-You are shipping the iOS/iPadOS app **Skipper Weather Study Guide** (home-screen name "Skipper Weather") to TestFlight. Work autonomously to the end. Do not stop to ask me questions unless a step below says so. Do not touch any other folder under `/Volumes/P310-01/Developer` except `skipper-weather`; you may READ (never modify) `aeolet` only to discover existing App Store Connect settings.
+You are shipping the iOS/iPadOS app **Skipper Weather Study Guide** (home-screen name "Skipper Weather") to TestFlight. Work autonomously to the end. Do not stop to ask me questions unless a step below says so. Do not touch any other project folder except `skipper-weather`; you may READ (never modify) `~/Developer/aeolet` only to discover existing App Store Connect settings.
 
 ## 0. Place the project
-1. Use the newest `skipper-weather-v1.0.zip` found in `~/Downloads` or `/Volumes/P310-01/Developer` (compare modified times). If `/Volumes/P310-01/Developer/skipper-weather` already exists, use it as is.
-2. Otherwise `cd /Volumes/P310-01/Developer && unzip -q <zip>`; then `cd skipper-weather && chmod +x scripts/*.sh tools/*.py`.
+1. Unzip `~/Downloads/skipper-weather-v1.0.zip` into `/Users/vangelis/Developer` (creates `/Users/vangelis/Developer/skipper-weather`). If that path is not writable (it may be a link to an unmounted SSD), use `/Users/vangelis/Projects` instead and say so at the end.
+2. `cd` into `skipper-weather` and run `chmod +x scripts/*.sh tools/*.py`.
 3. Confirm the README title reads "Skipper Weather Study Guide (unofficial)". If it still says "Skipper Weather — Unofficial Study Guide", apply the rename: README title, README release step name, PRIVACY.md and docs/*.html heading → "Skipper Weather Study Guide (unofficial)", docs/app-store-metadata.md Name → "Skipper Weather Study Guide". Commit.
 4. Read `CLAUDE.md` and follow its rules (project.yml is the project source; strings come from tools/strings.py; no RYA/course names outside the disclaimer).
 
 ## 1. Credentials (discover, don't ask)
 - API key: the `.p8` in `~/Keys` (`AuthKey_<KEYID>.p8`). KEYID comes from the filename. If there are several, prefer the one referenced by the `aeolet` project.
-- Issuer ID and Team ID: search read-only in `/Volumes/P310-01/Developer/aeolet` (fastlane/Appfile, .env*, scripts, workflow files, xcconfig, project.pbxproj `DEVELOPMENT_TEAM`), then `defaults read com.apple.dt.Xcode`, then `security find-identity -v -p codesigning` (team ID in the certificate name).
+- Issuer ID and Team ID: search read-only in `~/Developer/aeolet` (if present) (fastlane/Appfile, .env*, scripts, workflow files, xcconfig, project.pbxproj `DEVELOPMENT_TEAM`), then `defaults read com.apple.dt.Xcode`, then `security find-identity -v -p codesigning` (team ID in the certificate name).
 - Only if the Issuer ID genuinely cannot be found anywhere: stop and ask me for it in one line.
 - Export `ASC_KEY_ID`, `ASC_ISSUER_ID`, `DEVELOPMENT_TEAM` for later steps. Never print the key contents.
 

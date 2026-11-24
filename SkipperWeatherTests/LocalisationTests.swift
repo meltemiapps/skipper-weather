@@ -30,7 +30,7 @@ final class LocalisationTests: XCTestCase {
     func testContentLoadsForEveryLanguage() {
         for code in AppModel.supportedLanguages {
             let loaded = AppModel.loadContent(language: code)
-            XCTAssertEqual(loaded.content.modules.count, 8, code)
+            XCTAssertEqual(loaded.content.modules.count, 10, code)
         }
     }
 
@@ -58,5 +58,18 @@ final class LocalisationTests: XCTestCase {
         XCTAssertEqual(reloaded.bestScores["all"], 80)
         reloaded.resetProgress()
         XCTAssertEqual(reloaded.completedCount, 0)
+    }
+}
+
+/// Languages with translated lesson files must not fall back to English.
+@MainActor
+final class LayoutFitTests: XCTestCase {
+    func testTranslatedContentLanguagesHaveNoEnglishFallback() {
+        for code in ["en", "el", "es"] {
+            let loaded = AppModel.loadContent(language: code)
+            if code == "en" || Bundle.main.url(forResource: "content.\(code)", withExtension: "json") != nil {
+                XCTAssertFalse(loaded.isFallback, "\(code) should not fall back to English")
+            }
+        }
     }
 }

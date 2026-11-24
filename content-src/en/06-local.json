@@ -1,0 +1,296 @@
+{
+  "id": "local",
+  "title": "Local, coastal and regional winds",
+  "summary": "Sea and land breezes, katabatic and anabatic winds, funnelling, coastal convergence, and the Meltemi, Bora, Mistral and Sirocco.",
+  "symbol": "sun.haze",
+  "lessons": [
+    {
+      "id": "local.thermal",
+      "title": "Thermal winds",
+      "segments": [
+        {
+          "heading": "Sea breeze",
+          "paragraphs": [
+            "On a sunny day the land heats faster than the sea. Air rises over the land, pressure falls slightly at low level, and cooler air flows in from the sea. A return flow aloft completes the loop, and cumulus often marks the rising air inland.",
+            "The sea breeze usually sets in late morning, peaks mid-afternoon at Force 3 to 4 (stronger on hot coasts), extends perhaps 10 miles offshore and dies at dusk. In the Northern Hemisphere it veers through the afternoon. It needs a land–sea temperature difference and a light gradient: an offshore gradient wind above roughly 15 knots usually prevents it, while an onshore gradient adds to it."
+          ],
+          "keyPoints": [
+            "Sets in late morning, peaks mid-afternoon, dies at dusk.",
+            "Veers through the day (Northern Hemisphere).",
+            "Blocked by an offshore gradient above about 15 knots."
+          ],
+          "diagram": {
+            "id": "thermal",
+            "variant": "seaBreeze"
+          }
+        },
+        {
+          "heading": "Land breeze, katabatic and anabatic winds",
+          "paragraphs": [
+            "At night the land cools faster than the sea and a light offshore land breeze, usually Force 2 to 3, may develop, extending only a few miles out.",
+            "Where cold air drains down slopes and valleys, a katabatic wind forms. Off mountainous coasts, fjords and steep islands it can be strong and sudden, especially near valley mouths around dawn. Anabatic winds are the gentle daytime upslope counterpart."
+          ],
+          "diagram": {
+            "id": "thermal",
+            "variant": "katabatic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local.topography",
+      "title": "Coastal and topographic effects",
+      "segments": [
+        {
+          "heading": "Funnelling and corners",
+          "paragraphs": [
+            "Wind squeezed between high islands, along straits or down valleys accelerates: the venturi or funnelling effect. Wind can be a full Beaufort force or more stronger in the gap than outside it. Headlands create acceleration zones at their tips and confused seas where the flow meets tidal streams.",
+            "In the lee of high ground, expect strong, unpredictable gusts falling down the slopes and sudden changes of direction, even when the open-water wind is moderate."
+          ],
+          "diagram": {
+            "id": "venturi"
+          }
+        },
+        {
+          "heading": "Coastal convergence and divergence",
+          "paragraphs": [
+            "Friction backs the wind more over land than over sea. When the wind blows along a coast, this difference makes the flows converge or diverge.",
+            "In the Northern Hemisphere, stand with your back to the wind: if the land is on your right, the flows converge, giving stronger wind and often more cloud and rain along the coast. If the land is on your left, they diverge and the coastal wind is lighter."
+          ],
+          "keyPoints": [
+            "Back to the wind, land on the right: convergence, stronger wind.",
+            "Land on the left: divergence, lighter wind."
+          ],
+          "diagram": {
+            "id": "coastalConvergence"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local.med",
+      "title": "Mediterranean regional winds",
+      "segments": [
+        {
+          "heading": "Meltemi and Mistral",
+          "paragraphs": [
+            "The Meltemi (Etesian) blows from the north over the Aegean from May to September, peaking in July and August. It is driven by high pressure over the Balkans and a thermal low over Turkey and the Middle East. It is often Force 5 to 7, strongest in the afternoon, can reach gale force, can last for days, and is strongly funnelled between the Cyclades. It may set in with clear skies and little warning.",
+            "The Mistral is a cold, dry north to north-westerly funnelled down the Rhône valley into the Gulf of Lion, typically when high pressure lies over the Bay of Biscay and low pressure over the Gulf of Genoa. It frequently reaches Force 7 to 9, with a short, steep sea, and can extend to Corsica and Sardinia."
+          ],
+          "diagram": {
+            "id": "medWinds"
+          }
+        },
+        {
+          "heading": "Bora and Sirocco",
+          "paragraphs": [
+            "The Bora is a cold north-easterly fall wind on the eastern Adriatic, pouring over the coastal mountains of Croatia and Montenegro. Mainly a winter wind, it can arrive within minutes, with violent gusts that may exceed 80 knots in places such as the Velebit Channel. Low cloud caps on the mountains are a warning.",
+            "The Sirocco (Jugo in the Adriatic) is a warm southerly to south-easterly from North Africa, often blowing ahead of depressions moving east across the Mediterranean. It picks up moisture over the sea, bringing low cloud, rain, dust and poor visibility, and builds a long, heavy sea on coasts exposed to the south."
+          ],
+          "keyPoints": [
+            "Meltemi: summer northerly, Aegean, Force 5–7, afternoon peak.",
+            "Mistral: cold N–NW, Gulf of Lion, often Force 7–9.",
+            "Bora: cold NE fall wind, Adriatic, sudden violent gusts.",
+            "Sirocco: warm S–SE, humid, dust, poor visibility, heavy sea."
+          ],
+          "diagram": {
+            "id": "medWinds",
+            "variant": "boraSirocco"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.loc.1",
+      "kind": "single",
+      "prompt": "The forecast gradient wind is north-easterly 18 knots, blowing offshore on a south-facing coast. Will a sea breeze develop this afternoon?",
+      "diagram": {
+        "id": "thermal",
+        "variant": "seaBreeze"
+      },
+      "options": [
+        "Yes, it will reinforce the gradient",
+        "Probably not; the offshore gradient is too strong",
+        "Yes, but only after dark",
+        "It depends only on the tide"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "A sea breeze blows onshore, against this gradient.",
+        "Correct: an offshore gradient above roughly 15 knots usually suppresses it.",
+        "Sea breezes are daytime winds.",
+        "Tide is irrelevant to sea-breeze formation."
+      ],
+      "explanation": "Sea breezes need a light gradient. A strong offshore gradient wind overwhelms the thermal circulation."
+    },
+    {
+      "id": "q.loc.2",
+      "kind": "single",
+      "context": "Northern Hemisphere. A westerly wind blows along a coast that runs east–west, with the land to the south.",
+      "prompt": "With your back to the wind, the land is on your right. What does this mean for the coastal wind?",
+      "diagram": {
+        "id": "coastalConvergence"
+      },
+      "options": [
+        "Divergence and lighter wind",
+        "Convergence and stronger wind",
+        "No effect",
+        "Wind will reverse"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is the land-on-the-left case.",
+        "Correct.",
+        "Friction differences always have some effect.",
+        "No reversal results."
+      ],
+      "explanation": "Back to a westerly you face east; land to the south is on your right. The more-backed land flow turns towards the sea flow: convergence."
+    },
+    {
+      "id": "q.loc.3",
+      "kind": "single",
+      "prompt": "Planning a July passage across the Cyclades northbound under sail, what is the best tactic for the Meltemi?",
+      "diagram": {
+        "id": "medWinds"
+      },
+      "options": [
+        "Sail in the afternoon when it is strongest",
+        "Make northing early in the morning when it is lightest",
+        "Ignore it; it rarely exceeds Force 3",
+        "Expect it from the south"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "It peaks in the afternoon: the worst time to beat into it.",
+        "Correct.",
+        "It is often Force 5–7 and can reach gale force.",
+        "It blows from the north."
+      ],
+      "explanation": "The Meltemi is usually lighter at night and early morning and peaks mid-afternoon; plan windward legs early."
+    },
+    {
+      "id": "q.loc.4",
+      "kind": "single",
+      "prompt": "Anchored under the coastal mountains of Croatia in winter, you notice a cap of cloud forming on the ridges and the air turning colder. What should you expect?",
+      "options": [
+        "A Sirocco with rain",
+        "A Bora with sudden violent north-easterly gusts",
+        "A sea breeze",
+        "A Meltemi"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The Sirocco is warm and from the south-east.",
+        "Correct: the cloud cap is a classic Bora sign.",
+        "Sea breezes are summer, daytime and onshore.",
+        "The Meltemi is an Aegean summer wind."
+      ],
+      "explanation": "Cloud caps on the coastal ridges and falling temperature warn of a Bora; secure the boat for violent offshore gusts."
+    },
+    {
+      "id": "q.loc.5",
+      "kind": "multi",
+      "prompt": "Which statements about the Sirocco are correct? Select all that apply.",
+      "options": [
+        "It blows from the south or south-east",
+        "It is cold and dry",
+        "It can carry Saharan dust and reduce visibility",
+        "It often blows ahead of depressions moving east",
+        "It only occurs in the Aegean"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "It is warm and becomes humid over the sea.",
+        "Correct.",
+        "Correct.",
+        "It affects much of the central and eastern Mediterranean, including the Adriatic as Jugo."
+      ],
+      "explanation": "Sirocco: warm, moist after crossing the sea, dusty, poor visibility, building a heavy southerly sea."
+    },
+    {
+      "id": "q.loc.6",
+      "kind": "single",
+      "prompt": "Why does the wind often increase sharply in a channel between two high islands?",
+      "diagram": {
+        "id": "venturi"
+      },
+      "options": [
+        "Coriolis is stronger there",
+        "Funnelling accelerates the flow through the gap",
+        "The tide pushes the air",
+        "Pressure is always lower between islands"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Coriolis does not change locally like this.",
+        "Correct: the venturi effect.",
+        "Tide does not move the air.",
+        "Not a general rule."
+      ],
+      "explanation": "Air forced through a narrowing gap speeds up; expect a force or more extra wind and stronger gusts."
+    },
+    {
+      "id": "q.loc.7",
+      "kind": "single",
+      "prompt": "At what time is a katabatic wind most likely to be strongest off a steep valley mouth?",
+      "diagram": {
+        "id": "thermal",
+        "variant": "katabatic"
+      },
+      "options": [
+        "Mid-afternoon",
+        "Late night to around dawn",
+        "Noon",
+        "It is constant all day"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Afternoon heating gives anabatic and sea-breeze flows.",
+        "Correct: cold air has drained all night.",
+        "Midday heating works against it.",
+        "It is a night-time effect."
+      ],
+      "explanation": "Katabatic flow builds through the night as slopes cool, peaking towards dawn."
+    },
+    {
+      "id": "q.loc.8",
+      "kind": "single",
+      "prompt": "Which synoptic pattern typically produces a Mistral?",
+      "options": [
+        "High over the Bay of Biscay and low over the Gulf of Genoa",
+        "Low over Spain and high over Italy",
+        "High over Turkey",
+        "A col over France"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: a strong northerly gradient down the Rhône valley.",
+        "That would give southerlies.",
+        "That pattern relates to the eastern Mediterranean.",
+        "A col gives light winds."
+      ],
+      "explanation": "High pressure to the west and a Genoa low create a strong northerly flow funnelled down the Rhône."
+    }
+  ]
+}

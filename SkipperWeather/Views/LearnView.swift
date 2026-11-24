@@ -33,6 +33,16 @@ struct LearnView: View {
                         .buttonStyle(.plain)
                     }
 
+                    NavigationLink {
+                        GlossaryView()
+                    } label: {
+                        Label(t("learn.glossary"), systemImage: "character.book.closed")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .glassCard()
+                    }
+                    .buttonStyle(.plain)
+
                     Text(t("learn.modules")).font(.title3.bold()).padding(.top, 6)
 
                     ForEach(model.content.modules) { module in
@@ -127,37 +137,15 @@ struct LessonView: View {
         let t = model.strings
         if let lesson = model.lesson(id: lessonID) {
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 18) {
                     if model.contentIsFallback {
                         Label(t("lesson.englishOnly"), systemImage: "globe")
                             .font(.footnote)
                             .glassCard(cornerRadius: 16, tint: Palette.amber)
                     }
 
-                    if let diagram = lesson.diagram {
-                        DiagramView(id: diagram)
-                            .frame(height: 220)
-                            .glassCard()
-                            .accessibilityLabel(lesson.title)
-                    }
-
-                    ForEach(Array(lesson.paragraphs.enumerated()), id: \.offset) { _, paragraph in
-                        Text(paragraph).font(.body).lineSpacing(3)
-                    }
-
-                    if !lesson.keyPoints.isEmpty {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text(t("lesson.keyPoints"))
-                                .font(.caption.weight(.bold)).textCase(.uppercase).foregroundStyle(Palette.accent)
-                            ForEach(lesson.keyPoints, id: \.self) { point in
-                                Label {
-                                    Text(point)
-                                } icon: {
-                                    Image(systemName: "checkmark").foregroundStyle(Palette.good)
-                                }
-                            }
-                        }
-                        .glassCard(tint: Palette.accent)
+                    ForEach(Array(lesson.segments.enumerated()), id: \.offset) { _, segment in
+                        SegmentView(segment: segment)
                     }
 
                     Button {
@@ -178,5 +166,65 @@ struct LessonView: View {
             .navigationTitle(lesson.title)
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+}
+
+struct SegmentView: View {
+    @Environment(AppModel.self) private var model
+    let segment: Segment
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(segment.heading)
+                .font(.title3.bold())
+                .fixedSize(horizontal: false, vertical: true)
+            if let d = segment.diagram {
+                DiagramView(ref: d)
+                    .glassCard()
+            }
+            ForEach(Array(segment.paragraphs.enumerated()), id: \.offset) { _, paragraph in
+                Text(paragraph)
+                    .font(.body)
+                    .lineSpacing(3)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            if let points = segment.keyPoints, !points.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(model.strings("lesson.keyPoints"))
+                        .font(.caption.weight(.bold)).textCase(.uppercase).foregroundStyle(Palette.accent)
+                    ForEach(points, id: \.self) { point in
+                        Label {
+                            Text(point).fixedSize(horizontal: false, vertical: true)
+                        } icon: {
+                            Image(systemName: "checkmark").foregroundStyle(Palette.good)
+                        }
+                    }
+                }
+                .glassCard(tint: Palette.accent)
+            }
+        }
+    }
+}
+
+struct GlossaryView: View {
+    @Environment(AppModel.self) private var model
+    @State private var query = ""
+
+    var body: some View {
+        let entries = model.content.glossary.filter {
+            query.isEmpty || $0.term.localizedCaseInsensitiveContains(query) || $0.definition.localizedCaseInsensitiveContains(query)
+        }
+        List(entries) { entry in
+            VStack(alignment: .leading, spacing: 4) {
+                Text(entry.term).font(.headline)
+                Text(entry.definition).font(.subheadline).foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .listRowBackground(Color.clear)
+        }
+        .scrollContentBackground(.hidden)
+        .background(SeaBackground())
+        .searchable(text: $query)
+        .navigationTitle(model.strings("learn.glossary"))
     }
 }

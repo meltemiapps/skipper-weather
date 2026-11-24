@@ -1,0 +1,260 @@
+{
+  "id": "systems",
+  "title": "Depressions, anticyclones and other features",
+  "summary": "How depressions are born, grow, occlude and fill; how highs behave; and what troughs, ridges and cols bring.",
+  "symbol": "hurricane",
+  "lessons": [
+    {
+      "id": "systems.lifecycle",
+      "title": "Life cycle of a depression",
+      "segments": [
+        {
+          "heading": "Birth on the polar front",
+          "paragraphs": [
+            "A mid-latitude depression starts as a small wave on the polar front, where cold polar air lies alongside warm subtropical air. Pressure falls at the crest of the wave and the air begins to circulate anticlockwise.",
+            "Warm air pushes north-east as a warm front, leaving a wedge of warm air, the warm sector. Cold air sweeps in behind as a cold front. This is the open-wave stage, when the system is usually deepening and moving fastest."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "wave"
+          }
+        },
+        {
+          "heading": "Mature stage and movement",
+          "paragraphs": [
+            "A mature depression in the Atlantic typically moves east or north-east at 20 to 30 knots, steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
+            "A depression that deepens by 24 hPa or more in 24 hours is said to be undergoing explosive deepening. Expect severe gales and very rapid pressure falls."
+          ],
+          "keyPoints": [
+            "Typical speed 20–30 knots, moving east or north-east.",
+            "Direction follows warm-sector isobars.",
+            "Watch for secondary lows on trailing cold fronts."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "mature"
+          }
+        },
+        {
+          "heading": "Occlusion and decay",
+          "paragraphs": [
+            "Cold fronts move faster than warm fronts. When the cold front catches the warm front, the warm sector is lifted off the surface and an occluded front forms, spiralling into the centre.",
+            "Once occluded, the depression usually slows and begins to fill as pressure rises at its centre. Winds ease but can remain strong for some time, and the occlusion itself brings a band of cloud and rain."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "occluded"
+          }
+        }
+      ]
+    },
+    {
+      "id": "systems.highs",
+      "title": "Anticyclones",
+      "segments": [
+        {
+          "heading": "Settled but not always benign",
+          "paragraphs": [
+            "Air in an anticyclone sinks and warms, suppressing cloud. Highs bring light winds and settled weather and move slowly, sometimes blocking the westerly track of depressions for days.",
+            "Sinking air creates a temperature inversion. In winter, moisture trapped beneath it gives extensive low cloud ('anticyclonic gloom') or fog; in summer, haze and sea breezes. Winds can be strong on the edge of a high where its gradient meets a neighbouring low."
+          ],
+          "keyPoints": [
+            "Sinking air: inversion, little cloud, light winds.",
+            "Winter: fog and gloom. Summer: haze and sea breezes.",
+            "Strong winds possible on the edges."
+          ],
+          "diagram": {
+            "id": "stability",
+            "variant": "inversion"
+          }
+        }
+      ]
+    },
+    {
+      "id": "systems.features",
+      "title": "Troughs, ridges and cols",
+      "segments": [
+        {
+          "heading": "Reading the shapes",
+          "paragraphs": [
+            "A trough is an extension of low pressure. As it passes, expect a band of cloud, showers or squalls, a fall then rise in pressure and a veer in the wind, much like a weak cold front.",
+            "A ridge is an extension of high pressure between two depressions. It brings a short fine spell with lighter winds, often followed quickly by the next depression's cloud.",
+            "A col is the slack region between two highs and two lows. Winds are light and variable; expect fog in autumn and winter and thunderstorms in summer. Forecasts are less reliable in cols because small changes in the pattern alter the wind."
+          ],
+          "diagram": {
+            "id": "pressureFeatures"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.sys.1",
+      "kind": "order",
+      "prompt": "Put the stages of a polar-front depression in order.",
+      "options": [
+        "Occlusion forms",
+        "Wave forms on the polar front",
+        "Depression fills and decays",
+        "Open warm sector with warm and cold fronts"
+      ],
+      "answers": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Wave, open warm sector, occlusion as the cold front catches the warm front, then filling and decay."
+    },
+    {
+      "id": "q.sys.2",
+      "kind": "single",
+      "prompt": "Which feature most often catches skippers out with unexpected gales?",
+      "options": [
+        "A col",
+        "A secondary depression on a trailing cold front",
+        "A ridge of high pressure",
+        "A stationary anticyclone"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Cols have light, variable winds.",
+        "Correct: small secondaries can deepen quickly and are hard to forecast.",
+        "Ridges bring a brief fine spell.",
+        "A stationary high brings light winds except on its edges."
+      ],
+      "explanation": "Secondary lows form on trailing fronts, often move fast and can deepen rapidly; always check the latest forecast for them."
+    },
+    {
+      "id": "q.sys.3",
+      "kind": "single",
+      "prompt": "In which direction is a mature depression most likely to move?",
+      "diagram": {
+        "id": "depression",
+        "variant": "mature"
+      },
+      "options": [
+        "Parallel to the isobars in the warm sector",
+        "Directly towards the nearest high",
+        "Westward, against the prevailing flow",
+        "Perpendicular to the cold front, towards the warm air"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: the warm-sector isobars are a good guide to the track.",
+        "Depressions do not move towards highs.",
+        "Mid-latitude lows usually move east or north-east.",
+        "That is not a reliable rule."
+      ],
+      "explanation": "Depressions are steered by the upper flow; the warm-sector isobars give a practical indication of direction."
+    },
+    {
+      "id": "q.sys.4",
+      "kind": "multi",
+      "prompt": "A large winter anticyclone is centred over the North Sea. Which conditions are likely? Select all that apply.",
+      "options": [
+        "Light winds near the centre",
+        "Fog or extensive low cloud",
+        "Frequent heavy showers",
+        "A temperature inversion",
+        "Rapidly falling pressure"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Correct: moisture trapped under the inversion.",
+        "Sinking air suppresses showers.",
+        "Correct: sinking air warms aloft.",
+        "Highs are usually slow-moving with steady pressure."
+      ],
+      "explanation": "Winter highs bring light winds, an inversion and often fog or 'anticyclonic gloom'."
+    },
+    {
+      "id": "q.sys.5",
+      "kind": "single",
+      "prompt": "As a trough passes, what change in wind should you expect?",
+      "options": [
+        "A veer, often with squally showers",
+        "A back with steady rain",
+        "A gradual decrease to calm",
+        "No change in direction"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: troughs behave like weak cold fronts.",
+        "Backing and steady rain go with approaching warm fronts.",
+        "Troughs often bring a temporary increase.",
+        "Direction usually changes."
+      ],
+      "explanation": "A trough brings a band of showers or squalls, a pressure fall then rise, and a veer."
+    },
+    {
+      "id": "q.sys.6",
+      "kind": "numeric",
+      "prompt": "A depression's central pressure falls from 1000 hPa to 972 hPa in 24 hours. By how many hPa has it deepened?",
+      "numeric": {
+        "value": 28,
+        "tolerance": 0,
+        "unit": "hPa"
+      },
+      "explanation": "1000 minus 972 is 28 hPa in 24 hours, more than the 24 hPa threshold for explosive deepening: expect severe gales."
+    },
+    {
+      "id": "q.sys.7",
+      "kind": "single",
+      "prompt": "Why are forecasts for an area under a col less reliable?",
+      "options": [
+        "Cols always contain thunderstorms",
+        "Small shifts in the surrounding systems change the slack wind field markedly",
+        "Coriolis is zero in a col",
+        "Barometers do not work in a col"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Thunderstorms are possible, not certain.",
+        "Correct: weak gradients make wind direction and timing sensitive.",
+        "Coriolis depends on latitude, not on the pattern.",
+        "Barometers work everywhere."
+      ],
+      "explanation": "With weak gradients, local effects dominate and small pattern changes alter wind and weather significantly."
+    },
+    {
+      "id": "q.sys.8",
+      "kind": "single",
+      "prompt": "What happens to the warm sector when a depression occludes?",
+      "diagram": {
+        "id": "depression",
+        "variant": "occluded"
+      },
+      "options": [
+        "It expands",
+        "It is lifted off the surface",
+        "It turns into a cold front",
+        "It moves ahead of the warm front"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "It shrinks and disappears at the surface.",
+        "Correct: the cold front catches up and lifts it.",
+        "The fronts merge into an occlusion.",
+        "It cannot overtake the front that bounds it."
+      ],
+      "explanation": "The faster cold front catches the warm front, lifting the warm air aloft and forming an occluded front."
+    }
+  ]
+}

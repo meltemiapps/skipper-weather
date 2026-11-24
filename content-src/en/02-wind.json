@@ -1,0 +1,329 @@
+{
+  "id": "wind",
+  "title": "Wind: Coriolis, friction and Buys Ballot",
+  "summary": "Why wind blows along the isobars, how friction changes it at the surface, and how to locate a low from the wind you feel.",
+  "symbol": "wind",
+  "lessons": [
+    {
+      "id": "wind.global",
+      "title": "Global circulation and Coriolis",
+      "segments": [
+        {
+          "heading": "The global pattern",
+          "paragraphs": [
+            "Uneven heating drives the global circulation. Warm air rises near the equator and sinks in the subtropical high-pressure belts around 30° north and south, the home of the trade winds and of anticyclones such as the Azores High.",
+            "Between about 40° and 60° the prevailing westerlies carry a procession of depressions along the polar front, where cold polar air meets warm subtropical air. This is the weather machine of north-west Europe."
+          ],
+          "diagram": {
+            "id": "globalCirculation"
+          }
+        },
+        {
+          "heading": "The Coriolis effect",
+          "paragraphs": [
+            "Because the Earth rotates beneath it, moving air appears to be deflected: to the right in the Northern Hemisphere and to the left in the Southern Hemisphere. The effect is zero at the equator and greatest at the poles, and it grows with wind speed.",
+            "As air starts to move from high towards low pressure, Coriolis turns it until the two forces balance and the wind blows along the isobars. This balanced wind is the geostrophic wind. Around a Northern Hemisphere low the result is an anticlockwise circulation; around a high, clockwise."
+          ],
+          "keyPoints": [
+            "Deflection is to the right in the Northern Hemisphere.",
+            "Zero at the equator, maximum at the poles.",
+            "Lows anticlockwise, highs clockwise (Northern Hemisphere)."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "geostrophic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wind.surface",
+      "title": "Surface wind and friction",
+      "segments": [
+        {
+          "heading": "Friction near the surface",
+          "paragraphs": [
+            "Within the lowest kilometre or so, friction slows the wind. A slower wind has less Coriolis deflection, so the pressure gradient wins slightly and the wind crosses the isobars inwards towards low pressure.",
+            "Over the sea the surface wind is typically backed about 10° to 15° from the isobars and runs at roughly two-thirds to four-fifths of the geostrophic speed. Over land it is backed about 30° and may be only half the geostrophic speed, but it is gustier."
+          ],
+          "keyPoints": [
+            "Over sea: backed 10–15°, about 70–80% of geostrophic speed.",
+            "Over land: backed about 30°, about 50%, gustier.",
+            "Surface wind always crosses isobars towards the low."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "surface"
+          }
+        },
+        {
+          "heading": "Curvature: lows and highs",
+          "paragraphs": [
+            "Around curved isobars the balance includes the curvature. For the same spacing, wind around a low is lighter than the straight-isobar value, and wind around a high is stronger. In practice highs usually have widely spaced isobars and light winds, but a tight gradient on the edge of a high can still blow hard.",
+            "Instability matters too. In cold, unstable air, strong wind from aloft is mixed down to the surface in gusts; in stable air the surface wind can be much lighter than the gradient suggests."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "curvature"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wind.buysballot",
+      "title": "Buys Ballot's law in practice",
+      "segments": [
+        {
+          "heading": "Finding the low",
+          "paragraphs": [
+            "Buys Ballot's law: in the Northern Hemisphere, stand with your back to the true wind and low pressure is on your left. In the Southern Hemisphere it is on your right.",
+            "Because the surface wind is backed by friction, refine it: at sea, turn about 15° to your right after putting your back to the wind (30° over land); the low then lies at 90° on your left. For a south-westerly wind at sea, face 045°, turn to 060°, and the low bears roughly 330°."
+          ],
+          "keyPoints": [
+            "Back to the wind: low on your left (Northern Hemisphere).",
+            "Correct for friction: turn 15° right at sea, 30° over land.",
+            "Track the low's bearing over time to see where it is going."
+          ],
+          "diagram": {
+            "id": "buysBallot"
+          }
+        },
+        {
+          "heading": "Which way will the wind shift?",
+          "paragraphs": [
+            "If a depression's centre passes to the north of you (the usual case in the UK), the wind backs as it approaches and then veers as the fronts pass. If the centre passes to the south of you, the wind backs steadily through the whole passage, for example from east through north-east to north.",
+            "Repeated Buys Ballot bearings tell you which case you are in: a low bearing that moves from west through north means the centre is passing north of you."
+          ],
+          "keyPoints": [
+            "Centre passes north: back, then veer.",
+            "Centre passes south: continuous backing."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "tracks"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.wind.1",
+      "kind": "numeric",
+      "context": "You are at sea in the Northern Hemisphere. The true wind is from 225° (south-west).",
+      "prompt": "Using Buys Ballot's law with a 15° friction correction, what is the approximate bearing of the low-pressure centre, in degrees true?",
+      "diagram": {
+        "id": "buysBallot"
+      },
+      "numeric": {
+        "value": 330,
+        "tolerance": 15,
+        "unit": "°"
+      },
+      "explanation": "Back to the wind you face 045°. Turn 15° right to 060°. The low is 90° to your left: 060° minus 90° is 330°."
+    },
+    {
+      "id": "q.wind.2",
+      "kind": "single",
+      "prompt": "The isobars over the sea run east–west with low pressure to the north. What is the most likely surface wind direction?",
+      "options": [
+        "270° (west)",
+        "255° (west-south-west)",
+        "285° (west-north-west)",
+        "180° (south)"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is the geostrophic direction, along the isobars, above the friction layer.",
+        "Correct: backed about 15° from the westerly geostrophic wind.",
+        "That is veered, the wrong way.",
+        "Far too much backing for open sea."
+      ],
+      "explanation": "Geostrophic wind is westerly with the low to the north. Surface friction over the sea backs it 10–15°, so about 255°."
+    },
+    {
+      "id": "q.wind.3",
+      "kind": "single",
+      "prompt": "The geostrophic scale gives 30 knots. What mean surface wind would you expect over open sea?",
+      "options": [
+        "About 10 knots",
+        "About 22 knots",
+        "About 30 knots",
+        "About 40 knots"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Too much reduction for open sea.",
+        "Correct: roughly 70–80% of the geostrophic speed.",
+        "Friction always reduces the surface wind.",
+        "Surface wind is not stronger than geostrophic in straight isobars."
+      ],
+      "explanation": "Over the sea, surface wind is typically two-thirds to four-fifths of geostrophic: about 20–24 knots here, with gusts above that."
+    },
+    {
+      "id": "q.wind.4",
+      "kind": "single",
+      "context": "Over 12 hours on passage the wind goes south-east, then east, then north-east, then north, with no sharp shifts.",
+      "prompt": "Where did the depression centre pass?",
+      "options": [
+        "To your north",
+        "To your south",
+        "Directly overhead",
+        "It was an anticyclone, not a depression"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "A centre passing north gives backing then veering.",
+        "Correct: steady backing means the centre passed to your south.",
+        "A centre overhead gives a lull and then a sudden reversal.",
+        "Anticyclones do not produce this sequence with strengthening wind."
+      ],
+      "explanation": "In the Northern Hemisphere, a low passing south of the observer gives continuous backing; passing north gives backing followed by veering at the fronts."
+    },
+    {
+      "id": "q.wind.5",
+      "kind": "multi",
+      "prompt": "Which statements about the Coriolis effect are true? Select all that apply.",
+      "options": [
+        "It deflects moving air to the right in the Northern Hemisphere",
+        "It is strongest at the equator",
+        "It increases with wind speed",
+        "It is the cause of the wind",
+        "It is zero at the equator"
+      ],
+      "answers": [
+        0,
+        2,
+        4
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "It is zero at the equator and strongest at the poles.",
+        "Correct: faster air is deflected more.",
+        "Pressure gradient causes the wind; Coriolis only deflects it.",
+        "Correct."
+      ],
+      "explanation": "Coriolis deflects but does not drive the wind. It depends on latitude and speed, vanishing at the equator."
+    },
+    {
+      "id": "q.wind.6",
+      "kind": "single",
+      "prompt": "A sea breeze and a land breeze aside, why is the wind over land usually gustier than over the sea in the same weather pattern?",
+      "options": [
+        "Land is always warmer",
+        "Rough surfaces create turbulence that mixes faster air down in bursts",
+        "Coriolis is stronger over land",
+        "Pressure gradients are steeper over land"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Not always, and warmth alone is not the cause.",
+        "Correct: friction and turbulence produce gusts and lulls.",
+        "Coriolis does not depend on the surface.",
+        "Gradients are set by the pressure pattern, not the surface."
+      ],
+      "explanation": "Surface roughness creates turbulence. Mean wind drops, but eddies bring down faster air from aloft as gusts."
+    },
+    {
+      "id": "q.wind.7",
+      "kind": "scenario",
+      "context": "Mid-Channel, 50°N. At 08:00 the wind is SSW Force 5 and the barometer reads 1004 hPa, falling 3 hPa in the last three hours. By 11:00 the wind is S Force 6, the barometer 999 hPa.",
+      "prompt": "Work through the situation.",
+      "explanation": "The backing, strengthening wind with a steady fall shows a depression approaching from the west, centre likely to pass north.",
+      "steps": [
+        {
+          "id": "q.wind.7a",
+          "kind": "single",
+          "prompt": "What has the wind done between 08:00 and 11:00?",
+          "options": [
+            "Veered and increased",
+            "Backed and increased",
+            "Veered and decreased",
+            "Backed and decreased"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "SSW to S is anticlockwise.",
+            "Correct: anticlockwise shift and stronger.",
+            "Neither is true.",
+            "It has strengthened."
+          ],
+          "explanation": "SSW to S is an anticlockwise change, so the wind has backed, and Force 5 to 6 is an increase."
+        },
+        {
+          "id": "q.wind.7b",
+          "kind": "single",
+          "prompt": "At 11:00, with your back to the southerly wind and a 15° correction, roughly where is the low?",
+          "options": [
+            "North-east",
+            "North-west to west",
+            "South-east",
+            "Due south"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "That would need a north-westerly wind.",
+            "Correct: face 000°, turn to 015°, low on left at about 285°.",
+            "The low is never behind you to the right.",
+            "The wind would not be blowing from the low."
+          ],
+          "explanation": "Facing 000°, turning 15° right to 015°, the low lies about 90° left: roughly 285°, west-north-west."
+        },
+        {
+          "id": "q.wind.7c",
+          "kind": "single",
+          "prompt": "What wind change should you plan for when the warm front passes?",
+          "options": [
+            "A veer, typically to south-west",
+            "A further sharp back to east",
+            "A sudden calm",
+            "A back to north-west"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: the wind veers at the warm front, typically into the south-west.",
+            "Backing continues ahead of the front, not at it.",
+            "There is no calm at a warm front.",
+            "North-west would be a veer, and usually comes after the cold front."
+          ],
+          "explanation": "With the centre passing north, the wind veers as each front passes: to south-west at the warm front, and to west or north-west at the cold front."
+        }
+      ]
+    },
+    {
+      "id": "q.wind.8",
+      "kind": "single",
+      "prompt": "In the Southern Hemisphere, with your back to the wind, where is low pressure?",
+      "options": [
+        "On your left",
+        "On your right",
+        "Ahead",
+        "Behind"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "That is the Northern Hemisphere rule.",
+        "Correct: deflection is to the left, so the low is on your right.",
+        "Not ahead.",
+        "Not behind."
+      ],
+      "explanation": "Coriolis deflects to the left in the Southern Hemisphere, reversing the rule and the circulation direction."
+    }
+  ]
+}

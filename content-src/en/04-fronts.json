@@ -1,0 +1,325 @@
+{
+  "id": "fronts",
+  "title": "Fronts: before, during and after",
+  "summary": "Cloud sequences, wind shifts, pressure, visibility and rain at warm, cold and occluded fronts.",
+  "symbol": "cloud.rain",
+  "lessons": [
+    {
+      "id": "fronts.warm",
+      "title": "The warm front",
+      "segments": [
+        {
+          "heading": "Approach",
+          "paragraphs": [
+            "Warm air rides slowly up over the cold air ahead on a shallow slope, about 1 in 150. Its cloud therefore arrives long before the surface front: cirrus may appear several hundred miles ahead, typically 12 to 24 hours before the front.",
+            "The cloud thickens and lowers: cirrus, then cirrostratus with a halo around the sun or moon, then altostratus through which the sun looks watery, then nimbostratus with continuous rain. Pressure falls steadily and the wind backs and freshens. Visibility deteriorates in the rain and frontal fog can form."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "warm"
+          }
+        },
+        {
+          "heading": "Passage and warm sector",
+          "paragraphs": [
+            "As the surface front passes, the wind veers, typically from south to south-west, the rain eases to drizzle, temperature and dew point rise and the barometer steadies.",
+            "In the warm sector, expect overcast low cloud, drizzle and moderate to poor visibility. Over a cold sea, sea fog is likely. Winds are often steady in direction and can be strong."
+          ],
+          "keyPoints": [
+            "Before: lowering cloud, falling pressure, backing and freshening wind, steady rain.",
+            "At passage: veer, rain to drizzle, pressure steadies, warmer.",
+            "Warm sector: low cloud, drizzle, poor visibility, sea fog risk."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "warmSector"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fronts.cold",
+      "title": "The cold front",
+      "segments": [
+        {
+          "heading": "A sharper boundary",
+          "paragraphs": [
+            "Cold air undercuts the warm air on a steeper slope, about 1 in 50 to 1 in 80, so the weather is concentrated in a narrower band, often only an hour or two of heavy rain. Cumulonimbus may be embedded, bringing squalls, hail and thunder; a line of squalls sometimes runs ahead of the front.",
+            "At the front the wind veers sharply, typically from south-west to west or north-west, often with a violent squall. Pressure, having been steady, rises sharply. Temperature and dew point fall."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "cold"
+          }
+        },
+        {
+          "heading": "Behind the front",
+          "paragraphs": [
+            "Cold polar maritime air brings clearing skies, excellent visibility, cumulus and showers, some heavy. Winds are gusty and may continue to veer slowly. Showers bring their own squalls; watch the sky to windward.",
+            "Plan sail changes before the front arrives. Reef early, secure the deck and expect the wind to come round onto the new direction quickly, which can turn a sheltered anchorage into a lee shore."
+          ],
+          "keyPoints": [
+            "Narrow band of heavy rain, possible squalls and thunder.",
+            "Sharp veer and sharp pressure rise at passage.",
+            "Behind: clear, cold, showery, gusty, excellent visibility."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "coldFront"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fronts.occluded",
+      "title": "Occluded fronts",
+      "segments": [
+        {
+          "heading": "Combined weather",
+          "paragraphs": [
+            "An occlusion combines warm-front and cold-front weather: a long belt of cloud and rain like a warm front, sometimes ending with heavier rain and a veer like a cold front. There is no warm sector at the surface.",
+            "In a cold occlusion the air behind is colder than the air ahead; in a warm occlusion it is milder. For a skipper the practical message is the same: a broad band of rain, poor visibility and a veer as it passes, usually less vigorous than the original fronts."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "occluded"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fr.1",
+      "kind": "order",
+      "prompt": "Put these clouds in the order you would normally see them as a warm front approaches.",
+      "options": [
+        "Altostratus",
+        "Nimbostratus",
+        "Cirrus",
+        "Cirrostratus"
+      ],
+      "answers": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "explanation": "High cloud first (cirrus, then cirrostratus with a halo), then mid-level altostratus, then low, thick nimbostratus with continuous rain."
+    },
+    {
+      "id": "q.fr.2",
+      "kind": "single",
+      "prompt": "Why does warm-front cloud appear so far ahead of the surface front?",
+      "diagram": {
+        "id": "frontSection",
+        "variant": "warm"
+      },
+      "options": [
+        "The warm front moves faster than its cloud",
+        "The frontal surface slopes very gently, about 1 in 150",
+        "Cirrus is blown ahead by the jet stream only",
+        "Warm fronts are always slower than 5 knots"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Cloud and front move together.",
+        "Correct: a gentle slope puts the upper cloud hundreds of miles ahead.",
+        "Upper winds play a part, but the slope is the main reason.",
+        "Warm fronts typically move at 15–25 knots."
+      ],
+      "explanation": "The shallow slope means the frontal surface is still high in the sky far ahead of where it meets the ground."
+    },
+    {
+      "id": "q.fr.3",
+      "kind": "multi",
+      "prompt": "Which changes typically occur as a cold front passes? Select all that apply.",
+      "options": [
+        "Sharp veer in the wind",
+        "Pressure starts to rise",
+        "Temperature rises",
+        "Visibility improves afterwards",
+        "Wind backs to the south-east"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Correct: often a sharp rise.",
+        "Temperature falls behind a cold front.",
+        "Correct: clear polar air follows.",
+        "Backing to south-east is typical ahead of a warm front."
+      ],
+      "explanation": "Cold front: sharp veer, pressure rise, temperature drop, then clearer air with showers."
+    },
+    {
+      "id": "q.fr.4",
+      "kind": "scenario",
+      "context": "Anchored in a bay open to the north-west, sheltered from south and west. The forecast: 'South-west 5 to 6, veering north-west 6 to 7 later, rain then squally showers.' The barometer has been steady at 1001 hPa for four hours under overcast skies and drizzle.",
+      "prompt": "Make the skipper's decisions.",
+      "explanation": "You are in the warm sector. The cold front will veer the wind into the north-west and make the anchorage a lee shore.",
+      "steps": [
+        {
+          "id": "q.fr.4a",
+          "kind": "single",
+          "prompt": "Where are you relative to the depression's fronts?",
+          "options": [
+            "Ahead of the warm front",
+            "In the warm sector",
+            "Behind the cold front",
+            "Under an occlusion"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Pressure would be falling with thickening cloud and steady rain.",
+            "Correct: steady pressure, overcast, drizzle, south-west wind.",
+            "It would be clearing with showers and rising pressure.",
+            "There would be no warm-sector drizzle and steady barometer."
+          ],
+          "explanation": "Steady pressure, low cloud and drizzle in a south-westerly are classic warm-sector signs."
+        },
+        {
+          "id": "q.fr.4b",
+          "kind": "single",
+          "prompt": "What will the cold front do to your anchorage?",
+          "options": [
+            "Nothing: the bay stays sheltered",
+            "The north-west wind will blow straight in, making it a lee shore",
+            "The wind will back to south and improve shelter",
+            "The tide will reverse"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The veer removes your shelter.",
+            "Correct: the bay is open to the north-west.",
+            "Cold fronts veer, not back.",
+            "Fronts do not reverse tides."
+          ],
+          "explanation": "The forecast veer to north-west 6–7 will put the wind and sea straight into the bay."
+        },
+        {
+          "id": "q.fr.4c",
+          "kind": "single",
+          "prompt": "What is the seamanlike action?",
+          "options": [
+            "Stay and let out more scope after dark",
+            "Move now, in daylight, to shelter from the north-west",
+            "Wait until the squall arrives and then decide",
+            "Motor out to sea and heave to"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Extra scope does not fix a lee shore in a gale.",
+            "Correct: relocate while conditions are moderate.",
+            "Too late: the squall arrives suddenly.",
+            "Possible, but sheltered water is better if available."
+          ],
+          "explanation": "Act before the front: shift to an anchorage or harbour sheltered from the north-west while conditions are still manageable."
+        }
+      ]
+    },
+    {
+      "id": "q.fr.5",
+      "kind": "single",
+      "prompt": "In the warm sector over a cold sea in spring, what is the main visibility hazard?",
+      "options": [
+        "Radiation fog",
+        "Advection (sea) fog",
+        "Dust haze",
+        "Snow"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Radiation fog forms over land on clear nights.",
+        "Correct: warm, moist air cooled by the sea.",
+        "Dust haze comes from continental or desert air.",
+        "Warm-sector air is mild."
+      ],
+      "explanation": "Moist tropical maritime air cooled below its dew point by a cold sea forms widespread, persistent sea fog."
+    },
+    {
+      "id": "q.fr.6",
+      "kind": "single",
+      "prompt": "Which barometer trace best matches a warm front followed some hours later by a cold front?",
+      "diagram": {
+        "id": "barograph",
+        "variant": "front"
+      },
+      "options": [
+        "Steady fall, levels off, then sharp rise",
+        "Sharp rise, then steady fall",
+        "Rise all day",
+        "Sharp fall at the warm front, steady rise at the cold front"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: fall ahead of the warm front, steady in the warm sector, sharp rise at the cold front.",
+        "Reversed order.",
+        "No front gives a day-long rise.",
+        "The warm front is preceded by a steady, not sharp, fall."
+      ],
+      "explanation": "The classic trace: a long fall ahead of the warm front, a level warm sector, then a sharp rise as the cold front passes."
+    },
+    {
+      "id": "q.fr.7",
+      "kind": "single",
+      "prompt": "What is the best visual warning of a squall line ahead of a cold front?",
+      "options": [
+        "A halo around the sun",
+        "A dark, low, arched line of cloud with heavy rain beneath",
+        "Thin cirrus",
+        "Fair-weather cumulus"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "A halo warns of a warm front many hours away.",
+        "Correct: a roll or shelf cloud marks the gust front.",
+        "Cirrus is high cloud far ahead of fronts.",
+        "Small cumulus are not a squall warning."
+      ],
+      "explanation": "A dark arc or shelf cloud along the leading edge marks the gust front; reef before it arrives."
+    },
+    {
+      "id": "q.fr.8",
+      "kind": "single",
+      "prompt": "What is typical of an occluded front's weather?",
+      "diagram": {
+        "id": "frontSection",
+        "variant": "occluded"
+      },
+      "options": [
+        "Clear skies throughout",
+        "A broad band of cloud and rain combining warm- and cold-front features",
+        "Only fog",
+        "Persistent easterly gales"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Occlusions are cloudy.",
+        "Correct.",
+        "Fog may occur but is not defining.",
+        "Not a feature of occlusions."
+      ],
+      "explanation": "An occlusion brings a long belt of cloud and rain, then a veer as it passes."
+    }
+  ]
+}

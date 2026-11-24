@@ -1,0 +1,283 @@
+{
+  "id": "sea",
+  "title": "Sea state, swell and wind against tide",
+  "summary": "How waves grow, swell versus wind sea, wave statistics, and why wind against tide turns a sea dangerous.",
+  "symbol": "water.waves",
+  "lessons": [
+    {
+      "id": "sea.waves",
+      "title": "How waves grow",
+      "segments": [
+        {
+          "heading": "Strength, fetch and duration",
+          "paragraphs": [
+            "Wind waves grow with wind strength, fetch (the distance of open water the wind blows across) and duration (how long it has blown). The smallest of the three limits the sea. A gale blowing offshore leaves a short fetch and a modest sea near the coast; the same gale with hundreds of miles of fetch builds a large, fully developed sea.",
+            "Forecast wave heights are usually significant wave heights: the mean of the highest third. Among a thousand waves, expect one around 1.9 times the significant height. Plan for the bigger waves, not the average."
+          ],
+          "keyPoints": [
+            "Strength, fetch and duration together set the wave height.",
+            "Significant height is the mean of the highest third.",
+            "Occasional waves nearly twice that height."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "fetch"
+          }
+        },
+        {
+          "heading": "Swell versus wind sea",
+          "paragraphs": [
+            "Swell is long-period energy that has left the generating area. It travels far and fast and can arrive ahead of a storm, a valuable early warning. Wind waves are shorter, steeper and aligned with the local wind.",
+            "When swell and wind sea come from different directions, the sea becomes confused and crests can combine into steep, breaking peaks. Swell running into shallow water or against a current steepens dangerously, and can break across harbour bars."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "swell"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sea.tide",
+      "title": "Wind against tide and shallow water",
+      "segments": [
+        {
+          "heading": "Why it steepens",
+          "paragraphs": [
+            "When the wind blows against the tidal stream, the waves are effectively compressed: the wavelength shortens while height increases, so the sea becomes steep and breaks. A Force 5 against a 3-knot stream can feel like a Force 7. When the tide turns to run with the wind, the same sea lengthens and eases.",
+            "The effect is worst at headlands, over shoals and in tidal races and overfalls. Plan to pass such places at slack water or with wind and tide together."
+          ],
+          "keyPoints": [
+            "Wind against tide: shorter, steeper, breaking waves.",
+            "Worst at headlands, races, overfalls and over shoals.",
+            "Time passages for slack water or wind with tide."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "windAgainstTide"
+          }
+        },
+        {
+          "heading": "Sea state terms",
+          "paragraphs": [
+            "Forecasts describe sea state by significant height: smooth (up to 0.5 m), slight (0.5 to 1.25 m), moderate (1.25 to 2.5 m), rough (2.5 to 4 m), very rough (4 to 6 m), high (6 to 9 m), very high (9 to 14 m) and phenomenal (over 14 m).",
+            "Use the Beaufort descriptions to cross-check observed wind against the sea: white horses begin around Force 4, foam streaks at Force 7, and spindrift at Force 8."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "6"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.sea.1",
+      "kind": "single",
+      "prompt": "A north-easterly Force 7 has blown for 12 hours. Where will the sea be smallest?",
+      "diagram": {
+        "id": "waves",
+        "variant": "fetch"
+      },
+      "options": [
+        "Close under a coast to the north-east, where the wind blows off the land",
+        "200 miles downwind",
+        "In mid-ocean",
+        "Over a shallow bank 50 miles offshore"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: short fetch means little room for waves to build.",
+        "Long fetch means a bigger sea.",
+        "Unlimited fetch.",
+        "Shallow water steepens the waves that arrive."
+      ],
+      "explanation": "Fetch limits the waves: an offshore wind close under the weather shore gives the flattest water."
+    },
+    {
+      "id": "q.sea.2",
+      "kind": "numeric",
+      "prompt": "The forecast significant wave height is 2.5 m. Roughly how high might the occasional largest wave be, in metres? (Use 1.9 times.)",
+      "numeric": {
+        "value": 4.75,
+        "tolerance": 0.3,
+        "unit": "m"
+      },
+      "explanation": "2.5 × 1.9 ≈ 4.75 m. Prepare boat and crew for occasional waves of that size."
+    },
+    {
+      "id": "q.sea.3",
+      "kind": "scenario",
+      "context": "You plan to round a headland with a known tidal race. Wind: west-south-west Force 5. The tidal stream off the headland runs west at up to 3 knots from 10:00 to 16:00 and east from 16:00 to 22:00.",
+      "prompt": "Plan the rounding.",
+      "diagram": {
+        "id": "waves",
+        "variant": "windAgainstTide"
+      },
+      "explanation": "Pass with wind and tide together, or at slack, to avoid steep breaking seas in the race.",
+      "steps": [
+        {
+          "id": "q.sea.3a",
+          "kind": "single",
+          "prompt": "During which period is the wind against the tide?",
+          "options": [
+            "10:00 to 16:00 (westgoing stream)",
+            "16:00 to 22:00 (eastgoing stream)",
+            "Never",
+            "All day"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: a west-south-westerly wind blows towards the east-north-east, against a westgoing stream.",
+            "The eastgoing stream runs with the wind.",
+            "There is an opposing period.",
+            "The stream reverses."
+          ],
+          "explanation": "A west-south-west wind blows towards the east; a westgoing stream opposes it."
+        },
+        {
+          "id": "q.sea.3b",
+          "kind": "single",
+          "prompt": "When should you plan to pass the race?",
+          "options": [
+            "Around 13:00 at maximum westgoing stream",
+            "Around 16:00 at slack, or soon after as the eastgoing stream begins",
+            "Any time; Force 5 is moderate",
+            "At 10:00 as the westgoing stream begins"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Maximum wind-against-tide: worst sea.",
+            "Correct: slack, then wind and tide together.",
+            "Force 5 against 3 knots can feel like Force 7 in a race.",
+            "The stream is building against the wind."
+          ],
+          "explanation": "Slack water or a fair stream with the wind gives the easiest sea through a race."
+        }
+      ]
+    },
+    {
+      "id": "q.sea.4",
+      "kind": "single",
+      "prompt": "A long, low swell starts arriving from the south-west on a calm, clear day. What might it indicate?",
+      "diagram": {
+        "id": "waves",
+        "variant": "swell"
+      },
+      "options": [
+        "Nothing; swell is random",
+        "A distant storm, possibly approaching",
+        "A sea breeze later",
+        "An imminent fog bank"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Swell always has a source.",
+        "Correct: swell can arrive well ahead of the wind.",
+        "Unrelated.",
+        "Unrelated."
+      ],
+      "explanation": "Swell travels faster than most storms; a new, growing swell can be the first sign of approaching bad weather."
+    },
+    {
+      "id": "q.sea.5",
+      "kind": "order",
+      "prompt": "Put these sea-state terms in order of increasing wave height.",
+      "options": [
+        "Rough",
+        "Slight",
+        "Very rough",
+        "Moderate",
+        "Smooth"
+      ],
+      "answers": [
+        4,
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Smooth, slight, moderate, rough, very rough (then high, very high, phenomenal)."
+    },
+    {
+      "id": "q.sea.6",
+      "kind": "single",
+      "prompt": "At about which Beaufort force do white horses become widespread?",
+      "diagram": {
+        "id": "seaState",
+        "variant": "4"
+      },
+      "options": [
+        "Force 2",
+        "Force 4",
+        "Force 7",
+        "Force 9"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Force 2 has small wavelets only.",
+        "Correct: fairly frequent white horses at Force 4.",
+        "At Force 7 foam is blown in streaks.",
+        "Force 9 has dense foam and spray."
+      ],
+      "explanation": "White horses appear at Force 3 and become fairly frequent at Force 4."
+    },
+    {
+      "id": "q.sea.7",
+      "kind": "multi",
+      "prompt": "Which conditions make a harbour bar dangerous to cross? Select all that apply.",
+      "options": [
+        "Onshore swell",
+        "Ebb tide running out against the swell",
+        "Slack water with no swell",
+        "Strong onshore wind",
+        "Flood tide and offshore breeze"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correct.",
+        "Correct: the ebb steepens and breaks the swell.",
+        "This is the safest time.",
+        "Correct.",
+        "Generally the easiest combination."
+      ],
+      "explanation": "Swell, onshore wind and an ebb running against them make bars break; cross near high water slack in quiet conditions."
+    },
+    {
+      "id": "q.sea.8",
+      "kind": "single",
+      "prompt": "What does a forecast wave height usually refer to?",
+      "options": [
+        "The highest wave",
+        "The average of all waves",
+        "The significant wave height: mean of the highest third",
+        "The swell height only"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "Individual maxima are higher.",
+        "The average is lower than significant height.",
+        "Correct.",
+        "It includes both wind sea and swell unless stated."
+      ],
+      "explanation": "Significant wave height approximates what an observer would estimate; occasional waves are much larger."
+    }
+  ]
+}
