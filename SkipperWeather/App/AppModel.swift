@@ -202,5 +202,6 @@ final class AppModel {
 enum AppLinks {
     /// Set once the public repository exists (see README "Before first release").
     static let repository = URL(string: "https://github.com/meltemiapps/skipper-weather")!
-    static let privacyPolicy = URL(string: "https://meltemiapps.github.io/skipper-weather/privacy.html")!
+    static let support = URL(string: "https://meltemiapps.co.uk/skipper-weather/support/")!
+    static let privacyPolicy = URL(string: "https://meltemiapps.co.uk/skipper-weather/privacy/")!
 }

@@ -8,8 +8,9 @@
 **Price:** Free
 **Availability:** All territories except China mainland
 **Privacy label:** Data Not Collected
-**Privacy policy URL:** https://meltemiapps.github.io/skipper-weather/privacy.html
-**Support / marketing URL:** https://github.com/meltemiapps/skipper-weather
+**Privacy policy URL:** https://meltemiapps.co.uk/skipper-weather/privacy/
+**Support URL:** https://meltemiapps.co.uk/skipper-weather/support/
+**Source code:** https://github.com/meltemiapps/skipper-weather
 
 **Keywords (100):** sailing,weather,skipper,marine,forecast,beaufort,barometer,fronts,yacht,boating,study,quiz,isobars
 

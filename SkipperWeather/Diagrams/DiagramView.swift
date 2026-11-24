@@ -232,7 +232,7 @@ enum Diagrams {
         let L = p.pt(0.36, 0.34)
         if v == "wave" {
             p.curve([p.pt(0.02, 0.5), p.pt(0.3, 0.48), p.pt(0.42, 0.36), p.pt(0.55, 0.47), p.pt(0.98, 0.5)], iso, 1.2, dash: [4, 4])
-            p.front([p.pt(0.42, 0.36), p.pt(0.6, 0.45), p.pt(0.9, 0.5)], kind: "warm")
+            p.front([p.pt(0.42, 0.36), p.pt(0.6, 0.45), p.pt(0.9, 0.5)], kind: "warm", side: -1)
             p.front([p.pt(0.42, 0.36), p.pt(0.3, 0.5), p.pt(0.08, 0.55)], kind: "cold", side: -1)
             p.label(.low, CGPoint(x: L.x + p.size.width * 0.06, y: L.y - 6), size: 22, color: Palette.amber)
             p.label(.coldAir, p.pt(0.5, 0.15)); p.label(.warmAir, p.pt(0.45, 0.82))
@@ -254,12 +254,12 @@ enum Diagrams {
         }
         if v == "occluded" {
             let occ = [L, p.pt(0.5, 0.48), p.pt(0.56, 0.6)]
-            p.front(occ, kind: "occluded")
-            p.front([p.pt(0.56, 0.6), p.pt(0.72, 0.72), p.pt(0.82, 0.86)], kind: "warm")
+            p.front(occ, kind: "occluded", side: -1)
+            p.front([p.pt(0.56, 0.6), p.pt(0.72, 0.72), p.pt(0.82, 0.86)], kind: "warm", side: -1)
             p.front([p.pt(0.56, 0.6), p.pt(0.44, 0.76), p.pt(0.32, 0.95)], kind: "cold", side: -1)
             p.label(.occludedFront, p.pt(0.6, 0.5), size: 12, color: Color(red: 0.75, green: 0.45, blue: 0.95), anchor: .leading)
         } else {
-            p.front(warm, kind: "warm")
+            p.front(warm, kind: "warm", side: -1)
             p.front(cold, kind: "cold", side: -1)
             p.label(.warmFront, p.pt(0.83, 0.55), size: 12, color: Palette.bad)
             p.label(.coldFront, p.pt(0.11, 0.72), size: 12, color: blue, maxWidth: p.size.width * 0.22)
@@ -304,12 +304,12 @@ enum Diagrams {
         p.sea(0.86)
         switch v {
         case "cold":
-            p.stroke([p.pt(0.62, 0.86), p.pt(0.38, 0.15)], blue, 3)
+            p.stroke([p.pt(0.38, 0.86), p.pt(0.66, 0.15)], blue, 3)
             p.label(.coldAir, p.pt(0.8, 0.6)); p.label(.warmAir, p.pt(0.22, 0.5))
-            p.cloud(p.pt(0.52, 0.32), p.u * 0.16); p.cloud(p.pt(0.5, 0.52), p.u * 0.14)
-            p.label(.cumulonimbus, p.pt(0.5, 0.12), size: 11)
-            for i in 0..<6 { let x = 0.44 + CGFloat(i) * 0.025; p.stroke([p.pt(x, 0.64), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
-            p.label(.squall, p.pt(0.35, 0.78), size: 11, color: Palette.amber)
+            p.cloud(p.pt(0.46, 0.3), p.u * 0.16); p.cloud(p.pt(0.42, 0.5), p.u * 0.14)
+            p.label(.cumulonimbus, p.pt(0.36, 0.12), size: 11)
+            for i in 0..<6 { let x = 0.33 + CGFloat(i) * 0.025; p.stroke([p.pt(x, 0.64), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
+            p.label(.squall, p.pt(0.22, 0.78), size: 11, color: Palette.amber)
             p.arrow(p.pt(0.95, 0.8), p.pt(0.72, 0.8), blue)
         case "occluded":
             p.stroke([p.pt(0.1, 0.86), p.pt(0.45, 0.45)], blue, 3)
@@ -328,7 +328,7 @@ enum Diagrams {
             }
             for i in 0..<7 { let x = 0.2 + CGFloat(i) * 0.03; p.stroke([p.pt(x, 0.68), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
             p.label(.rain, p.pt(0.13, 0.76), size: 11, color: Palette.accent)
-            p.arrow(p.pt(0.02, 0.7), p.pt(0.2, 0.55), Palette.amber)
+            p.arrow(p.pt(0.02, 0.5), p.pt(0.16, 0.38), Palette.amber)
         }
     }
 
@@ -354,12 +354,13 @@ enum Diagrams {
     }
 
     static func buysBallot(_ p: Painter) {
-        let o = p.pt(0.55, 0.62)
-        p.ellipse(p.pt(0.2, 0.3), p.u * 0.14, p.u * 0.11, iso); p.label(.low, p.pt(0.2, 0.3), size: 22, color: Palette.amber)
-        p.arrow(p.pt(0.95, 0.9), p.pt(0.62, 0.68), Palette.accent, 3); p.label(.wind, p.pt(0.88, 0.78), size: 11, color: Palette.accent)
+        let o = p.pt(0.62, 0.58)
+        p.ellipse(p.pt(0.16, 0.45), p.u * 0.14, p.u * 0.11, iso); p.label(.low, p.pt(0.16, 0.45), size: 22, color: Palette.amber)
+        p.arrow(p.pt(0.62, 0.98), p.pt(0.62, 0.68), Palette.accent, 3); p.label(.wind, p.pt(0.7, 0.86), size: 11, color: Palette.accent, anchor: .leading)
+        p.arrow(o, p.pt(0.62, 0.3), .white.opacity(0.5), 1.5)
         p.observer(o)
-        p.arrow(o, p.pt(0.32, 0.42), Palette.amber, 2)
-        p.label(.backToWind, p.pt(0.78, 0.55), size: 11); p.label(.lowOnLeft, p.pt(0.42, 0.63), size: 11, color: Palette.amber, anchor: .trailing)
+        p.arrow(o, p.pt(0.3, 0.47), Palette.amber, 2)
+        p.label(.backToWind, p.pt(0.7, 0.58), size: 11, anchor: .leading); p.label(.lowOnLeft, p.pt(0.42, 0.62), size: 11, color: Palette.amber, anchor: .trailing)
     }
 
     static func globalCirculation(_ p: Painter) {
@@ -420,7 +421,7 @@ enum Diagrams {
         p.sea(0); p.ground(0, 1, 0.62)
         p.stroke([p.pt(0, 0.62), p.pt(1, 0.62)], .white.opacity(0.7), 2)
         p.label(.sea, p.pt(0.08, 0.1)); p.label(.land, p.pt(0.08, 0.9))
-        p.arrow(p.pt(0.1, 0.4), p.pt(0.55, 0.47), Palette.accent, 3); p.label(.overSea, p.pt(0.3, 0.33), size: 10, color: Palette.accent)
+        p.arrow(p.pt(0.1, 0.44), p.pt(0.55, 0.36), Palette.accent, 3); p.label(.overSea, p.pt(0.3, 0.33), size: 10, color: Palette.accent)
         p.arrow(p.pt(0.1, 0.84), p.pt(0.55, 0.66), Palette.good, 3); p.label(.overLand, p.pt(0.45, 0.92), size: 10, color: Palette.good)
         p.circle(p.pt(0.7, 0.56), p.u * 0.06, Palette.amber.opacity(0.5))
         p.label(.convergence, p.pt(0.8, 0.46), size: 12, color: Palette.amber); p.label(.strongerWind, p.pt(0.83, 0.74), size: 11, color: Palette.amber)
@@ -434,7 +435,7 @@ enum Diagrams {
         p.arrow(p.pt(0.3, 0.12), p.pt(0.3, 0.42), blue, 3); p.label(.mistral, p.pt(0.3, 0.48), size: 12, color: blue)
         p.arrow(p.pt(0.6, 0.18), p.pt(0.53, 0.32), blue, 3); p.label(.bora, p.pt(0.62, 0.4), size: 12, color: blue)
         p.arrow(p.pt(0.78, 0.36), p.pt(0.78, 0.66), Palette.accent, 3); p.label(.meltemi, p.pt(0.88, 0.56), size: 12, color: Palette.accent)
-        p.arrow(p.pt(0.45, 0.85), p.pt(0.55, 0.55), Palette.amber, 3); p.label(.sirocco, p.pt(0.46, 0.72), size: 12, color: Palette.amber, anchor: .trailing)
+        p.arrow(p.pt(0.66, 0.86), p.pt(0.5, 0.56), Palette.amber, 3); p.label(.sirocco, p.pt(0.56, 0.74), size: 12, color: Palette.amber, anchor: .trailing)
     }
 
     static func fog(_ p: Painter, _ v: String) {
