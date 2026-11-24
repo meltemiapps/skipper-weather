@@ -1,0 +1,296 @@
+{
+  "id": "local",
+  "title": "Vientos locales, costeros y regionales",
+  "summary": "Brisa marina y terral, vientos catabáticos y anabáticos, efecto embudo, convergencia costera, y el meltemi, la bora, el mistral y el siroco.",
+  "symbol": "sun.haze",
+  "lessons": [
+    {
+      "id": "local.thermal",
+      "title": "Vientos térmicos",
+      "segments": [
+        {
+          "heading": "Brisa marina (virazón)",
+          "paragraphs": [
+            "En un día soleado la tierra se calienta más deprisa que el mar. El aire asciende sobre tierra, la presión baja ligeramente en niveles bajos y entra aire más fresco desde el mar. Un flujo de retorno en altura cierra el circuito, y los cúmulos suelen señalar el aire ascendente tierra adentro.",
+            "La virazón suele entrar a media mañana, alcanza su máximo a media tarde con fuerza 3 a 4 (más en costas calurosas), se extiende quizá unas 10 millas mar adentro y desaparece al anochecer. En el hemisferio norte rola a la derecha a lo largo de la tarde. Necesita una diferencia de temperatura entre tierra y mar y un gradiente débil: un viento de gradiente de tierra de más de unos 15 nudos suele impedirla, mientras que un gradiente del mar hacia tierra la refuerza."
+          ],
+          "keyPoints": [
+            "Entra a media mañana, máximo a media tarde, desaparece al anochecer.",
+            "Rola a la derecha a lo largo del día (hemisferio norte).",
+            "La anula un gradiente de tierra de más de unos 15 nudos."
+          ],
+          "diagram": {
+            "id": "thermal",
+            "variant": "seaBreeze"
+          }
+        },
+        {
+          "heading": "Terral y vientos catabáticos y anabáticos",
+          "paragraphs": [
+            "Por la noche la tierra se enfría más deprisa que el mar y puede formarse un terral flojo, normalmente de fuerza 2 a 3, que solo llega a unas pocas millas de la costa.",
+            "Donde el aire frío desciende por laderas y valles se forma un viento catabático. En costas montañosas, fiordos e islas escarpadas puede ser fuerte y repentino, sobre todo cerca de la desembocadura de los valles hacia el amanecer. Los vientos anabáticos son su equivalente diurno, suave y ladera arriba."
+          ],
+          "diagram": {
+            "id": "thermal",
+            "variant": "katabatic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local.topography",
+      "title": "Efectos costeros y orográficos",
+      "segments": [
+        {
+          "heading": "Efecto embudo y cabos",
+          "paragraphs": [
+            "El viento que se estrecha entre islas altas, a lo largo de estrechos o al bajar por valles se acelera: es el efecto Venturi o efecto embudo. En el paso, el viento puede soplar un grado entero de la escala Beaufort, o más, por encima del de fuera. Los cabos crean zonas de aceleración en su extremo y mar confusa donde el flujo se encuentra con las corrientes de marea.",
+            "A sotavento de terreno alto, espere rachas fuertes e imprevisibles que caen por las laderas y cambios bruscos de dirección, aunque en mar abierta el viento sea moderado."
+          ],
+          "diagram": {
+            "id": "venturi"
+          }
+        },
+        {
+          "heading": "Convergencia y divergencia costeras",
+          "paragraphs": [
+            "La fricción hace rolar el viento a la izquierda más sobre tierra que sobre el mar. Cuando el viento sopla paralelo a la costa, esa diferencia hace que los flujos converjan o diverjan.",
+            "En el hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos convergen, con viento más fuerte y a menudo más nubes y lluvia a lo largo de la costa. Si la tierra queda a su izquierda, divergen y el viento costero es más flojo."
+          ],
+          "keyPoints": [
+            "De espaldas al viento, tierra a la derecha: convergencia, viento más fuerte.",
+            "Tierra a la izquierda: divergencia, viento más flojo."
+          ],
+          "diagram": {
+            "id": "coastalConvergence"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local.med",
+      "title": "Vientos regionales del Mediterráneo",
+      "segments": [
+        {
+          "heading": "Meltemi y mistral",
+          "paragraphs": [
+            "El meltemi (vientos etesios) sopla del norte sobre el Egeo de mayo a septiembre, con su máximo en julio y agosto. Lo generan las altas presiones sobre los Balcanes y una baja térmica sobre Turquía y Oriente Próximo. Suele ser de fuerza 5 a 7, más intenso por la tarde, puede llegar a temporal, puede durar días y se canaliza con fuerza entre las Cícladas. Puede entrar con cielo despejado y casi sin aviso.",
+            "El mistral es un viento frío y seco del norte al noroeste que se canaliza por el valle del Ródano hacia el golfo de León, normalmente cuando hay altas presiones sobre el golfo de Vizcaya y bajas sobre el golfo de Génova. Con frecuencia alcanza fuerza 7 a 9, con mar corta y empinada, y puede extenderse hasta Córcega y Cerdeña."
+          ],
+          "diagram": {
+            "id": "medWinds"
+          }
+        },
+        {
+          "heading": "Bora y siroco",
+          "paragraphs": [
+            "La bora es un viento catabático frío del nordeste en el Adriático oriental, que se desploma sobre las montañas costeras de Croacia y Montenegro. Es sobre todo un viento de invierno, puede llegar en cuestión de minutos y trae rachas violentas que pueden superar los 80 nudos en lugares como el canal de Velebit. Los casquetes de nubes bajas sobre las montañas son una señal de aviso.",
+            "El siroco (jugo en el Adriático) es un viento cálido del sur al sudeste procedente del norte de África, que a menudo sopla por delante de las borrascas que cruzan el Mediterráneo hacia el este. Se carga de humedad sobre el mar y trae nubes bajas, lluvia, polvo y mala visibilidad, y levanta una mar larga y gruesa en las costas expuestas al sur."
+          ],
+          "keyPoints": [
+            "Meltemi: viento del norte en verano, Egeo, fuerza 5–7, máximo por la tarde.",
+            "Mistral: frío del N–NO, golfo de León, a menudo fuerza 7–9.",
+            "Bora: catabático frío del NE, Adriático, rachas repentinas y violentas.",
+            "Siroco: cálido del S–SE, húmedo, polvo, mala visibilidad, mar gruesa."
+          ],
+          "diagram": {
+            "id": "medWinds",
+            "variant": "boraSirocco"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.loc.1",
+      "kind": "single",
+      "prompt": "El viento de gradiente previsto es del nordeste de 18 nudos y sopla de tierra en una costa orientada al sur. ¿Se formará virazón esta tarde?",
+      "diagram": {
+        "id": "thermal",
+        "variant": "seaBreeze"
+      },
+      "options": [
+        "Sí, y reforzará el gradiente",
+        "Probablemente no; el gradiente de tierra es demasiado fuerte",
+        "Sí, pero solo después de anochecer",
+        "Depende únicamente de la marea"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "La virazón sopla del mar hacia tierra, en contra de este gradiente.",
+        "Correcto: un gradiente de tierra de más de unos 15 nudos suele anularla.",
+        "La virazón es un viento diurno.",
+        "La marea no influye en la formación de la virazón."
+      ],
+      "explanation": "La virazón necesita un gradiente débil. Un viento de gradiente de tierra fuerte anula la circulación térmica."
+    },
+    {
+      "id": "q.loc.2",
+      "kind": "single",
+      "context": "Hemisferio norte. Sopla un viento del oeste a lo largo de una costa orientada de este a oeste, con la tierra al sur.",
+      "prompt": "De espaldas al viento, la tierra queda a su derecha. ¿Qué significa esto para el viento costero?",
+      "diagram": {
+        "id": "coastalConvergence"
+      },
+      "options": [
+        "Divergencia y viento más flojo",
+        "Convergencia y viento más fuerte",
+        "Ningún efecto",
+        "El viento se invertirá"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Ese es el caso de la tierra a la izquierda.",
+        "Correcto.",
+        "Las diferencias de fricción siempre tienen algún efecto.",
+        "No se produce ninguna inversión."
+      ],
+      "explanation": "De espaldas a un viento del oeste mira hacia el este; la tierra al sur queda a su derecha. El flujo sobre tierra, más rolado a la izquierda, gira hacia el flujo sobre el mar: convergencia."
+    },
+    {
+      "id": "q.loc.3",
+      "kind": "single",
+      "prompt": "Planifica para julio una travesía a vela por las Cícladas rumbo al norte. ¿Cuál es la mejor táctica frente al meltemi?",
+      "diagram": {
+        "id": "medWinds"
+      },
+      "options": [
+        "Navegar por la tarde, cuando es más fuerte",
+        "Ganar camino hacia el norte a primera hora de la mañana, cuando es más flojo",
+        "Ignorarlo; rara vez supera la fuerza 3",
+        "Contar con que sople del sur"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Su máximo es por la tarde: el peor momento para ceñir contra él.",
+        "Correcto.",
+        "Suele ser de fuerza 5–7 y puede llegar a temporal.",
+        "Sopla del norte."
+      ],
+      "explanation": "El meltemi suele ser más flojo por la noche y a primera hora y alcanza su máximo a media tarde: planifique los tramos de ceñida temprano."
+    },
+    {
+      "id": "q.loc.4",
+      "kind": "single",
+      "prompt": "Fondeado en invierno al pie de las montañas costeras de Croacia, observa que se forma un casquete de nubes sobre las crestas y el aire se vuelve más frío. ¿Qué debe esperar?",
+      "options": [
+        "Un siroco con lluvia",
+        "Una bora con rachas del nordeste repentinas y violentas",
+        "Una virazón",
+        "Un meltemi"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El siroco es cálido y sopla del sudeste.",
+        "Correcto: el casquete de nubes es una señal clásica de bora.",
+        "La virazón es un viento de verano, diurno y del mar hacia tierra.",
+        "El meltemi es un viento de verano del Egeo."
+      ],
+      "explanation": "Los casquetes de nubes sobre las crestas costeras y el descenso de la temperatura avisan de bora: prepare el barco para rachas violentas de tierra."
+    },
+    {
+      "id": "q.loc.5",
+      "kind": "multi",
+      "prompt": "¿Qué afirmaciones sobre el siroco son correctas? Seleccione todas las correctas.",
+      "options": [
+        "Sopla del sur o del sudeste",
+        "Es frío y seco",
+        "Puede transportar polvo del Sáhara y reducir la visibilidad",
+        "Suele soplar por delante de borrascas que se desplazan hacia el este",
+        "Solo se da en el Egeo"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Es cálido y se vuelve húmedo sobre el mar.",
+        "Correcto.",
+        "Correcto.",
+        "Afecta a gran parte del Mediterráneo central y oriental, incluido el Adriático, donde se llama jugo."
+      ],
+      "explanation": "Siroco: cálido, húmedo tras cruzar el mar, con polvo, mala visibilidad y una mar del sur cada vez más gruesa."
+    },
+    {
+      "id": "q.loc.6",
+      "kind": "single",
+      "prompt": "¿Por qué el viento suele aumentar bruscamente en un canal entre dos islas altas?",
+      "diagram": {
+        "id": "venturi"
+      },
+      "options": [
+        "El efecto Coriolis es más fuerte allí",
+        "El efecto embudo acelera el flujo a través del paso",
+        "La marea empuja el aire",
+        "La presión siempre es más baja entre islas"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El efecto Coriolis no varía localmente de esta manera.",
+        "Correcto: el efecto Venturi.",
+        "La marea no mueve el aire.",
+        "No es una regla general."
+      ],
+      "explanation": "El aire obligado a pasar por un estrechamiento se acelera: cuente con un grado de fuerza o más de viento adicional y rachas más fuertes."
+    },
+    {
+      "id": "q.loc.7",
+      "kind": "single",
+      "prompt": "¿A qué hora es más probable que un viento catabático sea más fuerte frente a la desembocadura de un valle escarpado?",
+      "diagram": {
+        "id": "thermal",
+        "variant": "katabatic"
+      },
+      "options": [
+        "A media tarde",
+        "Desde la madrugada hasta el amanecer",
+        "A mediodía",
+        "Es constante todo el día"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El calentamiento de la tarde da vientos anabáticos y virazón.",
+        "Correcto: el aire frío lleva toda la noche descendiendo.",
+        "El calentamiento de mediodía lo contrarresta.",
+        "Es un efecto nocturno."
+      ],
+      "explanation": "El flujo catabático aumenta durante la noche a medida que se enfrían las laderas y alcanza su máximo hacia el amanecer."
+    },
+    {
+      "id": "q.loc.8",
+      "kind": "single",
+      "prompt": "¿Qué situación sinóptica produce normalmente el mistral?",
+      "options": [
+        "Alta sobre el golfo de Vizcaya y baja sobre el golfo de Génova",
+        "Baja sobre España y alta sobre Italia",
+        "Alta sobre Turquía",
+        "Un collado sobre Francia"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: un fuerte gradiente del norte a lo largo del valle del Ródano.",
+        "Eso daría vientos del sur.",
+        "Esa situación corresponde al Mediterráneo oriental.",
+        "Un collado da vientos flojos."
+      ],
+      "explanation": "Las altas presiones al oeste y una baja en el golfo de Génova crean un fuerte flujo del norte canalizado por el valle del Ródano."
+    }
+  ]
+}

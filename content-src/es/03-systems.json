@@ -1,0 +1,260 @@
+{
+  "id": "systems",
+  "title": "Borrascas, anticiclones y otras configuraciones",
+  "summary": "Cómo nacen, crecen, se ocluyen y se rellenan las borrascas; cómo se comportan las altas, y qué traen las vaguadas, las dorsales y los collados.",
+  "symbol": "hurricane",
+  "lessons": [
+    {
+      "id": "systems.lifecycle",
+      "title": "Ciclo de vida de una borrasca",
+      "segments": [
+        {
+          "heading": "Nacimiento en el frente polar",
+          "paragraphs": [
+            "Una borrasca de latitudes medias empieza como una pequeña ondulación en el frente polar, donde el aire polar frío se encuentra con el aire subtropical cálido. En la cresta de la onda baja la presión y el aire empieza a girar en sentido antihorario.",
+            "El aire cálido avanza hacia el nordeste formando un frente cálido y deja tras de sí una cuña de aire cálido, el sector cálido. Por detrás irrumpe el aire frío como frente frío. Es la fase de onda abierta, en la que el sistema suele estar profundizándose y desplazándose más deprisa."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "wave"
+          }
+        },
+        {
+          "heading": "Madurez y desplazamiento",
+          "paragraphs": [
+            "Una borrasca madura en el Atlántico suele desplazarse hacia el este o el nordeste a 20–30 nudos, guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
+            "Cuando una borrasca se profundiza 24 hPa o más en 24 horas se habla de ciclogénesis explosiva. Cuente con temporales muy duros y bajadas de presión muy rápidas."
+          ],
+          "keyPoints": [
+            "Velocidad típica de 20–30 nudos, hacia el este o el nordeste.",
+            "La trayectoria sigue las isobaras del sector cálido.",
+            "Vigile las bajas secundarias en la cola de los frentes fríos."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "mature"
+          }
+        },
+        {
+          "heading": "Oclusión y disipación",
+          "paragraphs": [
+            "Los frentes fríos avanzan más deprisa que los cálidos. Cuando el frente frío alcanza al cálido, el sector cálido se despega de la superficie y se forma un frente ocluido que se enrolla en espiral hacia el centro.",
+            "Una vez ocluida, la borrasca suele frenarse y empieza a rellenarse a medida que sube la presión en su centro. El viento amaina, aunque puede seguir siendo fuerte durante un tiempo, y la propia oclusión trae una banda de nubes y lluvia."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "occluded"
+          }
+        }
+      ]
+    },
+    {
+      "id": "systems.highs",
+      "title": "Anticiclones",
+      "segments": [
+        {
+          "heading": "Tiempo estable, pero no siempre benigno",
+          "paragraphs": [
+            "En un anticiclón el aire desciende y se calienta, lo que impide que se formen nubes. Las altas traen vientos flojos y tiempo estable, se mueven despacio y a veces bloquean durante días la trayectoria de las borrascas que llegan del oeste.",
+            "El aire que desciende crea una inversión térmica. En invierno, la humedad atrapada debajo da extensas nubes bajas (los días grises anticiclónicos) o niebla; en verano, calima y virazones. En el borde de una alta, donde su gradiente se junta con el de una baja vecina, el viento puede ser fuerte."
+          ],
+          "keyPoints": [
+            "Aire descendente: inversión, poca nubosidad y vientos flojos.",
+            "Invierno: niebla y cielos grises. Verano: calima y virazones.",
+            "En los bordes puede haber viento fuerte."
+          ],
+          "diagram": {
+            "id": "stability",
+            "variant": "inversion"
+          }
+        }
+      ]
+    },
+    {
+      "id": "systems.features",
+      "title": "Vaguadas, dorsales y collados",
+      "segments": [
+        {
+          "heading": "Cómo interpretar las formas",
+          "paragraphs": [
+            "Una vaguada es una prolongación de bajas presiones. A su paso, cuente con una banda de nubes, chubascos o turbonadas, una bajada y posterior subida de la presión y un rolar del viento a la derecha, de forma muy parecida a un frente frío débil.",
+            "Una dorsal es una prolongación de altas presiones entre dos borrascas. Trae un breve periodo de buen tiempo con vientos más flojos, al que a menudo siguen enseguida las nubes de la siguiente borrasca.",
+            "Un collado es la zona de gradiente débil entre dos altas y dos bajas. Los vientos son flojos y variables; espere niebla en otoño e invierno y tormentas en verano. Las predicciones son menos fiables en los collados, porque pequeños cambios en la configuración alteran el viento."
+          ],
+          "diagram": {
+            "id": "pressureFeatures"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.sys.1",
+      "kind": "order",
+      "prompt": "Ordene las fases de una borrasca del frente polar.",
+      "options": [
+        "Se forma la oclusión",
+        "Se forma una onda en el frente polar",
+        "La borrasca se rellena y se disipa",
+        "Sector cálido abierto con frente cálido y frente frío"
+      ],
+      "answers": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Onda, sector cálido abierto, oclusión cuando el frente frío alcanza al cálido y, por último, relleno y disipación."
+    },
+    {
+      "id": "q.sys.2",
+      "kind": "single",
+      "prompt": "¿Qué configuración sorprende con más frecuencia a los patrones con temporales inesperados?",
+      "options": [
+        "Un collado",
+        "Una borrasca secundaria en la cola de un frente frío",
+        "Una dorsal de altas presiones",
+        "Un anticiclón estacionario"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "En los collados los vientos son flojos y variables.",
+        "Correcto: las pequeñas secundarias pueden profundizarse deprisa y son difíciles de predecir.",
+        "Las dorsales traen un breve periodo de buen tiempo.",
+        "Un anticiclón estacionario da vientos flojos, salvo en sus bordes."
+      ],
+      "explanation": "Las bajas secundarias se forman en la cola de los frentes, a menudo se mueven deprisa y pueden profundizarse con rapidez; consulte siempre la última predicción para no perderlas de vista."
+    },
+    {
+      "id": "q.sys.3",
+      "kind": "single",
+      "prompt": "¿En qué dirección es más probable que se desplace una borrasca madura?",
+      "diagram": {
+        "id": "depression",
+        "variant": "mature"
+      },
+      "options": [
+        "En paralelo a las isobaras del sector cálido",
+        "Directamente hacia la alta más cercana",
+        "Hacia el oeste, contra la circulación dominante",
+        "En perpendicular al frente frío, hacia el aire cálido"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: las isobaras del sector cálido son una buena guía de la trayectoria.",
+        "Las borrascas no se desplazan hacia las altas.",
+        "Las bajas de latitudes medias suelen desplazarse hacia el este o el nordeste.",
+        "No es una regla fiable."
+      ],
+      "explanation": "Las borrascas las guía la circulación en altura; las isobaras del sector cálido dan una indicación práctica de su dirección."
+    },
+    {
+      "id": "q.sys.4",
+      "kind": "multi",
+      "prompt": "Un gran anticiclón invernal está centrado sobre el mar del Norte. ¿Qué condiciones son probables? Seleccione todas las correctas.",
+      "options": [
+        "Vientos flojos cerca del centro",
+        "Niebla o nubes bajas extensas",
+        "Chubascos fuertes y frecuentes",
+        "Una inversión térmica",
+        "Presión bajando rápidamente"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Correcto: humedad atrapada bajo la inversión.",
+        "El aire descendente impide los chubascos.",
+        "Correcto: el aire descendente se calienta en altura.",
+        "Las altas suelen moverse despacio y con presión estable."
+      ],
+      "explanation": "Las altas invernales traen vientos flojos, una inversión térmica y a menudo niebla o días grises anticiclónicos."
+    },
+    {
+      "id": "q.sys.5",
+      "kind": "single",
+      "prompt": "Al paso de una vaguada, ¿qué cambio de viento cabe esperar?",
+      "options": [
+        "Un rolar a la derecha, a menudo con chubascos y turbonadas",
+        "Un rolar a la izquierda con lluvia continua",
+        "Un descenso gradual hasta la calma",
+        "Ningún cambio de dirección"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: las vaguadas se comportan como frentes fríos débiles.",
+        "El rolar a la izquierda y la lluvia continua acompañan a la llegada de los frentes cálidos.",
+        "Las vaguadas suelen traer un aumento temporal del viento.",
+        "La dirección suele cambiar."
+      ],
+      "explanation": "Una vaguada trae una banda de chubascos o turbonadas, una bajada y luego una subida de la presión, y un rolar a la derecha."
+    },
+    {
+      "id": "q.sys.6",
+      "kind": "numeric",
+      "prompt": "La presión en el centro de una borrasca baja de 1000 hPa a 972 hPa en 24 horas. ¿Cuántos hPa se ha profundizado?",
+      "numeric": {
+        "value": 28,
+        "tolerance": 0,
+        "unit": "hPa"
+      },
+      "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de 24 hPa de la ciclogénesis explosiva: cuente con temporales muy duros."
+    },
+    {
+      "id": "q.sys.7",
+      "kind": "single",
+      "prompt": "¿Por qué son menos fiables las predicciones para una zona situada bajo un collado?",
+      "options": [
+        "Porque en los collados siempre hay tormentas",
+        "Porque pequeños desplazamientos de los sistemas vecinos cambian mucho un campo de vientos tan débil",
+        "Porque el efecto Coriolis es nulo en un collado",
+        "Porque los barómetros no funcionan en un collado"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las tormentas son posibles, no seguras.",
+        "Correcto: con gradientes débiles, la dirección del viento y el momento de los cambios son muy sensibles.",
+        "El efecto Coriolis depende de la latitud, no de la configuración.",
+        "Los barómetros funcionan en cualquier sitio."
+      ],
+      "explanation": "Con gradientes débiles dominan los efectos locales, y pequeños cambios en la configuración alteran notablemente el viento y el tiempo."
+    },
+    {
+      "id": "q.sys.8",
+      "kind": "single",
+      "prompt": "¿Qué le ocurre al sector cálido cuando una borrasca se ocluye?",
+      "diagram": {
+        "id": "depression",
+        "variant": "occluded"
+      },
+      "options": [
+        "Se amplía",
+        "Se despega de la superficie y asciende",
+        "Se convierte en un frente frío",
+        "Se adelanta al frente cálido"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Se reduce hasta desaparecer en superficie.",
+        "Correcto: el frente frío lo alcanza y lo levanta.",
+        "Los frentes se funden en una oclusión.",
+        "No puede adelantar al frente que lo delimita."
+      ],
+      "explanation": "El frente frío, más rápido, alcanza al cálido, eleva el aire cálido en altura y forma un frente ocluido."
+    }
+  ]
+}

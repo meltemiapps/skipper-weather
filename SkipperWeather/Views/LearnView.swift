@@ -159,6 +159,7 @@ struct LessonView: View {
                     .foregroundStyle(Palette.onAccent)
                     .controlSize(.large)
                     .sensoryFeedback(.success, trigger: model.isComplete(lesson.id))
+                    .accessibilityIdentifier("lesson.complete")
                 }
                 .padding()
             }

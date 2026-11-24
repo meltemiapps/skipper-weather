@@ -1,0 +1,283 @@
+{
+  "id": "sea",
+  "title": "Estado de la mar, mar de fondo y viento contra corriente",
+  "summary": "Cómo crecen las olas, mar de fondo frente a mar de viento, estadística del oleaje y por qué el viento contra corriente vuelve peligrosa la mar.",
+  "symbol": "water.waves",
+  "lessons": [
+    {
+      "id": "sea.waves",
+      "title": "Cómo crecen las olas",
+      "segments": [
+        {
+          "heading": "Intensidad, fetch y duración",
+          "paragraphs": [
+            "El mar de viento crece con la intensidad del viento, el fetch (la distancia de mar abierto sobre la que sopla) y la duración (el tiempo que lleva soplando). El menor de los tres factores es el que limita la mar. Un temporal que sopla de tierra deja poco fetch y una mar moderada junto a la costa; ese mismo temporal con cientos de millas de fetch levanta una mar grande y plenamente desarrollada.",
+            "Las alturas de ola de las predicciones suelen ser alturas significativas: la media del tercio de olas más altas. De cada mil olas, cuente con que una alcance unas 1,9 veces la altura significativa. Planifique pensando en las olas grandes, no en la media."
+          ],
+          "keyPoints": [
+            "Intensidad, fetch y duración determinan juntos la altura de las olas.",
+            "La altura significativa es la media del tercio de olas más altas.",
+            "Algunas olas aisladas llegan casi al doble de esa altura."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "fetch"
+          }
+        },
+        {
+          "heading": "Mar de fondo frente a mar de viento",
+          "paragraphs": [
+            "El mar de fondo es energía de periodo largo que ha salido de la zona de generación. Viaja lejos y deprisa y puede llegar antes que la borrasca, lo que supone un valioso aviso anticipado. El mar de viento es más corto, más empinado y va alineado con el viento local.",
+            "Cuando el mar de fondo y el mar de viento llegan de direcciones distintas, la mar se vuelve cruzada y las crestas pueden sumarse en picos empinados que rompen. El mar de fondo que entra en aguas someras o contra una corriente se empina peligrosamente y puede romper sobre las barras de entrada a puerto."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "swell"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sea.tide",
+      "title": "Viento contra corriente y aguas someras",
+      "segments": [
+        {
+          "heading": "Por qué se empina la mar",
+          "paragraphs": [
+            "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede parecer un fuerza 7. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
+            "El efecto es máximo en los cabos, sobre bajos y en zonas de corrientes fuertes y escarceos. Planifique el paso por esos lugares en el repunte o con viento y corriente en el mismo sentido."
+          ],
+          "keyPoints": [
+            "Viento contra corriente: olas más cortas, empinadas y rompientes.",
+            "Peor en cabos, zonas de corrientes fuertes, escarceos y sobre bajos.",
+            "Programe el paso en el repunte o con viento a favor de la corriente."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "windAgainstTide"
+          }
+        },
+        {
+          "heading": "Términos del estado de la mar",
+          "paragraphs": [
+            "Las predicciones describen el estado de la mar por la altura significativa: marejadilla (hasta 0,5 m), marejada (de 0,5 a 1,25 m), fuerte marejada (de 1,25 a 2,5 m), gruesa (de 2,5 a 4 m), muy gruesa (de 4 a 6 m), arbolada (de 6 a 9 m), montañosa (de 9 a 14 m) y enorme (más de 14 m).",
+            "Use las descripciones de la escala Beaufort para contrastar el viento observado con la mar: los borreguillos empiezan hacia fuerza 4, la espuma forma franjas con fuerza 7 y los rociones aparecen con fuerza 8."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "6"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.sea.1",
+      "kind": "single",
+      "prompt": "Lleva 12 horas soplando un nordeste de fuerza 7. ¿Dónde será menor la mar?",
+      "diagram": {
+        "id": "waves",
+        "variant": "fetch"
+      },
+      "options": [
+        "Muy pegado a una costa situada al nordeste, donde el viento sopla de tierra",
+        "200 millas a sotavento",
+        "En pleno océano",
+        "Sobre un bajo a 50 millas de la costa"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: con poco fetch las olas apenas tienen espacio para crecer.",
+        "Un fetch largo significa una mar mayor.",
+        "Fetch ilimitado.",
+        "Las aguas someras empinan las olas que llegan."
+      ],
+      "explanation": "El fetch limita las olas: con viento de tierra, pegado a la costa de barlovento se encuentra el agua más llana."
+    },
+    {
+      "id": "q.sea.2",
+      "kind": "numeric",
+      "prompt": "La altura significativa de ola prevista es de 2,5 m. ¿Qué altura aproximada podría tener alguna de las olas más grandes, en metros? (Utilice 1,9 veces.)",
+      "numeric": {
+        "value": 4.75,
+        "tolerance": 0.3,
+        "unit": "m"
+      },
+      "explanation": "2,5 × 1,9 ≈ 4,75 m. Prepare el barco y la tripulación para olas ocasionales de ese tamaño."
+    },
+    {
+      "id": "q.sea.3",
+      "kind": "scenario",
+      "context": "Tiene previsto doblar un cabo con una zona de corrientes fuertes conocida. Viento: oeste-suroeste fuerza 5. La corriente de marea frente al cabo tira hacia el oeste con hasta 3 nudos de 10:00 a 16:00 y hacia el este de 16:00 a 22:00.",
+      "prompt": "Planifique el paso del cabo.",
+      "diagram": {
+        "id": "waves",
+        "variant": "windAgainstTide"
+      },
+      "explanation": "Pase con viento y corriente en el mismo sentido, o en el repunte, para evitar la mar empinada y rompiente de la zona de corrientes.",
+      "steps": [
+        {
+          "id": "q.sea.3a",
+          "kind": "single",
+          "prompt": "¿En qué periodo sopla el viento contra la corriente?",
+          "options": [
+            "De 10:00 a 16:00 (corriente hacia el oeste)",
+            "De 16:00 a 22:00 (corriente hacia el este)",
+            "Nunca",
+            "Todo el día"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto: un viento del oeste-suroeste sopla hacia el este-nordeste, en contra de una corriente que tira hacia el oeste.",
+            "La corriente hacia el este va a favor del viento.",
+            "Hay un periodo en que se oponen.",
+            "La corriente se invierte."
+          ],
+          "explanation": "Un viento del oeste-suroeste sopla hacia el este; una corriente hacia el oeste se le opone."
+        },
+        {
+          "id": "q.sea.3b",
+          "kind": "single",
+          "prompt": "¿Cuándo debería planificar el paso por la zona de corrientes?",
+          "options": [
+            "Hacia las 13:00, con la corriente máxima hacia el oeste",
+            "Hacia las 16:00, en el repunte, o poco después, cuando empieza la corriente hacia el este",
+            "A cualquier hora; un fuerza 5 es moderado",
+            "A las 10:00, cuando empieza la corriente hacia el oeste"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Máximo viento contra corriente: la peor mar.",
+            "Correcto: repunte y, después, viento y corriente en el mismo sentido.",
+            "Un fuerza 5 contra 3 nudos puede parecer un fuerza 7 en una zona de corrientes.",
+            "La corriente va aumentando en contra del viento."
+          ],
+          "explanation": "El repunte o una corriente favorable en el mismo sentido que el viento dan la mar más cómoda al cruzar una zona de corrientes."
+        }
+      ]
+    },
+    {
+      "id": "q.sea.4",
+      "kind": "single",
+      "prompt": "En un día despejado y en calma empieza a llegar un mar de fondo largo y bajo del suroeste. ¿Qué podría indicar?",
+      "diagram": {
+        "id": "waves",
+        "variant": "swell"
+      },
+      "options": [
+        "Nada; el mar de fondo es aleatorio",
+        "Una borrasca lejana, posiblemente acercándose",
+        "Una brisa marina más tarde",
+        "Un banco de niebla inminente"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El mar de fondo siempre tiene un origen.",
+        "Correcto: el mar de fondo puede llegar mucho antes que el viento.",
+        "No tiene relación.",
+        "No tiene relación."
+      ],
+      "explanation": "El mar de fondo avanza más deprisa que la mayoría de las borrascas; un mar de fondo nuevo y creciente puede ser el primer indicio de que se acerca mal tiempo."
+    },
+    {
+      "id": "q.sea.5",
+      "kind": "order",
+      "prompt": "Ordene estos términos del estado de la mar de menor a mayor altura de ola.",
+      "options": [
+        "Gruesa",
+        "Marejada",
+        "Muy gruesa",
+        "Fuerte marejada",
+        "Marejadilla"
+      ],
+      "answers": [
+        4,
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Marejadilla, marejada, fuerte marejada, gruesa, muy gruesa (y después arbolada, montañosa y enorme)."
+    },
+    {
+      "id": "q.sea.6",
+      "kind": "single",
+      "prompt": "¿Hacia qué fuerza de la escala Beaufort se generalizan los borreguillos?",
+      "diagram": {
+        "id": "seaState",
+        "variant": "4"
+      },
+      "options": [
+        "Fuerza 2",
+        "Fuerza 4",
+        "Fuerza 7",
+        "Fuerza 9"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Con fuerza 2 solo hay pequeñas ondulaciones.",
+        "Correcto: con fuerza 4 los borreguillos son bastante frecuentes.",
+        "Con fuerza 7 el viento arrastra la espuma en franjas.",
+        "Con fuerza 9 hay espuma densa y rociones."
+      ],
+      "explanation": "Los borreguillos aparecen con fuerza 3 y son bastante frecuentes con fuerza 4."
+    },
+    {
+      "id": "q.sea.7",
+      "kind": "multi",
+      "prompt": "¿Qué condiciones hacen peligroso cruzar la barra de un puerto? Seleccione todas las correctas.",
+      "options": [
+        "Mar de fondo hacia la costa",
+        "Vaciante saliendo en contra del mar de fondo",
+        "Repunte sin mar de fondo",
+        "Viento fuerte del mar hacia tierra",
+        "Llenante y brisa de tierra"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Correcto: la vaciante empina el mar de fondo y lo hace romper.",
+        "Es el momento más seguro.",
+        "Correcto.",
+        "En general, la combinación más fácil."
+      ],
+      "explanation": "El mar de fondo, el viento hacia tierra y una vaciante en contra hacen romper las barras; crúcelas cerca del repunte de pleamar y con condiciones tranquilas."
+    },
+    {
+      "id": "q.sea.8",
+      "kind": "single",
+      "prompt": "¿A qué se refiere normalmente la altura de ola de una predicción?",
+      "options": [
+        "A la ola más alta",
+        "A la media de todas las olas",
+        "A la altura significativa de ola: la media del tercio más alto",
+        "Solo a la altura del mar de fondo"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "Las olas máximas individuales son más altas.",
+        "La media es inferior a la altura significativa.",
+        "Correcto.",
+        "Incluye tanto el mar de viento como el mar de fondo, salvo que se indique otra cosa."
+      ],
+      "explanation": "La altura significativa de ola se aproxima a lo que estimaría un observador; algunas olas aisladas son mucho mayores."
+    }
+  ]
+}

@@ -24,6 +24,7 @@ struct QuizHomeView: View {
                         .glassCard(tint: Palette.amber)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("quiz.mock")
 
                     scopeRow(scope: "all", title: t("quiz.allModules"), symbol: "square.grid.2x2")
                     ForEach(model.content.modules) { module in
@@ -57,6 +58,7 @@ struct QuizHomeView: View {
             .glassCard()
         }
         .buttonStyle(.plain)
+        .accessibilityIdentifier("quiz.scope.\(scope)")
     }
 }
 
@@ -71,6 +73,9 @@ struct QuizRunView: View {
         Group {
             if let session {
                 QuizRunner(session: Binding(get: { self.session ?? session }, set: { self.session = $0 }), scope: scope, onRestart: restart)
+            } else {
+                // An empty Group has no view to attach onAppear to, so the session would never start.
+                Color.clear
             }
         }
         .screen()
@@ -139,6 +144,7 @@ struct QuestionCard: View {
     @State private var single: Int?
     @State private var order: [Int] = []
     @State private var numberText = ""
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var q: Question { item.question }
     private var checked: Bool { phase == .checked }
@@ -194,7 +200,10 @@ struct QuestionCard: View {
             .foregroundStyle(Palette.onAccent)
             .controlSize(.large)
             .disabled(!checked && !hasResponse)
+            .accessibilityIdentifier("quiz.action")
         }
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("question.\(item.scenario != nil ? "scenario" : q.kind.rawValue)")
         .onAppear(perform: prepare)
     }
 
@@ -232,6 +241,7 @@ struct QuestionCard: View {
                 .buttonStyle(.plain)
                 .disabled(checked)
                 .accessibilityAddTraits(isSelected(i) ? .isSelected : [])
+                .accessibilityIdentifier("quiz.option.\(i)")
             }
         case .numeric:
             HStack {
@@ -239,6 +249,7 @@ struct QuestionCard: View {
                     .keyboardType(.numbersAndPunctuation)
                     .font(.title2.monospacedDigit())
                     .disabled(checked)
+                    .accessibilityIdentifier("quiz.number")
                     .onChange(of: numberText) { _, text in
                         if let v = parse(text) { respond(.number(v)) }
                     }
@@ -248,19 +259,27 @@ struct QuestionCard: View {
         case .order:
             Text(t("quiz.orderHint")).font(.caption).foregroundStyle(.secondary)
             ForEach(Array(order.enumerated()), id: \.element) { pos, optionIndex in
-                HStack(spacing: 10) {
-                    Text("\(pos + 1)").font(.headline.monospacedDigit()).frame(width: 24)
-                    Text(options[optionIndex]).frame(maxWidth: .infinity, alignment: .leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                    if !checked {
-                        Button { move(pos, by: -1) } label: { Image(systemName: "chevron.up") }
-                            .disabled(pos == 0)
-                        Button { move(pos, by: 1) } label: { Image(systemName: "chevron.down") }
-                            .disabled(pos == order.count - 1)
-                    } else if let answers = q.answers {
-                        Image(systemName: answers[pos] == optionIndex ? "checkmark.circle.fill" : "xmark.circle.fill")
-                            .foregroundStyle(answers[pos] == optionIndex ? Palette.good : Palette.bad)
+                // At accessibility text sizes the arrows go under the text so it keeps the full width.
+                let stacked = dynamicTypeSize.isAccessibilitySize
+                let row = stacked ? AnyLayout(VStackLayout(alignment: .leading, spacing: 8)) : AnyLayout(HStackLayout(spacing: 10))
+                row {
+                    HStack(alignment: .firstTextBaseline, spacing: 10) {
+                        Text("\(pos + 1)").font(.headline.monospacedDigit()).frame(minWidth: 24)
+                        Text(options[optionIndex]).frame(maxWidth: .infinity, alignment: .leading)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
+                    HStack(spacing: 10) {
+                        if !checked {
+                            Button { move(pos, by: -1) } label: { Image(systemName: "chevron.up") }
+                                .disabled(pos == 0)
+                            Button { move(pos, by: 1) } label: { Image(systemName: "chevron.down") }
+                                .disabled(pos == order.count - 1)
+                        } else if let answers = q.answers {
+                            Image(systemName: answers[pos] == optionIndex ? "checkmark.circle.fill" : "xmark.circle.fill")
+                                .foregroundStyle(answers[pos] == optionIndex ? Palette.good : Palette.bad)
+                        }
+                    }
+                    .frame(maxWidth: stacked ? .infinity : nil, alignment: .trailing)
                 }
                 .buttonStyle(.glass)
                 .glassCard(cornerRadius: 16)
@@ -407,6 +426,7 @@ struct MockExamView: View {
                             .multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                         Button(t("quiz.start"), action: start)
                             .buttonStyle(.glassProminent).foregroundStyle(Palette.onAccent).controlSize(.large)
+                            .accessibilityIdentifier("mock.start")
                     }
                     .frame(maxWidth: .infinity)
                     .glassCard()

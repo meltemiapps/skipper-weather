@@ -1,0 +1,3228 @@
+{
+ "language": "es",
+ "glossary": [
+  {
+   "id": "isobar",
+   "term": "Isobara",
+   "definition": "Línea en un mapa que une puntos de igual presión a nivel del mar, normalmente trazada cada 4 hPa."
+  },
+  {
+   "id": "pressureGradient",
+   "term": "Gradiente de presión",
+   "definition": "Ritmo al que cambia la presión con la distancia. Isobaras muy juntas indican un gradiente fuerte y viento intenso."
+  },
+  {
+   "id": "synopticChart",
+   "term": "Mapa sinóptico",
+   "definition": "Mapa de presión en superficie con isobaras, altas, bajas y frentes en un momento determinado."
+  },
+  {
+   "id": "depression",
+   "term": "Borrasca (baja)",
+   "definition": "Zona de baja presión con circulación antihoraria en el hemisferio norte, que trae nubes, lluvia y viento."
+  },
+  {
+   "id": "anticyclone",
+   "term": "Anticiclón (alta)",
+   "definition": "Zona de alta presión con circulación horaria en el hemisferio norte, normalmente con tiempo estable y vientos flojos."
+  },
+  {
+   "id": "trough",
+   "term": "Vaguada",
+   "definition": "Prolongación alargada de bajas presiones. Suele traer chubascos, turbonadas y un rolar del viento a la derecha."
+  },
+  {
+   "id": "ridge",
+   "term": "Dorsal",
+   "definition": "Prolongación alargada de altas presiones que suele dar un breve periodo de buen tiempo entre borrascas."
+  },
+  {
+   "id": "col",
+   "term": "Collado (pantano barométrico)",
+   "definition": "Zona de gradiente débil entre dos altas y dos bajas, con vientos flojos y variables; posible niebla o tormentas."
+  },
+  {
+   "id": "warmFront",
+   "term": "Frente cálido",
+   "definition": "Borde delantero de una masa de aire cálido que avanza y asciende suavemente sobre el aire más frío que tiene delante."
+  },
+  {
+   "id": "coldFront",
+   "term": "Frente frío",
+   "definition": "Borde delantero de una masa de aire frío que avanza y se introduce por debajo del aire cálido que tiene delante."
+  },
+  {
+   "id": "occlusion",
+   "term": "Frente ocluido",
+   "definition": "Se forma cuando el frente frío alcanza al cálido y eleva el sector cálido por encima de la superficie."
+  },
+  {
+   "id": "warmSector",
+   "term": "Sector cálido",
+   "definition": "Cuña de aire cálido y húmedo entre el frente cálido y el frente frío de una borrasca."
+  },
+  {
+   "id": "veering",
+   "term": "Rolar a la derecha (dextrógiro)",
+   "definition": "Cambio de la dirección del viento en el sentido de las agujas del reloj, por ejemplo de suroeste a oeste."
+  },
+  {
+   "id": "backing",
+   "term": "Rolar a la izquierda (levógiro)",
+   "definition": "Cambio de la dirección del viento en sentido contrario a las agujas del reloj, por ejemplo de oeste a suroeste."
+  },
+  {
+   "id": "coriolis",
+   "term": "Efecto Coriolis",
+   "definition": "Desviación aparente del aire en movimiento causada por la rotación de la Tierra: hacia la derecha en el hemisferio norte."
+  },
+  {
+   "id": "geostrophic",
+   "term": "Viento geostrófico",
+   "definition": "Viento teórico por encima de la capa de fricción, paralelo a isobaras rectas cuando se equilibran el gradiente de presión y la fuerza de Coriolis."
+  },
+  {
+   "id": "buysBallot",
+   "term": "Ley de Buys Ballot",
+   "definition": "De espaldas al viento en el hemisferio norte, la baja presión queda a su izquierda."
+  },
+  {
+   "id": "squall",
+   "term": "Turbonada",
+   "definition": "Aumento brusco del viento de al menos 16 nudos que alcanza 22 nudos o más y dura al menos un minuto, a menudo con cambio de dirección."
+  },
+  {
+   "id": "gust",
+   "term": "Racha",
+   "definition": "Aumento breve de la velocidad del viento, de segundos de duración, por encima del viento medio."
+  },
+  {
+   "id": "dewPoint",
+   "term": "Punto de rocío",
+   "definition": "Temperatura a la que debe enfriarse el aire, a presión constante, para saturarse."
+  },
+  {
+   "id": "relativeHumidity",
+   "term": "Humedad relativa",
+   "definition": "Cantidad de vapor de agua en el aire como porcentaje del máximo que puede contener a esa temperatura."
+  },
+  {
+   "id": "advectionFog",
+   "term": "Niebla de advección (niebla marina)",
+   "definition": "Niebla que se forma cuando aire cálido y húmedo se desplaza sobre un mar más frío que su punto de rocío."
+  },
+  {
+   "id": "radiationFog",
+   "term": "Niebla de radiación",
+   "definition": "Niebla que se forma sobre tierra en noches despejadas y en calma, cuando el suelo enfría el aire hasta su punto de rocío."
+  },
+  {
+   "id": "frontalFog",
+   "term": "Niebla frontal",
+   "definition": "Niebla o nubes muy bajas que se forman cuando la lluvia del aire cálido satura el aire más frío de debajo, sobre todo por delante de los frentes cálidos."
+  },
+  {
+   "id": "seaBreeze",
+   "term": "Brisa marina (virazón)",
+   "definition": "Viento diurno del mar hacia tierra causado porque la tierra se calienta más deprisa que el mar."
+  },
+  {
+   "id": "landBreeze",
+   "term": "Brisa terral (terral)",
+   "definition": "Viento nocturno de tierra hacia el mar causado porque la tierra se enfría más deprisa que el mar."
+  },
+  {
+   "id": "katabatic",
+   "term": "Viento catabático",
+   "definition": "Viento producido por aire frío y denso que desciende por las laderas, normalmente de noche; puede ser fuerte y repentino en valles y fiordos."
+  },
+  {
+   "id": "anabatic",
+   "term": "Viento anabático",
+   "definition": "Viento flojo ladera arriba causado por el calentamiento diurno de las pendientes."
+  },
+  {
+   "id": "funnelling",
+   "term": "Efecto embudo (Venturi)",
+   "definition": "Aceleración del viento cuando se estrecha entre relieves, islas o a lo largo de un estrecho."
+  },
+  {
+   "id": "fetch",
+   "term": "Fetch (alcance)",
+   "definition": "Distancia de mar abierto sobre la que sopla el viento en una dirección constante."
+  },
+  {
+   "id": "swell",
+   "term": "Mar de fondo",
+   "definition": "Olas largas y regulares que han salido de la zona donde se generaron."
+  },
+  {
+   "id": "windWaves",
+   "term": "Mar de viento",
+   "definition": "Olas generadas por el viento local, normalmente más cortas y empinadas que el mar de fondo."
+  },
+  {
+   "id": "significantWaveHeight",
+   "term": "Altura significativa de ola",
+   "definition": "Altura media del tercio de olas más altas; algunas olas pueden alcanzar casi el doble."
+  },
+  {
+   "id": "windAgainstTide",
+   "term": "Viento contra corriente",
+   "definition": "Viento que sopla en sentido contrario a la corriente de marea, acortando y empinando las olas."
+  },
+  {
+   "id": "beaufort",
+   "term": "Escala Beaufort",
+   "definition": "Escala de fuerza del viento de 0 (calma) a 12 (temporal huracanado), asociada a la velocidad media y al estado de la mar."
+  },
+  {
+   "id": "tendency",
+   "term": "Tendencia barométrica",
+   "definition": "Variación de la presión en las tres horas anteriores, descrita como estable, subiendo o bajando, de lentamente a muy rápidamente."
+  },
+  {
+   "id": "instability",
+   "term": "Inestabilidad",
+   "definition": "Estado en el que el aire ascendente sigue más cálido que su entorno y continúa subiendo, formando nubes de desarrollo y chubascos."
+  },
+  {
+   "id": "inversion",
+   "term": "Inversión térmica",
+   "definition": "Capa en la que la temperatura aumenta con la altura, atrapando debajo calima, niebla y contaminación."
+  },
+  {
+   "id": "grib",
+   "term": "Archivo GRIB",
+   "definition": "Datos de un modelo numérico de predicción en malla, como viento y presión en horas fijas, que se visualizan en programas de navegación o meteorología."
+  },
+  {
+   "id": "windBarb",
+   "term": "Barba de viento",
+   "definition": "Símbolo cuyo eje apunta hacia donde viene el viento; media barba 5 nudos, barba entera 10 nudos, banderola 50 nudos."
+  },
+  {
+   "id": "cyclonic",
+   "term": "Ciclónico",
+   "definition": "Término de predicción: el viento cambiará mucho de dirección al pasar cerca una borrasca."
+  },
+  {
+   "id": "meltemi",
+   "term": "Meltemi (vientos etesios)",
+   "definition": "Viento persistente del norte en verano sobre el mar Egeo, a menudo de fuerza 5 a 7 y a veces de temporal."
+  },
+  {
+   "id": "bora",
+   "term": "Bora",
+   "definition": "Viento catabático del nordeste, frío y muy racheado, en la costa oriental del Adriático, que puede llegar casi sin aviso."
+  },
+  {
+   "id": "mistral",
+   "term": "Mistral",
+   "definition": "Viento frío y seco del norte o noroeste canalizado por el valle del Ródano hacia el golfo de León."
+  },
+  {
+   "id": "sirocco",
+   "term": "Siroco (Jugo)",
+   "definition": "Viento cálido del sur o sudeste procedente del norte de África, húmedo al llegar a Europa, a menudo con polvo y mala visibilidad."
+  }
+ ],
+ "diagramLabels": {
+  "low": "B",
+  "high": "A",
+  "warmFront": "Frente cálido",
+  "coldFront": "Frente frío",
+  "occludedFront": "Oclusión",
+  "warmSector": "Sector cálido",
+  "coldAir": "Aire frío",
+  "warmAir": "Aire cálido",
+  "trough": "Vaguada",
+  "ridge": "Dorsal",
+  "col": "Collado",
+  "isobars": "Isobaras",
+  "observer": "Usted",
+  "cirrus": "Cirros",
+  "cirrostratus": "Cirrostratos",
+  "altostratus": "Altostratos",
+  "nimbostratus": "Nimbostratos",
+  "cumulus": "Cúmulos",
+  "cumulonimbus": "Cumulonimbos",
+  "stratus": "Estratos",
+  "rain": "Lluvia",
+  "showers": "Chubascos",
+  "drizzle": "Llovizna",
+  "squall": "Turbonada",
+  "gustFront": "Frente de racha",
+  "anvil": "Yunque",
+  "downdraught": "Corriente descendente",
+  "updraught": "Corriente ascendente",
+  "geostrophic": "Viento geostrófico",
+  "overSea": "Sobre el mar ≈15°",
+  "overLand": "Sobre tierra ≈30°",
+  "friction": "Fricción",
+  "pressureGradient": "Gradiente de presión",
+  "coriolis": "Coriolis",
+  "backToWind": "De espaldas al viento",
+  "lowOnLeft": "Baja a la izquierda",
+  "seaBreeze": "Brisa marina",
+  "landBreeze": "Brisa terral",
+  "katabatic": "Catabático",
+  "anabatic": "Anabático",
+  "day": "Día",
+  "night": "Noche",
+  "land": "Tierra",
+  "sea": "Mar",
+  "coldSea": "Mar frío",
+  "warmSea": "Mar cálido",
+  "funnelling": "Efecto embudo",
+  "convergence": "Convergencia",
+  "divergence": "Divergencia",
+  "strongerWind": "Viento más fuerte",
+  "lighterWind": "Viento más flojo",
+  "meltemi": "Meltemi",
+  "bora": "Bora",
+  "mistral": "Mistral",
+  "sirocco": "Siroco",
+  "radiationFog": "Niebla de radiación",
+  "advectionFog": "Niebla de advección",
+  "frontalFog": "Niebla frontal",
+  "airTemperature": "Temperatura del aire",
+  "dewPoint": "Punto de rocío",
+  "seaTemperature": "Temperatura del mar",
+  "saturation": "Saturación",
+  "windWithTide": "Viento a favor de la corriente",
+  "windAgainstTide": "Viento contra corriente",
+  "tide": "Corriente",
+  "wind": "Viento",
+  "swell": "Mar de fondo",
+  "windWaves": "Mar de viento",
+  "fetch": "Fetch",
+  "wavelength": "Longitud de onda",
+  "waveHeight": "Altura",
+  "falling": "Bajando",
+  "rising": "Subiendo",
+  "steady": "Estable",
+  "hours": "Horas",
+  "hPa": "hPa",
+  "stable": "Estable",
+  "unstable": "Inestable",
+  "parcel": "Aire ascendente",
+  "calm": "Calma",
+  "knots": "kn",
+  "halfBarb": "5 kn",
+  "fullBarb": "10 kn",
+  "pennant": "50 kn",
+  "force": "Fuerza",
+  "polarMaritime": "Polar marítima",
+  "tropicalMaritime": "Tropical marítima",
+  "polarContinental": "Polar continental",
+  "tropicalContinental": "Tropical continental",
+  "highCloud": "Nubes altas",
+  "mediumCloud": "Nubes medias",
+  "lowCloud": "Nubes bajas",
+  "height": "Altura",
+  "inversion": "Inversión",
+  "visFog": "Niebla < 1.000 m",
+  "visPoor": "Mala 1.000 m–2 mn",
+  "visModerate": "Regular 2–5 mn",
+  "visGood": "Buena > 5 mn",
+  "issued": "Emisión",
+  "imminent": "Inminente < 6 h",
+  "soon": "Pronto 6–12 h",
+  "later": "Más tarde > 12 h",
+  "departure": "Salida",
+  "destination": "Destino",
+  "refuge": "Refugio",
+  "front": "Frente",
+  "gridPoint": "Punto de malla",
+  "modelWind": "Viento del modelo",
+  "gusts": "Sin rachas",
+  "heaveTo": "Al pairo",
+  "backedHeadsail": "Foque acuartelado",
+  "helmToWindward": "Timón a barlovento",
+  "lighterAround": "Más flojo",
+  "strongerAround": "Más fuerte",
+  "passesNorth": "Centro al norte: rola a la izquierda y luego a la derecha",
+  "passesSouth": "Centro al sur: rola a la izquierda sin parar"
+ },
+ "modules": [
+  {
+   "id": "atmosphere",
+   "title": "La atmósfera y la presión",
+   "summary": "Qué es la presión, cómo se mide y se representa en los mapas, y por qué el barómetro es la primera herramienta de predicción del patrón.",
+   "symbol": "gauge.with.dots.needle.50percent",
+   "lessons": [
+    {
+     "id": "atmosphere.pressure",
+     "title": "Presión atmosférica e isobaras",
+     "segments": [
+      {
+       "heading": "Qué es la presión",
+       "paragraphs": [
+        "La presión atmosférica es el peso de la columna de aire que hay sobre un punto. Al nivel medio del mar el valor estándar es de 1013,25 hPa (hectopascales, numéricamente iguales a los milibares). En el noroeste de Europa los valores reales suelen oscilar entre unos 950 hPa en una borrasca profunda y 1045 hPa en un anticiclón potente.",
+        "La presión disminuye con la altura, aproximadamente 1 hPa por cada 8 metros cerca de la superficie. Por eso los barómetros se corrigen al nivel medio del mar, para poder comparar en un mismo mapa las lecturas tomadas en lugares distintos."
+       ],
+       "keyPoints": [
+        "La presión estándar a nivel del mar es de 1013,25 hPa; 1 hPa equivale a 1 mb.",
+        "Rango habitual: entre unos 950 y 1045 hPa.",
+        "Las lecturas se reducen al nivel medio del mar antes de llevarlas al mapa."
+       ],
+       "diagram": {
+        "id": "airColumn"
+       }
+      },
+      {
+       "heading": "Isobaras y gradiente de presión",
+       "paragraphs": [
+        "Las isobaras unen puntos de igual presión a nivel del mar y normalmente se trazan cada 4 hPa. Su separación indica el gradiente de presión: cuanto más juntas están, más deprisa cambia la presión con la distancia y más fuerte es el viento.",
+        "La escala de viento geostrófico impresa en el mapa convierte la separación entre isobaras en velocidad del viento para la latitud correspondiente. Con la misma separación, el viento es más fuerte en latitudes más bajas, porque allí es más débil el efecto Coriolis que equilibra el gradiente.",
+        "La forma de las isobaras revela las distintas configuraciones de presión: círculos cerrados alrededor de una baja o una alta, vaguadas en forma de U que salen de las bajas, dorsales en forma de U invertida que salen de las altas y la silla de gradiente débil de un collado."
+       ],
+       "keyPoints": [
+        "Isobaras juntas: gradiente fuerte, viento fuerte.",
+        "Use la escala geostrófica del mapa para estimar el viento a partir de la separación.",
+        "Con la misma separación hay más viento en latitudes más bajas."
+       ],
+       "diagram": {
+        "id": "pressureFeatures"
+       }
+      }
+     ]
+    },
+    {
+     "id": "atmosphere.barometer",
+     "title": "El barómetro y la tendencia barométrica",
+     "segments": [
+      {
+       "heading": "Cómo leer la tendencia",
+       "paragraphs": [
+        "Una lectura aislada del barómetro dice poco. La tendencia, es decir, la variación en las tres horas anteriores, dice mucho más. Durante la travesía, anote el barómetro cada hora en el cuaderno de bitácora y represéntelo en una gráfica.",
+        "Los términos normalizados para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (de 0,1 a 1,5 hPa), subiendo o bajando (de 1,6 a 3,5 hPa), rápidamente (de 3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
+       ],
+       "keyPoints": [
+        "Anote el barómetro cada hora; lo que importa es la tendencia, no la cifra.",
+        "Más de 6 hPa en 3 horas es «muy rápidamente»."
+       ],
+       "diagram": {
+        "id": "barograph",
+        "variant": "front"
+       }
+      },
+      {
+       "heading": "Lo que dice la curva del barógrafo",
+       "paragraphs": [
+        "Un descenso continuado suele anunciar la llegada de una borrasca o de un frente cálido; cuanto más rápida es la bajada, más fuerte será probablemente el viento que vendrá después. Una subida brusca tras una bajada suele marcar el paso de un frente frío o de una vaguada, con un rolar a la derecha y chubascos con turbonadas.",
+        "Una subida rápida tras una borrasca profunda puede traer por sí sola un periodo de viento fuerte y racheado, porque el gradiente detrás del sistema es muy acusado. Recuerde el viejo refrán marinero: lo que mucho se anuncia, mucho dura; lo que llega sin aviso, pronto pasa."
+       ],
+       "keyPoints": [
+        "Bajada rápida: viene viento.",
+        "Subida brusca con rolar a la derecha: ha pasado un frente frío o una vaguada.",
+        "Una subida rápida también puede traer viento fuerte."
+       ],
+       "diagram": {
+        "id": "barograph",
+        "variant": "rapidRise"
+       }
+      }
+     ]
+    },
+    {
+     "id": "atmosphere.airmasses",
+     "title": "Masas de aire",
+     "segments": [
+      {
+       "heading": "De dónde viene el aire",
+       "paragraphs": [
+        "Una masa de aire es un gran volumen de aire con temperatura y humedad similares, cuyo carácter depende de dónde se formó: polar o tropical, marítima o continental. Después, su recorrido sobre el mar o sobre tierra la va modificando.",
+        "El aire polar marítimo, que suele llegar del noroeste, es fresco e inestable sobre un mar más cálido: buena visibilidad, cúmulos y chubascos, y viento racheado. El aire tropical marítimo del suroeste es cálido y húmedo; al enfriarse desde abajo se vuelve estable, con nubes bajas, llovizna y mala visibilidad o niebla. El aire continental es más seco, caluroso en verano y muy frío en invierno."
+       ],
+       "keyPoints": [
+        "Polar marítimo: fresco, con chubascos, buena visibilidad y rachas.",
+        "Tropical marítimo: templado, húmedo, nubes bajas, llovizna y riesgo de niebla.",
+        "Los frentes son las fronteras entre masas de aire."
+       ],
+       "diagram": {
+        "id": "airMasses"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.atm.1",
+     "kind": "single",
+     "prompt": "Su barómetro ha bajado de 1012 hPa a 1005 hPa en las últimas tres horas. ¿Cómo se describe esta tendencia?",
+     "options": [
+      "Bajando lentamente",
+      "Bajando",
+      "Bajando rápidamente",
+      "Bajando muy rápidamente"
+     ],
+     "answers": [
+      3
+     ],
+     "optionExplanations": [
+      "«Lentamente» corresponde a 0,1–1,5 hPa en tres horas.",
+      "«Bajando», sin más, corresponde a 1,6–3,5 hPa.",
+      "«Rápidamente» corresponde a 3,6–6,0 hPa.",
+      "Correcto: 7 hPa supera los 6,0 hPa en tres horas."
+     ],
+     "explanation": "Un descenso de 7 hPa en tres horas es «bajando muy rápidamente» e indica con claridad que se acerca un temporal."
+    },
+    {
+     "id": "q.atm.2",
+     "kind": "single",
+     "prompt": "Dos mapas muestran exactamente la misma separación entre isobaras, uno a 60°N y otro a 40°N. ¿Dónde es más fuerte el viento geostrófico?",
+     "options": [
+      "A 60°N",
+      "A 40°N",
+      "Igual en ambos",
+      "Depende de la estación del año"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El efecto Coriolis es más fuerte en latitudes altas, así que hace falta menos viento para equilibrar el gradiente.",
+      "Correcto: con un Coriolis más débil en latitudes bajas, el mismo gradiente da más viento.",
+      "El viento correspondiente a un gradiente dado depende de la latitud.",
+      "La estación del año no cambia esta relación."
+     ],
+     "explanation": "El equilibrio geostrófico se da entre la fuerza del gradiente de presión y la de Coriolis. El efecto Coriolis se debilita hacia el ecuador, de modo que el mismo gradiente produce más viento."
+    },
+    {
+     "id": "q.atm.3",
+     "kind": "multi",
+     "prompt": "¿Qué observaciones son típicas de una masa de aire polar marítimo sobre el mar? Seleccione todas las correctas.",
+     "options": [
+      "Buena visibilidad",
+      "Cúmulos y chubascos",
+      "Llovizna persistente",
+      "Viento racheado",
+      "Niebla marina extensa"
+     ],
+     "answers": [
+      0,
+      1,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto: el aire fresco y limpio da buena visibilidad.",
+      "Correcto: el aire fresco sobre un mar más cálido es inestable.",
+      "La llovizna es propia del aire tropical marítimo, estable y húmedo.",
+      "Correcto: la inestabilidad hace bajar hasta la superficie el viento más fuerte de altura.",
+      "La niebla marina necesita aire cálido y húmedo sobre un mar más frío."
+     ],
+     "explanation": "El aire polar marítimo se calienta desde abajo al pasar sobre el mar, por lo que es inestable: nubes de desarrollo, chubascos, rachas y buena visibilidad entre chubasco y chubasco."
+    },
+    {
+     "id": "q.atm.4",
+     "kind": "numeric",
+     "prompt": "A las 06:00 la presión era de 1016 hPa y está bajando a un ritmo constante de 2 hPa por hora. ¿Qué marcará a las 10:00, en hPa?",
+     "numeric": {
+      "value": 1008,
+      "tolerance": 0,
+      "unit": "hPa"
+     },
+     "explanation": "Cuatro horas a 2 hPa por hora suponen un descenso de 8 hPa: 1016 menos 8 da 1008 hPa. Eso está entre «bajando rápidamente» y «muy rápidamente»; prepárese para un viento fuerte."
+    },
+    {
+     "id": "q.atm.5",
+     "kind": "single",
+     "prompt": "En un mapa sinóptico, ¿qué suelen indicar unas isobaras en forma de U que se extienden hacia fuera desde una baja?",
+     "diagram": {
+      "id": "pressureFeatures"
+     },
+     "options": [
+      "Una dorsal",
+      "Un collado",
+      "Una vaguada",
+      "Un anticiclón"
+     ],
+     "answers": [
+      2
+     ],
+     "optionExplanations": [
+      "Una dorsal sale de una alta.",
+      "Un collado es la zona de gradiente débil entre dos altas y dos bajas.",
+      "Correcto: una vaguada es una prolongación de bajas presiones.",
+      "Un anticiclón es una alta cerrada."
+     ],
+     "explanation": "Las vaguadas salen de las bajas y, a su paso, suelen traer chubascos, turbonadas y un rolar del viento a la derecha."
+    },
+    {
+     "id": "q.atm.6",
+     "kind": "single",
+     "prompt": "Después del paso de una borrasca profunda, el barómetro sube 5 hPa en tres horas. ¿Qué cabe esperar?",
+     "options": [
+      "Calma inmediata",
+      "Un periodo de viento fuerte y racheado",
+      "Niebla espesa",
+      "Viento rolando a la izquierda y lluvia continua"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Una subida rápida indica un gradiente fuerte, no calma.",
+      "Correcto: el fuerte gradiente detrás de la borrasca genera viento fuerte y racheado.",
+      "La niebla es poco probable en el aire fresco y bien mezclado que sigue a una borrasca.",
+      "El rolar a la izquierda y la lluvia continua acompañan a la llegada de un frente cálido."
+     ],
+     "explanation": "Las subidas rápidas pueden traer tanto viento como las bajadas rápidas. Detrás de una borrasca profunda, el gradiente apretado y el aire polar inestable dan vientos fuertes y racheados."
+    },
+    {
+     "id": "q.atm.7",
+     "kind": "single",
+     "prompt": "¿Por qué se corrigen al nivel medio del mar las lecturas del barómetro?",
+     "options": [
+      "Para eliminar el efecto de la temperatura",
+      "Para poder comparar lecturas tomadas a distintas alturas",
+      "Para convertir pulgadas en hectopascales",
+      "Porque la presión a nivel del mar nunca cambia"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "La corrección es por altura, no por temperatura.",
+      "Correcto: la presión disminuye con la altura, así que las lecturas se reducen a un nivel común.",
+      "La conversión de unidades es otra cuestión.",
+      "La presión a nivel del mar cambia constantemente."
+     ],
+     "explanation": "Cerca de la superficie la presión disminuye aproximadamente 1 hPa cada 8 m, por lo que las lecturas se reducen al nivel medio del mar antes de llevarlas al mapa."
+    },
+    {
+     "id": "q.atm.8",
+     "kind": "order",
+     "prompt": "Ordene estos términos de tendencia de menor a mayor variación de presión en tres horas.",
+     "options": [
+      "Bajando rápidamente",
+      "Estable",
+      "Bajando muy rápidamente",
+      "Bajando lentamente",
+      "Bajando"
+     ],
+     "answers": [
+      1,
+      3,
+      4,
+      0,
+      2
+     ],
+     "explanation": "Estable (menos de 0,1), lentamente (de 0,1 a 1,5), bajando (de 1,6 a 3,5), rápidamente (de 3,6 a 6,0) y muy rápidamente (más de 6,0 hPa)."
+    }
+   ]
+  },
+  {
+   "id": "wind",
+   "title": "El viento: Coriolis, fricción y Buys Ballot",
+   "summary": "Por qué el viento sopla a lo largo de las isobaras, cómo lo modifica la fricción en superficie y cómo localizar una baja a partir del viento que siente a bordo.",
+   "symbol": "wind",
+   "lessons": [
+    {
+     "id": "wind.global",
+     "title": "Circulación general y efecto Coriolis",
+     "segments": [
+      {
+       "heading": "El esquema global",
+       "paragraphs": [
+        "El calentamiento desigual del planeta pone en marcha la circulación general. El aire cálido asciende cerca del ecuador y desciende en los cinturones subtropicales de altas presiones, en torno a los 30° norte y sur, donde nacen los alisios y se asientan anticiclones como el de las Azores.",
+        "Entre los 40° y los 60°, aproximadamente, los vientos dominantes del oeste arrastran una sucesión de borrascas a lo largo del frente polar, donde el aire polar frío se encuentra con el aire subtropical cálido. Esta es la máquina que fabrica el tiempo del noroeste de Europa."
+       ],
+       "diagram": {
+        "id": "globalCirculation"
+       }
+      },
+      {
+       "heading": "El efecto Coriolis",
+       "paragraphs": [
+        "Como la Tierra gira bajo él, el aire en movimiento parece desviarse: hacia la derecha en el hemisferio norte y hacia la izquierda en el hemisferio sur. El efecto es nulo en el ecuador, máximo en los polos y aumenta con la velocidad del viento.",
+        "Cuando el aire empieza a moverse de las altas hacia las bajas presiones, el efecto Coriolis lo va desviando hasta que ambas fuerzas se equilibran y el viento sopla a lo largo de las isobaras. Ese viento equilibrado es el viento geostrófico. En el hemisferio norte, el resultado es una circulación antihoraria alrededor de las bajas y horaria alrededor de las altas."
+       ],
+       "keyPoints": [
+        "En el hemisferio norte la desviación es hacia la derecha.",
+        "Nulo en el ecuador, máximo en los polos.",
+        "Bajas en sentido antihorario, altas en sentido horario (hemisferio norte)."
+       ],
+       "diagram": {
+        "id": "windAngle",
+        "variant": "geostrophic"
+       }
+      }
+     ]
+    },
+    {
+     "id": "wind.surface",
+     "title": "Viento en superficie y fricción",
+     "segments": [
+      {
+       "heading": "La fricción cerca de la superficie",
+       "paragraphs": [
+        "En el primer kilómetro de altura, más o menos, la fricción frena el viento. Un viento más lento sufre menos desviación por Coriolis, así que el gradiente de presión gana ligeramente la partida y el viento cruza las isobaras hacia dentro, hacia las bajas presiones.",
+        "Sobre el mar, el viento en superficie suele estar rolado a la izquierda unos 10° a 15° respecto a las isobaras y sopla a entre dos tercios y cuatro quintos de la velocidad geostrófica. Sobre tierra está rolado a la izquierda unos 30° y puede quedarse en la mitad de la velocidad geostrófica, pero es más racheado."
+       ],
+       "keyPoints": [
+        "Sobre el mar: rolado a la izquierda 10–15°, con un 70–80 % de la velocidad geostrófica.",
+        "Sobre tierra: rolado a la izquierda unos 30°, en torno al 50 % y más racheado.",
+        "El viento en superficie siempre cruza las isobaras hacia la baja."
+       ],
+       "diagram": {
+        "id": "windAngle",
+        "variant": "surface"
+       }
+      },
+      {
+       "heading": "Curvatura: bajas y altas",
+       "paragraphs": [
+        "Con isobaras curvas, el equilibrio incluye también la curvatura. Con la misma separación, el viento alrededor de una baja es más flojo que con isobaras rectas, y alrededor de una alta es más fuerte. En la práctica, las altas suelen tener isobaras muy separadas y vientos flojos, pero un gradiente apretado en el borde de un anticiclón puede dar mucho viento.",
+        "La inestabilidad también cuenta. En aire frío e inestable, el viento fuerte de altura baja a la superficie en forma de rachas; en aire estable, el viento en superficie puede ser bastante más flojo de lo que indica el gradiente."
+       ],
+       "diagram": {
+        "id": "windAngle",
+        "variant": "curvature"
+       }
+      }
+     ]
+    },
+    {
+     "id": "wind.buysballot",
+     "title": "La ley de Buys Ballot en la práctica",
+     "segments": [
+      {
+       "heading": "Cómo localizar la baja",
+       "paragraphs": [
+        "Ley de Buys Ballot: en el hemisferio norte, si se pone de espaldas al viento real, la baja presión queda a su izquierda. En el hemisferio sur queda a su derecha.",
+        "Como la fricción hace rolar a la izquierda el viento en superficie, conviene afinar: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja quedará entonces a 90° a su izquierda. Con viento del suroeste en el mar, mire al 045°, gire al 060° y la baja estará aproximadamente al 330°."
+       ],
+       "keyPoints": [
+        "De espaldas al viento: baja a la izquierda (hemisferio norte).",
+        "Corrija la fricción: gire 15° a la derecha en el mar y 30° sobre tierra.",
+        "Siga la demora de la baja a lo largo del tiempo para ver hacia dónde se desplaza."
+       ],
+       "diagram": {
+        "id": "buysBallot"
+       }
+      },
+      {
+       "heading": "¿Hacia dónde rolará el viento?",
+       "paragraphs": [
+        "Si el centro de una borrasca pasa al norte de su posición (lo habitual en las islas británicas), el viento rola a la izquierda mientras se acerca y luego rola a la derecha al pasar los frentes. Si el centro pasa al sur, el viento rola a la izquierda sin parar durante todo el paso, por ejemplo de este a nordeste y luego a norte.",
+        "Tomar varias demoras sucesivas con Buys Ballot le dirá en qué caso se encuentra: si la demora de la baja pasa del oeste al norte, el centro está pasando al norte de usted."
+       ],
+       "keyPoints": [
+        "Centro al norte: rola a la izquierda y luego a la derecha.",
+        "Centro al sur: rola a la izquierda sin parar."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "tracks"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.wind.1",
+     "kind": "numeric",
+     "context": "Navega en el hemisferio norte. El viento real sopla del 225° (suroeste).",
+     "prompt": "Aplicando la ley de Buys Ballot con una corrección por fricción de 15°, ¿cuál es la demora aproximada del centro de bajas presiones, en grados verdaderos?",
+     "diagram": {
+      "id": "buysBallot"
+     },
+     "numeric": {
+      "value": 330,
+      "tolerance": 15,
+      "unit": "°"
+     },
+     "explanation": "De espaldas al viento mira al 045°. Gire 15° a la derecha hasta el 060°. La baja está 90° a su izquierda: 060° menos 90° da 330°."
+    },
+    {
+     "id": "q.wind.2",
+     "kind": "single",
+     "prompt": "Sobre el mar, las isobaras van de este a oeste con la baja presión al norte. ¿Cuál es la dirección más probable del viento en superficie?",
+     "options": [
+      "270° (oeste)",
+      "255° (oesuroeste)",
+      "285° (oesnoroeste)",
+      "180° (sur)"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Esa es la dirección geostrófica, paralela a las isobaras, por encima de la capa de fricción.",
+      "Correcto: rolado a la izquierda unos 15° respecto al viento geostrófico del oeste.",
+      "Eso sería rolado a la derecha, en sentido contrario.",
+      "Demasiado rolado a la izquierda para mar abierto."
+     ],
+     "explanation": "El viento geostrófico es del oeste con la baja al norte. La fricción sobre el mar lo hace rolar a la izquierda 10–15°, así que queda en torno al 255°."
+    },
+    {
+     "id": "q.wind.3",
+     "kind": "single",
+     "prompt": "La escala geostrófica da 30 nudos. ¿Qué viento medio en superficie esperaría en mar abierto?",
+     "options": [
+      "Unos 10 nudos",
+      "Unos 22 nudos",
+      "Unos 30 nudos",
+      "Unos 40 nudos"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Es una reducción excesiva para mar abierto.",
+      "Correcto: más o menos un 70–80 % de la velocidad geostrófica.",
+      "La fricción siempre reduce el viento en superficie.",
+      "Con isobaras rectas, el viento en superficie no supera al geostrófico."
+     ],
+     "explanation": "Sobre el mar, el viento en superficie suele ser de dos tercios a cuatro quintos del geostrófico: aquí, unos 20–24 nudos, con rachas por encima."
+    },
+    {
+     "id": "q.wind.4",
+     "kind": "single",
+     "context": "Durante 12 horas de travesía el viento pasa de sudeste a este, luego a nordeste y después a norte, sin cambios bruscos.",
+     "prompt": "¿Por dónde ha pasado el centro de la borrasca?",
+     "options": [
+      "Al norte de usted",
+      "Al sur de usted",
+      "Justo por encima",
+      "Era un anticiclón, no una borrasca"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Si el centro pasa al norte, el viento rola a la izquierda y luego a la derecha.",
+      "Correcto: un rolar continuo a la izquierda indica que el centro ha pasado al sur.",
+      "Con el centro encima hay una encalmada y después un cambio brusco de sentido.",
+      "Los anticiclones no producen esta secuencia con viento en aumento."
+     ],
+     "explanation": "En el hemisferio norte, una baja que pasa al sur del observador da un rolar continuo a la izquierda; si pasa al norte, rola a la izquierda y después a la derecha al paso de los frentes."
+    },
+    {
+     "id": "q.wind.5",
+     "kind": "multi",
+     "prompt": "¿Qué afirmaciones sobre el efecto Coriolis son ciertas? Seleccione todas las correctas.",
+     "options": [
+      "Desvía el aire en movimiento hacia la derecha en el hemisferio norte",
+      "Es máximo en el ecuador",
+      "Aumenta con la velocidad del viento",
+      "Es la causa del viento",
+      "Es nulo en el ecuador"
+     ],
+     "answers": [
+      0,
+      2,
+      4
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Es nulo en el ecuador y máximo en los polos.",
+      "Correcto: cuanto más rápido va el aire, más se desvía.",
+      "El viento lo causa el gradiente de presión; Coriolis solo lo desvía.",
+      "Correcto."
+     ],
+     "explanation": "El efecto Coriolis desvía el viento, pero no lo genera. Depende de la latitud y de la velocidad, y desaparece en el ecuador."
+    },
+    {
+     "id": "q.wind.6",
+     "kind": "single",
+     "prompt": "Dejando aparte la virazón y el terral, ¿por qué el viento sobre tierra suele ser más racheado que sobre el mar con la misma situación meteorológica?",
+     "options": [
+      "Porque la tierra siempre está más caliente",
+      "Porque la rugosidad del terreno crea turbulencia que hace bajar a ráfagas el aire más rápido",
+      "Porque el efecto Coriolis es más fuerte sobre tierra",
+      "Porque los gradientes de presión son más fuertes sobre tierra"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "No siempre, y el calor por sí solo no es la causa.",
+      "Correcto: la fricción y la turbulencia producen rachas y encalmadas.",
+      "El efecto Coriolis no depende de la superficie.",
+      "Los gradientes dependen de la configuración de presiones, no de la superficie."
+     ],
+     "explanation": "La rugosidad de la superficie genera turbulencia. El viento medio disminuye, pero los remolinos hacen bajar en forma de rachas el aire más rápido de altura."
+    },
+    {
+     "id": "q.wind.7",
+     "kind": "scenario",
+     "context": "En mitad del canal de la Mancha, a 50°N. A las 08:00 el viento es SSO fuerza 5 y el barómetro marca 1004 hPa, tras bajar 3 hPa en las tres últimas horas. A las 11:00 el viento es S fuerza 6 y el barómetro marca 999 hPa.",
+     "prompt": "Analice la situación paso a paso.",
+     "explanation": "El viento que rola a la izquierda y arrecia, junto con un descenso continuado del barómetro, indica una borrasca que se acerca por el oeste y cuyo centro probablemente pasará al norte.",
+     "steps": [
+      {
+       "id": "q.wind.7a",
+       "kind": "single",
+       "prompt": "¿Qué ha hecho el viento entre las 08:00 y las 11:00?",
+       "options": [
+        "Ha rolado a la derecha y ha aumentado",
+        "Ha rolado a la izquierda y ha aumentado",
+        "Ha rolado a la derecha y ha disminuido",
+        "Ha rolado a la izquierda y ha disminuido"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "De SSO a S es un cambio en sentido antihorario.",
+        "Correcto: cambio en sentido antihorario y más fuerte.",
+        "No se cumple ninguna de las dos cosas.",
+        "El viento ha arreciado."
+       ],
+       "explanation": "De SSO a S es un cambio en sentido antihorario, así que el viento ha rolado a la izquierda, y pasar de fuerza 5 a 6 es un aumento."
+      },
+      {
+       "id": "q.wind.7b",
+       "kind": "single",
+       "prompt": "A las 11:00, de espaldas al viento del sur y con una corrección de 15°, ¿dónde está aproximadamente la baja?",
+       "options": [
+        "Al nordeste",
+        "Entre el noroeste y el oeste",
+        "Al sudeste",
+        "Justo al sur"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Para eso haría falta viento del noroeste.",
+        "Correcto: mire al 000°, gire al 015° y la baja queda a la izquierda, hacia el 285°.",
+        "La baja nunca queda detrás de usted a la derecha.",
+        "El viento no soplaría desde la baja."
+       ],
+       "explanation": "Mirando al 000° y girando 15° a la derecha hasta el 015°, la baja queda unos 90° a la izquierda: hacia el 285°, oesnoroeste."
+      },
+      {
+       "id": "q.wind.7c",
+       "kind": "single",
+       "prompt": "¿Qué cambio de viento debe prever cuando pase el frente cálido?",
+       "options": [
+        "Un rolar a la derecha, normalmente al suroeste",
+        "Otro rolar brusco a la izquierda, hasta el este",
+        "Una calma repentina",
+        "Un rolar a la izquierda hasta el noroeste"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: en el frente cálido el viento rola a la derecha, normalmente al suroeste.",
+        "El rolar a la izquierda continúa por delante del frente, no al pasar este.",
+        "En un frente cálido no hay calma.",
+        "Pasar a noroeste sería rolar a la derecha, y suele ocurrir tras el frente frío."
+       ],
+       "explanation": "Con el centro pasando al norte, el viento rola a la derecha al paso de cada frente: al suroeste en el frente cálido y al oeste o noroeste en el frente frío."
+      }
+     ]
+    },
+    {
+     "id": "q.wind.8",
+     "kind": "single",
+     "prompt": "En el hemisferio sur, de espaldas al viento, ¿dónde queda la baja presión?",
+     "options": [
+      "A su izquierda",
+      "A su derecha",
+      "Delante",
+      "Detrás"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Esa es la regla del hemisferio norte.",
+      "Correcto: la desviación es hacia la izquierda, así que la baja queda a su derecha.",
+      "No queda delante.",
+      "No queda detrás."
+     ],
+     "explanation": "En el hemisferio sur el efecto Coriolis desvía hacia la izquierda, lo que invierte la regla y el sentido de la circulación."
+    }
+   ]
+  },
+  {
+   "id": "systems",
+   "title": "Borrascas, anticiclones y otras configuraciones",
+   "summary": "Cómo nacen, crecen, se ocluyen y se rellenan las borrascas; cómo se comportan las altas, y qué traen las vaguadas, las dorsales y los collados.",
+   "symbol": "hurricane",
+   "lessons": [
+    {
+     "id": "systems.lifecycle",
+     "title": "Ciclo de vida de una borrasca",
+     "segments": [
+      {
+       "heading": "Nacimiento en el frente polar",
+       "paragraphs": [
+        "Una borrasca de latitudes medias empieza como una pequeña ondulación en el frente polar, donde el aire polar frío se encuentra con el aire subtropical cálido. En la cresta de la onda baja la presión y el aire empieza a girar en sentido antihorario.",
+        "El aire cálido avanza hacia el nordeste formando un frente cálido y deja tras de sí una cuña de aire cálido, el sector cálido. Por detrás irrumpe el aire frío como frente frío. Es la fase de onda abierta, en la que el sistema suele estar profundizándose y desplazándose más deprisa."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "wave"
+       }
+      },
+      {
+       "heading": "Madurez y desplazamiento",
+       "paragraphs": [
+        "Una borrasca madura en el Atlántico suele desplazarse hacia el este o el nordeste a 20–30 nudos, guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
+        "Cuando una borrasca se profundiza 24 hPa o más en 24 horas se habla de ciclogénesis explosiva. Cuente con temporales muy duros y bajadas de presión muy rápidas."
+       ],
+       "keyPoints": [
+        "Velocidad típica de 20–30 nudos, hacia el este o el nordeste.",
+        "La trayectoria sigue las isobaras del sector cálido.",
+        "Vigile las bajas secundarias en la cola de los frentes fríos."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "mature"
+       }
+      },
+      {
+       "heading": "Oclusión y disipación",
+       "paragraphs": [
+        "Los frentes fríos avanzan más deprisa que los cálidos. Cuando el frente frío alcanza al cálido, el sector cálido se despega de la superficie y se forma un frente ocluido que se enrolla en espiral hacia el centro.",
+        "Una vez ocluida, la borrasca suele frenarse y empieza a rellenarse a medida que sube la presión en su centro. El viento amaina, aunque puede seguir siendo fuerte durante un tiempo, y la propia oclusión trae una banda de nubes y lluvia."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "occluded"
+       }
+      }
+     ]
+    },
+    {
+     "id": "systems.highs",
+     "title": "Anticiclones",
+     "segments": [
+      {
+       "heading": "Tiempo estable, pero no siempre benigno",
+       "paragraphs": [
+        "En un anticiclón el aire desciende y se calienta, lo que impide que se formen nubes. Las altas traen vientos flojos y tiempo estable, se mueven despacio y a veces bloquean durante días la trayectoria de las borrascas que llegan del oeste.",
+        "El aire que desciende crea una inversión térmica. En invierno, la humedad atrapada debajo da extensas nubes bajas (los días grises anticiclónicos) o niebla; en verano, calima y virazones. En el borde de una alta, donde su gradiente se junta con el de una baja vecina, el viento puede ser fuerte."
+       ],
+       "keyPoints": [
+        "Aire descendente: inversión, poca nubosidad y vientos flojos.",
+        "Invierno: niebla y cielos grises. Verano: calima y virazones.",
+        "En los bordes puede haber viento fuerte."
+       ],
+       "diagram": {
+        "id": "stability",
+        "variant": "inversion"
+       }
+      }
+     ]
+    },
+    {
+     "id": "systems.features",
+     "title": "Vaguadas, dorsales y collados",
+     "segments": [
+      {
+       "heading": "Cómo interpretar las formas",
+       "paragraphs": [
+        "Una vaguada es una prolongación de bajas presiones. A su paso, cuente con una banda de nubes, chubascos o turbonadas, una bajada y posterior subida de la presión y un rolar del viento a la derecha, de forma muy parecida a un frente frío débil.",
+        "Una dorsal es una prolongación de altas presiones entre dos borrascas. Trae un breve periodo de buen tiempo con vientos más flojos, al que a menudo siguen enseguida las nubes de la siguiente borrasca.",
+        "Un collado es la zona de gradiente débil entre dos altas y dos bajas. Los vientos son flojos y variables; espere niebla en otoño e invierno y tormentas en verano. Las predicciones son menos fiables en los collados, porque pequeños cambios en la configuración alteran el viento."
+       ],
+       "diagram": {
+        "id": "pressureFeatures"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.sys.1",
+     "kind": "order",
+     "prompt": "Ordene las fases de una borrasca del frente polar.",
+     "options": [
+      "Se forma la oclusión",
+      "Se forma una onda en el frente polar",
+      "La borrasca se rellena y se disipa",
+      "Sector cálido abierto con frente cálido y frente frío"
+     ],
+     "answers": [
+      1,
+      3,
+      0,
+      2
+     ],
+     "explanation": "Onda, sector cálido abierto, oclusión cuando el frente frío alcanza al cálido y, por último, relleno y disipación."
+    },
+    {
+     "id": "q.sys.2",
+     "kind": "single",
+     "prompt": "¿Qué configuración sorprende con más frecuencia a los patrones con temporales inesperados?",
+     "options": [
+      "Un collado",
+      "Una borrasca secundaria en la cola de un frente frío",
+      "Una dorsal de altas presiones",
+      "Un anticiclón estacionario"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "En los collados los vientos son flojos y variables.",
+      "Correcto: las pequeñas secundarias pueden profundizarse deprisa y son difíciles de predecir.",
+      "Las dorsales traen un breve periodo de buen tiempo.",
+      "Un anticiclón estacionario da vientos flojos, salvo en sus bordes."
+     ],
+     "explanation": "Las bajas secundarias se forman en la cola de los frentes, a menudo se mueven deprisa y pueden profundizarse con rapidez; consulte siempre la última predicción para no perderlas de vista."
+    },
+    {
+     "id": "q.sys.3",
+     "kind": "single",
+     "prompt": "¿En qué dirección es más probable que se desplace una borrasca madura?",
+     "diagram": {
+      "id": "depression",
+      "variant": "mature"
+     },
+     "options": [
+      "En paralelo a las isobaras del sector cálido",
+      "Directamente hacia la alta más cercana",
+      "Hacia el oeste, contra la circulación dominante",
+      "En perpendicular al frente frío, hacia el aire cálido"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: las isobaras del sector cálido son una buena guía de la trayectoria.",
+      "Las borrascas no se desplazan hacia las altas.",
+      "Las bajas de latitudes medias suelen desplazarse hacia el este o el nordeste.",
+      "No es una regla fiable."
+     ],
+     "explanation": "Las borrascas las guía la circulación en altura; las isobaras del sector cálido dan una indicación práctica de su dirección."
+    },
+    {
+     "id": "q.sys.4",
+     "kind": "multi",
+     "prompt": "Un gran anticiclón invernal está centrado sobre el mar del Norte. ¿Qué condiciones son probables? Seleccione todas las correctas.",
+     "options": [
+      "Vientos flojos cerca del centro",
+      "Niebla o nubes bajas extensas",
+      "Chubascos fuertes y frecuentes",
+      "Una inversión térmica",
+      "Presión bajando rápidamente"
+     ],
+     "answers": [
+      0,
+      1,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Correcto: humedad atrapada bajo la inversión.",
+      "El aire descendente impide los chubascos.",
+      "Correcto: el aire descendente se calienta en altura.",
+      "Las altas suelen moverse despacio y con presión estable."
+     ],
+     "explanation": "Las altas invernales traen vientos flojos, una inversión térmica y a menudo niebla o días grises anticiclónicos."
+    },
+    {
+     "id": "q.sys.5",
+     "kind": "single",
+     "prompt": "Al paso de una vaguada, ¿qué cambio de viento cabe esperar?",
+     "options": [
+      "Un rolar a la derecha, a menudo con chubascos y turbonadas",
+      "Un rolar a la izquierda con lluvia continua",
+      "Un descenso gradual hasta la calma",
+      "Ningún cambio de dirección"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: las vaguadas se comportan como frentes fríos débiles.",
+      "El rolar a la izquierda y la lluvia continua acompañan a la llegada de los frentes cálidos.",
+      "Las vaguadas suelen traer un aumento temporal del viento.",
+      "La dirección suele cambiar."
+     ],
+     "explanation": "Una vaguada trae una banda de chubascos o turbonadas, una bajada y luego una subida de la presión, y un rolar a la derecha."
+    },
+    {
+     "id": "q.sys.6",
+     "kind": "numeric",
+     "prompt": "La presión en el centro de una borrasca baja de 1000 hPa a 972 hPa en 24 horas. ¿Cuántos hPa se ha profundizado?",
+     "numeric": {
+      "value": 28,
+      "tolerance": 0,
+      "unit": "hPa"
+     },
+     "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de 24 hPa de la ciclogénesis explosiva: cuente con temporales muy duros."
+    },
+    {
+     "id": "q.sys.7",
+     "kind": "single",
+     "prompt": "¿Por qué son menos fiables las predicciones para una zona situada bajo un collado?",
+     "options": [
+      "Porque en los collados siempre hay tormentas",
+      "Porque pequeños desplazamientos de los sistemas vecinos cambian mucho un campo de vientos tan débil",
+      "Porque el efecto Coriolis es nulo en un collado",
+      "Porque los barómetros no funcionan en un collado"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las tormentas son posibles, no seguras.",
+      "Correcto: con gradientes débiles, la dirección del viento y el momento de los cambios son muy sensibles.",
+      "El efecto Coriolis depende de la latitud, no de la configuración.",
+      "Los barómetros funcionan en cualquier sitio."
+     ],
+     "explanation": "Con gradientes débiles dominan los efectos locales, y pequeños cambios en la configuración alteran notablemente el viento y el tiempo."
+    },
+    {
+     "id": "q.sys.8",
+     "kind": "single",
+     "prompt": "¿Qué le ocurre al sector cálido cuando una borrasca se ocluye?",
+     "diagram": {
+      "id": "depression",
+      "variant": "occluded"
+     },
+     "options": [
+      "Se amplía",
+      "Se despega de la superficie y asciende",
+      "Se convierte en un frente frío",
+      "Se adelanta al frente cálido"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Se reduce hasta desaparecer en superficie.",
+      "Correcto: el frente frío lo alcanza y lo levanta.",
+      "Los frentes se funden en una oclusión.",
+      "No puede adelantar al frente que lo delimita."
+     ],
+     "explanation": "El frente frío, más rápido, alcanza al cálido, eleva el aire cálido en altura y forma un frente ocluido."
+    }
+   ]
+  },
+  {
+   "id": "fronts",
+   "title": "Frentes: antes, durante y después",
+   "summary": "Secuencias de nubes, roladas del viento, presión, visibilidad y lluvia en los frentes cálidos, fríos y ocluidos.",
+   "symbol": "cloud.rain",
+   "lessons": [
+    {
+     "id": "fronts.warm",
+     "title": "El frente cálido",
+     "segments": [
+      {
+       "heading": "Aproximación",
+       "paragraphs": [
+        "El aire cálido asciende lentamente sobre el aire frío que tiene delante siguiendo una pendiente suave, de aproximadamente 1 a 150. Por eso sus nubes llegan mucho antes que el frente en superficie: los cirros pueden aparecer varios cientos de millas por delante, normalmente entre 12 y 24 horas antes del paso del frente.",
+        "La nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal."
+       ],
+       "diagram": {
+        "id": "frontSection",
+        "variant": "warm"
+       }
+      },
+      {
+       "heading": "Paso del frente y sector cálido",
+       "paragraphs": [
+        "Al pasar el frente en superficie, el viento rola a la derecha, normalmente de sur a suroeste, la lluvia se convierte en llovizna, suben la temperatura y el punto de rocío y el barómetro se estabiliza.",
+        "En el sector cálido cabe esperar cielo cubierto de nubes bajas, llovizna y visibilidad de regular a mala. Sobre un mar frío es probable la niebla de advección. El viento suele ser de dirección constante y puede ser fuerte."
+       ],
+       "keyPoints": [
+        "Antes: nubes cada vez más bajas, presión bajando, viento que rola a la izquierda y arrecia, lluvia continua.",
+        "Al paso: rolada a la derecha, la lluvia pasa a llovizna, la presión se estabiliza, sube la temperatura.",
+        "Sector cálido: nubes bajas, llovizna, mala visibilidad, riesgo de niebla de advección."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "warmSector"
+       }
+      }
+     ]
+    },
+    {
+     "id": "fronts.cold",
+     "title": "El frente frío",
+     "segments": [
+      {
+       "heading": "Un límite más brusco",
+       "paragraphs": [
+        "El aire frío se introduce por debajo del cálido con una pendiente más pronunciada, de aproximadamente 1 a 50 o 1 a 80, de modo que el mal tiempo se concentra en una franja más estrecha: a menudo solo una o dos horas de lluvia intensa. Puede haber cumulonimbos embebidos que traen turbonadas, granizo y tormenta; a veces una línea de turbonadas avanza por delante del frente.",
+        "En el frente el viento rola bruscamente a la derecha, normalmente de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
+       ],
+       "diagram": {
+        "id": "frontSection",
+        "variant": "cold"
+       }
+      },
+      {
+       "heading": "Detrás del frente",
+       "paragraphs": [
+        "El aire polar marítimo, frío, trae cielos que se abren, visibilidad excelente, cúmulos y chubascos, algunos fuertes. El viento es racheado y puede seguir rolando lentamente a la derecha. Cada chubasco trae su propia turbonada: vigile el cielo a barlovento.",
+        "Planifique los cambios de vela antes de que llegue el frente. Tome rizos pronto, trinque la cubierta y cuente con que el viento role rápidamente a la nueva dirección, lo que puede convertir un fondeadero abrigado en una costa a sotavento."
+       ],
+       "keyPoints": [
+        "Franja estrecha de lluvia intensa, con posibles turbonadas y tormenta.",
+        "Rolada brusca a la derecha y fuerte subida de la presión al paso.",
+        "Detrás: cielo despejado, frío, chubascos, viento racheado, visibilidad excelente."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "coldFront"
+       }
+      }
+     ]
+    },
+    {
+     "id": "fronts.occluded",
+     "title": "Frentes ocluidos",
+     "segments": [
+      {
+       "heading": "Tiempo combinado",
+       "paragraphs": [
+        "Un frente ocluido combina el tiempo de un frente cálido y el de un frente frío: una larga banda de nubes y lluvia como la de un frente cálido, que a veces termina con lluvia más intensa y una rolada a la derecha como en un frente frío. En superficie no hay sector cálido.",
+        "En una oclusión fría el aire de detrás es más frío que el de delante; en una oclusión cálida es más templado. Para el patrón, el mensaje práctico es el mismo: una franja ancha de lluvia, mala visibilidad y una rolada a la derecha a su paso, normalmente menos violenta que la de los frentes originales."
+       ],
+       "diagram": {
+        "id": "frontSection",
+        "variant": "occluded"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.fr.1",
+     "kind": "order",
+     "prompt": "Ordene estas nubes tal como se suelen ver al aproximarse un frente cálido.",
+     "options": [
+      "Altostratos",
+      "Nimbostratos",
+      "Cirros",
+      "Cirrostratos"
+     ],
+     "answers": [
+      2,
+      3,
+      0,
+      1
+     ],
+     "explanation": "Primero las nubes altas (cirros y luego cirrostratos con halo), después los altostratos de nivel medio y por último los nimbostratos, bajos y espesos, con lluvia continua."
+    },
+    {
+     "id": "q.fr.2",
+     "kind": "single",
+     "prompt": "¿Por qué las nubes de un frente cálido aparecen tan por delante del frente en superficie?",
+     "diagram": {
+      "id": "frontSection",
+      "variant": "warm"
+     },
+     "options": [
+      "El frente cálido avanza más deprisa que sus nubes",
+      "La superficie frontal tiene una pendiente muy suave, de aproximadamente 1 a 150",
+      "Los cirros solo son empujados hacia delante por la corriente en chorro",
+      "Los frentes cálidos siempre avanzan a menos de 5 nudos"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las nubes y el frente se desplazan juntos.",
+      "Correcto: una pendiente suave sitúa las nubes altas cientos de millas por delante.",
+      "Los vientos en altura influyen, pero la pendiente es la razón principal.",
+      "Los frentes cálidos suelen avanzar a 15–25 nudos."
+     ],
+     "explanation": "Al ser tan suave la pendiente, la superficie frontal sigue estando a gran altura muy por delante del punto en que toca el suelo."
+    },
+    {
+     "id": "q.fr.3",
+     "kind": "multi",
+     "prompt": "¿Qué cambios se producen normalmente al paso de un frente frío? Seleccione todas las correctas.",
+     "options": [
+      "Rolada brusca del viento a la derecha",
+      "La presión empieza a subir",
+      "Sube la temperatura",
+      "Después mejora la visibilidad",
+      "El viento rola a la izquierda al sudeste"
+     ],
+     "answers": [
+      0,
+      1,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Correcto: a menudo sube bruscamente.",
+      "La temperatura baja detrás de un frente frío.",
+      "Correcto: a continuación llega aire polar limpio.",
+      "La rolada a la izquierda al sudeste es típica por delante de un frente cálido."
+     ],
+     "explanation": "Frente frío: rolada brusca a la derecha, subida de la presión, bajada de la temperatura y después aire más limpio con chubascos."
+    },
+    {
+     "id": "q.fr.4",
+     "kind": "scenario",
+     "context": "Está fondeado en una bahía abierta al noroeste y abrigada del sur y del oeste. La predicción: «Suroeste 5 a 6, rolando a noroeste 6 a 7 más tarde, lluvia y después chubascos con turbonadas». El barómetro lleva cuatro horas estable en 1001 hPa, con cielo cubierto y llovizna.",
+     "prompt": "Tome las decisiones del patrón.",
+     "explanation": "Está en el sector cálido. El frente frío hará rolar el viento a noroeste y convertirá el fondeadero en una costa a sotavento.",
+     "steps": [
+      {
+       "id": "q.fr.4a",
+       "kind": "single",
+       "prompt": "¿Dónde se encuentra respecto a los frentes de la borrasca?",
+       "options": [
+        "Por delante del frente cálido",
+        "En el sector cálido",
+        "Detrás del frente frío",
+        "Bajo un frente ocluido"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "La presión estaría bajando, con nubes cada vez más espesas y lluvia continua.",
+        "Correcto: presión estable, cielo cubierto, llovizna y viento del suroeste.",
+        "El cielo se estaría abriendo, con chubascos y presión en subida.",
+        "No habría la llovizna ni el barómetro estable propios del sector cálido."
+       ],
+       "explanation": "Presión estable, nubes bajas y llovizna con viento del suroeste son los signos clásicos del sector cálido."
+      },
+      {
+       "id": "q.fr.4b",
+       "kind": "single",
+       "prompt": "¿Qué efecto tendrá el frente frío en su fondeadero?",
+       "options": [
+        "Ninguno: la bahía sigue abrigada",
+        "El viento del noroeste entrará de lleno y la convertirá en una costa a sotavento",
+        "El viento rolará a la izquierda al sur y mejorará el abrigo",
+        "La marea se invertirá"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "La rolada a la derecha le deja sin abrigo.",
+        "Correcto: la bahía está abierta al noroeste.",
+        "Con los frentes fríos el viento rola a la derecha, no a la izquierda.",
+        "Los frentes no invierten las mareas."
+       ],
+       "explanation": "La rolada prevista a noroeste 6–7 meterá el viento y la mar directamente en la bahía."
+      },
+      {
+       "id": "q.fr.4c",
+       "kind": "single",
+       "prompt": "¿Qué haría un buen marino?",
+       "options": [
+        "Quedarse y largar más cadena cuando anochezca",
+        "Cambiar de fondeadero ya, con luz de día, a uno abrigado del noroeste",
+        "Esperar a que llegue la turbonada y decidir entonces",
+        "Salir a mar abierta a motor y ponerse al pairo"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Largar más cadena no resuelve el problema de una costa a sotavento con temporal.",
+        "Correcto: cambie de sitio mientras las condiciones son moderadas.",
+        "Demasiado tarde: la turbonada llega de golpe.",
+        "Es posible, pero si hay aguas abrigadas disponibles, son mejor opción."
+       ],
+       "explanation": "Actúe antes de que llegue el frente: trasládese a un fondeadero o puerto abrigado del noroeste mientras las condiciones aún sean manejables."
+      }
+     ]
+    },
+    {
+     "id": "q.fr.5",
+     "kind": "single",
+     "prompt": "En el sector cálido, sobre un mar frío en primavera, ¿cuál es el principal peligro para la visibilidad?",
+     "options": [
+      "Niebla de radiación",
+      "Niebla de advección (niebla marina)",
+      "Calima de polvo",
+      "Nieve"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "La niebla de radiación se forma sobre tierra en noches despejadas.",
+      "Correcto: aire cálido y húmedo enfriado por el mar.",
+      "La calima de polvo procede de aire continental o desértico.",
+      "El aire del sector cálido es templado."
+     ],
+     "explanation": "El aire tropical marítimo, húmedo, enfriado por debajo de su punto de rocío por un mar frío forma una niebla de advección extensa y persistente."
+    },
+    {
+     "id": "q.fr.6",
+     "kind": "single",
+     "prompt": "¿Qué registro del barógrafo corresponde mejor a un frente cálido seguido unas horas después por un frente frío?",
+     "diagram": {
+      "id": "barograph",
+      "variant": "front"
+     },
+     "options": [
+      "Bajada constante, se estabiliza y después subida brusca",
+      "Subida brusca y después bajada constante",
+      "Subida durante todo el día",
+      "Bajada brusca en el frente cálido y subida constante en el frente frío"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: baja por delante del frente cálido, se mantiene estable en el sector cálido y sube bruscamente con el frente frío.",
+      "Es el orden inverso.",
+      "Ningún frente produce una subida durante todo el día.",
+      "Al frente cálido le precede una bajada constante, no brusca."
+     ],
+     "explanation": "El registro clásico: una larga bajada por delante del frente cálido, un tramo plano en el sector cálido y una subida brusca al pasar el frente frío."
+    },
+    {
+     "id": "q.fr.7",
+     "kind": "single",
+     "prompt": "¿Cuál es el mejor aviso visual de una línea de turbonadas por delante de un frente frío?",
+     "options": [
+      "Un halo alrededor del sol",
+      "Una línea de nubes oscura, baja y en arco, con lluvia intensa debajo",
+      "Cirros finos",
+      "Cúmulos de buen tiempo"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Un halo avisa de un frente cálido que está aún a muchas horas.",
+      "Correcto: una nube rodillo o en repisa marca el frente de racha.",
+      "Los cirros son nubes altas, muy por delante de los frentes.",
+      "Los cúmulos pequeños no anuncian turbonadas."
+     ],
+     "explanation": "Un arco oscuro o una nube en repisa en el borde delantero marca el frente de racha: tome rizos antes de que llegue."
+    },
+    {
+     "id": "q.fr.8",
+     "kind": "single",
+     "prompt": "¿Qué tiempo es típico de un frente ocluido?",
+     "diagram": {
+      "id": "frontSection",
+      "variant": "occluded"
+     },
+     "options": [
+      "Cielo despejado todo el tiempo",
+      "Una franja ancha de nubes y lluvia que combina rasgos de frente cálido y frío",
+      "Solo niebla",
+      "Temporales persistentes del este"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las oclusiones traen mucha nubosidad.",
+      "Correcto.",
+      "Puede haber niebla, pero no es lo que las define.",
+      "No es una característica de las oclusiones."
+     ],
+     "explanation": "Un frente ocluido trae una larga banda de nubes y lluvia y, a su paso, una rolada a la derecha."
+    }
+   ]
+  },
+  {
+   "id": "clouds",
+   "title": "Nubes, estabilidad y turbonadas",
+   "summary": "Por qué el aire asciende o se queda donde está, qué nos dice cada nube y cómo afrontar turbonadas y tormentas.",
+   "symbol": "cloud.bolt.rain",
+   "lessons": [
+    {
+     "id": "clouds.stability",
+     "title": "Estabilidad e inestabilidad",
+     "segments": [
+      {
+       "heading": "Aire ascendente",
+       "paragraphs": [
+        "El aire que asciende se expande y se enfría: unos 3 °C por cada 1.000 ft (aproximadamente 10 °C por km) mientras está seco, y más o menos la mitad una vez que se forman nubes, porque la condensación libera calor.",
+        "Si el aire ascendente se mantiene más cálido que el aire que lo rodea, sigue subiendo: el aire es inestable y da cúmulos de desarrollo, chubascos, rachas y buena visibilidad. Si se vuelve más frío que su entorno, vuelve a descender: el aire es estable y da nubes estratiformes, llovizna, calima y vientos regulares."
+       ],
+       "keyPoints": [
+        "Inestable: cúmulos, chubascos, rachas, buena visibilidad.",
+        "Estable: estratos, llovizna, calima o niebla, viento regular.",
+        "El aire frío sobre un mar cálido se vuelve inestable."
+       ],
+       "diagram": {
+        "id": "stability"
+       }
+      },
+      {
+       "heading": "Familias de nubes",
+       "paragraphs": [
+        "Las nubes altas (cirros, cirrostratos, cirrocúmulos) están formadas por hielo y a menudo anuncian un frente. Las nubes medias (altostratos, altocúmulos) indican nubosidad frontal que se espesa o inestabilidad en niveles medios; los altocúmulos castellanos en una mañana de verano pueden preceder a las tormentas.",
+        "Entre las nubes bajas están los estratos, los estratocúmulos y los nimbostratos. Los cúmulos y los cumulonimbos son nubes de desarrollo vertical, con la base baja pero cuyas cimas pueden elevarse hasta la tropopausa."
+       ],
+       "diagram": {
+        "id": "cloudLevels"
+       }
+      }
+     ]
+    },
+    {
+     "id": "clouds.cb",
+     "title": "Cumulonimbos, turbonadas y tormentas",
+     "segments": [
+      {
+       "heading": "Anatomía de un cumulonimbo",
+       "paragraphs": [
+        "Un cumulonimbo maduro se alimenta de una fuerte corriente ascendente y tiene debajo una corriente descendente de aire frío cargado de lluvia. Esa corriente descendente se extiende en superficie como un frente de racha que puede llegar bastante antes que la lluvia, con una turbonada repentina y un cambio de dirección del viento de hasta 90° o más.",
+        "El yunque se extiende a sotavento en la parte superior de la nube. Puede haber granizo, rayos y trombas marinas. Se define la turbonada como un aumento repentino del viento de al menos 16 nudos, que alcanza como mínimo 22 nudos y dura al menos un minuto."
+       ],
+       "diagram": {
+        "id": "cumulonimbus"
+       }
+      },
+      {
+       "heading": "Táctica",
+       "paragraphs": [
+        "Vigile el cielo a barlovento y siga en el radar, si lo tiene, las células que se acercan. Tome rizos o reduzca vela antes de que llegue el frente de racha; lo delatan una base cada vez más oscura y deshilachada y una línea de agua alborotada.",
+        "Con rayos, quédese bajo cubierta, manténgase lejos del mástil, los obenques y los cadenotes, desconecte la electrónica sensible si es posible y guarde un VHF portátil y un GPS en el horno o en otra caja metálica. Cuente con que el viento amaine después de la turbonada y la dirección vuelva a estabilizarse."
+       ],
+       "keyPoints": [
+        "El frente de racha llega antes que la lluvia.",
+        "Tome rizos antes de la turbonada, no durante.",
+        "Con rayos: bajo cubierta y lejos de la jarcia."
+       ],
+       "diagram": {
+        "id": "cumulonimbus",
+        "variant": "tactics"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.cl.1",
+     "kind": "single",
+     "prompt": "Aire frío fluye sobre un mar mucho más cálido. ¿Qué tiempo es más probable?",
+     "diagram": {
+      "id": "stability"
+     },
+     "options": [
+      "Niebla y llovizna",
+      "Cúmulos, chubascos y viento racheado",
+      "Cielo despejado y calma",
+      "Lluvia continua de nimbostratos"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Eso corresponde a aire estable sobre una superficie más fría.",
+      "Correcto: el calentamiento desde abajo vuelve inestable el aire.",
+      "La inestabilidad genera nubes y rachas.",
+      "Los nimbostratos son nubes frontales estratiformes de aire estable."
+     ],
+     "explanation": "El aire calentado desde abajo se vuelve inestable: nubes de desarrollo, chubascos, buena visibilidad y rachas."
+    },
+    {
+     "id": "q.cl.2",
+     "kind": "single",
+     "prompt": "¿Qué parte de un cumulonimbo trae el primer cambio repentino del viento?",
+     "diagram": {
+      "id": "cumulonimbus"
+     },
+     "options": [
+      "El yunque",
+      "El frente de racha de la corriente descendente",
+      "La corriente ascendente",
+      "Los rayos"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El yunque está en altura y a sotavento.",
+      "Correcto: la salida de aire frío se extiende por delante de la lluvia.",
+      "La corriente ascendente aspira el aire suavemente.",
+      "Los rayos no generan la turbonada."
+     ],
+     "explanation": "La corriente descendente se extiende en superficie como un frente de racha, que a menudo llega antes que la lluvia."
+    },
+    {
+     "id": "q.cl.3",
+     "kind": "multi",
+     "prompt": "¿Qué señales indican que el aire es estable? Seleccione todas las correctas.",
+     "options": [
+      "Nubes estratiformes",
+      "Llovizna",
+      "Cúmulos de gran desarrollo",
+      "Calima o niebla",
+      "Viento muy racheado"
+     ],
+     "answers": [
+      0,
+      1,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Correcto.",
+      "Las torres indican inestabilidad.",
+      "Correcto: los contaminantes y la humedad quedan atrapados.",
+      "Las rachas se deben a la mezcla vertical del aire inestable."
+     ],
+     "explanation": "El aire estable se resiste al movimiento vertical: nubes estratiformes, llovizna, calima, niebla y vientos relativamente regulares."
+    },
+    {
+     "id": "q.cl.4",
+     "kind": "numeric",
+     "prompt": "Una masa de aire seco a 18 °C asciende 2.000 ft sin formar nubes. Tomando 3 °C por cada 1.000 ft, ¿cuál es su temperatura, en °C?",
+     "numeric": {
+      "value": 12,
+      "tolerance": 0.5,
+      "unit": "°C"
+     },
+     "explanation": "2.000 ft a 3 °C por cada 1.000 ft suponen un descenso de 6 °C: 18 menos 6 son 12 °C."
+    },
+    {
+     "id": "q.cl.5",
+     "kind": "single",
+     "prompt": "Navega a un descuartelar con todo el trapo y ve acercarse una línea de nubes oscura y deshilachada, precedida por una franja de agua rizada y blanca. ¿Qué hace?",
+     "options": [
+      "Aguantar y tomar rizos cuando llegue",
+      "Tomar rizos ya y prepararse para un cambio brusco",
+      "Izar más vela para dejarla atrás",
+      "Ir directo hacia ella para atravesarla rápido"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Tomar rizos en plena turbonada es peligroso y lento.",
+      "Correcto: reduzca vela antes del frente de racha.",
+      "No conseguirá dejar atrás una línea de turbonadas.",
+      "Poner rumbo hacia ella no aporta nada."
+     ],
+     "explanation": "El agua rizada es el frente de racha. Reduzca vela, trinque el equipo y esté preparado para un cambio brusco del viento."
+    },
+    {
+     "id": "q.cl.6",
+     "kind": "single",
+     "prompt": "¿Cuál es la definición de turbonada de la OMM?",
+     "options": [
+      "Cualquier racha de más de 30 nudos",
+      "Un aumento repentino de al menos 16 nudos, que alcanza como mínimo 22 nudos y dura al menos un minuto",
+      "Viento de fuerza 8 o superior",
+      "Un chubasco con viento"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las rachas son breves y se definen de otra manera.",
+      "Correcto.",
+      "Eso es un temporal.",
+      "No es la definición."
+     ],
+     "explanation": "Una turbonada dura más que una racha: se mantiene al menos un minuto y luego amaina."
+    },
+    {
+     "id": "q.cl.7",
+     "kind": "single",
+     "prompt": "Una mañana de verano ve altocúmulos castellanos (torrecillas sobre nubes medias). ¿Qué indican?",
+     "options": [
+      "Un día estable",
+      "Inestabilidad en niveles medios y riesgo de tormentas más tarde",
+      "Niebla de advección",
+      "Solo la llegada de un frente cálido"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las torrecillas indican inestabilidad en altura.",
+      "Correcto.",
+      "No tienen relación con la niebla de advección.",
+      "No son un indicio específicamente frontal."
+     ],
+     "explanation": "Los castellanos revelan aire inestable en altura; con el calentamiento diurno, suelen aparecer tormentas más tarde."
+    },
+    {
+     "id": "q.cl.8",
+     "kind": "multi",
+     "prompt": "Tiene una tormenta justo encima. ¿Qué precauciones son sensatas? Seleccione todas las correctas.",
+     "options": [
+      "Quedarse bajo cubierta, lejos del mástil y de los cadenotes",
+      "Agarrarse al estay de popa para mantener el equilibrio",
+      "Meter un VHF portátil y un GPS en una caja metálica, como el horno",
+      "Desconectar la electrónica sensible si es posible",
+      "Subir al mástil para revisar la antena"
+     ],
+     "answers": [
+      0,
+      2,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "La jarcia puede conducir la corriente del rayo.",
+      "Correcto: protege los equipos de respaldo de una descarga.",
+      "Correcto.",
+      "Nunca suba a la arboladura con rayos."
+     ],
+     "explanation": "Reduzca al mínimo el contacto con la jarcia, proteja la electrónica de respaldo y permanezca bajo cubierta siempre que pueda."
+    }
+   ]
+  },
+  {
+   "id": "local",
+   "title": "Vientos locales, costeros y regionales",
+   "summary": "Brisa marina y terral, vientos catabáticos y anabáticos, efecto embudo, convergencia costera, y el meltemi, la bora, el mistral y el siroco.",
+   "symbol": "sun.haze",
+   "lessons": [
+    {
+     "id": "local.thermal",
+     "title": "Vientos térmicos",
+     "segments": [
+      {
+       "heading": "Brisa marina (virazón)",
+       "paragraphs": [
+        "En un día soleado la tierra se calienta más deprisa que el mar. El aire asciende sobre tierra, la presión baja ligeramente en niveles bajos y entra aire más fresco desde el mar. Un flujo de retorno en altura cierra el circuito, y los cúmulos suelen señalar el aire ascendente tierra adentro.",
+        "La virazón suele entrar a media mañana, alcanza su máximo a media tarde con fuerza 3 a 4 (más en costas calurosas), se extiende quizá unas 10 millas mar adentro y desaparece al anochecer. En el hemisferio norte rola a la derecha a lo largo de la tarde. Necesita una diferencia de temperatura entre tierra y mar y un gradiente débil: un viento de gradiente de tierra de más de unos 15 nudos suele impedirla, mientras que un gradiente del mar hacia tierra la refuerza."
+       ],
+       "keyPoints": [
+        "Entra a media mañana, máximo a media tarde, desaparece al anochecer.",
+        "Rola a la derecha a lo largo del día (hemisferio norte).",
+        "La anula un gradiente de tierra de más de unos 15 nudos."
+       ],
+       "diagram": {
+        "id": "thermal",
+        "variant": "seaBreeze"
+       }
+      },
+      {
+       "heading": "Terral y vientos catabáticos y anabáticos",
+       "paragraphs": [
+        "Por la noche la tierra se enfría más deprisa que el mar y puede formarse un terral flojo, normalmente de fuerza 2 a 3, que solo llega a unas pocas millas de la costa.",
+        "Donde el aire frío desciende por laderas y valles se forma un viento catabático. En costas montañosas, fiordos e islas escarpadas puede ser fuerte y repentino, sobre todo cerca de la desembocadura de los valles hacia el amanecer. Los vientos anabáticos son su equivalente diurno, suave y ladera arriba."
+       ],
+       "diagram": {
+        "id": "thermal",
+        "variant": "katabatic"
+       }
+      }
+     ]
+    },
+    {
+     "id": "local.topography",
+     "title": "Efectos costeros y orográficos",
+     "segments": [
+      {
+       "heading": "Efecto embudo y cabos",
+       "paragraphs": [
+        "El viento que se estrecha entre islas altas, a lo largo de estrechos o al bajar por valles se acelera: es el efecto Venturi o efecto embudo. En el paso, el viento puede soplar un grado entero de la escala Beaufort, o más, por encima del de fuera. Los cabos crean zonas de aceleración en su extremo y mar confusa donde el flujo se encuentra con las corrientes de marea.",
+        "A sotavento de terreno alto, espere rachas fuertes e imprevisibles que caen por las laderas y cambios bruscos de dirección, aunque en mar abierta el viento sea moderado."
+       ],
+       "diagram": {
+        "id": "venturi"
+       }
+      },
+      {
+       "heading": "Convergencia y divergencia costeras",
+       "paragraphs": [
+        "La fricción hace rolar el viento a la izquierda más sobre tierra que sobre el mar. Cuando el viento sopla paralelo a la costa, esa diferencia hace que los flujos converjan o diverjan.",
+        "En el hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos convergen, con viento más fuerte y a menudo más nubes y lluvia a lo largo de la costa. Si la tierra queda a su izquierda, divergen y el viento costero es más flojo."
+       ],
+       "keyPoints": [
+        "De espaldas al viento, tierra a la derecha: convergencia, viento más fuerte.",
+        "Tierra a la izquierda: divergencia, viento más flojo."
+       ],
+       "diagram": {
+        "id": "coastalConvergence"
+       }
+      }
+     ]
+    },
+    {
+     "id": "local.med",
+     "title": "Vientos regionales del Mediterráneo",
+     "segments": [
+      {
+       "heading": "Meltemi y mistral",
+       "paragraphs": [
+        "El meltemi (vientos etesios) sopla del norte sobre el Egeo de mayo a septiembre, con su máximo en julio y agosto. Lo generan las altas presiones sobre los Balcanes y una baja térmica sobre Turquía y Oriente Próximo. Suele ser de fuerza 5 a 7, más intenso por la tarde, puede llegar a temporal, puede durar días y se canaliza con fuerza entre las Cícladas. Puede entrar con cielo despejado y casi sin aviso.",
+        "El mistral es un viento frío y seco del norte al noroeste que se canaliza por el valle del Ródano hacia el golfo de León, normalmente cuando hay altas presiones sobre el golfo de Vizcaya y bajas sobre el golfo de Génova. Con frecuencia alcanza fuerza 7 a 9, con mar corta y empinada, y puede extenderse hasta Córcega y Cerdeña."
+       ],
+       "diagram": {
+        "id": "medWinds"
+       }
+      },
+      {
+       "heading": "Bora y siroco",
+       "paragraphs": [
+        "La bora es un viento catabático frío del nordeste en el Adriático oriental, que se desploma sobre las montañas costeras de Croacia y Montenegro. Es sobre todo un viento de invierno, puede llegar en cuestión de minutos y trae rachas violentas que pueden superar los 80 nudos en lugares como el canal de Velebit. Los casquetes de nubes bajas sobre las montañas son una señal de aviso.",
+        "El siroco (jugo en el Adriático) es un viento cálido del sur al sudeste procedente del norte de África, que a menudo sopla por delante de las borrascas que cruzan el Mediterráneo hacia el este. Se carga de humedad sobre el mar y trae nubes bajas, lluvia, polvo y mala visibilidad, y levanta una mar larga y gruesa en las costas expuestas al sur."
+       ],
+       "keyPoints": [
+        "Meltemi: viento del norte en verano, Egeo, fuerza 5–7, máximo por la tarde.",
+        "Mistral: frío del N–NO, golfo de León, a menudo fuerza 7–9.",
+        "Bora: catabático frío del NE, Adriático, rachas repentinas y violentas.",
+        "Siroco: cálido del S–SE, húmedo, polvo, mala visibilidad, mar gruesa."
+       ],
+       "diagram": {
+        "id": "medWinds",
+        "variant": "boraSirocco"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.loc.1",
+     "kind": "single",
+     "prompt": "El viento de gradiente previsto es del nordeste de 18 nudos y sopla de tierra en una costa orientada al sur. ¿Se formará virazón esta tarde?",
+     "diagram": {
+      "id": "thermal",
+      "variant": "seaBreeze"
+     },
+     "options": [
+      "Sí, y reforzará el gradiente",
+      "Probablemente no; el gradiente de tierra es demasiado fuerte",
+      "Sí, pero solo después de anochecer",
+      "Depende únicamente de la marea"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "La virazón sopla del mar hacia tierra, en contra de este gradiente.",
+      "Correcto: un gradiente de tierra de más de unos 15 nudos suele anularla.",
+      "La virazón es un viento diurno.",
+      "La marea no influye en la formación de la virazón."
+     ],
+     "explanation": "La virazón necesita un gradiente débil. Un viento de gradiente de tierra fuerte anula la circulación térmica."
+    },
+    {
+     "id": "q.loc.2",
+     "kind": "single",
+     "context": "Hemisferio norte. Sopla un viento del oeste a lo largo de una costa orientada de este a oeste, con la tierra al sur.",
+     "prompt": "De espaldas al viento, la tierra queda a su derecha. ¿Qué significa esto para el viento costero?",
+     "diagram": {
+      "id": "coastalConvergence"
+     },
+     "options": [
+      "Divergencia y viento más flojo",
+      "Convergencia y viento más fuerte",
+      "Ningún efecto",
+      "El viento se invertirá"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Ese es el caso de la tierra a la izquierda.",
+      "Correcto.",
+      "Las diferencias de fricción siempre tienen algún efecto.",
+      "No se produce ninguna inversión."
+     ],
+     "explanation": "De espaldas a un viento del oeste mira hacia el este; la tierra al sur queda a su derecha. El flujo sobre tierra, más rolado a la izquierda, gira hacia el flujo sobre el mar: convergencia."
+    },
+    {
+     "id": "q.loc.3",
+     "kind": "single",
+     "prompt": "Planifica para julio una travesía a vela por las Cícladas rumbo al norte. ¿Cuál es la mejor táctica frente al meltemi?",
+     "diagram": {
+      "id": "medWinds"
+     },
+     "options": [
+      "Navegar por la tarde, cuando es más fuerte",
+      "Ganar camino hacia el norte a primera hora de la mañana, cuando es más flojo",
+      "Ignorarlo; rara vez supera la fuerza 3",
+      "Contar con que sople del sur"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Su máximo es por la tarde: el peor momento para ceñir contra él.",
+      "Correcto.",
+      "Suele ser de fuerza 5–7 y puede llegar a temporal.",
+      "Sopla del norte."
+     ],
+     "explanation": "El meltemi suele ser más flojo por la noche y a primera hora y alcanza su máximo a media tarde: planifique los tramos de ceñida temprano."
+    },
+    {
+     "id": "q.loc.4",
+     "kind": "single",
+     "prompt": "Fondeado en invierno al pie de las montañas costeras de Croacia, observa que se forma un casquete de nubes sobre las crestas y el aire se vuelve más frío. ¿Qué debe esperar?",
+     "options": [
+      "Un siroco con lluvia",
+      "Una bora con rachas del nordeste repentinas y violentas",
+      "Una virazón",
+      "Un meltemi"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El siroco es cálido y sopla del sudeste.",
+      "Correcto: el casquete de nubes es una señal clásica de bora.",
+      "La virazón es un viento de verano, diurno y del mar hacia tierra.",
+      "El meltemi es un viento de verano del Egeo."
+     ],
+     "explanation": "Los casquetes de nubes sobre las crestas costeras y el descenso de la temperatura avisan de bora: prepare el barco para rachas violentas de tierra."
+    },
+    {
+     "id": "q.loc.5",
+     "kind": "multi",
+     "prompt": "¿Qué afirmaciones sobre el siroco son correctas? Seleccione todas las correctas.",
+     "options": [
+      "Sopla del sur o del sudeste",
+      "Es frío y seco",
+      "Puede transportar polvo del Sáhara y reducir la visibilidad",
+      "Suele soplar por delante de borrascas que se desplazan hacia el este",
+      "Solo se da en el Egeo"
+     ],
+     "answers": [
+      0,
+      2,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Es cálido y se vuelve húmedo sobre el mar.",
+      "Correcto.",
+      "Correcto.",
+      "Afecta a gran parte del Mediterráneo central y oriental, incluido el Adriático, donde se llama jugo."
+     ],
+     "explanation": "Siroco: cálido, húmedo tras cruzar el mar, con polvo, mala visibilidad y una mar del sur cada vez más gruesa."
+    },
+    {
+     "id": "q.loc.6",
+     "kind": "single",
+     "prompt": "¿Por qué el viento suele aumentar bruscamente en un canal entre dos islas altas?",
+     "diagram": {
+      "id": "venturi"
+     },
+     "options": [
+      "El efecto Coriolis es más fuerte allí",
+      "El efecto embudo acelera el flujo a través del paso",
+      "La marea empuja el aire",
+      "La presión siempre es más baja entre islas"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El efecto Coriolis no varía localmente de esta manera.",
+      "Correcto: el efecto Venturi.",
+      "La marea no mueve el aire.",
+      "No es una regla general."
+     ],
+     "explanation": "El aire obligado a pasar por un estrechamiento se acelera: cuente con un grado de fuerza o más de viento adicional y rachas más fuertes."
+    },
+    {
+     "id": "q.loc.7",
+     "kind": "single",
+     "prompt": "¿A qué hora es más probable que un viento catabático sea más fuerte frente a la desembocadura de un valle escarpado?",
+     "diagram": {
+      "id": "thermal",
+      "variant": "katabatic"
+     },
+     "options": [
+      "A media tarde",
+      "Desde la madrugada hasta el amanecer",
+      "A mediodía",
+      "Es constante todo el día"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El calentamiento de la tarde da vientos anabáticos y virazón.",
+      "Correcto: el aire frío lleva toda la noche descendiendo.",
+      "El calentamiento de mediodía lo contrarresta.",
+      "Es un efecto nocturno."
+     ],
+     "explanation": "El flujo catabático aumenta durante la noche a medida que se enfrían las laderas y alcanza su máximo hacia el amanecer."
+    },
+    {
+     "id": "q.loc.8",
+     "kind": "single",
+     "prompt": "¿Qué situación sinóptica produce normalmente el mistral?",
+     "options": [
+      "Alta sobre el golfo de Vizcaya y baja sobre el golfo de Génova",
+      "Baja sobre España y alta sobre Italia",
+      "Alta sobre Turquía",
+      "Un collado sobre Francia"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: un fuerte gradiente del norte a lo largo del valle del Ródano.",
+      "Eso daría vientos del sur.",
+      "Esa situación corresponde al Mediterráneo oriental.",
+      "Un collado da vientos flojos."
+     ],
+     "explanation": "Las altas presiones al oeste y una baja en el golfo de Génova crean un fuerte flujo del norte canalizado por el valle del Ródano."
+    }
+   ]
+  },
+  {
+   "id": "fog",
+   "title": "Niebla, humedad y visibilidad",
+   "summary": "Punto de rocío y humedad, los tres tipos de niebla que importan en el mar y cómo prever y gestionar la mala visibilidad.",
+   "symbol": "cloud.fog",
+   "lessons": [
+    {
+     "id": "fog.dewpoint",
+     "title": "Punto de rocío y humedad",
+     "segments": [
+      {
+       "heading": "Saturación",
+       "paragraphs": [
+        "El aire cálido puede contener más vapor de agua que el frío. La humedad relativa es el vapor presente expresado como porcentaje del máximo posible a esa temperatura. El punto de rocío es la temperatura a la que debe enfriarse el aire para saturarse; en ese momento la condensación forma nubes, neblina o niebla.",
+        "La diferencia entre la temperatura del aire y el punto de rocío es el indicador clave de niebla. Una diferencia de 2 °C o menos, con más enfriamiento por delante, significa que la niebla es probable. Muchas predicciones y archivos GRIB dan directamente el punto de rocío; a bordo, un higrómetro o un sensor electrónico indican la humedad y el punto de rocío."
+       ],
+       "keyPoints": [
+        "Punto de rocío: la temperatura a la que el aire se satura.",
+        "Poca diferencia entre temperatura y punto de rocío: riesgo de niebla.",
+        "Tanto enfriar el aire como añadirle humedad conducen a la niebla."
+       ],
+       "diagram": {
+        "id": "dewPoint"
+       }
+      }
+     ]
+    },
+    {
+     "id": "fog.types",
+     "title": "Tipos de niebla",
+     "segments": [
+      {
+       "heading": "Niebla de radiación",
+       "paragraphs": [
+        "Se forma sobre tierra en noches despejadas con viento flojo (de unos 2 a 8 nudos) y aire húmedo, cuando el suelo irradia calor y enfría el aire que tiene encima hasta su punto de rocío. Es más frecuente en otoño e invierno.",
+        "Hacia el amanecer baja por los ríos hasta puertos y estuarios, y suele disiparse a media mañana cuando el sol calienta la tierra. Rara vez se extiende más de unas pocas millas mar adentro."
+       ],
+       "diagram": {
+        "id": "fog",
+        "variant": "radiation"
+       }
+      },
+      {
+       "heading": "Niebla de advección (niebla marina)",
+       "paragraphs": [
+        "Se forma cuando aire cálido y húmedo fluye sobre una superficie del mar más fría que el punto de rocío de ese aire. Es frecuente en primavera y a principios de verano, cuando el mar aún está frío, y en los sectores cálidos. Puede cubrir grandes extensiones, persistir durante días y resistir vientos de hasta fuerza 5 o 6.",
+        "Solo se disipa cuando cambia la masa de aire, normalmente después de que un frente frío traiga aire más seco, o cuando el viento rola y pasa a soplar de tierra. En el mar, el sol por sí solo no la disipa."
+       ],
+       "keyPoints": [
+        "Requiere que la temperatura del mar esté por debajo del punto de rocío del aire.",
+        "Persiste con viento moderado; solo se disipa con un cambio de masa de aire."
+       ],
+       "diagram": {
+        "id": "fog",
+        "variant": "advection"
+       }
+      },
+      {
+       "heading": "Niebla frontal",
+       "paragraphs": [
+        "Por delante de un frente cálido, la lluvia que cae desde el aire cálido se evapora en el aire más frío de debajo y lo satura, produciendo niebla o nubes muy bajas que pueden llegar a la superficie del mar. En los sectores cálidos también es frecuente la niebla en cerros y costas, donde el aire húmedo se eleva al pasar sobre tierra."
+       ],
+       "diagram": {
+        "id": "fog",
+        "variant": "frontal"
+       }
+      }
+     ]
+    },
+    {
+     "id": "fog.seamanship",
+     "title": "Visibilidad y buenas prácticas marineras",
+     "segments": [
+      {
+       "heading": "Términos de la predicción y decisiones",
+       "paragraphs": [
+        "Las predicciones marítimas describen la visibilidad como muy mala o niebla (menos de 1.000 metros), mala (de 1.000 metros a 2 millas náuticas), regular (de 2 a 5 millas náuticas) y buena (más de 5 millas náuticas).",
+        "Si se prevé niebla, plantéese no salir, o planifique una derrota alejada de las rutas de tráfico marítimo y por aguas menos profundas, donde los buques grandes no pueden entrar. Sitúese antes de que se cierre la visibilidad, ice el reflector de radar, utilice el radar y el AIS, ponga un vigía dedicado a mirar y escuchar, emita las señales acústicas y mantenga a la tripulación en cubierta con el chaleco salvavidas puesto."
+       ],
+       "diagram": {
+        "id": "visibilityScale"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.fog.1",
+     "kind": "single",
+     "context": "Mayo, frente a una costa occidental. Temperatura del aire 14 °C, punto de rocío 12 °C, temperatura del mar 10 °C, viento del suroeste fuerza 4.",
+     "prompt": "¿Cuál es el riesgo de niebla en el mar?",
+     "diagram": {
+      "id": "fog",
+      "variant": "advection"
+     },
+     "options": [
+      "Bajo: hay demasiado viento para que haya niebla",
+      "Alto: el mar está más frío que el punto de rocío del aire",
+      "Bajo: la niebla solo se forma de noche",
+      "Al amanecer se formará niebla de radiación"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "La niebla de advección resiste fuerza 4 y más.",
+      "Correcto: el mar a 10 °C está por debajo del punto de rocío de 12 °C.",
+      "La niebla de advección se forma de día o de noche.",
+      "La niebla de radiación se forma sobre tierra, no en el mar."
+     ],
+     "explanation": "El aire enfriado por el mar hasta 10 °C queda por debajo de su punto de rocío de 12 °C: es probable la niebla de advección, y puede persistir."
+    },
+    {
+     "id": "q.fog.2",
+     "kind": "numeric",
+     "prompt": "Temperatura del aire 9 °C, punto de rocío 7,5 °C. ¿Cuál es la diferencia, en °C?",
+     "numeric": {
+      "value": 1.5,
+      "tolerance": 0.1,
+      "unit": "°C"
+     },
+     "explanation": "9 menos 7,5 son 1,5 °C. Una diferencia de menos de 2 °C, con más enfriamiento previsto, significa que la niebla es probable."
+    },
+    {
+     "id": "q.fog.3",
+     "kind": "single",
+     "prompt": "A las 07:00, tras una noche de otoño despejada y en calma, un puerto de estuario está cubierto de niebla espesa. ¿Qué es lo más probable que ocurra?",
+     "diagram": {
+      "id": "fog",
+      "variant": "radiation"
+     },
+     "options": [
+      "Persistirá durante días",
+      "Se disipará a media mañana, cuando se caliente la tierra",
+      "Se espesará al aumentar el viento",
+      "Se extiende 50 millas mar adentro"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Eso es típico de la niebla de advección.",
+      "Correcto: la niebla de radiación se disipa con el sol.",
+      "El aumento del viento suele levantar o dispersar la niebla de radiación.",
+      "La niebla de radiación rara vez se aleja mucho de la costa."
+     ],
+     "explanation": "La niebla de radiación se forma sobre tierra durante la noche y suele disiparse a media mañana."
+    },
+    {
+     "id": "q.fog.4",
+     "kind": "single",
+     "prompt": "¿Qué suele disipar la niebla de advección en el mar?",
+     "options": [
+      "La salida del sol",
+      "Un aumento del viento hasta fuerza 4",
+      "Un cambio de masa de aire, como detrás de un frente frío",
+      "El cambio de la marea"
+     ],
+     "answers": [
+      2
+     ],
+     "optionExplanations": [
+      "El sol no calienta lo suficiente la superficie del mar.",
+      "La niebla de advección puede persistir con fuerza 5 a 6.",
+      "Correcto.",
+      "La marea no cambia el aire."
+     ],
+     "explanation": "Solo un aire más seco, o relativamente más cálido que el mar, elimina la causa; normalmente eso significa un frente o un rolar del viento que lo haga soplar de tierra."
+    },
+    {
+     "id": "q.fog.5",
+     "kind": "order",
+     "prompt": "Ordene estos términos de visibilidad de peor a mejor.",
+     "options": [
+      "Regular",
+      "Buena",
+      "Niebla / muy mala",
+      "Mala"
+     ],
+     "answers": [
+      2,
+      3,
+      0,
+      1
+     ],
+     "explanation": "Niebla/muy mala (menos de 1.000 m), mala (de 1.000 m a 2 mn), regular (de 2 a 5 mn), buena (más de 5 mn)."
+    },
+    {
+     "id": "q.fog.6",
+     "kind": "multi",
+     "prompt": "Se prevé niebla para una travesía que cruza una ruta de tráfico muy concurrida. ¿Qué medidas son acertadas? Seleccione todas las correctas.",
+     "options": [
+      "Situarse antes de que baje la visibilidad",
+      "Planificar el cruce de la ruta con niebla para ganar tiempo",
+      "Izar un reflector de radar y utilizar el radar y el AIS",
+      "Poner un vigía dedicado a mirar y escuchar",
+      "Plantearse retrasar la salida o desviarse hacia aguas poco profundas"
+     ],
+     "answers": [
+      0,
+      2,
+      3,
+      4
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Cruzar a ciegas una ruta de tráfico es un riesgo grave.",
+      "Correcto.",
+      "Correcto.",
+      "Correcto: los buques grandes no pueden seguirle a aguas poco profundas."
+     ],
+     "explanation": "Reduzca la exposición al tráfico, hágase lo más detectable posible y conozca su posición."
+    },
+    {
+     "id": "q.fog.7",
+     "kind": "single",
+     "prompt": "¿Por qué se forma a menudo niebla por delante de un frente cálido?",
+     "diagram": {
+      "id": "fog",
+      "variant": "frontal"
+     },
+     "options": [
+      "La lluvia del aire cálido se evapora en el aire frío de debajo y lo satura",
+      "El frente enfría el mar",
+      "El viento cae a calma",
+      "El barómetro sube"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: niebla frontal.",
+      "El mar no se enfría con rapidez.",
+      "Por delante de un frente cálido el viento suele arreciar.",
+      "La presión baja por delante de un frente cálido."
+     ],
+     "explanation": "La humedad que aporta la lluvia lleva a la saturación el aire frío situado por delante del frente."
+    },
+    {
+     "id": "q.fog.8",
+     "kind": "single",
+     "prompt": "A las 22:00 la humedad relativa es del 98 %, con cielo despejado y brisa ligera sobre tierra. ¿Qué es probable que haya por la mañana?",
+     "diagram": {
+      "id": "dewPoint"
+     },
+     "options": [
+      "Niebla de radiación",
+      "Virazón",
+      "Tormentas",
+      "Niebla de advección en mar abierta"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: aire casi saturado más el enfriamiento nocturno.",
+      "La virazón es un viento diurno.",
+      "No hay indicios de inestabilidad.",
+      "Se trata de enfriamiento sobre tierra, no de aire que se desplaza sobre un mar frío."
+     ],
+     "explanation": "El cielo despejado permite el enfriamiento por radiación; con un 98 % de humedad basta un pequeño descenso de temperatura para alcanzar el punto de rocío."
+    }
+   ]
+  },
+  {
+   "id": "sea",
+   "title": "Estado de la mar, mar de fondo y viento contra corriente",
+   "summary": "Cómo crecen las olas, mar de fondo frente a mar de viento, estadística del oleaje y por qué el viento contra corriente vuelve peligrosa la mar.",
+   "symbol": "water.waves",
+   "lessons": [
+    {
+     "id": "sea.waves",
+     "title": "Cómo crecen las olas",
+     "segments": [
+      {
+       "heading": "Intensidad, fetch y duración",
+       "paragraphs": [
+        "El mar de viento crece con la intensidad del viento, el fetch (la distancia de mar abierto sobre la que sopla) y la duración (el tiempo que lleva soplando). El menor de los tres factores es el que limita la mar. Un temporal que sopla de tierra deja poco fetch y una mar moderada junto a la costa; ese mismo temporal con cientos de millas de fetch levanta una mar grande y plenamente desarrollada.",
+        "Las alturas de ola de las predicciones suelen ser alturas significativas: la media del tercio de olas más altas. De cada mil olas, cuente con que una alcance unas 1,9 veces la altura significativa. Planifique pensando en las olas grandes, no en la media."
+       ],
+       "keyPoints": [
+        "Intensidad, fetch y duración determinan juntos la altura de las olas.",
+        "La altura significativa es la media del tercio de olas más altas.",
+        "Algunas olas aisladas llegan casi al doble de esa altura."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "fetch"
+       }
+      },
+      {
+       "heading": "Mar de fondo frente a mar de viento",
+       "paragraphs": [
+        "El mar de fondo es energía de periodo largo que ha salido de la zona de generación. Viaja lejos y deprisa y puede llegar antes que la borrasca, lo que supone un valioso aviso anticipado. El mar de viento es más corto, más empinado y va alineado con el viento local.",
+        "Cuando el mar de fondo y el mar de viento llegan de direcciones distintas, la mar se vuelve cruzada y las crestas pueden sumarse en picos empinados que rompen. El mar de fondo que entra en aguas someras o contra una corriente se empina peligrosamente y puede romper sobre las barras de entrada a puerto."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "swell"
+       }
+      }
+     ]
+    },
+    {
+     "id": "sea.tide",
+     "title": "Viento contra corriente y aguas someras",
+     "segments": [
+      {
+       "heading": "Por qué se empina la mar",
+       "paragraphs": [
+        "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede parecer un fuerza 7. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
+        "El efecto es máximo en los cabos, sobre bajos y en zonas de corrientes fuertes y escarceos. Planifique el paso por esos lugares en el repunte o con viento y corriente en el mismo sentido."
+       ],
+       "keyPoints": [
+        "Viento contra corriente: olas más cortas, empinadas y rompientes.",
+        "Peor en cabos, zonas de corrientes fuertes, escarceos y sobre bajos.",
+        "Programe el paso en el repunte o con viento a favor de la corriente."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "windAgainstTide"
+       }
+      },
+      {
+       "heading": "Términos del estado de la mar",
+       "paragraphs": [
+        "Las predicciones describen el estado de la mar por la altura significativa: marejadilla (hasta 0,5 m), marejada (de 0,5 a 1,25 m), fuerte marejada (de 1,25 a 2,5 m), gruesa (de 2,5 a 4 m), muy gruesa (de 4 a 6 m), arbolada (de 6 a 9 m), montañosa (de 9 a 14 m) y enorme (más de 14 m).",
+        "Use las descripciones de la escala Beaufort para contrastar el viento observado con la mar: los borreguillos empiezan hacia fuerza 4, la espuma forma franjas con fuerza 7 y los rociones aparecen con fuerza 8."
+       ],
+       "diagram": {
+        "id": "seaState",
+        "variant": "6"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.sea.1",
+     "kind": "single",
+     "prompt": "Lleva 12 horas soplando un nordeste de fuerza 7. ¿Dónde será menor la mar?",
+     "diagram": {
+      "id": "waves",
+      "variant": "fetch"
+     },
+     "options": [
+      "Muy pegado a una costa situada al nordeste, donde el viento sopla de tierra",
+      "200 millas a sotavento",
+      "En pleno océano",
+      "Sobre un bajo a 50 millas de la costa"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: con poco fetch las olas apenas tienen espacio para crecer.",
+      "Un fetch largo significa una mar mayor.",
+      "Fetch ilimitado.",
+      "Las aguas someras empinan las olas que llegan."
+     ],
+     "explanation": "El fetch limita las olas: con viento de tierra, pegado a la costa de barlovento se encuentra el agua más llana."
+    },
+    {
+     "id": "q.sea.2",
+     "kind": "numeric",
+     "prompt": "La altura significativa de ola prevista es de 2,5 m. ¿Qué altura aproximada podría tener alguna de las olas más grandes, en metros? (Utilice 1,9 veces.)",
+     "numeric": {
+      "value": 4.75,
+      "tolerance": 0.3,
+      "unit": "m"
+     },
+     "explanation": "2,5 × 1,9 ≈ 4,75 m. Prepare el barco y la tripulación para olas ocasionales de ese tamaño."
+    },
+    {
+     "id": "q.sea.3",
+     "kind": "scenario",
+     "context": "Tiene previsto doblar un cabo con una zona de corrientes fuertes conocida. Viento: oeste-suroeste fuerza 5. La corriente de marea frente al cabo tira hacia el oeste con hasta 3 nudos de 10:00 a 16:00 y hacia el este de 16:00 a 22:00.",
+     "prompt": "Planifique el paso del cabo.",
+     "diagram": {
+      "id": "waves",
+      "variant": "windAgainstTide"
+     },
+     "explanation": "Pase con viento y corriente en el mismo sentido, o en el repunte, para evitar la mar empinada y rompiente de la zona de corrientes.",
+     "steps": [
+      {
+       "id": "q.sea.3a",
+       "kind": "single",
+       "prompt": "¿En qué periodo sopla el viento contra la corriente?",
+       "options": [
+        "De 10:00 a 16:00 (corriente hacia el oeste)",
+        "De 16:00 a 22:00 (corriente hacia el este)",
+        "Nunca",
+        "Todo el día"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: un viento del oeste-suroeste sopla hacia el este-nordeste, en contra de una corriente que tira hacia el oeste.",
+        "La corriente hacia el este va a favor del viento.",
+        "Hay un periodo en que se oponen.",
+        "La corriente se invierte."
+       ],
+       "explanation": "Un viento del oeste-suroeste sopla hacia el este; una corriente hacia el oeste se le opone."
+      },
+      {
+       "id": "q.sea.3b",
+       "kind": "single",
+       "prompt": "¿Cuándo debería planificar el paso por la zona de corrientes?",
+       "options": [
+        "Hacia las 13:00, con la corriente máxima hacia el oeste",
+        "Hacia las 16:00, en el repunte, o poco después, cuando empieza la corriente hacia el este",
+        "A cualquier hora; un fuerza 5 es moderado",
+        "A las 10:00, cuando empieza la corriente hacia el oeste"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Máximo viento contra corriente: la peor mar.",
+        "Correcto: repunte y, después, viento y corriente en el mismo sentido.",
+        "Un fuerza 5 contra 3 nudos puede parecer un fuerza 7 en una zona de corrientes.",
+        "La corriente va aumentando en contra del viento."
+       ],
+       "explanation": "El repunte o una corriente favorable en el mismo sentido que el viento dan la mar más cómoda al cruzar una zona de corrientes."
+      }
+     ]
+    },
+    {
+     "id": "q.sea.4",
+     "kind": "single",
+     "prompt": "En un día despejado y en calma empieza a llegar un mar de fondo largo y bajo del suroeste. ¿Qué podría indicar?",
+     "diagram": {
+      "id": "waves",
+      "variant": "swell"
+     },
+     "options": [
+      "Nada; el mar de fondo es aleatorio",
+      "Una borrasca lejana, posiblemente acercándose",
+      "Una brisa marina más tarde",
+      "Un banco de niebla inminente"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El mar de fondo siempre tiene un origen.",
+      "Correcto: el mar de fondo puede llegar mucho antes que el viento.",
+      "No tiene relación.",
+      "No tiene relación."
+     ],
+     "explanation": "El mar de fondo avanza más deprisa que la mayoría de las borrascas; un mar de fondo nuevo y creciente puede ser el primer indicio de que se acerca mal tiempo."
+    },
+    {
+     "id": "q.sea.5",
+     "kind": "order",
+     "prompt": "Ordene estos términos del estado de la mar de menor a mayor altura de ola.",
+     "options": [
+      "Gruesa",
+      "Marejada",
+      "Muy gruesa",
+      "Fuerte marejada",
+      "Marejadilla"
+     ],
+     "answers": [
+      4,
+      1,
+      3,
+      0,
+      2
+     ],
+     "explanation": "Marejadilla, marejada, fuerte marejada, gruesa, muy gruesa (y después arbolada, montañosa y enorme)."
+    },
+    {
+     "id": "q.sea.6",
+     "kind": "single",
+     "prompt": "¿Hacia qué fuerza de la escala Beaufort se generalizan los borreguillos?",
+     "diagram": {
+      "id": "seaState",
+      "variant": "4"
+     },
+     "options": [
+      "Fuerza 2",
+      "Fuerza 4",
+      "Fuerza 7",
+      "Fuerza 9"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Con fuerza 2 solo hay pequeñas ondulaciones.",
+      "Correcto: con fuerza 4 los borreguillos son bastante frecuentes.",
+      "Con fuerza 7 el viento arrastra la espuma en franjas.",
+      "Con fuerza 9 hay espuma densa y rociones."
+     ],
+     "explanation": "Los borreguillos aparecen con fuerza 3 y son bastante frecuentes con fuerza 4."
+    },
+    {
+     "id": "q.sea.7",
+     "kind": "multi",
+     "prompt": "¿Qué condiciones hacen peligroso cruzar la barra de un puerto? Seleccione todas las correctas.",
+     "options": [
+      "Mar de fondo hacia la costa",
+      "Vaciante saliendo en contra del mar de fondo",
+      "Repunte sin mar de fondo",
+      "Viento fuerte del mar hacia tierra",
+      "Llenante y brisa de tierra"
+     ],
+     "answers": [
+      0,
+      1,
+      3
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Correcto: la vaciante empina el mar de fondo y lo hace romper.",
+      "Es el momento más seguro.",
+      "Correcto.",
+      "En general, la combinación más fácil."
+     ],
+     "explanation": "El mar de fondo, el viento hacia tierra y una vaciante en contra hacen romper las barras; crúcelas cerca del repunte de pleamar y con condiciones tranquilas."
+    },
+    {
+     "id": "q.sea.8",
+     "kind": "single",
+     "prompt": "¿A qué se refiere normalmente la altura de ola de una predicción?",
+     "options": [
+      "A la ola más alta",
+      "A la media de todas las olas",
+      "A la altura significativa de ola: la media del tercio más alto",
+      "Solo a la altura del mar de fondo"
+     ],
+     "answers": [
+      2
+     ],
+     "optionExplanations": [
+      "Las olas máximas individuales son más altas.",
+      "La media es inferior a la altura significativa.",
+      "Correcto.",
+      "Incluye tanto el mar de viento como el mar de fondo, salvo que se indique otra cosa."
+     ],
+     "explanation": "La altura significativa de ola se aproxima a lo que estimaría un observador; algunas olas aisladas son mucho mayores."
+    }
+   ]
+  },
+  {
+   "id": "forecasts",
+   "title": "Mapas, archivos GRIB y predicciones marítimas",
+   "summary": "Lectura de mapas sinópticos y de previsión, barbas de viento y datos GRIB, e interpretación del lenguaje de las predicciones marítimas.",
+   "symbol": "map",
+   "lessons": [
+    {
+     "id": "forecasts.charts",
+     "title": "Mapas sinópticos y de previsión",
+     "segments": [
+      {
+       "heading": "Símbolos",
+       "paragraphs": [
+        "En los mapas de superficie, el frente cálido se dibuja con semicírculos (rojos en los mapas en color), el frente frío con triángulos (azules) y el frente ocluido con triángulos y semicírculos alternos (morados); los símbolos apuntan en el sentido del desplazamiento. Las vaguadas se representan con líneas continuas o discontinuas. Las altas y las bajas se marcan con A y B junto con su presión central.",
+        "Los mapas de análisis muestran la situación a una hora determinada; los mapas de previsión (pronósticos) muestran la configuración esperada a 24, 48 o más horas vista. Fíjese siempre en la hora de validez y compare mapas sucesivos para ver cómo se desplazan y profundizan los sistemas."
+       ],
+       "diagram": {
+        "id": "synopticSymbols"
+       }
+      },
+      {
+       "heading": "Del mapa a la predicción",
+       "paragraphs": [
+        "Estime el viento en su posición a partir de la separación de las isobaras (escala geostrófica) y después redúzcalo y hágalo rolar a la izquierda para obtener el viento en superficie. Localice los frentes, su velocidad probable y lo que traerán. Deduzca de la trayectoria del sistema si el viento rolará a la izquierda o a la derecha.",
+        "Busque isobaras apretadas alrededor de vaguadas y bajas, inflexiones que delatan bajas secundarias y collados donde el viento será flojo y variable."
+       ],
+       "diagram": {
+        "id": "depression",
+        "variant": "chart"
+       }
+      }
+     ]
+    },
+    {
+     "id": "forecasts.grib",
+     "title": "Barbas de viento y archivos GRIB",
+     "segments": [
+      {
+       "heading": "Barbas de viento",
+       "paragraphs": [
+        "El eje de una barba de viento apunta hacia la dirección de donde viene el viento. Las plumas del extremo indican la velocidad: media barba son 5 nudos, una barba entera 10 nudos y una banderola (triángulo) 50 nudos. Dos barbas enteras y media barba significan 25 nudos.",
+        "En muchas aplicaciones las flechas apuntan al revés, hacia sotavento; consulte siempre la leyenda."
+       ],
+       "keyPoints": [
+        "El eje apunta hacia el punto de donde viene el viento.",
+        "Media barba 5 kn, barba entera 10 kn, banderola 50 kn."
+       ],
+       "diagram": {
+        "id": "windBarbs"
+       }
+      },
+      {
+       "heading": "Usar los datos GRIB con criterio",
+       "paragraphs": [
+        "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
+        "Sus limitaciones: dan vientos medios, no rachas; suavizan frentes, turbonadas, brisas marinas y efectos embudo; y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Añada un margen de al menos un grado Beaufort cerca de frentes, chubascos y cabos."
+       ],
+       "keyPoints": [
+        "El GRIB es salida de modelo: vientos medios sin revisión humana.",
+        "No refleja rachas, turbonadas ni efectos locales.",
+        "Compare modelos y lea las predicciones y los avisos oficiales."
+       ],
+       "diagram": {
+        "id": "gribGrid"
+       }
+      }
+     ]
+    },
+    {
+     "id": "forecasts.language",
+     "title": "El lenguaje de las predicciones marítimas",
+     "segments": [
+      {
+       "heading": "Estructura y plazos",
+       "paragraphs": [
+        "Las predicciones marítimas suelen dar primero los avisos de temporal, después una situación general y, para cada zona, la dirección y fuerza del viento, el estado de la mar, el tiempo y la visibilidad.",
+        "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. Los avisos de temporal se emiten para fuerza 8 o superior, o para rachas de 43 nudos o más. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
+        "Anote la predicción y la hora de emisión, y compárela con lo que observa. Si la predicción va retrasada respecto al tiempo observado, espere que la siguiente fase llegue antes de lo previsto."
+       ],
+       "keyPoints": [
+        "Inminente < 6 h, pronto 6–12 h, más tarde > 12 h.",
+        "Aviso de temporal: fuerza 8 o rachas de 43 kn o más.",
+        "Anote la hora de emisión y compárela con lo observado."
+       ],
+       "diagram": {
+        "id": "forecastTimeline"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.fc.1",
+     "kind": "numeric",
+     "prompt": "Una barba de viento tiene una banderola, dos barbas enteras y media barba. ¿Qué velocidad del viento indica, en nudos?",
+     "diagram": {
+      "id": "windBarbs"
+     },
+     "numeric": {
+      "value": 75,
+      "tolerance": 0,
+      "unit": "kn"
+     },
+     "explanation": "Banderola 50 + dos barbas enteras 20 + media barba 5 = 75 nudos."
+    },
+    {
+     "id": "q.fc.2",
+     "kind": "single",
+     "prompt": "El eje de una barba de viento apunta hacia el noroeste. ¿Cuál es la dirección del viento?",
+     "options": [
+      "Del noroeste",
+      "Del sudeste",
+      "Hacia el noroeste",
+      "No se puede determinar"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: el eje apunta hacia el punto de donde viene el viento.",
+      "Es justo lo contrario.",
+      "Eso sería un viento del sudeste.",
+      "Las barbas indican la dirección de forma explícita."
+     ],
+     "explanation": "El eje de la barba apunta al viento: es un noroeste."
+    },
+    {
+     "id": "q.fc.3",
+     "kind": "single",
+     "prompt": "Un aviso de temporal emitido a las 06:00 dice «inminente». ¿Cuándo se espera el temporal?",
+     "options": [
+      "Antes de las 12:00",
+      "Entre las 12:00 y las 18:00",
+      "Después de las 18:00",
+      "Mañana"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: en menos de 6 horas desde la emisión.",
+      "Eso es «pronto».",
+      "Eso es «más tarde».",
+      "Eso va más allá de «más tarde»."
+     ],
+     "explanation": "Inminente significa en menos de 6 horas desde la hora de emisión."
+    },
+    {
+     "id": "q.fc.4",
+     "kind": "multi",
+     "prompt": "¿Qué fenómenos probablemente estarán mal representados en un archivo GRIB? Seleccione todas las correctas.",
+     "options": [
+      "Turbonadas bajo cumulonimbos",
+      "Efecto embudo entre islas",
+      "Desplazamiento a gran escala de una borrasca",
+      "Brisas marinas",
+      "Rachas"
+     ],
+     "answers": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "optionExplanations": [
+      "Correcto: demasiado pequeñas para la malla de la mayoría de los modelos.",
+      "Correcto: la topografía local queda suavizada.",
+      "Los modelos tratan bien los grandes sistemas.",
+      "Correcto: a menudo se omiten o se subestiman.",
+      "Correcto: los vientos GRIB son medios."
+     ],
+     "explanation": "Los datos GRIB son excelentes para los plazos a gran escala y flojos en efectos locales, de pequeña escala y en rachas."
+    },
+    {
+     "id": "q.fc.5",
+     "kind": "single",
+     "prompt": "En un mapa, ¿qué indica una línea con triángulos y semicírculos alternos en el mismo lado?",
+     "diagram": {
+      "id": "synopticSymbols"
+     },
+     "options": [
+      "Una vaguada",
+      "Un frente ocluido",
+      "Un frente estacionario",
+      "Una dorsal"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las vaguadas son líneas sin símbolos.",
+      "Correcto.",
+      "Un frente estacionario lleva los símbolos en lados opuestos.",
+      "Las dorsales no suelen dibujarse con símbolos."
+     ],
+     "explanation": "Frente ocluido: triángulos y semicírculos alternos en el mismo lado, apuntando en el sentido del desplazamiento."
+    },
+    {
+     "id": "q.fc.6",
+     "kind": "scenario",
+     "context": "Se encuentra en la posición marcada en un mapa de previsión para mañana a las 12:00. Un frente frío está 120 millas al oeste, desplazándose hacia el este a 20 nudos. En su posición las isobaras van de SSO a NNE, muy juntas, con la baja presión al noroeste.",
+     "prompt": "Interprete el mapa.",
+     "diagram": {
+      "id": "depression",
+      "variant": "chart"
+     },
+     "explanation": "Viento fuerte del sur al sur-suroeste en el sector cálido, un frente frío que llega en unas seis horas y, después, un fuerte rolar a la derecha hacia el oeste o el noroeste con turbonadas.",
+     "steps": [
+      {
+       "id": "q.fc.6a",
+       "kind": "single",
+       "prompt": "¿Qué dirección del viento en superficie espera a las 12:00?",
+       "options": [
+        "Del sur al sur-suroeste",
+        "Del nordeste",
+        "Del este-sudeste",
+        "Del noroeste"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: SSO a lo largo de las isobaras, rolado ligeramente a la izquierda hacia el sur en superficie.",
+        "Eso situaría la baja al sudeste.",
+        "Es un rolar a la izquierda excesivo.",
+        "Eso llega después del frente frío."
+       ],
+       "explanation": "Con la baja al noroeste e isobaras de SSO a NNE, el viento geostrófico es del sur-suroeste; la fricción lo hace rolar a la izquierda hacia el sur en superficie."
+      },
+      {
+       "id": "q.fc.6b",
+       "kind": "numeric",
+       "prompt": "¿Aproximadamente cuántas horas después de las 12:00 le alcanzará el frente frío?",
+       "numeric": {
+        "value": 6,
+        "tolerance": 0.5,
+        "unit": "h"
+       },
+       "explanation": "120 millas a 20 nudos son 6 horas: hacia las 18:00."
+      },
+      {
+       "id": "q.fc.6c",
+       "kind": "single",
+       "prompt": "¿Para qué cambio debe prepararse cuando llegue?",
+       "options": [
+        "Fuerte rolar a la derecha hacia el oeste o el noroeste, con turbonadas y lluvia intensa",
+        "Rolar gradual a la izquierda hacia el sudeste",
+        "Calma y niebla",
+        "Llovizna continua y presión bajando"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto.",
+        "El rolar a la izquierda se produce por delante de un frente cálido.",
+        "No es típico de un frente frío.",
+        "Eso describe el sector cálido o la llegada de un frente cálido."
+       ],
+       "explanation": "Frente frío: fuerte rolar a la derecha, turbonadas, lluvia intensa, presión subiendo y, después, aire más limpio con chubascos."
+      }
+     ]
+    },
+    {
+     "id": "q.fc.7",
+     "kind": "single",
+     "prompt": "El GRIB indica 18 nudos para su travesía, pero la predicción oficial dice «suroeste 5 a 6, ocasionalmente 7 en chubascos con turbonadas». ¿Para qué se prepara?",
+     "options": [
+      "Para 18 nudos, porque el GRIB es más preciso",
+      "Para rachas y turbonadas de fuerza 7 o más",
+      "Para vientos más flojos, porque las predicciones exageran",
+      "Para la media de ambos: 15 nudos"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El GRIB da vientos medios suavizados.",
+      "Correcto: prepárese para las turbonadas que el modelo no puede resolver.",
+      "Los predictores añaden el detalle que se les escapa a los modelos.",
+      "Promediar ignora el riesgo de turbonadas."
+     ],
+     "explanation": "Planifique para el peor caso de la predicción oficial; los vientos medios del GRIB subestiman las turbonadas."
+    },
+    {
+     "id": "q.fc.8",
+     "kind": "single",
+     "prompt": "¿Qué significa «ciclónico» en una predicción?",
+     "options": [
+      "Vientos de fuerza huracanada",
+      "Cambio considerable de la dirección del viento al pasar cerca una borrasca",
+      "Flojo y variable",
+      "Un ciclón tropical"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "No es un término de intensidad.",
+      "Correcto.",
+      "Eso es «variable».",
+      "No en las predicciones marítimas de latitudes medias."
+     ],
+     "explanation": "«Ciclónico» advierte de que la dirección del viento cambiará considerablemente cerca del centro de una baja."
+    }
+   ]
+  },
+  {
+   "id": "planning",
+   "title": "Planificación de la travesía y mal tiempo",
+   "summary": "Formarse una idea del tiempo, elegir una ventana, puertos de refugio y preparación y tácticas para el mal tiempo.",
+   "symbol": "sailboat",
+   "lessons": [
+    {
+     "id": "planning.window",
+     "title": "Elegir una ventana meteorológica",
+     "segments": [
+      {
+       "heading": "Formarse una idea del tiempo",
+       "paragraphs": [
+        "Empiece varios días antes: siga los mapas sinópticos y de previsión para entender la situación y cómo evoluciona. Más cerca de la salida, añada la predicción marítima oficial, las predicciones costeras, los avisos de temporal y datos GRIB de más de un modelo. Fíjese en dónde discrepan las predicciones; la discrepancia es una medida de la incertidumbre.",
+        "Después, aplíquelo a su barco y a su tripulación. ¿Cuál es el viento más fuerte probable, rachas incluidas, de qué dirección respecto a su rumbo y a las corrientes de marea, durante cuánto tiempo y con qué estado de la mar en los cabos y en la aproximación al destino?"
+       ],
+       "keyPoints": [
+        "Siga la evolución durante días, no solo la última predicción.",
+        "Si los modelos discrepan hay incertidumbre: añada margen.",
+        "Traduzca viento y mar en condiciones reales en su ruta."
+       ],
+       "diagram": {
+        "id": "passagePlan"
+       }
+      },
+      {
+       "heading": "Límites, horarios y refugios",
+       "paragraphs": [
+        "Fije sus límites personales de viento, mar y visibilidad antes de leer la predicción y acuérdelos con la tripulación. Programe la salida de modo que la travesía termine con luz de día y que lo peor de cualquier frente o cambio de viento le sorprenda en mar abierto, no en la bocana de un puerto en una costa a sotavento.",
+        "Haga una lista de puertos de refugio a lo largo de la ruta e indique cuáles son seguros para entrar con la dirección de viento prevista, con qué estados de marea y de noche. Recuerde que un rolar a la derecha previsto puede convertir un refugio en una entrada peligrosa."
+       ],
+       "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+       }
+      }
+     ]
+    },
+    {
+     "id": "planning.heavy",
+     "title": "Preparación y tácticas para el mal tiempo",
+     "segments": [
+      {
+       "heading": "Antes de que llegue",
+       "paragraphs": [
+        "Tome rizos pronto. Estibe y trinque todo bajo cubierta y en cubierta, cierre las escotillas y los grifos de fondo que no use, monte las líneas de vida y asegúrese de que todos llevan chaleco salvavidas y arnés en cubierta. Prepare comida y bebida calientes y tentempiés sencillos, organice unas guardias que protejan a la tripulación del cansancio e informe a todos del plan y de cómo actuar ante el mareo.",
+        "Sitúese con precisión y prevea resguardo suficiente: con mal tiempo, el mayor peligro suele ser la tierra, no el mar."
+       ],
+       "keyPoints": [
+        "Tome rizos pronto y asegure el barco.",
+        "Chalecos salvavidas, arneses y líneas de vida.",
+        "Alimente y haga descansar a la tripulación; mantenga resguardo."
+       ],
+       "diagram": {
+        "id": "seaState",
+        "variant": "8"
+       }
+      },
+      {
+       "heading": "Tácticas",
+       "paragraphs": [
+        "Las opciones incluyen seguir navegando con la vela muy rizada, ponerse al pairo (foque acuartelado, mayor amollada y timón trincado a barlovento) para que la tripulación descanse y el barco aguante la mar con comodidad, correr el temporal con el mínimo de vela y estachas o un cono de arrastre a remolque para controlar la velocidad y, en condiciones de supervivencia, un ancla de capa por la proa.",
+        "La elección correcta depende del barco, de la tripulación, del resguardo disponible y de la dirección del peligro más cercano. Gobernar formando un ángulo con las crestas que rompen, en lugar de recibirlas de frente, reduce el riesgo de una tumbada. Elija lo que elija, decídalo pronto, mientras la tripulación aún tiene energía."
+       ],
+       "diagram": {
+        "id": "heavyWeather"
+       }
+      }
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "q.pl.1",
+     "kind": "single",
+     "prompt": "Tres modelos discrepan en 12 horas sobre la llegada de un frente. ¿Qué le indica esto?",
+     "options": [
+      "Que debe usar el modelo más optimista",
+      "Que la incertidumbre de la predicción es alta; deje margen o espere",
+      "Que debe promediarlos y salir según la media",
+      "Que debe ignorar los modelos y fiarse solo del barómetro"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Quedarse con el mejor caso es hacerse ilusiones.",
+      "Correcto.",
+      "La media oculta la dispersión.",
+      "El barómetro complementa las predicciones, no las sustituye."
+     ],
+     "explanation": "La discrepancia entre modelos cuantifica la incertidumbre. Planifique para la llegada más temprana o retrase la salida."
+    },
+    {
+     "id": "q.pl.2",
+     "kind": "single",
+     "prompt": "¿Cuándo debe fijar sus límites personales de viento para una travesía?",
+     "options": [
+      "Después de leer la predicción",
+      "Antes de leer la predicción",
+      "Una vez en la mar",
+      "Solo si se prevé temporal"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Así es fácil acabar convenciéndose de salir.",
+      "Correcto.",
+      "Demasiado tarde.",
+      "Los límites se aplican en cualquier condición."
+     ],
+     "explanation": "Unos límites fijados de antemano protegen de leer con optimismo una predicción dudosa."
+    },
+    {
+     "id": "q.pl.3",
+     "kind": "multi",
+     "prompt": "Se prevé temporal dentro de 8 horas y ya está comprometido con la travesía. ¿Qué preparativos debe hacer ahora? Seleccione todas las correctas.",
+     "options": [
+      "Tomar rizos antes de que suba el viento",
+      "Preparar comida caliente y termos",
+      "Abrir las escotillas para ventilar",
+      "Montar las líneas de vida y ponerse el arnés",
+      "Planificar mantenerse bien separado de la costa, lejos de una costa a sotavento"
+     ],
+     "answers": [
+      0,
+      1,
+      3,
+      4
+     ],
+     "optionExplanations": [
+      "Correcto.",
+      "Correcto.",
+      "Las escotillas deben estar cerradas y aseguradas.",
+      "Correcto.",
+      "Correcto: el resguardo es seguridad."
+     ],
+     "explanation": "Prepare el barco, la tripulación y el plan antes de que empeoren las condiciones."
+    },
+    {
+     "id": "q.pl.4",
+     "kind": "single",
+     "prompt": "¿Qué es ponerse al pairo?",
+     "options": [
+      "Correr el temporal a palo seco",
+      "Foque acuartelado, mayor amollada y timón trincado a barlovento para que el barco quede tranquilo",
+      "Navegar a motor proa al viento a toda máquina",
+      "Fondear en aguas profundas"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Eso es correr el temporal.",
+      "Correcto.",
+      "Eso no es ponerse al pairo.",
+      "Eso no es ponerse al pairo."
+     ],
+     "explanation": "Ponerse al pairo detiene el barco en una posición cómoda, lo que da a la tripulación descanso y tiempo para resolver problemas."
+    },
+    {
+     "id": "q.pl.5",
+     "kind": "scenario",
+     "context": "Planifica una travesía de 60 millas a lo largo de una costa orientada al sur. Predicción: «Oeste 4 a 5, aumentando a 6 a 7 más tarde, rolando al noroeste». El puerto de destino previsto tiene una entrada con barra orientada al oeste, peligrosa con ponientes fuertes y con la vaciante. Un puerto alternativo, a 40 millas, está orientado al sudeste y tiene una entrada practicable con cualquier marea.",
+     "prompt": "Elabore el plan.",
+     "explanation": "Evite la barra expuesta al oeste con un poniente que arrecia; el puerto orientado al sudeste está resguardado del viento previsto del oeste al noroeste.",
+     "steps": [
+      {
+       "id": "q.pl.5a",
+       "kind": "single",
+       "prompt": "¿Por qué el destino previsto es una mala elección?",
+       "options": [
+        "La barra está expuesta al poniente que arrecia y puede romper con la vaciante",
+        "Está demasiado lejos",
+        "No tiene combustible",
+        "Los puertos siempre son peligrosos de noche"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto.",
+        "La distancia no es el problema principal.",
+        "Aquí no influye en la seguridad.",
+        "Demasiado genérico."
+       ],
+       "explanation": "Una barra orientada al oeste, con poniente fuerte y la vaciante saliendo, puede romper peligrosamente."
+      },
+      {
+       "id": "q.pl.5b",
+       "kind": "single",
+       "prompt": "¿Seguirá resguardado el puerto orientado al sudeste después del rolar al noroeste?",
+       "options": [
+        "Sí: su entrada da la espalda tanto al viento del oeste como al del noroeste",
+        "No: el rolar lo convierte en una costa a sotavento",
+        "Solo en pleamar",
+        "Solo de día"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto.",
+        "En una entrada orientada al sudeste, el noroeste sopla de tierra.",
+        "La entrada es practicable con cualquier marea.",
+        "No es el factor decisivo."
+       ],
+       "explanation": "Una entrada orientada al sudeste queda a sotavento de la tierra tanto con viento del oeste como del noroeste."
+      },
+      {
+       "id": "q.pl.5c",
+       "kind": "single",
+       "prompt": "¿Cuál es la decisión sensata?",
+       "options": [
+        "Planificar desde el principio el puerto alternativo como destino",
+        "Poner rumbo a la barra y decidir al llegar",
+        "Esperar a que sople el temporal para comprobar su fuerza",
+        "Fondear frente a la barra"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: más cerca, resguardado y practicable con cualquier marea.",
+        "Decidir ante una barra que rompe es demasiado tarde.",
+        "Esperar a que entre el temporal reduce las opciones.",
+        "Un fondeadero abierto frente a una barra a sotavento es peligroso."
+       ],
+       "explanation": "Elija el destino que siga siendo seguro en la peor fase de la predicción."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.6",
+     "kind": "single",
+     "prompt": "Con mal tiempo en alta mar, ¿cuál suele ser el mayor peligro?",
+     "options": [
+      "Las propias olas",
+      "La tierra: una costa a sotavento y la pérdida de resguardo",
+      "Quedarse sin comida",
+      "El frío"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Las olas son un riesgo, pero un barco bien preparado las aguanta si tiene resguardo.",
+      "Correcto.",
+      "Se resuelve con preparación.",
+      "Se resuelve con ropa adecuada."
+     ],
+     "explanation": "El resguardo es seguridad. La mayoría de las pérdidas con mal tiempo tienen que ver con la tierra."
+    },
+    {
+     "id": "q.pl.7",
+     "kind": "single",
+     "prompt": "Corriendo el temporal ante grandes olas rompientes, el barco surfea a una velocidad peligrosa. ¿Qué ayuda?",
+     "options": [
+      "Izar más vela",
+      "Largar estachas o un cono de arrastre a remolque para frenarlo",
+      "Gobernar exactamente de frente a cada cresta a toda velocidad",
+      "Atravesarse a la mar"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Más vela aumenta la velocidad.",
+      "Correcto.",
+      "El exceso de velocidad aumenta el riesgo de capotar o de una orzada incontrolada.",
+      "Atravesado a la mar se arriesga a una tumbada."
+     ],
+     "explanation": "Controlar la velocidad con elementos de arrastre reduce el riesgo de una orzada incontrolada o de capotar."
+    },
+    {
+     "id": "q.pl.8",
+     "kind": "single",
+     "prompt": "Las condiciones son peores de lo previsto y la tripulación se está cansando. ¿Qué haría un buen marino?",
+     "options": [
+      "Seguir con el plan",
+      "Replantearse la situación: desviarse, ponerse al pairo o dar la vuelta según convenga",
+      "Dar más vela para llegar antes",
+      "Esperar a la siguiente predicción antes de hacer nada"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El plan se basaba en una predicción que ahora resulta errónea.",
+      "Correcto.",
+      "Más vela añade riesgo.",
+      "Actúe según lo que ve ahora."
+     ],
+     "explanation": "Cambiar de plan en función de las condiciones es buena marinería."
+    }
+   ]
+  }
+ ]
+}

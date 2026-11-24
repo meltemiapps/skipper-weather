@@ -47,6 +47,7 @@ struct DiagramView: View {
         .environment(\.layoutDirection, .leftToRight) // charts are never mirrored
         .accessibilityElement()
         .accessibilityLabel(Text(verbatim: accessibilitySummary(labels)))
+        .accessibilityIdentifier("diagram.\(ref.id)" + (ref.variant.map { ".\($0)" } ?? ""))
     }
 
     private func accessibilitySummary(_ c: StudyContent) -> String {
@@ -110,12 +111,34 @@ struct Painter {
                  CGPoint(x: b.x - h * cos(ang + .pi / 7), y: b.y - h * sin(ang + .pi / 7))], color)
     }
 
-    func text(_ s: String, _ at: CGPoint, size: CGFloat = 12, color: Color = .white, weight: Font.Weight = .semibold, anchor: UnitPoint = .center) {
-        ctx.draw(Text(verbatim: s).font(.system(size: size, weight: weight)).foregroundStyle(color), at: at, anchor: anchor)
+    static let plateColor = Color(red: 0.04, green: 0.12, blue: 0.22).opacity(0.62)
+
+    /// Draws a label that never leaves the canvas, shrinks to `maxWidth` if a translation is long,
+    /// and sits on a soft plate so lines passing behind it don't hurt legibility.
+    func text(_ s: String, _ at: CGPoint, size: CGFloat = 12, color: Color = .white, weight: Font.Weight = .semibold,
+              anchor: UnitPoint = .center, maxWidth: CGFloat? = nil, plate: Bool = true) {
+        let unbounded = CGSize(width: CGFloat.greatestFiniteMagnitude, height: .greatestFiniteMagnitude)
+        func resolve(_ pt: CGFloat) -> GraphicsContext.ResolvedText {
+            ctx.resolve(Text(verbatim: s).font(.system(size: pt, weight: weight)).foregroundStyle(color))
+        }
+        var resolved = resolve(size)
+        var m = resolved.measure(in: unbounded)
+        let limit = min(maxWidth ?? .greatestFiniteMagnitude, self.size.width - 8)
+        if m.width > limit {
+            resolved = resolve(max(7, (size * limit / m.width).rounded(.down)))
+            m = resolved.measure(in: unbounded)
+        }
+        var o = CGPoint(x: at.x - anchor.x * m.width, y: at.y - anchor.y * m.height)
+        o.x = min(max(o.x, 4), self.size.width - 4 - m.width)
+        o.y = min(max(o.y, 2), self.size.height - 2 - m.height)
+        let rect = CGRect(origin: o, size: m)
+        if plate { ctx.fill(Path(roundedRect: rect.insetBy(dx: -3, dy: -1), cornerRadius: 4), with: .color(Self.plateColor)) }
+        ctx.draw(resolved, in: rect)
     }
 
-    func label(_ key: DiagramLabel, _ at: CGPoint, size: CGFloat = 12, color: Color = .white, anchor: UnitPoint = .center) {
-        text(name(key), at, size: size, color: color, anchor: anchor)
+    func label(_ key: DiagramLabel, _ at: CGPoint, size: CGFloat = 12, color: Color = .white, anchor: UnitPoint = .center,
+               maxWidth: CGFloat? = nil, plate: Bool = true) {
+        text(name(key), at, size: size, color: color, anchor: anchor, maxWidth: maxWidth, plate: plate)
     }
 
     func circle(_ c: CGPoint, _ r: CGFloat, _ color: Color) {
@@ -227,19 +250,19 @@ enum Diagrams {
             sector.addLines(Array(warm.dropFirst()) + [p.pt(0.6, 1), p.pt(0.12, 0.95)] + cold.reversed())
             sector.closeSubpath()
             p.fill(sector, v == "warmSector" ? Palette.bad.opacity(0.35) : warmTint)
-            p.label(.warmSector, p.pt(0.48, 0.72), size: 12, color: Palette.bad)
+            p.label(.warmSector, p.pt(0.5, v == "warmSector" ? 0.84 : 0.74), size: 12, color: Palette.bad)
         }
         if v == "occluded" {
             let occ = [L, p.pt(0.5, 0.48), p.pt(0.56, 0.6)]
             p.front(occ, kind: "occluded")
             p.front([p.pt(0.56, 0.6), p.pt(0.72, 0.72), p.pt(0.82, 0.86)], kind: "warm")
             p.front([p.pt(0.56, 0.6), p.pt(0.44, 0.76), p.pt(0.32, 0.95)], kind: "cold", side: -1)
-            p.label(.occludedFront, p.pt(0.62, 0.45), size: 12, color: Color(red: 0.75, green: 0.45, blue: 0.95))
+            p.label(.occludedFront, p.pt(0.6, 0.5), size: 12, color: Color(red: 0.75, green: 0.45, blue: 0.95), anchor: .leading)
         } else {
             p.front(warm, kind: "warm")
             p.front(cold, kind: "cold", side: -1)
             p.label(.warmFront, p.pt(0.83, 0.55), size: 12, color: Palette.bad)
-            p.label(.coldFront, p.pt(0.14, 0.62), size: 12, color: blue)
+            p.label(.coldFront, p.pt(0.11, 0.72), size: 12, color: blue, maxWidth: p.size.width * 0.22)
         }
         p.label(.low, CGPoint(x: L.x, y: L.y), size: 24, color: Palette.amber)
         // Anticlockwise surface wind, crossing inwards.
@@ -301,7 +324,7 @@ enum Diagrams {
             let names: [(DiagramLabel, CGFloat, CGFloat)] = [(.cirrus, 0.88, 0.1), (.cirrostratus, 0.72, 0.24), (.altostratus, 0.54, 0.42), (.nimbostratus, 0.34, 0.62)]
             for (k, x, y) in names {
                 p.stroke([p.pt(x - 0.1, y + 0.02), p.pt(x + 0.08, y - 0.02)], .white.opacity(0.75), 5)
-                p.label(k, p.pt(x, y - 0.06), size: 10)
+                p.label(k, p.pt(x - 0.05, y - 0.07), size: 10)
             }
             for i in 0..<7 { let x = 0.2 + CGFloat(i) * 0.03; p.stroke([p.pt(x, 0.68), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
             p.label(.rain, p.pt(0.13, 0.76), size: 11, color: Palette.accent)
@@ -314,9 +337,9 @@ enum Diagrams {
         p.label(.low, p.pt(0.5, 0.06), size: 18, color: Palette.amber); p.label(.high, p.pt(0.5, 0.95), size: 18, color: Palette.accent)
         switch v {
         case "geostrophic":
-            p.arrow(p.pt(0.3, 0.5), p.pt(0.7, 0.5), .white, 3); p.label(.geostrophic, p.pt(0.5, 0.42), size: 11)
-            p.arrow(p.pt(0.5, 0.55), p.pt(0.5, 0.3), Palette.amber); p.label(.pressureGradient, p.pt(0.66, 0.32), size: 10, color: Palette.amber)
-            p.arrow(p.pt(0.5, 0.55), p.pt(0.5, 0.75), blue); p.label(.coriolis, p.pt(0.6, 0.72), size: 10, color: blue)
+            p.arrow(p.pt(0.3, 0.5), p.pt(0.7, 0.5), .white, 3); p.label(.geostrophic, p.pt(0.3, 0.42), size: 11)
+            p.arrow(p.pt(0.5, 0.55), p.pt(0.5, 0.3), Palette.amber); p.label(.pressureGradient, p.pt(0.53, 0.32), size: 10, color: Palette.amber, anchor: .leading)
+            p.arrow(p.pt(0.5, 0.55), p.pt(0.5, 0.75), blue); p.label(.coriolis, p.pt(0.53, 0.72), size: 10, color: blue, anchor: .leading)
         case "curvature":
             p.label(.lighterAround, p.pt(0.25, 0.32), size: 11, color: Palette.amber)
             p.arrow(p.pt(0.15, 0.4), p.pt(0.33, 0.4), Palette.amber, 2)
@@ -336,7 +359,7 @@ enum Diagrams {
         p.arrow(p.pt(0.95, 0.9), p.pt(0.62, 0.68), Palette.accent, 3); p.label(.wind, p.pt(0.88, 0.78), size: 11, color: Palette.accent)
         p.observer(o)
         p.arrow(o, p.pt(0.32, 0.42), Palette.amber, 2)
-        p.label(.backToWind, p.pt(0.78, 0.55), size: 11); p.label(.lowOnLeft, p.pt(0.34, 0.56), size: 11, color: Palette.amber)
+        p.label(.backToWind, p.pt(0.78, 0.55), size: 11); p.label(.lowOnLeft, p.pt(0.42, 0.63), size: 11, color: Palette.amber, anchor: .trailing)
     }
 
     static func globalCirculation(_ p: Painter) {
@@ -350,7 +373,7 @@ enum Diagrams {
         }
         for y in [-0.62, 0.62] as [CGFloat] { p.arrow(CGPoint(x: c.x - r * 0.35, y: c.y + y * r * 0.98), CGPoint(x: c.x + r * 0.35, y: c.y + y * r * 0.98 - 6), Palette.good) }
         for y in [-0.25, 0.25] as [CGFloat] { p.arrow(CGPoint(x: c.x + r * 0.4, y: c.y + y * r), CGPoint(x: c.x - r * 0.4, y: c.y + y * r * 0.4), Palette.amber) }
-        p.label(.coriolis, CGPoint(x: c.x, y: c.y + r + 2), size: 10, color: iso)
+        p.label(.coriolis, p.pt(0.02, 0.94), size: 10, color: iso, anchor: .leading)
     }
 
     static func thermal(_ p: Painter, _ v: String) {
@@ -375,7 +398,7 @@ enum Diagrams {
             p.arrow(p.pt(0.6, 0.18), p.pt(0.2, 0.18), iso); p.arrow(p.pt(0.12, 0.24), p.pt(0.12, 0.56), iso)
             p.label(.seaBreeze, p.pt(0.36, 0.56), size: 13, color: Palette.accent)
         } else {
-            p.text("☾", p.pt(0.12, 0.12), size: 22)
+            p.text("☾", p.pt(0.12, 0.12), size: 22, plate: false)
             p.arrow(p.pt(0.85, 0.62), p.pt(0.35, 0.62), blue, 3); p.arrow(p.pt(0.2, 0.58), p.pt(0.2, 0.34), iso)
             p.arrow(p.pt(0.3, 0.26), p.pt(0.75, 0.26), iso)
             p.label(.landBreeze, p.pt(0.6, 0.54), size: 13, color: blue)
@@ -398,7 +421,7 @@ enum Diagrams {
         p.stroke([p.pt(0, 0.62), p.pt(1, 0.62)], .white.opacity(0.7), 2)
         p.label(.sea, p.pt(0.08, 0.1)); p.label(.land, p.pt(0.08, 0.9))
         p.arrow(p.pt(0.1, 0.4), p.pt(0.55, 0.47), Palette.accent, 3); p.label(.overSea, p.pt(0.3, 0.33), size: 10, color: Palette.accent)
-        p.arrow(p.pt(0.1, 0.84), p.pt(0.55, 0.66), Palette.good, 3); p.label(.overLand, p.pt(0.3, 0.92), size: 10, color: Palette.good)
+        p.arrow(p.pt(0.1, 0.84), p.pt(0.55, 0.66), Palette.good, 3); p.label(.overLand, p.pt(0.45, 0.92), size: 10, color: Palette.good)
         p.circle(p.pt(0.7, 0.56), p.u * 0.06, Palette.amber.opacity(0.5))
         p.label(.convergence, p.pt(0.8, 0.46), size: 12, color: Palette.amber); p.label(.strongerWind, p.pt(0.83, 0.74), size: 11, color: Palette.amber)
     }
@@ -411,18 +434,18 @@ enum Diagrams {
         p.arrow(p.pt(0.3, 0.12), p.pt(0.3, 0.42), blue, 3); p.label(.mistral, p.pt(0.3, 0.48), size: 12, color: blue)
         p.arrow(p.pt(0.6, 0.18), p.pt(0.53, 0.32), blue, 3); p.label(.bora, p.pt(0.62, 0.4), size: 12, color: blue)
         p.arrow(p.pt(0.78, 0.36), p.pt(0.78, 0.66), Palette.accent, 3); p.label(.meltemi, p.pt(0.88, 0.56), size: 12, color: Palette.accent)
-        p.arrow(p.pt(0.45, 0.85), p.pt(0.55, 0.55), Palette.amber, 3); p.label(.sirocco, p.pt(0.42, 0.7), size: 12, color: Palette.amber)
+        p.arrow(p.pt(0.45, 0.85), p.pt(0.55, 0.55), Palette.amber, 3); p.label(.sirocco, p.pt(0.46, 0.72), size: 12, color: Palette.amber, anchor: .trailing)
     }
 
     static func fog(_ p: Painter, _ v: String) {
         switch v {
         case "radiation":
-            p.ground(0, 1, 0.72); p.text("☾", p.pt(0.1, 0.12), size: 22)
+            p.ground(0, 1, 0.72); p.text("☾", p.pt(0.1, 0.12), size: 22, plate: false)
             for i in 0..<4 { var r = Path(); r.addRoundedRect(in: CGRect(origin: p.pt(0.1, 0.62 - CGFloat(i) * 0.06), size: CGSize(width: p.size.width * 0.8, height: 10)), cornerSize: CGSize(width: 5, height: 5)); p.fill(r, .white.opacity(0.4 - Double(i) * 0.08)) }
             p.label(.radiationFog, p.pt(0.5, 0.32), size: 14); p.label(.night, p.pt(0.85, 0.12))
         case "frontal":
             p.sea(0.85); p.stroke([p.pt(0.1, 0.85), p.pt(0.95, 0.2)], Palette.bad, 3)
-            p.label(.warmAir, p.pt(0.35, 0.35)); p.label(.coldAir, p.pt(0.8, 0.7))
+            p.label(.warmAir, p.pt(0.35, 0.35)); p.label(.coldAir, p.pt(0.83, 0.62), anchor: .leading)
             for i in 0..<8 { let x = 0.45 + CGFloat(i) * 0.05; p.stroke([p.pt(x, 0.5 - CGFloat(i) * 0.03), p.pt(x - 0.01, 0.75)], Palette.accent.opacity(0.8), 1.5) }
             var f = Path(); f.addRect(CGRect(origin: p.pt(0.4, 0.75), size: CGSize(width: p.size.width * 0.6, height: p.size.height * 0.1))); p.fill(f, .white.opacity(0.4))
             p.label(.frontalFog, p.pt(0.7, 0.92), size: 12)
@@ -439,7 +462,7 @@ enum Diagrams {
         p.curve([p.pt(0.1, 0.2), p.pt(0.4, 0.4), p.pt(0.7, 0.55), p.pt(0.92, 0.58)], Palette.amber, 3)
         p.curve([p.pt(0.1, 0.62), p.pt(0.5, 0.6), p.pt(0.92, 0.6)], Palette.accent, 3)
         p.circle(p.pt(0.74, 0.57), 8, .white.opacity(0.5))
-        p.label(.airTemperature, p.pt(0.28, 0.22), size: 11, color: Palette.amber)
+        p.label(.airTemperature, p.pt(0.36, 0.27), size: 11, color: Palette.amber, anchor: .leading)
         p.label(.dewPoint, p.pt(0.3, 0.7), size: 11, color: Palette.accent)
         p.label(.saturation, p.pt(0.78, 0.46), size: 11)
         p.label(.night, p.pt(0.5, 0.93), size: 10, color: iso)
@@ -494,9 +517,9 @@ enum Diagrams {
             p.label(.strongerWind, p.pt(0.75, 0.12), size: 11, color: Palette.amber)
         } else {
             p.curve([p.pt(0.1, 0.2), p.pt(0.35, 0.55), p.pt(0.45, 0.62), p.pt(0.62, 0.63), p.pt(0.68, 0.5), p.pt(0.92, 0.3)], Palette.amber, 3)
-            p.label(.warmFront, p.pt(0.44, 0.72), size: 10, color: Palette.bad); p.stroke([p.pt(0.45, 0.1), p.pt(0.45, 0.85)], Palette.bad.opacity(0.6), 1, dash: [4, 4])
-            p.label(.coldFront, p.pt(0.66, 0.72), size: 10, color: blue); p.stroke([p.pt(0.65, 0.1), p.pt(0.65, 0.85)], blue.opacity(0.6), 1, dash: [4, 4])
-            p.label(.falling, p.pt(0.22, 0.28), size: 11); p.label(.steady, p.pt(0.55, 0.55), size: 11); p.label(.rising, p.pt(0.84, 0.22), size: 11, color: Palette.good)
+            p.label(.warmFront, p.pt(0.44, 0.76), size: 10, color: Palette.bad, anchor: .trailing); p.stroke([p.pt(0.45, 0.1), p.pt(0.45, 0.85)], Palette.bad.opacity(0.6), 1, dash: [4, 4])
+            p.label(.coldFront, p.pt(0.66, 0.76), size: 10, color: blue, anchor: .leading); p.stroke([p.pt(0.65, 0.1), p.pt(0.65, 0.85)], blue.opacity(0.6), 1, dash: [4, 4])
+            p.label(.falling, p.pt(0.18, 0.5), size: 11); p.label(.steady, p.pt(0.55, 0.55), size: 11); p.label(.rising, p.pt(0.84, 0.22), size: 11, color: Palette.good)
         }
     }
 
@@ -516,7 +539,7 @@ enum Diagrams {
         p.arrow(p.pt(0.25, 0.8), p.pt(0.25, 0.65), .white.opacity(0.6)); p.label(.stratus, p.pt(0.25, 0.45), size: 11)
         p.label(.unstable, p.pt(0.75, 0.1), size: 13, color: Palette.amber)
         p.cloud(p.pt(0.75, 0.42), p.u * 0.18); p.cloud(p.pt(0.75, 0.28), p.u * 0.14)
-        p.arrow(p.pt(0.75, 0.82), p.pt(0.75, 0.55), Palette.amber, 3); p.label(.parcel, p.pt(0.88, 0.7), size: 10, color: Palette.amber)
+        p.arrow(p.pt(0.75, 0.82), p.pt(0.75, 0.55), Palette.amber, 3); p.label(.parcel, p.pt(0.71, 0.7), size: 10, color: Palette.amber, anchor: .trailing, maxWidth: p.size.width * 0.4)
     }
 
     static func cumulonimbus(_ p: Painter) {
@@ -524,8 +547,8 @@ enum Diagrams {
         p.polygon([p.pt(0.2, 0.12), p.pt(0.85, 0.12), p.pt(0.62, 0.2), p.pt(0.42, 0.2)], .white.opacity(0.85))
         p.label(.anvil, p.pt(0.75, 0.06), size: 11)
         var body = Path(); body.addRoundedRect(in: CGRect(origin: p.pt(0.38, 0.18), size: CGSize(width: p.size.width * 0.28, height: p.size.height * 0.42)), cornerSize: CGSize(width: 18, height: 18)); p.fill(body, .white.opacity(0.75))
-        p.arrow(p.pt(0.44, 0.58), p.pt(0.44, 0.24), Palette.amber, 2.5); p.label(.updraught, p.pt(0.3, 0.38), size: 10, color: Palette.amber)
-        p.arrow(p.pt(0.6, 0.3), p.pt(0.6, 0.78), blue, 2.5); p.label(.downdraught, p.pt(0.78, 0.4), size: 10, color: blue)
+        p.arrow(p.pt(0.44, 0.58), p.pt(0.44, 0.24), Palette.amber, 2.5); p.label(.updraught, p.pt(0.36, 0.38), size: 10, color: Palette.amber, anchor: .trailing, maxWidth: p.size.width * 0.33)
+        p.arrow(p.pt(0.6, 0.3), p.pt(0.6, 0.78), blue, 2.5); p.label(.downdraught, p.pt(0.68, 0.4), size: 10, color: blue, anchor: .leading, maxWidth: p.size.width * 0.3)
         for i in 0..<6 { let x = 0.52 + CGFloat(i) * 0.025; p.stroke([p.pt(x, 0.62), p.pt(x - 0.01, 0.84)], Palette.accent, 1.5) }
         p.arrow(p.pt(0.6, 0.82), p.pt(0.95, 0.82), Palette.bad, 3); p.arrow(p.pt(0.55, 0.82), p.pt(0.2, 0.82), Palette.bad, 3)
         p.label(.gustFront, p.pt(0.86, 0.74), size: 11, color: Palette.bad); p.label(.squall, p.pt(0.2, 0.74), size: 11, color: Palette.bad)
@@ -534,18 +557,18 @@ enum Diagrams {
     static func windBarbs(_ p: Painter) {
         let rows: [(Int, DiagramLabel?)] = [(5, .halfBarb), (10, .fullBarb), (25, nil), (50, .pennant), (65, nil)]
         for (i, row) in rows.enumerated() {
-            let x = 0.12 + CGFloat(i) * 0.19
-            p.barb(p.pt(x, 0.62), from: 315, knots: row.0, len: p.u * 0.28)
-            p.text("\(row.0) \(p.name(.knots))", p.pt(x, 0.88), size: 11)
+            let x = 0.17 + CGFloat(i) * 0.18
+            p.barb(p.pt(x, 0.62), from: 315, knots: row.0, len: p.u * 0.26)
+            p.text("\(row.0) \(p.name(.knots))", p.pt(x, 0.88), size: 11, maxWidth: p.size.width * 0.17)
         }
         p.label(.wind, p.pt(0.5, 0.08), size: 11, color: iso)
     }
 
     static func synopticSymbols(_ p: Painter) {
-        p.front([p.pt(0.08, 0.2), p.pt(0.62, 0.2)], kind: "warm"); p.label(.warmFront, p.pt(0.66, 0.2), size: 12, color: Palette.bad, anchor: .leading)
-        p.front([p.pt(0.08, 0.45), p.pt(0.62, 0.45)], kind: "cold"); p.label(.coldFront, p.pt(0.66, 0.45), size: 12, color: blue, anchor: .leading)
-        p.front([p.pt(0.08, 0.7), p.pt(0.62, 0.7)], kind: "occluded"); p.label(.occludedFront, p.pt(0.66, 0.7), size: 12, color: Color(red: 0.75, green: 0.45, blue: 0.95), anchor: .leading)
-        p.stroke([p.pt(0.08, 0.9), p.pt(0.62, 0.9)], .white, 2.5, dash: [8, 5]); p.label(.trough, p.pt(0.66, 0.9), size: 12, anchor: .leading)
+        p.front([p.pt(0.08, 0.2), p.pt(0.62, 0.2)], kind: "warm"); p.label(.warmFront, p.pt(0.66, 0.2), size: 12, color: Palette.bad, anchor: .leading, maxWidth: p.size.width * 0.31)
+        p.front([p.pt(0.08, 0.45), p.pt(0.62, 0.45)], kind: "cold"); p.label(.coldFront, p.pt(0.66, 0.45), size: 12, color: blue, anchor: .leading, maxWidth: p.size.width * 0.31)
+        p.front([p.pt(0.08, 0.7), p.pt(0.62, 0.7)], kind: "occluded"); p.label(.occludedFront, p.pt(0.66, 0.7), size: 12, color: Color(red: 0.75, green: 0.45, blue: 0.95), anchor: .leading, maxWidth: p.size.width * 0.31)
+        p.stroke([p.pt(0.08, 0.9), p.pt(0.62, 0.9)], .white, 2.5, dash: [8, 5]); p.label(.trough, p.pt(0.66, 0.9), size: 12, anchor: .leading, maxWidth: p.size.width * 0.31)
     }
 
     static func airColumn(_ p: Painter) {
@@ -573,11 +596,11 @@ enum Diagrams {
         p.sea(0.9)
         let tiers: [(DiagramLabel, CGFloat, [DiagramLabel])] = [(.highCloud, 0.14, [.cirrus, .cirrostratus]), (.mediumCloud, 0.42, [.altostratus]), (.lowCloud, 0.7, [.stratus, .nimbostratus, .cumulus])]
         for (tier, y, names) in tiers {
-            p.stroke([p.pt(0.02, y + 0.12), p.pt(0.98, y + 0.12)], iso, 0.8, dash: [3, 5])
-            p.label(tier, p.pt(0.02, y), size: 11, color: Palette.accent, anchor: .leading)
+            p.stroke([p.pt(0.02, y + 0.19), p.pt(0.98, y + 0.19)], iso, 0.8, dash: [3, 5])
+            p.label(tier, p.pt(0.02, y), size: 11, color: Palette.accent, anchor: .leading, maxWidth: p.size.width * 0.3)
             for (i, n) in names.enumerated() {
                 let x = 0.42 + CGFloat(i) * 0.22
-                p.cloud(p.pt(x, y + 0.04), p.u * 0.07, .white.opacity(0.6)); p.label(n, p.pt(x, y + 0.13), size: 9)
+                p.cloud(p.pt(x, y + 0.04), p.u * 0.07, .white.opacity(0.6)); p.label(n, p.pt(x, y + 0.13), size: 9, maxWidth: p.size.width * 0.2)
             }
         }
     }
@@ -586,8 +609,8 @@ enum Diagrams {
         let bands: [(DiagramLabel, Color)] = [(.visFog, Palette.bad), (.visPoor, Palette.amber), (.visModerate, Palette.accent), (.visGood, Palette.good)]
         for (i, b) in bands.enumerated() {
             let y = 0.1 + CGFloat(i) * 0.22
-            var r = Path(); r.addRoundedRect(in: CGRect(origin: p.pt(0.05, y), size: CGSize(width: p.size.width * (0.25 + CGFloat(i) * 0.2), height: p.size.height * 0.15)), cornerSize: CGSize(width: 8, height: 8))
-            p.fill(r, b.1.opacity(0.55)); p.label(b.0, p.pt(0.08, y + 0.075), size: 12, anchor: .leading)
+            var r = Path(); r.addRoundedRect(in: CGRect(origin: p.pt(0.05, y), size: CGSize(width: p.size.width * (0.42 + CGFloat(i) * 0.17), height: p.size.height * 0.15)), cornerSize: CGSize(width: 8, height: 8))
+            p.fill(r, b.1.opacity(0.55)); p.label(b.0, p.pt(0.08, y + 0.075), size: 12, anchor: .leading, maxWidth: p.size.width * (0.36 + CGFloat(i) * 0.17), plate: false)
         }
     }
 
@@ -605,7 +628,8 @@ enum Diagrams {
         let marks: [(CGFloat, DiagramLabel, Color)] = [(0.05, .issued, .white), (0.3, .imminent, Palette.bad), (0.58, .soon, Palette.amber), (0.86, .later, Palette.accent)]
         for (x, l, col) in marks {
             p.circle(p.pt(x, 0.5), 6, col)
-            p.label(l, p.pt(x, x == 0.05 ? 0.35 : 0.68), size: 11, color: col)
+            // Stagger the middle label so long translations get room without shrinking.
+            p.label(l, p.pt(x, x == 0.05 ? 0.35 : (l == .soon ? 0.8 : 0.66)), size: 11, color: col, maxWidth: p.size.width * 0.44)
         }
     }
 
@@ -614,7 +638,7 @@ enum Diagrams {
         p.curve([p.pt(0.08, 0.72), p.pt(0.4, 0.55), p.pt(0.7, 0.58), p.pt(0.92, 0.72)], .white, 2, dash: [6, 5])
         p.observer(p.pt(0.08, 0.72)); p.label(.departure, p.pt(0.08, 0.92), size: 10)
         p.circle(p.pt(0.92, 0.72), 6, Palette.good); p.label(.destination, p.pt(0.88, 0.92), size: 10, color: Palette.good)
-        p.front([p.pt(0.15, 0.05), p.pt(0.05, 0.4)], kind: "cold", side: -1); p.label(.front, p.pt(0.2, 0.12), size: 10, color: blue)
+        p.front([p.pt(0.15, 0.05), p.pt(0.05, 0.4)], kind: "cold", side: -1); p.label(.front, p.pt(0.23, 0.1), size: 10, color: blue, anchor: .leading)
         p.arrow(p.pt(0.2, 0.25), p.pt(0.35, 0.25), blue, 2)
         if refuge { p.circle(p.pt(0.55, 0.78), 7, Palette.amber); p.label(.refuge, p.pt(0.55, 0.92), size: 10, color: Palette.amber) }
     }

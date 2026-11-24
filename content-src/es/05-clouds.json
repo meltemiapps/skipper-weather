@@ -1,0 +1,245 @@
+{
+  "id": "clouds",
+  "title": "Nubes, estabilidad y turbonadas",
+  "summary": "Por qué el aire asciende o se queda donde está, qué nos dice cada nube y cómo afrontar turbonadas y tormentas.",
+  "symbol": "cloud.bolt.rain",
+  "lessons": [
+    {
+      "id": "clouds.stability",
+      "title": "Estabilidad e inestabilidad",
+      "segments": [
+        {
+          "heading": "Aire ascendente",
+          "paragraphs": [
+            "El aire que asciende se expande y se enfría: unos 3 °C por cada 1.000 ft (aproximadamente 10 °C por km) mientras está seco, y más o menos la mitad una vez que se forman nubes, porque la condensación libera calor.",
+            "Si el aire ascendente se mantiene más cálido que el aire que lo rodea, sigue subiendo: el aire es inestable y da cúmulos de desarrollo, chubascos, rachas y buena visibilidad. Si se vuelve más frío que su entorno, vuelve a descender: el aire es estable y da nubes estratiformes, llovizna, calima y vientos regulares."
+          ],
+          "keyPoints": [
+            "Inestable: cúmulos, chubascos, rachas, buena visibilidad.",
+            "Estable: estratos, llovizna, calima o niebla, viento regular.",
+            "El aire frío sobre un mar cálido se vuelve inestable."
+          ],
+          "diagram": {
+            "id": "stability"
+          }
+        },
+        {
+          "heading": "Familias de nubes",
+          "paragraphs": [
+            "Las nubes altas (cirros, cirrostratos, cirrocúmulos) están formadas por hielo y a menudo anuncian un frente. Las nubes medias (altostratos, altocúmulos) indican nubosidad frontal que se espesa o inestabilidad en niveles medios; los altocúmulos castellanos en una mañana de verano pueden preceder a las tormentas.",
+            "Entre las nubes bajas están los estratos, los estratocúmulos y los nimbostratos. Los cúmulos y los cumulonimbos son nubes de desarrollo vertical, con la base baja pero cuyas cimas pueden elevarse hasta la tropopausa."
+          ],
+          "diagram": {
+            "id": "cloudLevels"
+          }
+        }
+      ]
+    },
+    {
+      "id": "clouds.cb",
+      "title": "Cumulonimbos, turbonadas y tormentas",
+      "segments": [
+        {
+          "heading": "Anatomía de un cumulonimbo",
+          "paragraphs": [
+            "Un cumulonimbo maduro se alimenta de una fuerte corriente ascendente y tiene debajo una corriente descendente de aire frío cargado de lluvia. Esa corriente descendente se extiende en superficie como un frente de racha que puede llegar bastante antes que la lluvia, con una turbonada repentina y un cambio de dirección del viento de hasta 90° o más.",
+            "El yunque se extiende a sotavento en la parte superior de la nube. Puede haber granizo, rayos y trombas marinas. Se define la turbonada como un aumento repentino del viento de al menos 16 nudos, que alcanza como mínimo 22 nudos y dura al menos un minuto."
+          ],
+          "diagram": {
+            "id": "cumulonimbus"
+          }
+        },
+        {
+          "heading": "Táctica",
+          "paragraphs": [
+            "Vigile el cielo a barlovento y siga en el radar, si lo tiene, las células que se acercan. Tome rizos o reduzca vela antes de que llegue el frente de racha; lo delatan una base cada vez más oscura y deshilachada y una línea de agua alborotada.",
+            "Con rayos, quédese bajo cubierta, manténgase lejos del mástil, los obenques y los cadenotes, desconecte la electrónica sensible si es posible y guarde un VHF portátil y un GPS en el horno o en otra caja metálica. Cuente con que el viento amaine después de la turbonada y la dirección vuelva a estabilizarse."
+          ],
+          "keyPoints": [
+            "El frente de racha llega antes que la lluvia.",
+            "Tome rizos antes de la turbonada, no durante.",
+            "Con rayos: bajo cubierta y lejos de la jarcia."
+          ],
+          "diagram": {
+            "id": "cumulonimbus",
+            "variant": "tactics"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.cl.1",
+      "kind": "single",
+      "prompt": "Aire frío fluye sobre un mar mucho más cálido. ¿Qué tiempo es más probable?",
+      "diagram": {
+        "id": "stability"
+      },
+      "options": [
+        "Niebla y llovizna",
+        "Cúmulos, chubascos y viento racheado",
+        "Cielo despejado y calma",
+        "Lluvia continua de nimbostratos"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Eso corresponde a aire estable sobre una superficie más fría.",
+        "Correcto: el calentamiento desde abajo vuelve inestable el aire.",
+        "La inestabilidad genera nubes y rachas.",
+        "Los nimbostratos son nubes frontales estratiformes de aire estable."
+      ],
+      "explanation": "El aire calentado desde abajo se vuelve inestable: nubes de desarrollo, chubascos, buena visibilidad y rachas."
+    },
+    {
+      "id": "q.cl.2",
+      "kind": "single",
+      "prompt": "¿Qué parte de un cumulonimbo trae el primer cambio repentino del viento?",
+      "diagram": {
+        "id": "cumulonimbus"
+      },
+      "options": [
+        "El yunque",
+        "El frente de racha de la corriente descendente",
+        "La corriente ascendente",
+        "Los rayos"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El yunque está en altura y a sotavento.",
+        "Correcto: la salida de aire frío se extiende por delante de la lluvia.",
+        "La corriente ascendente aspira el aire suavemente.",
+        "Los rayos no generan la turbonada."
+      ],
+      "explanation": "La corriente descendente se extiende en superficie como un frente de racha, que a menudo llega antes que la lluvia."
+    },
+    {
+      "id": "q.cl.3",
+      "kind": "multi",
+      "prompt": "¿Qué señales indican que el aire es estable? Seleccione todas las correctas.",
+      "options": [
+        "Nubes estratiformes",
+        "Llovizna",
+        "Cúmulos de gran desarrollo",
+        "Calima o niebla",
+        "Viento muy racheado"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Correcto.",
+        "Las torres indican inestabilidad.",
+        "Correcto: los contaminantes y la humedad quedan atrapados.",
+        "Las rachas se deben a la mezcla vertical del aire inestable."
+      ],
+      "explanation": "El aire estable se resiste al movimiento vertical: nubes estratiformes, llovizna, calima, niebla y vientos relativamente regulares."
+    },
+    {
+      "id": "q.cl.4",
+      "kind": "numeric",
+      "prompt": "Una masa de aire seco a 18 °C asciende 2.000 ft sin formar nubes. Tomando 3 °C por cada 1.000 ft, ¿cuál es su temperatura, en °C?",
+      "numeric": {
+        "value": 12,
+        "tolerance": 0.5,
+        "unit": "°C"
+      },
+      "explanation": "2.000 ft a 3 °C por cada 1.000 ft suponen un descenso de 6 °C: 18 menos 6 son 12 °C."
+    },
+    {
+      "id": "q.cl.5",
+      "kind": "single",
+      "prompt": "Navega a un descuartelar con todo el trapo y ve acercarse una línea de nubes oscura y deshilachada, precedida por una franja de agua rizada y blanca. ¿Qué hace?",
+      "options": [
+        "Aguantar y tomar rizos cuando llegue",
+        "Tomar rizos ya y prepararse para un cambio brusco",
+        "Izar más vela para dejarla atrás",
+        "Ir directo hacia ella para atravesarla rápido"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Tomar rizos en plena turbonada es peligroso y lento.",
+        "Correcto: reduzca vela antes del frente de racha.",
+        "No conseguirá dejar atrás una línea de turbonadas.",
+        "Poner rumbo hacia ella no aporta nada."
+      ],
+      "explanation": "El agua rizada es el frente de racha. Reduzca vela, trinque el equipo y esté preparado para un cambio brusco del viento."
+    },
+    {
+      "id": "q.cl.6",
+      "kind": "single",
+      "prompt": "¿Cuál es la definición de turbonada de la OMM?",
+      "options": [
+        "Cualquier racha de más de 30 nudos",
+        "Un aumento repentino de al menos 16 nudos, que alcanza como mínimo 22 nudos y dura al menos un minuto",
+        "Viento de fuerza 8 o superior",
+        "Un chubasco con viento"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las rachas son breves y se definen de otra manera.",
+        "Correcto.",
+        "Eso es un temporal.",
+        "No es la definición."
+      ],
+      "explanation": "Una turbonada dura más que una racha: se mantiene al menos un minuto y luego amaina."
+    },
+    {
+      "id": "q.cl.7",
+      "kind": "single",
+      "prompt": "Una mañana de verano ve altocúmulos castellanos (torrecillas sobre nubes medias). ¿Qué indican?",
+      "options": [
+        "Un día estable",
+        "Inestabilidad en niveles medios y riesgo de tormentas más tarde",
+        "Niebla de advección",
+        "Solo la llegada de un frente cálido"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las torrecillas indican inestabilidad en altura.",
+        "Correcto.",
+        "No tienen relación con la niebla de advección.",
+        "No son un indicio específicamente frontal."
+      ],
+      "explanation": "Los castellanos revelan aire inestable en altura; con el calentamiento diurno, suelen aparecer tormentas más tarde."
+    },
+    {
+      "id": "q.cl.8",
+      "kind": "multi",
+      "prompt": "Tiene una tormenta justo encima. ¿Qué precauciones son sensatas? Seleccione todas las correctas.",
+      "options": [
+        "Quedarse bajo cubierta, lejos del mástil y de los cadenotes",
+        "Agarrarse al estay de popa para mantener el equilibrio",
+        "Meter un VHF portátil y un GPS en una caja metálica, como el horno",
+        "Desconectar la electrónica sensible si es posible",
+        "Subir al mástil para revisar la antena"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "La jarcia puede conducir la corriente del rayo.",
+        "Correcto: protege los equipos de respaldo de una descarga.",
+        "Correcto.",
+        "Nunca suba a la arboladura con rayos."
+      ],
+      "explanation": "Reduzca al mínimo el contacto con la jarcia, proteja la electrónica de respaldo y permanezca bajo cubierta siempre que pueda."
+    }
+  ]
+}

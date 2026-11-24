@@ -1,0 +1,325 @@
+{
+  "id": "fronts",
+  "title": "Frentes: antes, durante y después",
+  "summary": "Secuencias de nubes, roladas del viento, presión, visibilidad y lluvia en los frentes cálidos, fríos y ocluidos.",
+  "symbol": "cloud.rain",
+  "lessons": [
+    {
+      "id": "fronts.warm",
+      "title": "El frente cálido",
+      "segments": [
+        {
+          "heading": "Aproximación",
+          "paragraphs": [
+            "El aire cálido asciende lentamente sobre el aire frío que tiene delante siguiendo una pendiente suave, de aproximadamente 1 a 150. Por eso sus nubes llegan mucho antes que el frente en superficie: los cirros pueden aparecer varios cientos de millas por delante, normalmente entre 12 y 24 horas antes del paso del frente.",
+            "La nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "warm"
+          }
+        },
+        {
+          "heading": "Paso del frente y sector cálido",
+          "paragraphs": [
+            "Al pasar el frente en superficie, el viento rola a la derecha, normalmente de sur a suroeste, la lluvia se convierte en llovizna, suben la temperatura y el punto de rocío y el barómetro se estabiliza.",
+            "En el sector cálido cabe esperar cielo cubierto de nubes bajas, llovizna y visibilidad de regular a mala. Sobre un mar frío es probable la niebla de advección. El viento suele ser de dirección constante y puede ser fuerte."
+          ],
+          "keyPoints": [
+            "Antes: nubes cada vez más bajas, presión bajando, viento que rola a la izquierda y arrecia, lluvia continua.",
+            "Al paso: rolada a la derecha, la lluvia pasa a llovizna, la presión se estabiliza, sube la temperatura.",
+            "Sector cálido: nubes bajas, llovizna, mala visibilidad, riesgo de niebla de advección."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "warmSector"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fronts.cold",
+      "title": "El frente frío",
+      "segments": [
+        {
+          "heading": "Un límite más brusco",
+          "paragraphs": [
+            "El aire frío se introduce por debajo del cálido con una pendiente más pronunciada, de aproximadamente 1 a 50 o 1 a 80, de modo que el mal tiempo se concentra en una franja más estrecha: a menudo solo una o dos horas de lluvia intensa. Puede haber cumulonimbos embebidos que traen turbonadas, granizo y tormenta; a veces una línea de turbonadas avanza por delante del frente.",
+            "En el frente el viento rola bruscamente a la derecha, normalmente de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "cold"
+          }
+        },
+        {
+          "heading": "Detrás del frente",
+          "paragraphs": [
+            "El aire polar marítimo, frío, trae cielos que se abren, visibilidad excelente, cúmulos y chubascos, algunos fuertes. El viento es racheado y puede seguir rolando lentamente a la derecha. Cada chubasco trae su propia turbonada: vigile el cielo a barlovento.",
+            "Planifique los cambios de vela antes de que llegue el frente. Tome rizos pronto, trinque la cubierta y cuente con que el viento role rápidamente a la nueva dirección, lo que puede convertir un fondeadero abrigado en una costa a sotavento."
+          ],
+          "keyPoints": [
+            "Franja estrecha de lluvia intensa, con posibles turbonadas y tormenta.",
+            "Rolada brusca a la derecha y fuerte subida de la presión al paso.",
+            "Detrás: cielo despejado, frío, chubascos, viento racheado, visibilidad excelente."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "coldFront"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fronts.occluded",
+      "title": "Frentes ocluidos",
+      "segments": [
+        {
+          "heading": "Tiempo combinado",
+          "paragraphs": [
+            "Un frente ocluido combina el tiempo de un frente cálido y el de un frente frío: una larga banda de nubes y lluvia como la de un frente cálido, que a veces termina con lluvia más intensa y una rolada a la derecha como en un frente frío. En superficie no hay sector cálido.",
+            "En una oclusión fría el aire de detrás es más frío que el de delante; en una oclusión cálida es más templado. Para el patrón, el mensaje práctico es el mismo: una franja ancha de lluvia, mala visibilidad y una rolada a la derecha a su paso, normalmente menos violenta que la de los frentes originales."
+          ],
+          "diagram": {
+            "id": "frontSection",
+            "variant": "occluded"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fr.1",
+      "kind": "order",
+      "prompt": "Ordene estas nubes tal como se suelen ver al aproximarse un frente cálido.",
+      "options": [
+        "Altostratos",
+        "Nimbostratos",
+        "Cirros",
+        "Cirrostratos"
+      ],
+      "answers": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "explanation": "Primero las nubes altas (cirros y luego cirrostratos con halo), después los altostratos de nivel medio y por último los nimbostratos, bajos y espesos, con lluvia continua."
+    },
+    {
+      "id": "q.fr.2",
+      "kind": "single",
+      "prompt": "¿Por qué las nubes de un frente cálido aparecen tan por delante del frente en superficie?",
+      "diagram": {
+        "id": "frontSection",
+        "variant": "warm"
+      },
+      "options": [
+        "El frente cálido avanza más deprisa que sus nubes",
+        "La superficie frontal tiene una pendiente muy suave, de aproximadamente 1 a 150",
+        "Los cirros solo son empujados hacia delante por la corriente en chorro",
+        "Los frentes cálidos siempre avanzan a menos de 5 nudos"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las nubes y el frente se desplazan juntos.",
+        "Correcto: una pendiente suave sitúa las nubes altas cientos de millas por delante.",
+        "Los vientos en altura influyen, pero la pendiente es la razón principal.",
+        "Los frentes cálidos suelen avanzar a 15–25 nudos."
+      ],
+      "explanation": "Al ser tan suave la pendiente, la superficie frontal sigue estando a gran altura muy por delante del punto en que toca el suelo."
+    },
+    {
+      "id": "q.fr.3",
+      "kind": "multi",
+      "prompt": "¿Qué cambios se producen normalmente al paso de un frente frío? Seleccione todas las correctas.",
+      "options": [
+        "Rolada brusca del viento a la derecha",
+        "La presión empieza a subir",
+        "Sube la temperatura",
+        "Después mejora la visibilidad",
+        "El viento rola a la izquierda al sudeste"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Correcto: a menudo sube bruscamente.",
+        "La temperatura baja detrás de un frente frío.",
+        "Correcto: a continuación llega aire polar limpio.",
+        "La rolada a la izquierda al sudeste es típica por delante de un frente cálido."
+      ],
+      "explanation": "Frente frío: rolada brusca a la derecha, subida de la presión, bajada de la temperatura y después aire más limpio con chubascos."
+    },
+    {
+      "id": "q.fr.4",
+      "kind": "scenario",
+      "context": "Está fondeado en una bahía abierta al noroeste y abrigada del sur y del oeste. La predicción: «Suroeste 5 a 6, rolando a noroeste 6 a 7 más tarde, lluvia y después chubascos con turbonadas». El barómetro lleva cuatro horas estable en 1001 hPa, con cielo cubierto y llovizna.",
+      "prompt": "Tome las decisiones del patrón.",
+      "explanation": "Está en el sector cálido. El frente frío hará rolar el viento a noroeste y convertirá el fondeadero en una costa a sotavento.",
+      "steps": [
+        {
+          "id": "q.fr.4a",
+          "kind": "single",
+          "prompt": "¿Dónde se encuentra respecto a los frentes de la borrasca?",
+          "options": [
+            "Por delante del frente cálido",
+            "En el sector cálido",
+            "Detrás del frente frío",
+            "Bajo un frente ocluido"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "La presión estaría bajando, con nubes cada vez más espesas y lluvia continua.",
+            "Correcto: presión estable, cielo cubierto, llovizna y viento del suroeste.",
+            "El cielo se estaría abriendo, con chubascos y presión en subida.",
+            "No habría la llovizna ni el barómetro estable propios del sector cálido."
+          ],
+          "explanation": "Presión estable, nubes bajas y llovizna con viento del suroeste son los signos clásicos del sector cálido."
+        },
+        {
+          "id": "q.fr.4b",
+          "kind": "single",
+          "prompt": "¿Qué efecto tendrá el frente frío en su fondeadero?",
+          "options": [
+            "Ninguno: la bahía sigue abrigada",
+            "El viento del noroeste entrará de lleno y la convertirá en una costa a sotavento",
+            "El viento rolará a la izquierda al sur y mejorará el abrigo",
+            "La marea se invertirá"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "La rolada a la derecha le deja sin abrigo.",
+            "Correcto: la bahía está abierta al noroeste.",
+            "Con los frentes fríos el viento rola a la derecha, no a la izquierda.",
+            "Los frentes no invierten las mareas."
+          ],
+          "explanation": "La rolada prevista a noroeste 6–7 meterá el viento y la mar directamente en la bahía."
+        },
+        {
+          "id": "q.fr.4c",
+          "kind": "single",
+          "prompt": "¿Qué haría un buen marino?",
+          "options": [
+            "Quedarse y largar más cadena cuando anochezca",
+            "Cambiar de fondeadero ya, con luz de día, a uno abrigado del noroeste",
+            "Esperar a que llegue la turbonada y decidir entonces",
+            "Salir a mar abierta a motor y ponerse al pairo"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Largar más cadena no resuelve el problema de una costa a sotavento con temporal.",
+            "Correcto: cambie de sitio mientras las condiciones son moderadas.",
+            "Demasiado tarde: la turbonada llega de golpe.",
+            "Es posible, pero si hay aguas abrigadas disponibles, son mejor opción."
+          ],
+          "explanation": "Actúe antes de que llegue el frente: trasládese a un fondeadero o puerto abrigado del noroeste mientras las condiciones aún sean manejables."
+        }
+      ]
+    },
+    {
+      "id": "q.fr.5",
+      "kind": "single",
+      "prompt": "En el sector cálido, sobre un mar frío en primavera, ¿cuál es el principal peligro para la visibilidad?",
+      "options": [
+        "Niebla de radiación",
+        "Niebla de advección (niebla marina)",
+        "Calima de polvo",
+        "Nieve"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "La niebla de radiación se forma sobre tierra en noches despejadas.",
+        "Correcto: aire cálido y húmedo enfriado por el mar.",
+        "La calima de polvo procede de aire continental o desértico.",
+        "El aire del sector cálido es templado."
+      ],
+      "explanation": "El aire tropical marítimo, húmedo, enfriado por debajo de su punto de rocío por un mar frío forma una niebla de advección extensa y persistente."
+    },
+    {
+      "id": "q.fr.6",
+      "kind": "single",
+      "prompt": "¿Qué registro del barógrafo corresponde mejor a un frente cálido seguido unas horas después por un frente frío?",
+      "diagram": {
+        "id": "barograph",
+        "variant": "front"
+      },
+      "options": [
+        "Bajada constante, se estabiliza y después subida brusca",
+        "Subida brusca y después bajada constante",
+        "Subida durante todo el día",
+        "Bajada brusca en el frente cálido y subida constante en el frente frío"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: baja por delante del frente cálido, se mantiene estable en el sector cálido y sube bruscamente con el frente frío.",
+        "Es el orden inverso.",
+        "Ningún frente produce una subida durante todo el día.",
+        "Al frente cálido le precede una bajada constante, no brusca."
+      ],
+      "explanation": "El registro clásico: una larga bajada por delante del frente cálido, un tramo plano en el sector cálido y una subida brusca al pasar el frente frío."
+    },
+    {
+      "id": "q.fr.7",
+      "kind": "single",
+      "prompt": "¿Cuál es el mejor aviso visual de una línea de turbonadas por delante de un frente frío?",
+      "options": [
+        "Un halo alrededor del sol",
+        "Una línea de nubes oscura, baja y en arco, con lluvia intensa debajo",
+        "Cirros finos",
+        "Cúmulos de buen tiempo"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Un halo avisa de un frente cálido que está aún a muchas horas.",
+        "Correcto: una nube rodillo o en repisa marca el frente de racha.",
+        "Los cirros son nubes altas, muy por delante de los frentes.",
+        "Los cúmulos pequeños no anuncian turbonadas."
+      ],
+      "explanation": "Un arco oscuro o una nube en repisa en el borde delantero marca el frente de racha: tome rizos antes de que llegue."
+    },
+    {
+      "id": "q.fr.8",
+      "kind": "single",
+      "prompt": "¿Qué tiempo es típico de un frente ocluido?",
+      "diagram": {
+        "id": "frontSection",
+        "variant": "occluded"
+      },
+      "options": [
+        "Cielo despejado todo el tiempo",
+        "Una franja ancha de nubes y lluvia que combina rasgos de frente cálido y frío",
+        "Solo niebla",
+        "Temporales persistentes del este"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las oclusiones traen mucha nubosidad.",
+        "Correcto.",
+        "Puede haber niebla, pero no es lo que las define.",
+        "No es una característica de las oclusiones."
+      ],
+      "explanation": "Un frente ocluido trae una larga banda de nubes y lluvia y, a su paso, una rolada a la derecha."
+    }
+  ]
+}

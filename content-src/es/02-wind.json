@@ -1,0 +1,329 @@
+{
+  "id": "wind",
+  "title": "El viento: Coriolis, fricción y Buys Ballot",
+  "summary": "Por qué el viento sopla a lo largo de las isobaras, cómo lo modifica la fricción en superficie y cómo localizar una baja a partir del viento que siente a bordo.",
+  "symbol": "wind",
+  "lessons": [
+    {
+      "id": "wind.global",
+      "title": "Circulación general y efecto Coriolis",
+      "segments": [
+        {
+          "heading": "El esquema global",
+          "paragraphs": [
+            "El calentamiento desigual del planeta pone en marcha la circulación general. El aire cálido asciende cerca del ecuador y desciende en los cinturones subtropicales de altas presiones, en torno a los 30° norte y sur, donde nacen los alisios y se asientan anticiclones como el de las Azores.",
+            "Entre los 40° y los 60°, aproximadamente, los vientos dominantes del oeste arrastran una sucesión de borrascas a lo largo del frente polar, donde el aire polar frío se encuentra con el aire subtropical cálido. Esta es la máquina que fabrica el tiempo del noroeste de Europa."
+          ],
+          "diagram": {
+            "id": "globalCirculation"
+          }
+        },
+        {
+          "heading": "El efecto Coriolis",
+          "paragraphs": [
+            "Como la Tierra gira bajo él, el aire en movimiento parece desviarse: hacia la derecha en el hemisferio norte y hacia la izquierda en el hemisferio sur. El efecto es nulo en el ecuador, máximo en los polos y aumenta con la velocidad del viento.",
+            "Cuando el aire empieza a moverse de las altas hacia las bajas presiones, el efecto Coriolis lo va desviando hasta que ambas fuerzas se equilibran y el viento sopla a lo largo de las isobaras. Ese viento equilibrado es el viento geostrófico. En el hemisferio norte, el resultado es una circulación antihoraria alrededor de las bajas y horaria alrededor de las altas."
+          ],
+          "keyPoints": [
+            "En el hemisferio norte la desviación es hacia la derecha.",
+            "Nulo en el ecuador, máximo en los polos.",
+            "Bajas en sentido antihorario, altas en sentido horario (hemisferio norte)."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "geostrophic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wind.surface",
+      "title": "Viento en superficie y fricción",
+      "segments": [
+        {
+          "heading": "La fricción cerca de la superficie",
+          "paragraphs": [
+            "En el primer kilómetro de altura, más o menos, la fricción frena el viento. Un viento más lento sufre menos desviación por Coriolis, así que el gradiente de presión gana ligeramente la partida y el viento cruza las isobaras hacia dentro, hacia las bajas presiones.",
+            "Sobre el mar, el viento en superficie suele estar rolado a la izquierda unos 10° a 15° respecto a las isobaras y sopla a entre dos tercios y cuatro quintos de la velocidad geostrófica. Sobre tierra está rolado a la izquierda unos 30° y puede quedarse en la mitad de la velocidad geostrófica, pero es más racheado."
+          ],
+          "keyPoints": [
+            "Sobre el mar: rolado a la izquierda 10–15°, con un 70–80 % de la velocidad geostrófica.",
+            "Sobre tierra: rolado a la izquierda unos 30°, en torno al 50 % y más racheado.",
+            "El viento en superficie siempre cruza las isobaras hacia la baja."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "surface"
+          }
+        },
+        {
+          "heading": "Curvatura: bajas y altas",
+          "paragraphs": [
+            "Con isobaras curvas, el equilibrio incluye también la curvatura. Con la misma separación, el viento alrededor de una baja es más flojo que con isobaras rectas, y alrededor de una alta es más fuerte. En la práctica, las altas suelen tener isobaras muy separadas y vientos flojos, pero un gradiente apretado en el borde de un anticiclón puede dar mucho viento.",
+            "La inestabilidad también cuenta. En aire frío e inestable, el viento fuerte de altura baja a la superficie en forma de rachas; en aire estable, el viento en superficie puede ser bastante más flojo de lo que indica el gradiente."
+          ],
+          "diagram": {
+            "id": "windAngle",
+            "variant": "curvature"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wind.buysballot",
+      "title": "La ley de Buys Ballot en la práctica",
+      "segments": [
+        {
+          "heading": "Cómo localizar la baja",
+          "paragraphs": [
+            "Ley de Buys Ballot: en el hemisferio norte, si se pone de espaldas al viento real, la baja presión queda a su izquierda. En el hemisferio sur queda a su derecha.",
+            "Como la fricción hace rolar a la izquierda el viento en superficie, conviene afinar: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja quedará entonces a 90° a su izquierda. Con viento del suroeste en el mar, mire al 045°, gire al 060° y la baja estará aproximadamente al 330°."
+          ],
+          "keyPoints": [
+            "De espaldas al viento: baja a la izquierda (hemisferio norte).",
+            "Corrija la fricción: gire 15° a la derecha en el mar y 30° sobre tierra.",
+            "Siga la demora de la baja a lo largo del tiempo para ver hacia dónde se desplaza."
+          ],
+          "diagram": {
+            "id": "buysBallot"
+          }
+        },
+        {
+          "heading": "¿Hacia dónde rolará el viento?",
+          "paragraphs": [
+            "Si el centro de una borrasca pasa al norte de su posición (lo habitual en las islas británicas), el viento rola a la izquierda mientras se acerca y luego rola a la derecha al pasar los frentes. Si el centro pasa al sur, el viento rola a la izquierda sin parar durante todo el paso, por ejemplo de este a nordeste y luego a norte.",
+            "Tomar varias demoras sucesivas con Buys Ballot le dirá en qué caso se encuentra: si la demora de la baja pasa del oeste al norte, el centro está pasando al norte de usted."
+          ],
+          "keyPoints": [
+            "Centro al norte: rola a la izquierda y luego a la derecha.",
+            "Centro al sur: rola a la izquierda sin parar."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "tracks"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.wind.1",
+      "kind": "numeric",
+      "context": "Navega en el hemisferio norte. El viento real sopla del 225° (suroeste).",
+      "prompt": "Aplicando la ley de Buys Ballot con una corrección por fricción de 15°, ¿cuál es la demora aproximada del centro de bajas presiones, en grados verdaderos?",
+      "diagram": {
+        "id": "buysBallot"
+      },
+      "numeric": {
+        "value": 330,
+        "tolerance": 15,
+        "unit": "°"
+      },
+      "explanation": "De espaldas al viento mira al 045°. Gire 15° a la derecha hasta el 060°. La baja está 90° a su izquierda: 060° menos 90° da 330°."
+    },
+    {
+      "id": "q.wind.2",
+      "kind": "single",
+      "prompt": "Sobre el mar, las isobaras van de este a oeste con la baja presión al norte. ¿Cuál es la dirección más probable del viento en superficie?",
+      "options": [
+        "270° (oeste)",
+        "255° (oesuroeste)",
+        "285° (oesnoroeste)",
+        "180° (sur)"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Esa es la dirección geostrófica, paralela a las isobaras, por encima de la capa de fricción.",
+        "Correcto: rolado a la izquierda unos 15° respecto al viento geostrófico del oeste.",
+        "Eso sería rolado a la derecha, en sentido contrario.",
+        "Demasiado rolado a la izquierda para mar abierto."
+      ],
+      "explanation": "El viento geostrófico es del oeste con la baja al norte. La fricción sobre el mar lo hace rolar a la izquierda 10–15°, así que queda en torno al 255°."
+    },
+    {
+      "id": "q.wind.3",
+      "kind": "single",
+      "prompt": "La escala geostrófica da 30 nudos. ¿Qué viento medio en superficie esperaría en mar abierto?",
+      "options": [
+        "Unos 10 nudos",
+        "Unos 22 nudos",
+        "Unos 30 nudos",
+        "Unos 40 nudos"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Es una reducción excesiva para mar abierto.",
+        "Correcto: más o menos un 70–80 % de la velocidad geostrófica.",
+        "La fricción siempre reduce el viento en superficie.",
+        "Con isobaras rectas, el viento en superficie no supera al geostrófico."
+      ],
+      "explanation": "Sobre el mar, el viento en superficie suele ser de dos tercios a cuatro quintos del geostrófico: aquí, unos 20–24 nudos, con rachas por encima."
+    },
+    {
+      "id": "q.wind.4",
+      "kind": "single",
+      "context": "Durante 12 horas de travesía el viento pasa de sudeste a este, luego a nordeste y después a norte, sin cambios bruscos.",
+      "prompt": "¿Por dónde ha pasado el centro de la borrasca?",
+      "options": [
+        "Al norte de usted",
+        "Al sur de usted",
+        "Justo por encima",
+        "Era un anticiclón, no una borrasca"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Si el centro pasa al norte, el viento rola a la izquierda y luego a la derecha.",
+        "Correcto: un rolar continuo a la izquierda indica que el centro ha pasado al sur.",
+        "Con el centro encima hay una encalmada y después un cambio brusco de sentido.",
+        "Los anticiclones no producen esta secuencia con viento en aumento."
+      ],
+      "explanation": "En el hemisferio norte, una baja que pasa al sur del observador da un rolar continuo a la izquierda; si pasa al norte, rola a la izquierda y después a la derecha al paso de los frentes."
+    },
+    {
+      "id": "q.wind.5",
+      "kind": "multi",
+      "prompt": "¿Qué afirmaciones sobre el efecto Coriolis son ciertas? Seleccione todas las correctas.",
+      "options": [
+        "Desvía el aire en movimiento hacia la derecha en el hemisferio norte",
+        "Es máximo en el ecuador",
+        "Aumenta con la velocidad del viento",
+        "Es la causa del viento",
+        "Es nulo en el ecuador"
+      ],
+      "answers": [
+        0,
+        2,
+        4
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Es nulo en el ecuador y máximo en los polos.",
+        "Correcto: cuanto más rápido va el aire, más se desvía.",
+        "El viento lo causa el gradiente de presión; Coriolis solo lo desvía.",
+        "Correcto."
+      ],
+      "explanation": "El efecto Coriolis desvía el viento, pero no lo genera. Depende de la latitud y de la velocidad, y desaparece en el ecuador."
+    },
+    {
+      "id": "q.wind.6",
+      "kind": "single",
+      "prompt": "Dejando aparte la virazón y el terral, ¿por qué el viento sobre tierra suele ser más racheado que sobre el mar con la misma situación meteorológica?",
+      "options": [
+        "Porque la tierra siempre está más caliente",
+        "Porque la rugosidad del terreno crea turbulencia que hace bajar a ráfagas el aire más rápido",
+        "Porque el efecto Coriolis es más fuerte sobre tierra",
+        "Porque los gradientes de presión son más fuertes sobre tierra"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "No siempre, y el calor por sí solo no es la causa.",
+        "Correcto: la fricción y la turbulencia producen rachas y encalmadas.",
+        "El efecto Coriolis no depende de la superficie.",
+        "Los gradientes dependen de la configuración de presiones, no de la superficie."
+      ],
+      "explanation": "La rugosidad de la superficie genera turbulencia. El viento medio disminuye, pero los remolinos hacen bajar en forma de rachas el aire más rápido de altura."
+    },
+    {
+      "id": "q.wind.7",
+      "kind": "scenario",
+      "context": "En mitad del canal de la Mancha, a 50°N. A las 08:00 el viento es SSO fuerza 5 y el barómetro marca 1004 hPa, tras bajar 3 hPa en las tres últimas horas. A las 11:00 el viento es S fuerza 6 y el barómetro marca 999 hPa.",
+      "prompt": "Analice la situación paso a paso.",
+      "explanation": "El viento que rola a la izquierda y arrecia, junto con un descenso continuado del barómetro, indica una borrasca que se acerca por el oeste y cuyo centro probablemente pasará al norte.",
+      "steps": [
+        {
+          "id": "q.wind.7a",
+          "kind": "single",
+          "prompt": "¿Qué ha hecho el viento entre las 08:00 y las 11:00?",
+          "options": [
+            "Ha rolado a la derecha y ha aumentado",
+            "Ha rolado a la izquierda y ha aumentado",
+            "Ha rolado a la derecha y ha disminuido",
+            "Ha rolado a la izquierda y ha disminuido"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "De SSO a S es un cambio en sentido antihorario.",
+            "Correcto: cambio en sentido antihorario y más fuerte.",
+            "No se cumple ninguna de las dos cosas.",
+            "El viento ha arreciado."
+          ],
+          "explanation": "De SSO a S es un cambio en sentido antihorario, así que el viento ha rolado a la izquierda, y pasar de fuerza 5 a 6 es un aumento."
+        },
+        {
+          "id": "q.wind.7b",
+          "kind": "single",
+          "prompt": "A las 11:00, de espaldas al viento del sur y con una corrección de 15°, ¿dónde está aproximadamente la baja?",
+          "options": [
+            "Al nordeste",
+            "Entre el noroeste y el oeste",
+            "Al sudeste",
+            "Justo al sur"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Para eso haría falta viento del noroeste.",
+            "Correcto: mire al 000°, gire al 015° y la baja queda a la izquierda, hacia el 285°.",
+            "La baja nunca queda detrás de usted a la derecha.",
+            "El viento no soplaría desde la baja."
+          ],
+          "explanation": "Mirando al 000° y girando 15° a la derecha hasta el 015°, la baja queda unos 90° a la izquierda: hacia el 285°, oesnoroeste."
+        },
+        {
+          "id": "q.wind.7c",
+          "kind": "single",
+          "prompt": "¿Qué cambio de viento debe prever cuando pase el frente cálido?",
+          "options": [
+            "Un rolar a la derecha, normalmente al suroeste",
+            "Otro rolar brusco a la izquierda, hasta el este",
+            "Una calma repentina",
+            "Un rolar a la izquierda hasta el noroeste"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto: en el frente cálido el viento rola a la derecha, normalmente al suroeste.",
+            "El rolar a la izquierda continúa por delante del frente, no al pasar este.",
+            "En un frente cálido no hay calma.",
+            "Pasar a noroeste sería rolar a la derecha, y suele ocurrir tras el frente frío."
+          ],
+          "explanation": "Con el centro pasando al norte, el viento rola a la derecha al paso de cada frente: al suroeste en el frente cálido y al oeste o noroeste en el frente frío."
+        }
+      ]
+    },
+    {
+      "id": "q.wind.8",
+      "kind": "single",
+      "prompt": "En el hemisferio sur, de espaldas al viento, ¿dónde queda la baja presión?",
+      "options": [
+        "A su izquierda",
+        "A su derecha",
+        "Delante",
+        "Detrás"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Esa es la regla del hemisferio norte.",
+        "Correcto: la desviación es hacia la izquierda, así que la baja queda a su derecha.",
+        "No queda delante.",
+        "No queda detrás."
+      ],
+      "explanation": "En el hemisferio sur el efecto Coriolis desvía hacia la izquierda, lo que invierte la regla y el sentido de la circulación."
+    }
+  ]
+}

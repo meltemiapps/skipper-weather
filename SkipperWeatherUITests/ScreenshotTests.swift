@@ -27,8 +27,8 @@ final class ScreenshotTests: XCTestCase {
         snap(app, lang, "1-learn")
 
         tapTab(app, names[0])
-        if tap(app.buttons["module.pressure"]) {
-            if tap(app.buttons["lesson.pressure.buysballot"]) { sleep(1); snap(app, lang, "2-lesson-diagram") }
+        if tap(app.buttons["module.wind"]) {
+            if tap(app.buttons["lesson.wind.buysballot"]) { sleep(1); snap(app, lang, "2-lesson-diagram") }
         }
 
         tapTab(app, names[1]); snap(app, lang, "3-quiz")

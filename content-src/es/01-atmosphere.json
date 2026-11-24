@@ -1,0 +1,269 @@
+{
+  "id": "atmosphere",
+  "title": "La atmósfera y la presión",
+  "summary": "Qué es la presión, cómo se mide y se representa en los mapas, y por qué el barómetro es la primera herramienta de predicción del patrón.",
+  "symbol": "gauge.with.dots.needle.50percent",
+  "lessons": [
+    {
+      "id": "atmosphere.pressure",
+      "title": "Presión atmosférica e isobaras",
+      "segments": [
+        {
+          "heading": "Qué es la presión",
+          "paragraphs": [
+            "La presión atmosférica es el peso de la columna de aire que hay sobre un punto. Al nivel medio del mar el valor estándar es de 1013,25 hPa (hectopascales, numéricamente iguales a los milibares). En el noroeste de Europa los valores reales suelen oscilar entre unos 950 hPa en una borrasca profunda y 1045 hPa en un anticiclón potente.",
+            "La presión disminuye con la altura, aproximadamente 1 hPa por cada 8 metros cerca de la superficie. Por eso los barómetros se corrigen al nivel medio del mar, para poder comparar en un mismo mapa las lecturas tomadas en lugares distintos."
+          ],
+          "keyPoints": [
+            "La presión estándar a nivel del mar es de 1013,25 hPa; 1 hPa equivale a 1 mb.",
+            "Rango habitual: entre unos 950 y 1045 hPa.",
+            "Las lecturas se reducen al nivel medio del mar antes de llevarlas al mapa."
+          ],
+          "diagram": {
+            "id": "airColumn"
+          }
+        },
+        {
+          "heading": "Isobaras y gradiente de presión",
+          "paragraphs": [
+            "Las isobaras unen puntos de igual presión a nivel del mar y normalmente se trazan cada 4 hPa. Su separación indica el gradiente de presión: cuanto más juntas están, más deprisa cambia la presión con la distancia y más fuerte es el viento.",
+            "La escala de viento geostrófico impresa en el mapa convierte la separación entre isobaras en velocidad del viento para la latitud correspondiente. Con la misma separación, el viento es más fuerte en latitudes más bajas, porque allí es más débil el efecto Coriolis que equilibra el gradiente.",
+            "La forma de las isobaras revela las distintas configuraciones de presión: círculos cerrados alrededor de una baja o una alta, vaguadas en forma de U que salen de las bajas, dorsales en forma de U invertida que salen de las altas y la silla de gradiente débil de un collado."
+          ],
+          "keyPoints": [
+            "Isobaras juntas: gradiente fuerte, viento fuerte.",
+            "Use la escala geostrófica del mapa para estimar el viento a partir de la separación.",
+            "Con la misma separación hay más viento en latitudes más bajas."
+          ],
+          "diagram": {
+            "id": "pressureFeatures"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atmosphere.barometer",
+      "title": "El barómetro y la tendencia barométrica",
+      "segments": [
+        {
+          "heading": "Cómo leer la tendencia",
+          "paragraphs": [
+            "Una lectura aislada del barómetro dice poco. La tendencia, es decir, la variación en las tres horas anteriores, dice mucho más. Durante la travesía, anote el barómetro cada hora en el cuaderno de bitácora y represéntelo en una gráfica.",
+            "Los términos normalizados para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (de 0,1 a 1,5 hPa), subiendo o bajando (de 1,6 a 3,5 hPa), rápidamente (de 3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
+          ],
+          "keyPoints": [
+            "Anote el barómetro cada hora; lo que importa es la tendencia, no la cifra.",
+            "Más de 6 hPa en 3 horas es «muy rápidamente»."
+          ],
+          "diagram": {
+            "id": "barograph",
+            "variant": "front"
+          }
+        },
+        {
+          "heading": "Lo que dice la curva del barógrafo",
+          "paragraphs": [
+            "Un descenso continuado suele anunciar la llegada de una borrasca o de un frente cálido; cuanto más rápida es la bajada, más fuerte será probablemente el viento que vendrá después. Una subida brusca tras una bajada suele marcar el paso de un frente frío o de una vaguada, con un rolar a la derecha y chubascos con turbonadas.",
+            "Una subida rápida tras una borrasca profunda puede traer por sí sola un periodo de viento fuerte y racheado, porque el gradiente detrás del sistema es muy acusado. Recuerde el viejo refrán marinero: lo que mucho se anuncia, mucho dura; lo que llega sin aviso, pronto pasa."
+          ],
+          "keyPoints": [
+            "Bajada rápida: viene viento.",
+            "Subida brusca con rolar a la derecha: ha pasado un frente frío o una vaguada.",
+            "Una subida rápida también puede traer viento fuerte."
+          ],
+          "diagram": {
+            "id": "barograph",
+            "variant": "rapidRise"
+          }
+        }
+      ]
+    },
+    {
+      "id": "atmosphere.airmasses",
+      "title": "Masas de aire",
+      "segments": [
+        {
+          "heading": "De dónde viene el aire",
+          "paragraphs": [
+            "Una masa de aire es un gran volumen de aire con temperatura y humedad similares, cuyo carácter depende de dónde se formó: polar o tropical, marítima o continental. Después, su recorrido sobre el mar o sobre tierra la va modificando.",
+            "El aire polar marítimo, que suele llegar del noroeste, es fresco e inestable sobre un mar más cálido: buena visibilidad, cúmulos y chubascos, y viento racheado. El aire tropical marítimo del suroeste es cálido y húmedo; al enfriarse desde abajo se vuelve estable, con nubes bajas, llovizna y mala visibilidad o niebla. El aire continental es más seco, caluroso en verano y muy frío en invierno."
+          ],
+          "keyPoints": [
+            "Polar marítimo: fresco, con chubascos, buena visibilidad y rachas.",
+            "Tropical marítimo: templado, húmedo, nubes bajas, llovizna y riesgo de niebla.",
+            "Los frentes son las fronteras entre masas de aire."
+          ],
+          "diagram": {
+            "id": "airMasses"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.atm.1",
+      "kind": "single",
+      "prompt": "Su barómetro ha bajado de 1012 hPa a 1005 hPa en las últimas tres horas. ¿Cómo se describe esta tendencia?",
+      "options": [
+        "Bajando lentamente",
+        "Bajando",
+        "Bajando rápidamente",
+        "Bajando muy rápidamente"
+      ],
+      "answers": [
+        3
+      ],
+      "optionExplanations": [
+        "«Lentamente» corresponde a 0,1–1,5 hPa en tres horas.",
+        "«Bajando», sin más, corresponde a 1,6–3,5 hPa.",
+        "«Rápidamente» corresponde a 3,6–6,0 hPa.",
+        "Correcto: 7 hPa supera los 6,0 hPa en tres horas."
+      ],
+      "explanation": "Un descenso de 7 hPa en tres horas es «bajando muy rápidamente» e indica con claridad que se acerca un temporal."
+    },
+    {
+      "id": "q.atm.2",
+      "kind": "single",
+      "prompt": "Dos mapas muestran exactamente la misma separación entre isobaras, uno a 60°N y otro a 40°N. ¿Dónde es más fuerte el viento geostrófico?",
+      "options": [
+        "A 60°N",
+        "A 40°N",
+        "Igual en ambos",
+        "Depende de la estación del año"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El efecto Coriolis es más fuerte en latitudes altas, así que hace falta menos viento para equilibrar el gradiente.",
+        "Correcto: con un Coriolis más débil en latitudes bajas, el mismo gradiente da más viento.",
+        "El viento correspondiente a un gradiente dado depende de la latitud.",
+        "La estación del año no cambia esta relación."
+      ],
+      "explanation": "El equilibrio geostrófico se da entre la fuerza del gradiente de presión y la de Coriolis. El efecto Coriolis se debilita hacia el ecuador, de modo que el mismo gradiente produce más viento."
+    },
+    {
+      "id": "q.atm.3",
+      "kind": "multi",
+      "prompt": "¿Qué observaciones son típicas de una masa de aire polar marítimo sobre el mar? Seleccione todas las correctas.",
+      "options": [
+        "Buena visibilidad",
+        "Cúmulos y chubascos",
+        "Llovizna persistente",
+        "Viento racheado",
+        "Niebla marina extensa"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "optionExplanations": [
+        "Correcto: el aire fresco y limpio da buena visibilidad.",
+        "Correcto: el aire fresco sobre un mar más cálido es inestable.",
+        "La llovizna es propia del aire tropical marítimo, estable y húmedo.",
+        "Correcto: la inestabilidad hace bajar hasta la superficie el viento más fuerte de altura.",
+        "La niebla marina necesita aire cálido y húmedo sobre un mar más frío."
+      ],
+      "explanation": "El aire polar marítimo se calienta desde abajo al pasar sobre el mar, por lo que es inestable: nubes de desarrollo, chubascos, rachas y buena visibilidad entre chubasco y chubasco."
+    },
+    {
+      "id": "q.atm.4",
+      "kind": "numeric",
+      "prompt": "A las 06:00 la presión era de 1016 hPa y está bajando a un ritmo constante de 2 hPa por hora. ¿Qué marcará a las 10:00, en hPa?",
+      "numeric": {
+        "value": 1008,
+        "tolerance": 0,
+        "unit": "hPa"
+      },
+      "explanation": "Cuatro horas a 2 hPa por hora suponen un descenso de 8 hPa: 1016 menos 8 da 1008 hPa. Eso está entre «bajando rápidamente» y «muy rápidamente»; prepárese para un viento fuerte."
+    },
+    {
+      "id": "q.atm.5",
+      "kind": "single",
+      "prompt": "En un mapa sinóptico, ¿qué suelen indicar unas isobaras en forma de U que se extienden hacia fuera desde una baja?",
+      "diagram": {
+        "id": "pressureFeatures"
+      },
+      "options": [
+        "Una dorsal",
+        "Un collado",
+        "Una vaguada",
+        "Un anticiclón"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "Una dorsal sale de una alta.",
+        "Un collado es la zona de gradiente débil entre dos altas y dos bajas.",
+        "Correcto: una vaguada es una prolongación de bajas presiones.",
+        "Un anticiclón es una alta cerrada."
+      ],
+      "explanation": "Las vaguadas salen de las bajas y, a su paso, suelen traer chubascos, turbonadas y un rolar del viento a la derecha."
+    },
+    {
+      "id": "q.atm.6",
+      "kind": "single",
+      "prompt": "Después del paso de una borrasca profunda, el barómetro sube 5 hPa en tres horas. ¿Qué cabe esperar?",
+      "options": [
+        "Calma inmediata",
+        "Un periodo de viento fuerte y racheado",
+        "Niebla espesa",
+        "Viento rolando a la izquierda y lluvia continua"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Una subida rápida indica un gradiente fuerte, no calma.",
+        "Correcto: el fuerte gradiente detrás de la borrasca genera viento fuerte y racheado.",
+        "La niebla es poco probable en el aire fresco y bien mezclado que sigue a una borrasca.",
+        "El rolar a la izquierda y la lluvia continua acompañan a la llegada de un frente cálido."
+      ],
+      "explanation": "Las subidas rápidas pueden traer tanto viento como las bajadas rápidas. Detrás de una borrasca profunda, el gradiente apretado y el aire polar inestable dan vientos fuertes y racheados."
+    },
+    {
+      "id": "q.atm.7",
+      "kind": "single",
+      "prompt": "¿Por qué se corrigen al nivel medio del mar las lecturas del barómetro?",
+      "options": [
+        "Para eliminar el efecto de la temperatura",
+        "Para poder comparar lecturas tomadas a distintas alturas",
+        "Para convertir pulgadas en hectopascales",
+        "Porque la presión a nivel del mar nunca cambia"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "La corrección es por altura, no por temperatura.",
+        "Correcto: la presión disminuye con la altura, así que las lecturas se reducen a un nivel común.",
+        "La conversión de unidades es otra cuestión.",
+        "La presión a nivel del mar cambia constantemente."
+      ],
+      "explanation": "Cerca de la superficie la presión disminuye aproximadamente 1 hPa cada 8 m, por lo que las lecturas se reducen al nivel medio del mar antes de llevarlas al mapa."
+    },
+    {
+      "id": "q.atm.8",
+      "kind": "order",
+      "prompt": "Ordene estos términos de tendencia de menor a mayor variación de presión en tres horas.",
+      "options": [
+        "Bajando rápidamente",
+        "Estable",
+        "Bajando muy rápidamente",
+        "Bajando lentamente",
+        "Bajando"
+      ],
+      "answers": [
+        1,
+        3,
+        4,
+        0,
+        2
+      ],
+      "explanation": "Estable (menos de 0,1), lentamente (de 0,1 a 1,5), bajando (de 1,6 a 3,5), rápidamente (de 3,6 a 6,0) y muy rápidamente (más de 6,0 hPa)."
+    }
+  ]
+}

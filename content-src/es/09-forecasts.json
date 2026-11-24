@@ -1,0 +1,308 @@
+{
+  "id": "forecasts",
+  "title": "Mapas, archivos GRIB y predicciones marítimas",
+  "summary": "Lectura de mapas sinópticos y de previsión, barbas de viento y datos GRIB, e interpretación del lenguaje de las predicciones marítimas.",
+  "symbol": "map",
+  "lessons": [
+    {
+      "id": "forecasts.charts",
+      "title": "Mapas sinópticos y de previsión",
+      "segments": [
+        {
+          "heading": "Símbolos",
+          "paragraphs": [
+            "En los mapas de superficie, el frente cálido se dibuja con semicírculos (rojos en los mapas en color), el frente frío con triángulos (azules) y el frente ocluido con triángulos y semicírculos alternos (morados); los símbolos apuntan en el sentido del desplazamiento. Las vaguadas se representan con líneas continuas o discontinuas. Las altas y las bajas se marcan con A y B junto con su presión central.",
+            "Los mapas de análisis muestran la situación a una hora determinada; los mapas de previsión (pronósticos) muestran la configuración esperada a 24, 48 o más horas vista. Fíjese siempre en la hora de validez y compare mapas sucesivos para ver cómo se desplazan y profundizan los sistemas."
+          ],
+          "diagram": {
+            "id": "synopticSymbols"
+          }
+        },
+        {
+          "heading": "Del mapa a la predicción",
+          "paragraphs": [
+            "Estime el viento en su posición a partir de la separación de las isobaras (escala geostrófica) y después redúzcalo y hágalo rolar a la izquierda para obtener el viento en superficie. Localice los frentes, su velocidad probable y lo que traerán. Deduzca de la trayectoria del sistema si el viento rolará a la izquierda o a la derecha.",
+            "Busque isobaras apretadas alrededor de vaguadas y bajas, inflexiones que delatan bajas secundarias y collados donde el viento será flojo y variable."
+          ],
+          "diagram": {
+            "id": "depression",
+            "variant": "chart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasts.grib",
+      "title": "Barbas de viento y archivos GRIB",
+      "segments": [
+        {
+          "heading": "Barbas de viento",
+          "paragraphs": [
+            "El eje de una barba de viento apunta hacia la dirección de donde viene el viento. Las plumas del extremo indican la velocidad: media barba son 5 nudos, una barba entera 10 nudos y una banderola (triángulo) 50 nudos. Dos barbas enteras y media barba significan 25 nudos.",
+            "En muchas aplicaciones las flechas apuntan al revés, hacia sotavento; consulte siempre la leyenda."
+          ],
+          "keyPoints": [
+            "El eje apunta hacia el punto de donde viene el viento.",
+            "Media barba 5 kn, barba entera 10 kn, banderola 50 kn."
+          ],
+          "diagram": {
+            "id": "windBarbs"
+          }
+        },
+        {
+          "heading": "Usar los datos GRIB con criterio",
+          "paragraphs": [
+            "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
+            "Sus limitaciones: dan vientos medios, no rachas; suavizan frentes, turbonadas, brisas marinas y efectos embudo; y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Añada un margen de al menos un grado Beaufort cerca de frentes, chubascos y cabos."
+          ],
+          "keyPoints": [
+            "El GRIB es salida de modelo: vientos medios sin revisión humana.",
+            "No refleja rachas, turbonadas ni efectos locales.",
+            "Compare modelos y lea las predicciones y los avisos oficiales."
+          ],
+          "diagram": {
+            "id": "gribGrid"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasts.language",
+      "title": "El lenguaje de las predicciones marítimas",
+      "segments": [
+        {
+          "heading": "Estructura y plazos",
+          "paragraphs": [
+            "Las predicciones marítimas suelen dar primero los avisos de temporal, después una situación general y, para cada zona, la dirección y fuerza del viento, el estado de la mar, el tiempo y la visibilidad.",
+            "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. Los avisos de temporal se emiten para fuerza 8 o superior, o para rachas de 43 nudos o más. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
+            "Anote la predicción y la hora de emisión, y compárela con lo que observa. Si la predicción va retrasada respecto al tiempo observado, espere que la siguiente fase llegue antes de lo previsto."
+          ],
+          "keyPoints": [
+            "Inminente < 6 h, pronto 6–12 h, más tarde > 12 h.",
+            "Aviso de temporal: fuerza 8 o rachas de 43 kn o más.",
+            "Anote la hora de emisión y compárela con lo observado."
+          ],
+          "diagram": {
+            "id": "forecastTimeline"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fc.1",
+      "kind": "numeric",
+      "prompt": "Una barba de viento tiene una banderola, dos barbas enteras y media barba. ¿Qué velocidad del viento indica, en nudos?",
+      "diagram": {
+        "id": "windBarbs"
+      },
+      "numeric": {
+        "value": 75,
+        "tolerance": 0,
+        "unit": "kn"
+      },
+      "explanation": "Banderola 50 + dos barbas enteras 20 + media barba 5 = 75 nudos."
+    },
+    {
+      "id": "q.fc.2",
+      "kind": "single",
+      "prompt": "El eje de una barba de viento apunta hacia el noroeste. ¿Cuál es la dirección del viento?",
+      "options": [
+        "Del noroeste",
+        "Del sudeste",
+        "Hacia el noroeste",
+        "No se puede determinar"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: el eje apunta hacia el punto de donde viene el viento.",
+        "Es justo lo contrario.",
+        "Eso sería un viento del sudeste.",
+        "Las barbas indican la dirección de forma explícita."
+      ],
+      "explanation": "El eje de la barba apunta al viento: es un noroeste."
+    },
+    {
+      "id": "q.fc.3",
+      "kind": "single",
+      "prompt": "Un aviso de temporal emitido a las 06:00 dice «inminente». ¿Cuándo se espera el temporal?",
+      "options": [
+        "Antes de las 12:00",
+        "Entre las 12:00 y las 18:00",
+        "Después de las 18:00",
+        "Mañana"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: en menos de 6 horas desde la emisión.",
+        "Eso es «pronto».",
+        "Eso es «más tarde».",
+        "Eso va más allá de «más tarde»."
+      ],
+      "explanation": "Inminente significa en menos de 6 horas desde la hora de emisión."
+    },
+    {
+      "id": "q.fc.4",
+      "kind": "multi",
+      "prompt": "¿Qué fenómenos probablemente estarán mal representados en un archivo GRIB? Seleccione todas las correctas.",
+      "options": [
+        "Turbonadas bajo cumulonimbos",
+        "Efecto embudo entre islas",
+        "Desplazamiento a gran escala de una borrasca",
+        "Brisas marinas",
+        "Rachas"
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correcto: demasiado pequeñas para la malla de la mayoría de los modelos.",
+        "Correcto: la topografía local queda suavizada.",
+        "Los modelos tratan bien los grandes sistemas.",
+        "Correcto: a menudo se omiten o se subestiman.",
+        "Correcto: los vientos GRIB son medios."
+      ],
+      "explanation": "Los datos GRIB son excelentes para los plazos a gran escala y flojos en efectos locales, de pequeña escala y en rachas."
+    },
+    {
+      "id": "q.fc.5",
+      "kind": "single",
+      "prompt": "En un mapa, ¿qué indica una línea con triángulos y semicírculos alternos en el mismo lado?",
+      "diagram": {
+        "id": "synopticSymbols"
+      },
+      "options": [
+        "Una vaguada",
+        "Un frente ocluido",
+        "Un frente estacionario",
+        "Una dorsal"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las vaguadas son líneas sin símbolos.",
+        "Correcto.",
+        "Un frente estacionario lleva los símbolos en lados opuestos.",
+        "Las dorsales no suelen dibujarse con símbolos."
+      ],
+      "explanation": "Frente ocluido: triángulos y semicírculos alternos en el mismo lado, apuntando en el sentido del desplazamiento."
+    },
+    {
+      "id": "q.fc.6",
+      "kind": "scenario",
+      "context": "Se encuentra en la posición marcada en un mapa de previsión para mañana a las 12:00. Un frente frío está 120 millas al oeste, desplazándose hacia el este a 20 nudos. En su posición las isobaras van de SSO a NNE, muy juntas, con la baja presión al noroeste.",
+      "prompt": "Interprete el mapa.",
+      "diagram": {
+        "id": "depression",
+        "variant": "chart"
+      },
+      "explanation": "Viento fuerte del sur al sur-suroeste en el sector cálido, un frente frío que llega en unas seis horas y, después, un fuerte rolar a la derecha hacia el oeste o el noroeste con turbonadas.",
+      "steps": [
+        {
+          "id": "q.fc.6a",
+          "kind": "single",
+          "prompt": "¿Qué dirección del viento en superficie espera a las 12:00?",
+          "options": [
+            "Del sur al sur-suroeste",
+            "Del nordeste",
+            "Del este-sudeste",
+            "Del noroeste"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto: SSO a lo largo de las isobaras, rolado ligeramente a la izquierda hacia el sur en superficie.",
+            "Eso situaría la baja al sudeste.",
+            "Es un rolar a la izquierda excesivo.",
+            "Eso llega después del frente frío."
+          ],
+          "explanation": "Con la baja al noroeste e isobaras de SSO a NNE, el viento geostrófico es del sur-suroeste; la fricción lo hace rolar a la izquierda hacia el sur en superficie."
+        },
+        {
+          "id": "q.fc.6b",
+          "kind": "numeric",
+          "prompt": "¿Aproximadamente cuántas horas después de las 12:00 le alcanzará el frente frío?",
+          "numeric": {
+            "value": 6,
+            "tolerance": 0.5,
+            "unit": "h"
+          },
+          "explanation": "120 millas a 20 nudos son 6 horas: hacia las 18:00."
+        },
+        {
+          "id": "q.fc.6c",
+          "kind": "single",
+          "prompt": "¿Para qué cambio debe prepararse cuando llegue?",
+          "options": [
+            "Fuerte rolar a la derecha hacia el oeste o el noroeste, con turbonadas y lluvia intensa",
+            "Rolar gradual a la izquierda hacia el sudeste",
+            "Calma y niebla",
+            "Llovizna continua y presión bajando"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto.",
+            "El rolar a la izquierda se produce por delante de un frente cálido.",
+            "No es típico de un frente frío.",
+            "Eso describe el sector cálido o la llegada de un frente cálido."
+          ],
+          "explanation": "Frente frío: fuerte rolar a la derecha, turbonadas, lluvia intensa, presión subiendo y, después, aire más limpio con chubascos."
+        }
+      ]
+    },
+    {
+      "id": "q.fc.7",
+      "kind": "single",
+      "prompt": "El GRIB indica 18 nudos para su travesía, pero la predicción oficial dice «suroeste 5 a 6, ocasionalmente 7 en chubascos con turbonadas». ¿Para qué se prepara?",
+      "options": [
+        "Para 18 nudos, porque el GRIB es más preciso",
+        "Para rachas y turbonadas de fuerza 7 o más",
+        "Para vientos más flojos, porque las predicciones exageran",
+        "Para la media de ambos: 15 nudos"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El GRIB da vientos medios suavizados.",
+        "Correcto: prepárese para las turbonadas que el modelo no puede resolver.",
+        "Los predictores añaden el detalle que se les escapa a los modelos.",
+        "Promediar ignora el riesgo de turbonadas."
+      ],
+      "explanation": "Planifique para el peor caso de la predicción oficial; los vientos medios del GRIB subestiman las turbonadas."
+    },
+    {
+      "id": "q.fc.8",
+      "kind": "single",
+      "prompt": "¿Qué significa «ciclónico» en una predicción?",
+      "options": [
+        "Vientos de fuerza huracanada",
+        "Cambio considerable de la dirección del viento al pasar cerca una borrasca",
+        "Flojo y variable",
+        "Un ciclón tropical"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "No es un término de intensidad.",
+        "Correcto.",
+        "Eso es «variable».",
+        "No en las predicciones marítimas de latitudes medias."
+      ],
+      "explanation": "«Ciclónico» advierte de que la dirección del viento cambiará considerablemente cerca del centro de una baja."
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "id": "fog",
+  "title": "Niebla, humedad y visibilidad",
+  "summary": "Punto de rocío y humedad, los tres tipos de niebla que importan en el mar y cómo prever y gestionar la mala visibilidad.",
+  "symbol": "cloud.fog",
+  "lessons": [
+    {
+      "id": "fog.dewpoint",
+      "title": "Punto de rocío y humedad",
+      "segments": [
+        {
+          "heading": "Saturación",
+          "paragraphs": [
+            "El aire cálido puede contener más vapor de agua que el frío. La humedad relativa es el vapor presente expresado como porcentaje del máximo posible a esa temperatura. El punto de rocío es la temperatura a la que debe enfriarse el aire para saturarse; en ese momento la condensación forma nubes, neblina o niebla.",
+            "La diferencia entre la temperatura del aire y el punto de rocío es el indicador clave de niebla. Una diferencia de 2 °C o menos, con más enfriamiento por delante, significa que la niebla es probable. Muchas predicciones y archivos GRIB dan directamente el punto de rocío; a bordo, un higrómetro o un sensor electrónico indican la humedad y el punto de rocío."
+          ],
+          "keyPoints": [
+            "Punto de rocío: la temperatura a la que el aire se satura.",
+            "Poca diferencia entre temperatura y punto de rocío: riesgo de niebla.",
+            "Tanto enfriar el aire como añadirle humedad conducen a la niebla."
+          ],
+          "diagram": {
+            "id": "dewPoint"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fog.types",
+      "title": "Tipos de niebla",
+      "segments": [
+        {
+          "heading": "Niebla de radiación",
+          "paragraphs": [
+            "Se forma sobre tierra en noches despejadas con viento flojo (de unos 2 a 8 nudos) y aire húmedo, cuando el suelo irradia calor y enfría el aire que tiene encima hasta su punto de rocío. Es más frecuente en otoño e invierno.",
+            "Hacia el amanecer baja por los ríos hasta puertos y estuarios, y suele disiparse a media mañana cuando el sol calienta la tierra. Rara vez se extiende más de unas pocas millas mar adentro."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "radiation"
+          }
+        },
+        {
+          "heading": "Niebla de advección (niebla marina)",
+          "paragraphs": [
+            "Se forma cuando aire cálido y húmedo fluye sobre una superficie del mar más fría que el punto de rocío de ese aire. Es frecuente en primavera y a principios de verano, cuando el mar aún está frío, y en los sectores cálidos. Puede cubrir grandes extensiones, persistir durante días y resistir vientos de hasta fuerza 5 o 6.",
+            "Solo se disipa cuando cambia la masa de aire, normalmente después de que un frente frío traiga aire más seco, o cuando el viento rola y pasa a soplar de tierra. En el mar, el sol por sí solo no la disipa."
+          ],
+          "keyPoints": [
+            "Requiere que la temperatura del mar esté por debajo del punto de rocío del aire.",
+            "Persiste con viento moderado; solo se disipa con un cambio de masa de aire."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "advection"
+          }
+        },
+        {
+          "heading": "Niebla frontal",
+          "paragraphs": [
+            "Por delante de un frente cálido, la lluvia que cae desde el aire cálido se evapora en el aire más frío de debajo y lo satura, produciendo niebla o nubes muy bajas que pueden llegar a la superficie del mar. En los sectores cálidos también es frecuente la niebla en cerros y costas, donde el aire húmedo se eleva al pasar sobre tierra."
+          ],
+          "diagram": {
+            "id": "fog",
+            "variant": "frontal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fog.seamanship",
+      "title": "Visibilidad y buenas prácticas marineras",
+      "segments": [
+        {
+          "heading": "Términos de la predicción y decisiones",
+          "paragraphs": [
+            "Las predicciones marítimas describen la visibilidad como muy mala o niebla (menos de 1.000 metros), mala (de 1.000 metros a 2 millas náuticas), regular (de 2 a 5 millas náuticas) y buena (más de 5 millas náuticas).",
+            "Si se prevé niebla, plantéese no salir, o planifique una derrota alejada de las rutas de tráfico marítimo y por aguas menos profundas, donde los buques grandes no pueden entrar. Sitúese antes de que se cierre la visibilidad, ice el reflector de radar, utilice el radar y el AIS, ponga un vigía dedicado a mirar y escuchar, emita las señales acústicas y mantenga a la tripulación en cubierta con el chaleco salvavidas puesto."
+          ],
+          "diagram": {
+            "id": "visibilityScale"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.fog.1",
+      "kind": "single",
+      "context": "Mayo, frente a una costa occidental. Temperatura del aire 14 °C, punto de rocío 12 °C, temperatura del mar 10 °C, viento del suroeste fuerza 4.",
+      "prompt": "¿Cuál es el riesgo de niebla en el mar?",
+      "diagram": {
+        "id": "fog",
+        "variant": "advection"
+      },
+      "options": [
+        "Bajo: hay demasiado viento para que haya niebla",
+        "Alto: el mar está más frío que el punto de rocío del aire",
+        "Bajo: la niebla solo se forma de noche",
+        "Al amanecer se formará niebla de radiación"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "La niebla de advección resiste fuerza 4 y más.",
+        "Correcto: el mar a 10 °C está por debajo del punto de rocío de 12 °C.",
+        "La niebla de advección se forma de día o de noche.",
+        "La niebla de radiación se forma sobre tierra, no en el mar."
+      ],
+      "explanation": "El aire enfriado por el mar hasta 10 °C queda por debajo de su punto de rocío de 12 °C: es probable la niebla de advección, y puede persistir."
+    },
+    {
+      "id": "q.fog.2",
+      "kind": "numeric",
+      "prompt": "Temperatura del aire 9 °C, punto de rocío 7,5 °C. ¿Cuál es la diferencia, en °C?",
+      "numeric": {
+        "value": 1.5,
+        "tolerance": 0.1,
+        "unit": "°C"
+      },
+      "explanation": "9 menos 7,5 son 1,5 °C. Una diferencia de menos de 2 °C, con más enfriamiento previsto, significa que la niebla es probable."
+    },
+    {
+      "id": "q.fog.3",
+      "kind": "single",
+      "prompt": "A las 07:00, tras una noche de otoño despejada y en calma, un puerto de estuario está cubierto de niebla espesa. ¿Qué es lo más probable que ocurra?",
+      "diagram": {
+        "id": "fog",
+        "variant": "radiation"
+      },
+      "options": [
+        "Persistirá durante días",
+        "Se disipará a media mañana, cuando se caliente la tierra",
+        "Se espesará al aumentar el viento",
+        "Se extiende 50 millas mar adentro"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Eso es típico de la niebla de advección.",
+        "Correcto: la niebla de radiación se disipa con el sol.",
+        "El aumento del viento suele levantar o dispersar la niebla de radiación.",
+        "La niebla de radiación rara vez se aleja mucho de la costa."
+      ],
+      "explanation": "La niebla de radiación se forma sobre tierra durante la noche y suele disiparse a media mañana."
+    },
+    {
+      "id": "q.fog.4",
+      "kind": "single",
+      "prompt": "¿Qué suele disipar la niebla de advección en el mar?",
+      "options": [
+        "La salida del sol",
+        "Un aumento del viento hasta fuerza 4",
+        "Un cambio de masa de aire, como detrás de un frente frío",
+        "El cambio de la marea"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "El sol no calienta lo suficiente la superficie del mar.",
+        "La niebla de advección puede persistir con fuerza 5 a 6.",
+        "Correcto.",
+        "La marea no cambia el aire."
+      ],
+      "explanation": "Solo un aire más seco, o relativamente más cálido que el mar, elimina la causa; normalmente eso significa un frente o un rolar del viento que lo haga soplar de tierra."
+    },
+    {
+      "id": "q.fog.5",
+      "kind": "order",
+      "prompt": "Ordene estos términos de visibilidad de peor a mejor.",
+      "options": [
+        "Regular",
+        "Buena",
+        "Niebla / muy mala",
+        "Mala"
+      ],
+      "answers": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "explanation": "Niebla/muy mala (menos de 1.000 m), mala (de 1.000 m a 2 mn), regular (de 2 a 5 mn), buena (más de 5 mn)."
+    },
+    {
+      "id": "q.fog.6",
+      "kind": "multi",
+      "prompt": "Se prevé niebla para una travesía que cruza una ruta de tráfico muy concurrida. ¿Qué medidas son acertadas? Seleccione todas las correctas.",
+      "options": [
+        "Situarse antes de que baje la visibilidad",
+        "Planificar el cruce de la ruta con niebla para ganar tiempo",
+        "Izar un reflector de radar y utilizar el radar y el AIS",
+        "Poner un vigía dedicado a mirar y escuchar",
+        "Plantearse retrasar la salida o desviarse hacia aguas poco profundas"
+      ],
+      "answers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Cruzar a ciegas una ruta de tráfico es un riesgo grave.",
+        "Correcto.",
+        "Correcto.",
+        "Correcto: los buques grandes no pueden seguirle a aguas poco profundas."
+      ],
+      "explanation": "Reduzca la exposición al tráfico, hágase lo más detectable posible y conozca su posición."
+    },
+    {
+      "id": "q.fog.7",
+      "kind": "single",
+      "prompt": "¿Por qué se forma a menudo niebla por delante de un frente cálido?",
+      "diagram": {
+        "id": "fog",
+        "variant": "frontal"
+      },
+      "options": [
+        "La lluvia del aire cálido se evapora en el aire frío de debajo y lo satura",
+        "El frente enfría el mar",
+        "El viento cae a calma",
+        "El barómetro sube"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: niebla frontal.",
+        "El mar no se enfría con rapidez.",
+        "Por delante de un frente cálido el viento suele arreciar.",
+        "La presión baja por delante de un frente cálido."
+      ],
+      "explanation": "La humedad que aporta la lluvia lleva a la saturación el aire frío situado por delante del frente."
+    },
+    {
+      "id": "q.fog.8",
+      "kind": "single",
+      "prompt": "A las 22:00 la humedad relativa es del 98 %, con cielo despejado y brisa ligera sobre tierra. ¿Qué es probable que haya por la mañana?",
+      "diagram": {
+        "id": "dewPoint"
+      },
+      "options": [
+        "Niebla de radiación",
+        "Virazón",
+        "Tormentas",
+        "Niebla de advección en mar abierta"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: aire casi saturado más el enfriamiento nocturno.",
+        "La virazón es un viento diurno.",
+        "No hay indicios de inestabilidad.",
+        "Se trata de enfriamiento sobre tierra, no de aire que se desplaza sobre un mar frío."
+      ],
+      "explanation": "El cielo despejado permite el enfriamiento por radiación; con un 98 % de humedad basta un pequeño descenso de temperatura para alcanzar el punto de rocío."
+    }
+  ]
+}

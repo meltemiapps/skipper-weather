@@ -1,0 +1,298 @@
+{
+  "id": "planning",
+  "title": "Planificación de la travesía y mal tiempo",
+  "summary": "Formarse una idea del tiempo, elegir una ventana, puertos de refugio y preparación y tácticas para el mal tiempo.",
+  "symbol": "sailboat",
+  "lessons": [
+    {
+      "id": "planning.window",
+      "title": "Elegir una ventana meteorológica",
+      "segments": [
+        {
+          "heading": "Formarse una idea del tiempo",
+          "paragraphs": [
+            "Empiece varios días antes: siga los mapas sinópticos y de previsión para entender la situación y cómo evoluciona. Más cerca de la salida, añada la predicción marítima oficial, las predicciones costeras, los avisos de temporal y datos GRIB de más de un modelo. Fíjese en dónde discrepan las predicciones; la discrepancia es una medida de la incertidumbre.",
+            "Después, aplíquelo a su barco y a su tripulación. ¿Cuál es el viento más fuerte probable, rachas incluidas, de qué dirección respecto a su rumbo y a las corrientes de marea, durante cuánto tiempo y con qué estado de la mar en los cabos y en la aproximación al destino?"
+          ],
+          "keyPoints": [
+            "Siga la evolución durante días, no solo la última predicción.",
+            "Si los modelos discrepan hay incertidumbre: añada margen.",
+            "Traduzca viento y mar en condiciones reales en su ruta."
+          ],
+          "diagram": {
+            "id": "passagePlan"
+          }
+        },
+        {
+          "heading": "Límites, horarios y refugios",
+          "paragraphs": [
+            "Fije sus límites personales de viento, mar y visibilidad antes de leer la predicción y acuérdelos con la tripulación. Programe la salida de modo que la travesía termine con luz de día y que lo peor de cualquier frente o cambio de viento le sorprenda en mar abierto, no en la bocana de un puerto en una costa a sotavento.",
+            "Haga una lista de puertos de refugio a lo largo de la ruta e indique cuáles son seguros para entrar con la dirección de viento prevista, con qué estados de marea y de noche. Recuerde que un rolar a la derecha previsto puede convertir un refugio en una entrada peligrosa."
+          ],
+          "diagram": {
+            "id": "passagePlan",
+            "variant": "refuge"
+          }
+        }
+      ]
+    },
+    {
+      "id": "planning.heavy",
+      "title": "Preparación y tácticas para el mal tiempo",
+      "segments": [
+        {
+          "heading": "Antes de que llegue",
+          "paragraphs": [
+            "Tome rizos pronto. Estibe y trinque todo bajo cubierta y en cubierta, cierre las escotillas y los grifos de fondo que no use, monte las líneas de vida y asegúrese de que todos llevan chaleco salvavidas y arnés en cubierta. Prepare comida y bebida calientes y tentempiés sencillos, organice unas guardias que protejan a la tripulación del cansancio e informe a todos del plan y de cómo actuar ante el mareo.",
+            "Sitúese con precisión y prevea resguardo suficiente: con mal tiempo, el mayor peligro suele ser la tierra, no el mar."
+          ],
+          "keyPoints": [
+            "Tome rizos pronto y asegure el barco.",
+            "Chalecos salvavidas, arneses y líneas de vida.",
+            "Alimente y haga descansar a la tripulación; mantenga resguardo."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "8"
+          }
+        },
+        {
+          "heading": "Tácticas",
+          "paragraphs": [
+            "Las opciones incluyen seguir navegando con la vela muy rizada, ponerse al pairo (foque acuartelado, mayor amollada y timón trincado a barlovento) para que la tripulación descanse y el barco aguante la mar con comodidad, correr el temporal con el mínimo de vela y estachas o un cono de arrastre a remolque para controlar la velocidad y, en condiciones de supervivencia, un ancla de capa por la proa.",
+            "La elección correcta depende del barco, de la tripulación, del resguardo disponible y de la dirección del peligro más cercano. Gobernar formando un ángulo con las crestas que rompen, en lugar de recibirlas de frente, reduce el riesgo de una tumbada. Elija lo que elija, decídalo pronto, mientras la tripulación aún tiene energía."
+          ],
+          "diagram": {
+            "id": "heavyWeather"
+          }
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q.pl.1",
+      "kind": "single",
+      "prompt": "Tres modelos discrepan en 12 horas sobre la llegada de un frente. ¿Qué le indica esto?",
+      "options": [
+        "Que debe usar el modelo más optimista",
+        "Que la incertidumbre de la predicción es alta; deje margen o espere",
+        "Que debe promediarlos y salir según la media",
+        "Que debe ignorar los modelos y fiarse solo del barómetro"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Quedarse con el mejor caso es hacerse ilusiones.",
+        "Correcto.",
+        "La media oculta la dispersión.",
+        "El barómetro complementa las predicciones, no las sustituye."
+      ],
+      "explanation": "La discrepancia entre modelos cuantifica la incertidumbre. Planifique para la llegada más temprana o retrase la salida."
+    },
+    {
+      "id": "q.pl.2",
+      "kind": "single",
+      "prompt": "¿Cuándo debe fijar sus límites personales de viento para una travesía?",
+      "options": [
+        "Después de leer la predicción",
+        "Antes de leer la predicción",
+        "Una vez en la mar",
+        "Solo si se prevé temporal"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Así es fácil acabar convenciéndose de salir.",
+        "Correcto.",
+        "Demasiado tarde.",
+        "Los límites se aplican en cualquier condición."
+      ],
+      "explanation": "Unos límites fijados de antemano protegen de leer con optimismo una predicción dudosa."
+    },
+    {
+      "id": "q.pl.3",
+      "kind": "multi",
+      "prompt": "Se prevé temporal dentro de 8 horas y ya está comprometido con la travesía. ¿Qué preparativos debe hacer ahora? Seleccione todas las correctas.",
+      "options": [
+        "Tomar rizos antes de que suba el viento",
+        "Preparar comida caliente y termos",
+        "Abrir las escotillas para ventilar",
+        "Montar las líneas de vida y ponerse el arnés",
+        "Planificar mantenerse bien separado de la costa, lejos de una costa a sotavento"
+      ],
+      "answers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "optionExplanations": [
+        "Correcto.",
+        "Correcto.",
+        "Las escotillas deben estar cerradas y aseguradas.",
+        "Correcto.",
+        "Correcto: el resguardo es seguridad."
+      ],
+      "explanation": "Prepare el barco, la tripulación y el plan antes de que empeoren las condiciones."
+    },
+    {
+      "id": "q.pl.4",
+      "kind": "single",
+      "prompt": "¿Qué es ponerse al pairo?",
+      "options": [
+        "Correr el temporal a palo seco",
+        "Foque acuartelado, mayor amollada y timón trincado a barlovento para que el barco quede tranquilo",
+        "Navegar a motor proa al viento a toda máquina",
+        "Fondear en aguas profundas"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Eso es correr el temporal.",
+        "Correcto.",
+        "Eso no es ponerse al pairo.",
+        "Eso no es ponerse al pairo."
+      ],
+      "explanation": "Ponerse al pairo detiene el barco en una posición cómoda, lo que da a la tripulación descanso y tiempo para resolver problemas."
+    },
+    {
+      "id": "q.pl.5",
+      "kind": "scenario",
+      "context": "Planifica una travesía de 60 millas a lo largo de una costa orientada al sur. Predicción: «Oeste 4 a 5, aumentando a 6 a 7 más tarde, rolando al noroeste». El puerto de destino previsto tiene una entrada con barra orientada al oeste, peligrosa con ponientes fuertes y con la vaciante. Un puerto alternativo, a 40 millas, está orientado al sudeste y tiene una entrada practicable con cualquier marea.",
+      "prompt": "Elabore el plan.",
+      "explanation": "Evite la barra expuesta al oeste con un poniente que arrecia; el puerto orientado al sudeste está resguardado del viento previsto del oeste al noroeste.",
+      "steps": [
+        {
+          "id": "q.pl.5a",
+          "kind": "single",
+          "prompt": "¿Por qué el destino previsto es una mala elección?",
+          "options": [
+            "La barra está expuesta al poniente que arrecia y puede romper con la vaciante",
+            "Está demasiado lejos",
+            "No tiene combustible",
+            "Los puertos siempre son peligrosos de noche"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto.",
+            "La distancia no es el problema principal.",
+            "Aquí no influye en la seguridad.",
+            "Demasiado genérico."
+          ],
+          "explanation": "Una barra orientada al oeste, con poniente fuerte y la vaciante saliendo, puede romper peligrosamente."
+        },
+        {
+          "id": "q.pl.5b",
+          "kind": "single",
+          "prompt": "¿Seguirá resguardado el puerto orientado al sudeste después del rolar al noroeste?",
+          "options": [
+            "Sí: su entrada da la espalda tanto al viento del oeste como al del noroeste",
+            "No: el rolar lo convierte en una costa a sotavento",
+            "Solo en pleamar",
+            "Solo de día"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto.",
+            "En una entrada orientada al sudeste, el noroeste sopla de tierra.",
+            "La entrada es practicable con cualquier marea.",
+            "No es el factor decisivo."
+          ],
+          "explanation": "Una entrada orientada al sudeste queda a sotavento de la tierra tanto con viento del oeste como del noroeste."
+        },
+        {
+          "id": "q.pl.5c",
+          "kind": "single",
+          "prompt": "¿Cuál es la decisión sensata?",
+          "options": [
+            "Planificar desde el principio el puerto alternativo como destino",
+            "Poner rumbo a la barra y decidir al llegar",
+            "Esperar a que sople el temporal para comprobar su fuerza",
+            "Fondear frente a la barra"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto: más cerca, resguardado y practicable con cualquier marea.",
+            "Decidir ante una barra que rompe es demasiado tarde.",
+            "Esperar a que entre el temporal reduce las opciones.",
+            "Un fondeadero abierto frente a una barra a sotavento es peligroso."
+          ],
+          "explanation": "Elija el destino que siga siendo seguro en la peor fase de la predicción."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.6",
+      "kind": "single",
+      "prompt": "Con mal tiempo en alta mar, ¿cuál suele ser el mayor peligro?",
+      "options": [
+        "Las propias olas",
+        "La tierra: una costa a sotavento y la pérdida de resguardo",
+        "Quedarse sin comida",
+        "El frío"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Las olas son un riesgo, pero un barco bien preparado las aguanta si tiene resguardo.",
+        "Correcto.",
+        "Se resuelve con preparación.",
+        "Se resuelve con ropa adecuada."
+      ],
+      "explanation": "El resguardo es seguridad. La mayoría de las pérdidas con mal tiempo tienen que ver con la tierra."
+    },
+    {
+      "id": "q.pl.7",
+      "kind": "single",
+      "prompt": "Corriendo el temporal ante grandes olas rompientes, el barco surfea a una velocidad peligrosa. ¿Qué ayuda?",
+      "options": [
+        "Izar más vela",
+        "Largar estachas o un cono de arrastre a remolque para frenarlo",
+        "Gobernar exactamente de frente a cada cresta a toda velocidad",
+        "Atravesarse a la mar"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Más vela aumenta la velocidad.",
+        "Correcto.",
+        "El exceso de velocidad aumenta el riesgo de capotar o de una orzada incontrolada.",
+        "Atravesado a la mar se arriesga a una tumbada."
+      ],
+      "explanation": "Controlar la velocidad con elementos de arrastre reduce el riesgo de una orzada incontrolada o de capotar."
+    },
+    {
+      "id": "q.pl.8",
+      "kind": "single",
+      "prompt": "Las condiciones son peores de lo previsto y la tripulación se está cansando. ¿Qué haría un buen marino?",
+      "options": [
+        "Seguir con el plan",
+        "Replantearse la situación: desviarse, ponerse al pairo o dar la vuelta según convenga",
+        "Dar más vela para llegar antes",
+        "Esperar a la siguiente predicción antes de hacer nada"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El plan se basaba en una predicción que ahora resulta errónea.",
+        "Correcto.",
+        "Más vela añade riesgo.",
+        "Actúe según lo que ve ahora."
+      ],
+      "explanation": "Cambiar de plan en función de las condiciones es buena marinería."
+    }
+  ]
+}
