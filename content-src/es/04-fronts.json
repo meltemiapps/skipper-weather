@@ -12,7 +12,7 @@
           "heading": "Aproximación",
           "paragraphs": [
             "El aire cálido asciende lentamente sobre el aire frío que tiene delante siguiendo una pendiente suave, de aproximadamente 1 a 150. Por eso sus nubes llegan mucho antes que el frente en superficie: los cirros pueden aparecer varios cientos de millas por delante, normalmente entre 12 y 24 horas antes del paso del frente.",
-            "La nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal."
+            "En la secuencia típica, la nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal. Los frentes reales varían con la estación, el relieve, la oclusión y los chubascos, así que tómela como guía y contrástela con la predicción."
           ],
           "diagram": {
             "id": "frontSection",
@@ -45,7 +45,7 @@
           "heading": "Un límite más brusco",
           "paragraphs": [
             "El aire frío se introduce por debajo del cálido con una pendiente más pronunciada, de aproximadamente 1 a 50 o 1 a 80, de modo que el mal tiempo se concentra en una franja más estrecha: a menudo solo una o dos horas de lluvia intensa. Puede haber cumulonimbos embebidos que traen turbonadas, granizo y tormenta; a veces una línea de turbonadas avanza por delante del frente.",
-            "En el frente el viento rola bruscamente a la derecha, normalmente de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
+            "En un frente frío típico el viento rola bruscamente a la derecha, a menudo de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
           ],
           "diagram": {
             "id": "frontSection",

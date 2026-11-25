@@ -14,9 +14,9 @@ final class DiagramWalkTests: XCTestCase {
         "clouds": ["clouds.stability", "clouds.cb"],
         "local": ["local.thermal", "local.topography", "local.med"],
         "fog": ["fog.dewpoint", "fog.types", "fog.seamanship"],
-        "sea": ["sea.waves", "sea.tide"],
-        "forecasts": ["forecasts.charts", "forecasts.grib", "forecasts.language"],
-        "planning": ["planning.window", "planning.heavy"],
+        "sea": ["sea.waves", "sea.tide", "sea.reading"],
+        "forecasts": ["forecasts.charts", "forecasts.grib", "forecasts.language", "forecasts.reconcile"],
+        "planning": ["planning.window", "planning.gonogo", "planning.heavy"],
     ]
     private let order = ["atmosphere", "wind", "systems", "fronts", "clouds", "local", "fog", "sea", "forecasts", "planning"]
 

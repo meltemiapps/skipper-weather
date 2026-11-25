@@ -67,6 +67,60 @@
             "id": "seaState",
             "variant": "6"
           }
+        },
+        {
+          "heading": "Races, overfalls and bars",
+          "paragraphs": [
+            "Tidal races form where a strong stream is squeezed round a headland or over an uneven bottom; overfalls are the steep, breaking seas this produces. Portland Bill, St Alban's Head and the Alderney Race are well-known examples. With wind against the stream they can be dangerous even in moderate winds, and a swell running in makes them worse.",
+            "Harbour bars break when an onshore swell meets shallow water, worst on the ebb when the outgoing stream steepens the waves. Cross a bar on the flood, near high water, and not at all if it is breaking. Use the pilot book or almanac for local timings and clearances: keep well off a race or take the recognised inshore passage at the right time."
+          ],
+          "keyPoints": [
+            "Races and overfalls: strong stream over headlands and uneven ground.",
+            "Bars break worst on the ebb with onshore swell.",
+            "Cross on the flood near high water; never when breaking."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "windAgainstTide"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sea.reading",
+      "title": "Reading a wave forecast",
+      "segments": [
+        {
+          "heading": "Significant height and the bigger waves",
+          "paragraphs": [
+            "Wave forecasts and buoy reports give the significant wave height: the average height of the highest third of the waves, close to what an experienced observer would estimate. Many waves are lower, and some are much higher.",
+            "Over a few hours, expect occasional individual waves of up to about twice the significant height. A forecast of 2 m can therefore bring the odd wave of around 4 m, and that is the wave that fills a cockpit or knocks a boat down."
+          ],
+          "keyPoints": [
+            "Significant height: mean of the highest third.",
+            "Expect occasional waves near twice that height.",
+            "Plan for the big wave, not the average."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "6"
+          }
+        },
+        {
+          "heading": "Period, swell and combined seas",
+          "paragraphs": [
+            "Wave period matters as much as height. In deep water the wavelength in metres is roughly 1.56 times the period squared: a 5-second sea is about 40 m long, a 12-second swell about 225 m. A 2 m wave at 5 seconds is short and steep and may break; the same height at 12 seconds is a long, gentle swell.",
+            "Forecasts may give wind sea and swell separately, each with its own height, period and direction, or a combined figure. When swell and wind sea come from different directions the result is a confused cross sea, which is uncomfortable and harder to steer through. Two forecasts with the same height can therefore mean very different conditions."
+          ],
+          "keyPoints": [
+            "Short period plus height means steep, breaking seas.",
+            "Read wind sea and swell separately: height, period, direction.",
+            "Cross seas from two directions are confused and tiring."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "swell"
+          }
         }
       ]
     }
@@ -278,6 +332,73 @@
         "It includes both wind sea and swell unless stated."
       ],
       "explanation": "Significant wave height approximates what an observer would estimate; occasional waves are much larger."
+    },
+    {
+      "id": "q.sea.9",
+      "kind": "single",
+      "prompt": "A forecast gives a significant wave height of 2 m. What is the largest individual wave you should prepare for over several hours?",
+      "options": [
+        "About 1 m",
+        "About 2 m",
+        "About 4 m",
+        "About 8 m"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "Many waves are lower, but that is not the risk.",
+        "That is the significant height, not the largest wave.",
+        "Correct: occasional waves near twice the significant height.",
+        "Far beyond what a 2 m sea produces."
+      ],
+      "explanation": "Plan for occasional waves of about twice the significant height."
+    },
+    {
+      "id": "q.sea.10",
+      "kind": "single",
+      "prompt": "Two seas are both 2 m high. Which is the more dangerous for a small yacht?",
+      "options": [
+        "2 m at a 5-second period",
+        "2 m at a 12-second period",
+        "They are the same",
+        "It depends only on wind strength"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correct: about 40 m long, steep and likely to break.",
+        "About 225 m long: a long, gentle swell.",
+        "Period changes steepness.",
+        "Period and height together set steepness."
+      ],
+      "explanation": "A short period means short, steep waves; the same height at a long period is gentle swell.",
+      "diagram": {
+        "id": "waves",
+        "variant": "swell"
+      }
+    },
+    {
+      "id": "q.sea.11",
+      "kind": "single",
+      "prompt": "You plan to enter a harbour over a bar with a moderate onshore swell. When should you cross?",
+      "options": [
+        "Mid-ebb, for the strongest stream",
+        "On the flood, near high water",
+        "At low water, when the bar is visible",
+        "Any time, if the engine is reliable"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The ebb steepens the swell: worst time.",
+        "Correct: most depth and the stream with the swell.",
+        "Least depth: waves break most readily.",
+        "Engine reliability does not stop breaking seas."
+      ],
+      "explanation": "Cross bars on the flood near high water, and not at all if they are breaking."
     }
   ]
 }

@@ -225,6 +225,11 @@
       "id": "sirocco",
       "term": "Siroco (Jugo)",
       "definition": "Viento cálido del sur o sudeste procedente del norte de África, húmedo al llegar a Europa, a menudo con polvo y mala visibilidad."
+    },
+    {
+      "id": "wavePeriod",
+      "term": "Periodo de ola",
+      "definition": "El tiempo en segundos entre dos crestas sucesivas que pasan por un punto fijo. Un periodo corto significa una mar más empinada."
     }
   ],
   "diagramLabels": {

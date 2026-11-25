@@ -225,6 +225,11 @@
    "id": "sirocco",
    "term": "Siroco (Jugo)",
    "definition": "Viento cálido del sur o sudeste procedente del norte de África, húmedo al llegar a Europa, a menudo con polvo y mala visibilidad."
+  },
+  {
+   "id": "wavePeriod",
+   "term": "Periodo de ola",
+   "definition": "El tiempo en segundos entre dos crestas sucesivas que pasan por un punto fijo. Un periodo corto significa una mar más empinada."
   }
  ],
  "diagramLabels": {
@@ -968,11 +973,11 @@
       {
        "heading": "Madurez y desplazamiento",
        "paragraphs": [
-        "Una borrasca madura en el Atlántico suele desplazarse hacia el este o el nordeste a 20–30 nudos, guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
-        "Cuando una borrasca se profundiza 24 hPa o más en 24 horas se habla de ciclogénesis explosiva. Cuente con temporales muy duros y bajadas de presión muy rápidas."
+        "Una borrasca madura en el Atlántico se desplaza a menudo hacia el este o el nordeste a unos 20–30 nudos, aunque la velocidad varía mucho. Va guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
+        "Por convención, la ciclogénesis explosiva es una caída de la presión central de 24 hPa en 24 horas a 60° de latitud; el umbral varía con la latitud y a 50° N es de unos 21 hPa. Cuente con temporales muy duros y bajadas de presión muy rápidas."
        ],
        "keyPoints": [
-        "Velocidad típica de 20–30 nudos, hacia el este o el nordeste.",
+        "A menudo 20–30 nudos hacia el E o NE; la velocidad varía.",
         "La trayectoria sigue las isobaras del sector cálido.",
         "Vigile las bajas secundarias en la cola de los frentes fríos."
        ],
@@ -1154,7 +1159,7 @@
       "tolerance": 0,
       "unit": "hPa"
      },
-     "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de 24 hPa de la ciclogénesis explosiva: cuente con temporales muy duros."
+     "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de ciclogénesis explosiva en latitudes británicas (unos 21 a 24 hPa): cuente con temporales muy duros."
     },
     {
      "id": "q.sys.7",
@@ -1218,7 +1223,7 @@
        "heading": "Aproximación",
        "paragraphs": [
         "El aire cálido asciende lentamente sobre el aire frío que tiene delante siguiendo una pendiente suave, de aproximadamente 1 a 150. Por eso sus nubes llegan mucho antes que el frente en superficie: los cirros pueden aparecer varios cientos de millas por delante, normalmente entre 12 y 24 horas antes del paso del frente.",
-        "La nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal."
+        "En la secuencia típica, la nubosidad se espesa y baja: primero cirros, luego cirrostratos con halo alrededor del sol o la luna, después altostratos tras los que el sol se ve pálido y difuso, y por último nimbostratos con lluvia continua. La presión baja de forma constante y el viento rola a la izquierda y arrecia. La visibilidad empeora con la lluvia y puede formarse niebla frontal. Los frentes reales varían con la estación, el relieve, la oclusión y los chubascos, así que tómela como guía y contrástela con la predicción."
        ],
        "diagram": {
         "id": "frontSection",
@@ -1251,7 +1256,7 @@
        "heading": "Un límite más brusco",
        "paragraphs": [
         "El aire frío se introduce por debajo del cálido con una pendiente más pronunciada, de aproximadamente 1 a 50 o 1 a 80, de modo que el mal tiempo se concentra en una franja más estrecha: a menudo solo una o dos horas de lluvia intensa. Puede haber cumulonimbos embebidos que traen turbonadas, granizo y tormenta; a veces una línea de turbonadas avanza por delante del frente.",
-        "En el frente el viento rola bruscamente a la derecha, normalmente de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
+        "En un frente frío típico el viento rola bruscamente a la derecha, a menudo de suroeste a oeste o noroeste, a menudo con una turbonada violenta. La presión, que se había mantenido estable, sube con rapidez. Bajan la temperatura y el punto de rocío."
        ],
        "diagram": {
         "id": "frontSection",
@@ -2404,6 +2409,60 @@
         "id": "seaState",
         "variant": "6"
        }
+      },
+      {
+       "heading": "Zonas de corriente, escarceos y barras",
+       "paragraphs": [
+        "Las zonas de corriente fuerte (tidal races) se forman donde una corriente intensa se estrecha alrededor de un cabo o pasa sobre un fondo irregular; los escarceos son la mar corta, empinada y rompiente que producen. Portland Bill, St Alban's Head y el Alderney Race son ejemplos conocidos. Con viento contra corriente pueden ser peligrosos incluso con vientos moderados, y el mar de fondo los empeora.",
+        "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, sobre todo en la vaciante, cuando la corriente saliente empina las olas. Cruce una barra con la marea entrante, cerca de la pleamar, y nunca si está rompiendo. Consulte el derrotero o el almanaque náutico para los horarios y distancias locales: manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
+       ],
+       "keyPoints": [
+        "Zonas de corriente y escarceos: corriente fuerte en cabos y fondos irregulares.",
+        "Las barras rompen más en la vaciante con mar de fondo.",
+        "Cruce con marea entrante cerca de la pleamar; nunca si rompe."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "windAgainstTide"
+       }
+      }
+     ]
+    },
+    {
+     "id": "sea.reading",
+     "title": "Cómo leer una predicción de oleaje",
+     "segments": [
+      {
+       "heading": "Altura significativa y las olas mayores",
+       "paragraphs": [
+        "Las predicciones de oleaje y los datos de las boyas dan la altura significativa de ola: la media del tercio más alto de las olas, cercana a lo que estimaría un observador experimentado. Muchas olas son más bajas y algunas mucho más altas.",
+        "En unas pocas horas, cuente con olas individuales ocasionales de hasta aproximadamente el doble de la altura significativa. Una predicción de 2 m puede traer alguna ola de unos 4 m, y esa es la ola que llena la bañera o tumba un barco."
+       ],
+       "keyPoints": [
+        "Altura significativa: media del tercio más alto.",
+        "Cuente con olas ocasionales cercanas al doble.",
+        "Planifique para la ola grande, no para la media."
+       ],
+       "diagram": {
+        "id": "seaState",
+        "variant": "6"
+       }
+      },
+      {
+       "heading": "Periodo, mar de fondo y mar combinada",
+       "paragraphs": [
+        "El periodo de la ola importa tanto como la altura. En aguas profundas, la longitud de onda en metros es aproximadamente 1,56 veces el cuadrado del periodo: una mar de 5 segundos mide unos 40 m y un mar de fondo de 12 segundos unos 225 m. Una ola de 2 m con 5 segundos es corta y empinada y puede romper; la misma altura con 12 segundos es un mar de fondo largo y suave.",
+        "Las predicciones pueden dar por separado la mar de viento y el mar de fondo, cada uno con su altura, periodo y dirección, o una cifra combinada. Cuando el mar de fondo y la mar de viento llegan de direcciones distintas se forma una mar cruzada y confusa, incómoda y más difícil de gobernar. Dos predicciones con la misma altura pueden significar condiciones muy diferentes."
+       ],
+       "keyPoints": [
+        "Periodo corto y altura: mar empinada y rompiente.",
+        "Lea por separado mar de viento y mar de fondo: altura, periodo, dirección.",
+        "La mar cruzada de dos direcciones es confusa y agotadora."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "swell"
+       }
       }
      ]
     }
@@ -2615,6 +2674,73 @@
       "Incluye tanto el mar de viento como el mar de fondo, salvo que se indique otra cosa."
      ],
      "explanation": "La altura significativa de ola se aproxima a lo que estimaría un observador; algunas olas aisladas son mucho mayores."
+    },
+    {
+     "id": "q.sea.9",
+     "kind": "single",
+     "prompt": "Una predicción da una altura significativa de ola de 2 m. ¿Para qué ola individual máxima debe prepararse en varias horas?",
+     "options": [
+      "Unos 1 m",
+      "Unos 2 m",
+      "Unos 4 m",
+      "Unos 8 m"
+     ],
+     "answers": [
+      2
+     ],
+     "optionExplanations": [
+      "Muchas olas son más bajas, pero ese no es el riesgo.",
+      "Esa es la altura significativa, no la ola mayor.",
+      "Correcto: olas ocasionales cercanas al doble de la altura significativa.",
+      "Muy por encima de lo que produce una mar de 2 m."
+     ],
+     "explanation": "Planifique para olas ocasionales de aproximadamente el doble de la altura significativa."
+    },
+    {
+     "id": "q.sea.10",
+     "kind": "single",
+     "prompt": "Dos mares tienen ambos 2 m de altura. ¿Cuál es más peligroso para un velero pequeño?",
+     "options": [
+      "2 m con un periodo de 5 segundos",
+      "2 m con un periodo de 12 segundos",
+      "Son iguales",
+      "Depende solo de la fuerza del viento"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correcto: unos 40 m de longitud, empinada y propensa a romper.",
+      "Unos 225 m: un mar de fondo largo y suave.",
+      "El periodo cambia la pendiente.",
+      "Periodo y altura juntos determinan la pendiente."
+     ],
+     "explanation": "Un periodo corto significa olas cortas y empinadas; la misma altura con periodo largo es un mar de fondo suave.",
+     "diagram": {
+      "id": "waves",
+      "variant": "swell"
+     }
+    },
+    {
+     "id": "q.sea.11",
+     "kind": "single",
+     "prompt": "Va a entrar en un puerto cruzando una barra con mar de fondo moderado de fuera. ¿Cuándo debe cruzar?",
+     "options": [
+      "A media vaciante, con la corriente más fuerte",
+      "Con la marea entrante, cerca de la pleamar",
+      "En bajamar, cuando la barra se ve",
+      "En cualquier momento, si el motor es fiable"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "La vaciante empina el mar de fondo: el peor momento.",
+      "Correcto: máxima profundidad y corriente a favor del mar de fondo.",
+      "Mínima profundidad: las olas rompen con más facilidad.",
+      "Un motor fiable no evita la rompiente."
+     ],
+     "explanation": "Cruce las barras con marea entrante cerca de la pleamar, y nunca si rompen."
     }
    ]
   },
@@ -2673,11 +2799,11 @@
        "heading": "Usar los datos GRIB con criterio",
        "paragraphs": [
         "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
-        "Sus limitaciones: dan vientos medios, no rachas; suavizan frentes, turbonadas, brisas marinas y efectos embudo; y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Añada un margen de al menos un grado Beaufort cerca de frentes, chubascos y cabos."
+        "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Cerca de frentes, chubascos y cabos, tome el viento del GRIB como un mínimo, no como lo peor que encontrará."
        ],
        "keyPoints": [
-        "El GRIB es salida de modelo: vientos medios sin revisión humana.",
-        "No refleja rachas, turbonadas ni efectos locales.",
+        "El GRIB es salida de modelo sin revisión humana, a menudo solo viento medio.",
+        "Suaviza turbonadas, rachas y efectos locales.",
         "Compare modelos y lea las predicciones y los avisos oficiales."
        ],
        "diagram": {
@@ -2694,16 +2820,51 @@
        "heading": "Estructura y plazos",
        "paragraphs": [
         "Las predicciones marítimas suelen dar primero los avisos de temporal, después una situación general y, para cada zona, la dirección y fuerza del viento, el estado de la mar, el tiempo y la visibilidad.",
-        "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. Los avisos de temporal se emiten para fuerza 8 o superior, o para rachas de 43 nudos o más. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
+        "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. En el Reino Unido, la Met Office emite avisos de temporal para viento medio de fuerza 8 (34 nudos) o superior, o rachas de 43 nudos o más; otros servicios nacionales aplican sus propios criterios. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
         "Anote la predicción y la hora de emisión, y compárela con lo que observa. Si la predicción va retrasada respecto al tiempo observado, espere que la siguiente fase llegue antes de lo previsto."
        ],
        "keyPoints": [
         "Inminente < 6 h, pronto 6–12 h, más tarde > 12 h.",
-        "Aviso de temporal: fuerza 8 o rachas de 43 kn o más.",
+        "Reino Unido: viento medio fuerza 8+ o rachas de 43 kn+.",
         "Anote la hora de emisión y compárela con lo observado."
        ],
        "diagram": {
         "id": "forecastTimeline"
+       }
+      }
+     ]
+    },
+    {
+     "id": "forecasts.reconcile",
+     "title": "Cómo combinar las predicciones",
+     "segments": [
+      {
+       "heading": "Qué fuente para qué",
+       "paragraphs": [
+        "Cada fuente tiene su función. Los avisos (de temporal, de viento fuerte, de temporal muy duro) tienen prioridad sobre todo lo demás. Las predicciones oficiales para zonas marítimas y aguas costeras dan el criterio del predictor para el periodo siguiente; los mapas sinópticos explican el porqué. Los GRIB y las aplicaciones añaden horario y detalle, pero son salida de modelo sin revisar. Sus propias observaciones del cielo, la mar y el barómetro le dicen si todo ello se cumple.",
+        "Anote la hora de emisión y el periodo de validez de cada producto. Una predicción emitida a las 05:00 para las 24 horas siguientes es anterior a un aviso emitido a las 11:00. Cuando las fuentes discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
+       ],
+       "keyPoints": [
+        "Primero los avisos, luego las predicciones oficiales, luego los modelos.",
+        "Compruebe la hora de emisión y la validez de cada producto.",
+        "Si las fuentes discrepan, planifique para la más severa."
+       ],
+       "diagram": {
+        "id": "forecastTimeline"
+       }
+      },
+      {
+       "heading": "Confianza e incertidumbre",
+       "paragraphs": [
+        "La confianza de una predicción varía. Palabras como «ocasionalmente», «quizá» y «más tarde» indican incertidumbre en el momento o en la intensidad. Cuando distintos modelos discrepan, o las pasadas sucesivas cambian una y otra vez, la confianza es baja y sus márgenes deben ser mayores.",
+        "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el sistema va adelantado o es más profundo de lo previsto: suponga que la siguiente fase llegará antes."
+       ],
+       "keyPoints": [
+        "Discrepancia entre modelos: confianza baja, márgenes mayores.",
+        "Tiempo adelantado a la predicción: la siguiente fase llegará antes."
+       ],
+       "diagram": {
+        "id": "gribGrid"
        }
       }
      ]
@@ -2788,7 +2949,7 @@
       "Correcto: la topografía local queda suavizada.",
       "Los modelos tratan bien los grandes sistemas.",
       "Correcto: a menudo se omiten o se subestiman.",
-      "Correcto: los vientos GRIB son medios."
+      "Correcto: las rachas del modelo, si se incluyen, son estimaciones y no captan las turbonadas."
      ],
      "explanation": "Los datos GRIB son excelentes para los plazos a gran escala y flojos en efectos locales, de pequeña escala y en rachas."
     },
@@ -2896,12 +3057,12 @@
       1
      ],
      "optionExplanations": [
-      "El GRIB da vientos medios suavizados.",
+      "Los vientos GRIB son salida de modelo suavizada.",
       "Correcto: prepárese para las turbonadas que el modelo no puede resolver.",
       "Los predictores añaden el detalle que se les escapa a los modelos.",
       "Promediar ignora el riesgo de turbonadas."
      ],
-     "explanation": "Planifique para el peor caso de la predicción oficial; los vientos medios del GRIB subestiman las turbonadas."
+     "explanation": "Planifique para el peor caso de la predicción oficial; los vientos del GRIB subestiman las turbonadas."
     },
     {
      "id": "q.fc.8",
@@ -2923,6 +3084,48 @@
       "No en las predicciones marítimas de latitudes medias."
      ],
      "explanation": "«Ciclónico» advierte de que la dirección del viento cambiará considerablemente cerca del centro de una baja."
+    },
+    {
+     "id": "q.fc.9",
+     "kind": "single",
+     "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
+     "options": [
+      "15 nudos",
+      "Fuerza 4 a 5",
+      "Fuerza 6",
+      "Fuerza 7, por el aviso más reciente"
+     ],
+     "answers": [
+      3
+     ],
+     "optionExplanations": [
+      "Salida de modelo sin revisar.",
+      "Ignora el aviso más reciente.",
+      "Es el límite superior de la predicción anterior.",
+      "Correcto: el producto oficial más reciente y el más severo."
+     ],
+     "explanation": "Los avisos tienen prioridad y prevalece la hora de emisión más reciente."
+    },
+    {
+     "id": "q.fc.10",
+     "kind": "single",
+     "prompt": "Tres pasadas seguidas de un modelo han movido varias horas cada vez la llegada de un frente. ¿Qué le indica esto?",
+     "options": [
+      "El frente no llegará",
+      "La confianza es baja: amplíe sus márgenes",
+      "La pasada más reciente es segura",
+      "Promedie las tres y planifique con eso"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "Llegará; lo incierto es cuándo.",
+      "Correcto.",
+      "Las pasadas recientes son mejores, no seguras.",
+      "Promediar oculta la incertidumbre."
+     ],
+     "explanation": "Las pasadas cambiantes indican baja confianza; planifique con márgenes amplios y una alternativa."
     }
    ]
   },
@@ -2965,6 +3168,43 @@
      ]
     },
     {
+     "id": "planning.gonogo",
+     "title": "Decidir si salir o no",
+     "segments": [
+      {
+       "heading": "Fije sus límites antes de mirar",
+       "paragraphs": [
+        "Decida sus límites antes de leer la predicción, para que la predicción no le convenza de salir. Para este barco y esta tripulación: el viento máximo incluidas las rachas, el peor estado de la mar, la dirección del viento respecto al rumbo, la visibilidad mínima y si llegará con luz de día. Rebaje los límites si la tripulación está cansada, es inexperta o reducida.",
+        "Después compruebe la predicción frente a esos límites para toda la travesía más un margen, no solo para la hora de salida. Identifique puertos de refugio alcanzables con el viento previsto y el punto a partir del cual volver ya no es la opción más segura."
+       ],
+       "keyPoints": [
+        "Primero los límites: viento y rachas, mar, dirección, visibilidad, luz de día.",
+        "Compruebe toda la travesía más un margen.",
+        "Defina los refugios y el punto de no retorno."
+       ],
+       "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+       }
+      },
+      {
+       "heading": "Criterios de cambio, y motor frente a vela",
+       "paragraphs": [
+        "Acuerde antes de salir qué le hará cambiar de plan: un aviso nuevo, el barómetro bajando más deprisa de lo previsto, viento o mar por encima de sus límites, un avance más lento de lo planeado o una tripulación cansada. Cuando se cumpla uno, actúe; no espere a la siguiente predicción.",
+        "El tipo de barco cambia la decisión. Una lancha a motor puede aprovechar la velocidad para encajar en una ventana corta, pero debe reducir mucho con mar de proa, depende del combustible y del motor, y puede atravesarse con mar de popa empinada. Un velero es más lento y queda expuesto más tiempo, pero puede seguir navegando sin motor. Base el plan en una velocidad realista con la mar prevista, no en la velocidad con mar llana."
+       ],
+       "keyPoints": [
+        "Acuerde los criterios de cambio y actúe cuando se cumpla uno.",
+        "Planifique con velocidad realista en la mar prevista.",
+        "Motor: velocidad, combustible, mar de proa y de popa. Vela: más tiempo expuesto."
+       ],
+       "diagram": {
+        "id": "passagePlan"
+       }
+      }
+     ]
+    },
+    {
      "id": "planning.heavy",
      "title": "Preparación y tácticas para el mal tiempo",
      "segments": [
@@ -2988,7 +3228,7 @@
        "heading": "Tácticas",
        "paragraphs": [
         "Las opciones incluyen seguir navegando con la vela muy rizada, ponerse al pairo (foque acuartelado, mayor amollada y timón trincado a barlovento) para que la tripulación descanse y el barco aguante la mar con comodidad, correr el temporal con el mínimo de vela y estachas o un cono de arrastre a remolque para controlar la velocidad y, en condiciones de supervivencia, un ancla de capa por la proa.",
-        "La elección correcta depende del barco, de la tripulación, del resguardo disponible y de la dirección del peligro más cercano. Gobernar formando un ángulo con las crestas que rompen, en lugar de recibirlas de frente, reduce el riesgo de una tumbada. Elija lo que elija, decídalo pronto, mientras la tripulación aún tiene energía."
+        "No existe una táctica universal. La elección depende de si el barco es de vela o de motor, de su carena y estabilidad, del tamaño, la forma y el periodo de las olas, del resguardo, de la visibilidad, de la tripulación y de las indicaciones del fabricante. Mejor aún, evítelo: desvíese o busque abrigo pronto, reduzca la velocidad, reevalúe a menudo y decida mientras la tripulación aún tiene energía."
        ],
        "diagram": {
         "id": "heavyWeather"
@@ -3221,6 +3461,210 @@
       "Actúe según lo que ve ahora."
      ],
      "explanation": "Cambiar de plan en función de las condiciones es buena marinería."
+    },
+    {
+     "id": "q.pl.9",
+     "kind": "scenario",
+     "context": "En mayo tiene previsto navegar hacia el oeste de Weymouth a Dartmouth, unas 50 millas, doblando Portland Bill. Barco: velero de 10 m, tripulación de tres. Sus límites: fuerza 6, marejada, llegada con luz de día. Predicción emitida a las 05:00: «Oeste o suroeste 4 o 5, ocasionalmente 6 más tarde. Marejada. Buen tiempo. Visibilidad buena.» Frente al cabo la corriente tira hacia el oeste de 10:00 a 16:00 y hacia el este de 16:00 a 22:00.",
+     "prompt": "Tome las decisiones del patrón.",
+     "diagram": {
+      "id": "passagePlan",
+      "variant": "refuge"
+     },
+     "explanation": "Calcule el paso, manténgase lejos de la zona de corriente, fije criterios de cambio y vuelva a un refugio cuando un aviso convierta el resto de la travesía en una ceñida con viento en aumento y de noche.",
+     "steps": [
+      {
+       "id": "q.pl.9a",
+       "kind": "single",
+       "prompt": "¿Cómo afronta la zona de corriente de Portland (Portland Race)?",
+       "options": [
+        "Cruzando por el centro con la máxima corriente hacia el oeste",
+        "Manteniéndose bien separado, o usando el paso costero a la hora que indica el derrotero",
+        "Cruzando a las 16:00 haga el viento que haga",
+        "Ignorándola: fuerza 4 a 5 es moderado"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Viento contra una corriente fuerte: mar empinada y rompiente.",
+        "Correcto: siga los horarios y distancias del derrotero.",
+        "La hora debe convenir a la corriente y al viento.",
+        "Estas zonas pueden ser peligrosas con viento moderado."
+       ],
+       "explanation": "Manténgase bien separado de la zona de corriente o use el paso costero reconocido a la hora adecuada."
+      },
+      {
+       "id": "q.pl.9b",
+       "kind": "single",
+       "prompt": "A las 11:00, a la altura del cabo, se emite un aviso: «Temporal del oeste fuerza 8 previsto más tarde». ¿Cuándo se espera el temporal?",
+       "options": [
+        "En menos de 6 horas",
+        "Entre 6 y 12 horas",
+        "Más de 12 horas después de la emisión",
+        "Ya está soplando"
+       ],
+       "answers": [
+        2
+       ],
+       "optionExplanations": [
+        "Eso es «inminente».",
+        "Eso es «pronto».",
+        "Correcto: «más tarde» significa más de 12 horas después de la emisión.",
+        "Todavía no."
+       ],
+       "explanation": "«Más tarde» es más de 12 horas desde la hora de emisión."
+      },
+      {
+       "id": "q.pl.9c",
+       "kind": "numeric",
+       "prompt": "Le quedan 42 millas hasta Dartmouth. Ciñendo contra el viento del oeste, su velocidad efectiva es de 4 nudos. ¿Cuántas horas tardará en llegar?",
+       "numeric": {
+        "value": 10.5,
+        "tolerance": 0.5,
+        "unit": "h"
+       },
+       "explanation": "42 ÷ 4 son 10½ horas: llegada hacia las 21:30, ya de noche, con el viento arreciando."
+      },
+      {
+       "id": "q.pl.9d",
+       "kind": "single",
+       "prompt": "¿Cuál es la decisión marinera?",
+       "options": [
+        "Seguir: el temporal no llega hasta dentro de 12 horas",
+        "Volver a Weymouth, con viento de popa y abrigado del oeste",
+        "Ponerse al pairo frente al cabo y esperar",
+        "Seguir a motor a toda máquina para ganar tiempo"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Ceñiría con viento en aumento y llegaría de noche, fuera de sus límites.",
+        "Correcto: un corto tramo con viento de popa hasta un puerto abrigado de los ponientes.",
+        "Cerca de la zona de corriente y con costa a sotavento y viento del oeste en aumento.",
+        "La mar de proa le frenará y cansará a la tripulación."
+       ],
+       "explanation": "Se superarían los límites de luz y de viento; el puerto de refugio está cerca y a favor del viento."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.10",
+     "kind": "scenario",
+     "context": "Julio, en las Cícladas. Tiene previsto navegar de Kythnos hacia el este hasta Syros, unas 25 millas. La predicción nacional: «Norte 5 a 6 Beaufort, localmente 7 en el Egeo central a partir del mediodía; similar los próximos tres días.» Su tripulación de cuatro incluye dos principiantes.",
+     "prompt": "Planifique la travesía.",
+     "diagram": {
+      "id": "medWinds"
+     },
+     "explanation": "El meltemi suele arreciar a lo largo del día y es más fuerte en los canales y frente a los cabos. Salga temprano, cuente con efecto embudo y rachas a sotavento, y elija un refugio protegido del norte.",
+     "steps": [
+      {
+       "id": "q.pl.10a",
+       "kind": "single",
+       "prompt": "¿Cuándo debe salir?",
+       "options": [
+        "Al amanecer, antes de que arrecie",
+        "A media tarde, cuando hace más calor",
+        "A mediodía, cuando la predicción da 7",
+        "Al anochecer, porque siempre amaina"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: el meltemi suele ser más flojo a primera hora.",
+        "Suele ser la parte más ventosa del día.",
+        "El periodo más fuerte según la predicción.",
+        "A menudo amaina de noche, pero llegar a oscuras a una isla desconocida añade riesgo."
+       ],
+       "explanation": "Salga temprano para completar la travesía antes del máximo de la tarde."
+      },
+      {
+       "id": "q.pl.10b",
+       "kind": "single",
+       "prompt": "¿Dónde espera el viento más fuerte en la ruta?",
+       "options": [
+        "A sotavento de Kythnos al salir",
+        "En el canal abierto entre las islas y frente a los cabos",
+        "En el puerto de Syros",
+        "Es uniforme"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "A sotavento hay rachas pero menos viento en conjunto.",
+        "Correcto: efecto embudo entre islas y aceleración frente a los cabos.",
+        "Los puertos suelen estar abrigados.",
+        "Las islas lo hacen muy irregular."
+       ],
+       "explanation": "Cuente con un grado Beaufort o más de más en los canales y frente a los cabos."
+      },
+      {
+       "id": "q.pl.10c",
+       "kind": "single",
+       "prompt": "¿Qué fondeadero ofrece mejor abrigo para la noche?",
+       "options": [
+        "Una cala abierta al norte",
+        "Una cala en la cara sur, abierta al sur",
+        "Una rada abierta en la costa este",
+        "Cualquier cala, porque el viento cae de noche"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Abierta al meltemi y a su mar.",
+        "Correcto: pero cuente con rachas que bajan por las laderas a sotavento de montes altos.",
+        "Expuesta al mar de fondo que rodea la isla.",
+        "Puede no caer y soplar toda la noche."
+       ],
+       "explanation": "Elija abrigo del norte y tenga en cuenta las rachas que bajan por las laderas."
+      },
+      {
+       "id": "q.pl.10d",
+       "kind": "single",
+       "prompt": "El segundo día la predicción pasa a «Norte 7, localmente 8». Con dos principiantes a bordo, ¿qué hace?",
+       "options": [
+        "Navegar según lo previsto",
+        "Quedarse en puerto y esperar a que amaine el meltemi",
+        "Salir a mediodía para cruzar más rápido",
+        "Ir a motor directamente contra el viento"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Por encima de límites razonables para esta tripulación.",
+        "Correcto: las rachas de meltemi terminan; esperar solo cuesta tiempo.",
+        "La parte más fuerte del día.",
+        "Mar de proa y viento fuera de límites."
+       ],
+       "explanation": "Quédese en puerto cuando la predicción supere los límites de su tripulación."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.11",
+     "kind": "single",
+     "prompt": "Una lancha a motor (crucero a 18 nudos) y un velero (6 nudos) planean la misma travesía de 36 millas en una ventana de 4 horas antes de un frente. ¿Qué afirmación es correcta?",
+     "options": [
+      "Ambos van sobrados de tiempo",
+      "La lancha encaja en la ventana solo si mantiene su velocidad con la mar prevista",
+      "El velero es más seguro porque es más lento",
+      "Ninguno debe tener en cuenta la velocidad"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "El velero necesita unas 6 horas: no encaja.",
+      "Correcto: la mar de proa puede reducir a la mitad la velocidad de una planeadora.",
+      "Más lento significa más tiempo expuesto.",
+      "La velocidad realista es clave en la decisión."
+     ],
+     "explanation": "Planifique con velocidad realista en la mar prevista; el velero no encaja en esta ventana."
     }
    ]
   }

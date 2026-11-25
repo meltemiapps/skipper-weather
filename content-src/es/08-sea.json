@@ -67,6 +67,60 @@
             "id": "seaState",
             "variant": "6"
           }
+        },
+        {
+          "heading": "Zonas de corriente, escarceos y barras",
+          "paragraphs": [
+            "Las zonas de corriente fuerte (tidal races) se forman donde una corriente intensa se estrecha alrededor de un cabo o pasa sobre un fondo irregular; los escarceos son la mar corta, empinada y rompiente que producen. Portland Bill, St Alban's Head y el Alderney Race son ejemplos conocidos. Con viento contra corriente pueden ser peligrosos incluso con vientos moderados, y el mar de fondo los empeora.",
+            "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, sobre todo en la vaciante, cuando la corriente saliente empina las olas. Cruce una barra con la marea entrante, cerca de la pleamar, y nunca si está rompiendo. Consulte el derrotero o el almanaque náutico para los horarios y distancias locales: manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
+          ],
+          "keyPoints": [
+            "Zonas de corriente y escarceos: corriente fuerte en cabos y fondos irregulares.",
+            "Las barras rompen más en la vaciante con mar de fondo.",
+            "Cruce con marea entrante cerca de la pleamar; nunca si rompe."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "windAgainstTide"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sea.reading",
+      "title": "Cómo leer una predicción de oleaje",
+      "segments": [
+        {
+          "heading": "Altura significativa y las olas mayores",
+          "paragraphs": [
+            "Las predicciones de oleaje y los datos de las boyas dan la altura significativa de ola: la media del tercio más alto de las olas, cercana a lo que estimaría un observador experimentado. Muchas olas son más bajas y algunas mucho más altas.",
+            "En unas pocas horas, cuente con olas individuales ocasionales de hasta aproximadamente el doble de la altura significativa. Una predicción de 2 m puede traer alguna ola de unos 4 m, y esa es la ola que llena la bañera o tumba un barco."
+          ],
+          "keyPoints": [
+            "Altura significativa: media del tercio más alto.",
+            "Cuente con olas ocasionales cercanas al doble.",
+            "Planifique para la ola grande, no para la media."
+          ],
+          "diagram": {
+            "id": "seaState",
+            "variant": "6"
+          }
+        },
+        {
+          "heading": "Periodo, mar de fondo y mar combinada",
+          "paragraphs": [
+            "El periodo de la ola importa tanto como la altura. En aguas profundas, la longitud de onda en metros es aproximadamente 1,56 veces el cuadrado del periodo: una mar de 5 segundos mide unos 40 m y un mar de fondo de 12 segundos unos 225 m. Una ola de 2 m con 5 segundos es corta y empinada y puede romper; la misma altura con 12 segundos es un mar de fondo largo y suave.",
+            "Las predicciones pueden dar por separado la mar de viento y el mar de fondo, cada uno con su altura, periodo y dirección, o una cifra combinada. Cuando el mar de fondo y la mar de viento llegan de direcciones distintas se forma una mar cruzada y confusa, incómoda y más difícil de gobernar. Dos predicciones con la misma altura pueden significar condiciones muy diferentes."
+          ],
+          "keyPoints": [
+            "Periodo corto y altura: mar empinada y rompiente.",
+            "Lea por separado mar de viento y mar de fondo: altura, periodo, dirección.",
+            "La mar cruzada de dos direcciones es confusa y agotadora."
+          ],
+          "diagram": {
+            "id": "waves",
+            "variant": "swell"
+          }
         }
       ]
     }
@@ -278,6 +332,73 @@
         "Incluye tanto el mar de viento como el mar de fondo, salvo que se indique otra cosa."
       ],
       "explanation": "La altura significativa de ola se aproxima a lo que estimaría un observador; algunas olas aisladas son mucho mayores."
+    },
+    {
+      "id": "q.sea.9",
+      "kind": "single",
+      "prompt": "Una predicción da una altura significativa de ola de 2 m. ¿Para qué ola individual máxima debe prepararse en varias horas?",
+      "options": [
+        "Unos 1 m",
+        "Unos 2 m",
+        "Unos 4 m",
+        "Unos 8 m"
+      ],
+      "answers": [
+        2
+      ],
+      "optionExplanations": [
+        "Muchas olas son más bajas, pero ese no es el riesgo.",
+        "Esa es la altura significativa, no la ola mayor.",
+        "Correcto: olas ocasionales cercanas al doble de la altura significativa.",
+        "Muy por encima de lo que produce una mar de 2 m."
+      ],
+      "explanation": "Planifique para olas ocasionales de aproximadamente el doble de la altura significativa."
+    },
+    {
+      "id": "q.sea.10",
+      "kind": "single",
+      "prompt": "Dos mares tienen ambos 2 m de altura. ¿Cuál es más peligroso para un velero pequeño?",
+      "options": [
+        "2 m con un periodo de 5 segundos",
+        "2 m con un periodo de 12 segundos",
+        "Son iguales",
+        "Depende solo de la fuerza del viento"
+      ],
+      "answers": [
+        0
+      ],
+      "optionExplanations": [
+        "Correcto: unos 40 m de longitud, empinada y propensa a romper.",
+        "Unos 225 m: un mar de fondo largo y suave.",
+        "El periodo cambia la pendiente.",
+        "Periodo y altura juntos determinan la pendiente."
+      ],
+      "explanation": "Un periodo corto significa olas cortas y empinadas; la misma altura con periodo largo es un mar de fondo suave.",
+      "diagram": {
+        "id": "waves",
+        "variant": "swell"
+      }
+    },
+    {
+      "id": "q.sea.11",
+      "kind": "single",
+      "prompt": "Va a entrar en un puerto cruzando una barra con mar de fondo moderado de fuera. ¿Cuándo debe cruzar?",
+      "options": [
+        "A media vaciante, con la corriente más fuerte",
+        "Con la marea entrante, cerca de la pleamar",
+        "En bajamar, cuando la barra se ve",
+        "En cualquier momento, si el motor es fiable"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "La vaciante empina el mar de fondo: el peor momento.",
+        "Correcto: máxima profundidad y corriente a favor del mar de fondo.",
+        "Mínima profundidad: las olas rompen con más facilidad.",
+        "Un motor fiable no evita la rompiente."
+      ],
+      "explanation": "Cruce las barras con marea entrante cerca de la pleamar, y nunca si rompen."
     }
   ]
 }

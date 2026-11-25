@@ -37,6 +37,43 @@
       ]
     },
     {
+      "id": "planning.gonogo",
+      "title": "Go/no-go decisions",
+      "segments": [
+        {
+          "heading": "Set your limits before you look",
+          "paragraphs": [
+            "Decide your limits before reading the forecast, so the forecast cannot talk you into going. For this boat and crew: the strongest wind including gusts, the highest sea state, wind direction relative to the course, minimum visibility, and whether you will arrive in daylight. Lower the limits for a tired, inexperienced or small crew.",
+            "Then check the forecast against those limits for the whole passage plus a margin, not just the departure time. Identify fallback ports you can reach in the forecast wind, and the point beyond which turning back is no longer the safer option."
+          ],
+          "keyPoints": [
+            "Fix limits first: wind and gusts, sea, direction, visibility, daylight.",
+            "Check the whole passage plus a margin.",
+            "Name fallback ports and the point of no return."
+          ],
+          "diagram": {
+            "id": "passagePlan",
+            "variant": "refuge"
+          }
+        },
+        {
+          "heading": "Triggers, and motor versus sail",
+          "paragraphs": [
+            "Agree triggers for changing the plan before you leave: a new warning, the barometer falling faster than forecast, the wind or sea above your limits, slower progress than planned, or a tiring crew. When a trigger is met, act on it; do not wait for the next forecast.",
+            "Boat type changes the decision. A motor cruiser can use speed to fit a short window, but must slow right down in head seas, depends on fuel and on the engine, and can broach in steep following seas. A sailing yacht is slower, so stays exposed for longer, but can keep moving without the engine. Base the plan on realistic speed in the expected sea, not on flat-water speed."
+          ],
+          "keyPoints": [
+            "Agree triggers in advance and act when one is met.",
+            "Plan on realistic speed in the expected sea.",
+            "Motor: speed, fuel, head and following seas. Sail: longer exposure."
+          ],
+          "diagram": {
+            "id": "passagePlan"
+          }
+        }
+      ]
+    },
+    {
       "id": "planning.heavy",
       "title": "Heavy-weather preparation and tactics",
       "segments": [
@@ -60,7 +97,7 @@
           "heading": "Tactics",
           "paragraphs": [
             "Options include continuing under deeply reefed sail, heaving-to (backed headsail, eased main, helm lashed to windward) to rest the crew and ride the seas comfortably, running off under minimal sail with warps or a drogue to control speed, and in survival conditions a sea anchor from the bow.",
-            "The right choice depends on the boat, the crew, the sea room and the direction of the nearest danger. Steering at an angle to breaking crests, rather than square to them, reduces the risk of a knockdown. Whatever you choose, decide early while the crew still has energy."
+            "There is no universal tactic. The right choice depends on sail or power, hull form and stability, the size, shape and period of the seas, sea room, visibility, the crew and the builder's guidance. Better still, avoid it: divert or seek shelter early, reduce speed and reassess often, and decide while the crew still has energy."
           ],
           "diagram": {
             "id": "heavyWeather"
@@ -293,6 +330,210 @@
         "Act on what you see now."
       ],
       "explanation": "Changing plan in response to conditions is good seamanship."
+    },
+    {
+      "id": "q.pl.9",
+      "kind": "scenario",
+      "context": "In May you plan to sail west from Weymouth to Dartmouth, about 50 miles, rounding Portland Bill. Boat: 10 m yacht, crew of three. Your limits: Force 6, moderate sea, arrive in daylight. Forecast issued 05:00: 'West or south-west 4 or 5, occasionally 6 later. Moderate. Fair. Good.' Off the Bill the stream runs west from 10:00 to 16:00 and east from 16:00 to 22:00.",
+      "prompt": "Make the skipper's decisions.",
+      "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+      },
+      "explanation": "Time the race, keep well clear of it, set triggers, and turn back to shelter when a warning makes the rest of the passage a beat into a rising gale in the dark.",
+      "steps": [
+        {
+          "id": "q.pl.9a",
+          "kind": "single",
+          "prompt": "How do you deal with Portland Race?",
+          "options": [
+            "Go through the middle of the race at maximum westgoing stream",
+            "Keep well clear, or use the inshore passage at the time the pilot book gives",
+            "Go through at 16:00 whatever the wind",
+            "Ignore it: Force 4 to 5 is moderate"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Wind against a strong stream in the race: steep breaking seas.",
+            "Correct: follow the pilot book's timing and clearances.",
+            "Timing must suit both stream and wind.",
+            "Races can be dangerous in moderate winds."
+          ],
+          "explanation": "Keep well off a race or use the recognised inshore passage at the right time."
+        },
+        {
+          "id": "q.pl.9b",
+          "kind": "single",
+          "prompt": "At 11:00, abeam the Bill, a gale warning is broadcast: 'Westerly gale 8 expected later'. When is the gale expected?",
+          "options": [
+            "Within 6 hours",
+            "6 to 12 hours",
+            "More than 12 hours after issue",
+            "It is already blowing"
+          ],
+          "answers": [
+            2
+          ],
+          "optionExplanations": [
+            "That is 'imminent'.",
+            "That is 'soon'.",
+            "Correct: 'later' means more than 12 hours after issue.",
+            "Not yet."
+          ],
+          "explanation": "'Later' is more than 12 hours from the time of issue."
+        },
+        {
+          "id": "q.pl.9c",
+          "kind": "numeric",
+          "prompt": "Dartmouth is 42 miles on. Beating into the westerly your speed made good is 4 knots. How many hours to arrive?",
+          "numeric": {
+            "value": 10.5,
+            "tolerance": 0.5,
+            "unit": "h"
+          },
+          "explanation": "42 ÷ 4 is 10½ hours: arriving around 21:30, after dark, as the wind rises."
+        },
+        {
+          "id": "q.pl.9d",
+          "kind": "single",
+          "prompt": "What is the seamanlike decision?",
+          "options": [
+            "Press on: the gale is not due for 12 hours",
+            "Turn back to Weymouth, downwind and sheltered from the west",
+            "Heave to off the Bill and wait",
+            "Motor into it at full power to save time"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "You would beat into rising wind and arrive in the dark, beyond your limits.",
+            "Correct: a short, downwind run to a harbour sheltered from westerlies.",
+            "Close to the race and a lee shore in a rising westerly.",
+            "Head seas will slow you and tire the crew."
+          ],
+          "explanation": "Your daylight and wind limits will both be broken; the fallback port is close and downwind."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.10",
+      "kind": "scenario",
+      "context": "July, in the Cyclades. You plan to sail from Kythnos east to Syros, about 25 miles. The national forecast: 'North 5 to 6 Beaufort, locally 7 in the central Aegean from midday; similar for the next three days.' Your crew of four includes two beginners.",
+      "prompt": "Plan the passage.",
+      "diagram": {
+        "id": "medWinds"
+      },
+      "explanation": "The Meltemi usually builds through the day and is strongest in the channels and off capes. Leave early, expect funnelling and lee gusts, and choose shelter from the north.",
+      "steps": [
+        {
+          "id": "q.pl.10a",
+          "kind": "single",
+          "prompt": "When should you leave?",
+          "options": [
+            "At first light, before the wind builds",
+            "Mid-afternoon, when it is warmest",
+            "At midday, when the forecast says 7",
+            "At dusk, when it always drops"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: the Meltemi is usually lightest in the early morning.",
+            "Usually the windiest part of the day.",
+            "The forecast's strongest period.",
+            "It often eases at night, but arriving at an unfamiliar island in the dark adds risk."
+          ],
+          "explanation": "Leave early to complete the passage before the afternoon peak."
+        },
+        {
+          "id": "q.pl.10b",
+          "kind": "single",
+          "prompt": "Where on the route do you expect the strongest wind?",
+          "options": [
+            "In the lee of Kythnos at departure",
+            "In the open channel between the islands and off the capes",
+            "In Syros harbour",
+            "It is uniform"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The lee is gusty but less wind overall.",
+            "Correct: funnelling between islands and acceleration off capes.",
+            "Harbours are usually sheltered.",
+            "Islands make it very uneven."
+          ],
+          "explanation": "Expect a force or more extra in the channels and off headlands."
+        },
+        {
+          "id": "q.pl.10c",
+          "kind": "single",
+          "prompt": "Which anchorage gives the best shelter for the night?",
+          "options": [
+            "A bay open to the north",
+            "A bay on the south side, open to the south",
+            "An open roadstead on the east coast",
+            "Any bay, since the wind drops at night"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Open to the Meltemi and its sea.",
+            "Correct: but expect gusts down the slopes in the lee of high ground.",
+            "Exposed to swell wrapping round.",
+            "It may not drop, and can blow all night."
+          ],
+          "explanation": "Choose shelter from the north, and allow for downslope gusts."
+        },
+        {
+          "id": "q.pl.10d",
+          "kind": "single",
+          "prompt": "On day two the forecast becomes 'North 7, locally 8'. With two beginners aboard, what do you do?",
+          "options": [
+            "Sail as planned",
+            "Stay in harbour and wait for the Meltemi to ease",
+            "Leave at noon to cross faster",
+            "Motor directly into it"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Above sensible limits for this crew.",
+            "Correct: Meltemi spells end; waiting costs only time.",
+            "The strongest part of the day.",
+            "Head seas and wind beyond limits."
+          ],
+          "explanation": "Stay put when the forecast exceeds your crew's limits."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.11",
+      "kind": "single",
+      "prompt": "A motor cruiser (cruising at 18 knots) and a sailing yacht (6 knots) plan the same 36-mile passage in a 4-hour window before a front. Which statement is right?",
+      "options": [
+        "Both have plenty of time",
+        "The motor cruiser fits the window only if it can keep its speed in the expected sea",
+        "The yacht is safer because it is slower",
+        "Neither should consider speed"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "The yacht needs about 6 hours: it does not fit.",
+        "Correct: head seas can halve a planing boat's speed.",
+        "Slower means longer exposure.",
+        "Realistic speed is central to the decision."
+      ],
+      "explanation": "Plan on realistic speed in the expected sea; the yacht does not fit this window at all."
     }
   ]
 }

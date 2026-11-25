@@ -37,6 +37,43 @@
       ]
     },
     {
+      "id": "planning.gonogo",
+      "title": "Decidir si salir o no",
+      "segments": [
+        {
+          "heading": "Fije sus límites antes de mirar",
+          "paragraphs": [
+            "Decida sus límites antes de leer la predicción, para que la predicción no le convenza de salir. Para este barco y esta tripulación: el viento máximo incluidas las rachas, el peor estado de la mar, la dirección del viento respecto al rumbo, la visibilidad mínima y si llegará con luz de día. Rebaje los límites si la tripulación está cansada, es inexperta o reducida.",
+            "Después compruebe la predicción frente a esos límites para toda la travesía más un margen, no solo para la hora de salida. Identifique puertos de refugio alcanzables con el viento previsto y el punto a partir del cual volver ya no es la opción más segura."
+          ],
+          "keyPoints": [
+            "Primero los límites: viento y rachas, mar, dirección, visibilidad, luz de día.",
+            "Compruebe toda la travesía más un margen.",
+            "Defina los refugios y el punto de no retorno."
+          ],
+          "diagram": {
+            "id": "passagePlan",
+            "variant": "refuge"
+          }
+        },
+        {
+          "heading": "Criterios de cambio, y motor frente a vela",
+          "paragraphs": [
+            "Acuerde antes de salir qué le hará cambiar de plan: un aviso nuevo, el barómetro bajando más deprisa de lo previsto, viento o mar por encima de sus límites, un avance más lento de lo planeado o una tripulación cansada. Cuando se cumpla uno, actúe; no espere a la siguiente predicción.",
+            "El tipo de barco cambia la decisión. Una lancha a motor puede aprovechar la velocidad para encajar en una ventana corta, pero debe reducir mucho con mar de proa, depende del combustible y del motor, y puede atravesarse con mar de popa empinada. Un velero es más lento y queda expuesto más tiempo, pero puede seguir navegando sin motor. Base el plan en una velocidad realista con la mar prevista, no en la velocidad con mar llana."
+          ],
+          "keyPoints": [
+            "Acuerde los criterios de cambio y actúe cuando se cumpla uno.",
+            "Planifique con velocidad realista en la mar prevista.",
+            "Motor: velocidad, combustible, mar de proa y de popa. Vela: más tiempo expuesto."
+          ],
+          "diagram": {
+            "id": "passagePlan"
+          }
+        }
+      ]
+    },
+    {
       "id": "planning.heavy",
       "title": "Preparación y tácticas para el mal tiempo",
       "segments": [
@@ -60,7 +97,7 @@
           "heading": "Tácticas",
           "paragraphs": [
             "Las opciones incluyen seguir navegando con la vela muy rizada, ponerse al pairo (foque acuartelado, mayor amollada y timón trincado a barlovento) para que la tripulación descanse y el barco aguante la mar con comodidad, correr el temporal con el mínimo de vela y estachas o un cono de arrastre a remolque para controlar la velocidad y, en condiciones de supervivencia, un ancla de capa por la proa.",
-            "La elección correcta depende del barco, de la tripulación, del resguardo disponible y de la dirección del peligro más cercano. Gobernar formando un ángulo con las crestas que rompen, en lugar de recibirlas de frente, reduce el riesgo de una tumbada. Elija lo que elija, decídalo pronto, mientras la tripulación aún tiene energía."
+            "No existe una táctica universal. La elección depende de si el barco es de vela o de motor, de su carena y estabilidad, del tamaño, la forma y el periodo de las olas, del resguardo, de la visibilidad, de la tripulación y de las indicaciones del fabricante. Mejor aún, evítelo: desvíese o busque abrigo pronto, reduzca la velocidad, reevalúe a menudo y decida mientras la tripulación aún tiene energía."
           ],
           "diagram": {
             "id": "heavyWeather"
@@ -293,6 +330,210 @@
         "Actúe según lo que ve ahora."
       ],
       "explanation": "Cambiar de plan en función de las condiciones es buena marinería."
+    },
+    {
+      "id": "q.pl.9",
+      "kind": "scenario",
+      "context": "En mayo tiene previsto navegar hacia el oeste de Weymouth a Dartmouth, unas 50 millas, doblando Portland Bill. Barco: velero de 10 m, tripulación de tres. Sus límites: fuerza 6, marejada, llegada con luz de día. Predicción emitida a las 05:00: «Oeste o suroeste 4 o 5, ocasionalmente 6 más tarde. Marejada. Buen tiempo. Visibilidad buena.» Frente al cabo la corriente tira hacia el oeste de 10:00 a 16:00 y hacia el este de 16:00 a 22:00.",
+      "prompt": "Tome las decisiones del patrón.",
+      "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+      },
+      "explanation": "Calcule el paso, manténgase lejos de la zona de corriente, fije criterios de cambio y vuelva a un refugio cuando un aviso convierta el resto de la travesía en una ceñida con viento en aumento y de noche.",
+      "steps": [
+        {
+          "id": "q.pl.9a",
+          "kind": "single",
+          "prompt": "¿Cómo afronta la zona de corriente de Portland (Portland Race)?",
+          "options": [
+            "Cruzando por el centro con la máxima corriente hacia el oeste",
+            "Manteniéndose bien separado, o usando el paso costero a la hora que indica el derrotero",
+            "Cruzando a las 16:00 haga el viento que haga",
+            "Ignorándola: fuerza 4 a 5 es moderado"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Viento contra una corriente fuerte: mar empinada y rompiente.",
+            "Correcto: siga los horarios y distancias del derrotero.",
+            "La hora debe convenir a la corriente y al viento.",
+            "Estas zonas pueden ser peligrosas con viento moderado."
+          ],
+          "explanation": "Manténgase bien separado de la zona de corriente o use el paso costero reconocido a la hora adecuada."
+        },
+        {
+          "id": "q.pl.9b",
+          "kind": "single",
+          "prompt": "A las 11:00, a la altura del cabo, se emite un aviso: «Temporal del oeste fuerza 8 previsto más tarde». ¿Cuándo se espera el temporal?",
+          "options": [
+            "En menos de 6 horas",
+            "Entre 6 y 12 horas",
+            "Más de 12 horas después de la emisión",
+            "Ya está soplando"
+          ],
+          "answers": [
+            2
+          ],
+          "optionExplanations": [
+            "Eso es «inminente».",
+            "Eso es «pronto».",
+            "Correcto: «más tarde» significa más de 12 horas después de la emisión.",
+            "Todavía no."
+          ],
+          "explanation": "«Más tarde» es más de 12 horas desde la hora de emisión."
+        },
+        {
+          "id": "q.pl.9c",
+          "kind": "numeric",
+          "prompt": "Le quedan 42 millas hasta Dartmouth. Ciñendo contra el viento del oeste, su velocidad efectiva es de 4 nudos. ¿Cuántas horas tardará en llegar?",
+          "numeric": {
+            "value": 10.5,
+            "tolerance": 0.5,
+            "unit": "h"
+          },
+          "explanation": "42 ÷ 4 son 10½ horas: llegada hacia las 21:30, ya de noche, con el viento arreciando."
+        },
+        {
+          "id": "q.pl.9d",
+          "kind": "single",
+          "prompt": "¿Cuál es la decisión marinera?",
+          "options": [
+            "Seguir: el temporal no llega hasta dentro de 12 horas",
+            "Volver a Weymouth, con viento de popa y abrigado del oeste",
+            "Ponerse al pairo frente al cabo y esperar",
+            "Seguir a motor a toda máquina para ganar tiempo"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Ceñiría con viento en aumento y llegaría de noche, fuera de sus límites.",
+            "Correcto: un corto tramo con viento de popa hasta un puerto abrigado de los ponientes.",
+            "Cerca de la zona de corriente y con costa a sotavento y viento del oeste en aumento.",
+            "La mar de proa le frenará y cansará a la tripulación."
+          ],
+          "explanation": "Se superarían los límites de luz y de viento; el puerto de refugio está cerca y a favor del viento."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.10",
+      "kind": "scenario",
+      "context": "Julio, en las Cícladas. Tiene previsto navegar de Kythnos hacia el este hasta Syros, unas 25 millas. La predicción nacional: «Norte 5 a 6 Beaufort, localmente 7 en el Egeo central a partir del mediodía; similar los próximos tres días.» Su tripulación de cuatro incluye dos principiantes.",
+      "prompt": "Planifique la travesía.",
+      "diagram": {
+        "id": "medWinds"
+      },
+      "explanation": "El meltemi suele arreciar a lo largo del día y es más fuerte en los canales y frente a los cabos. Salga temprano, cuente con efecto embudo y rachas a sotavento, y elija un refugio protegido del norte.",
+      "steps": [
+        {
+          "id": "q.pl.10a",
+          "kind": "single",
+          "prompt": "¿Cuándo debe salir?",
+          "options": [
+            "Al amanecer, antes de que arrecie",
+            "A media tarde, cuando hace más calor",
+            "A mediodía, cuando la predicción da 7",
+            "Al anochecer, porque siempre amaina"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correcto: el meltemi suele ser más flojo a primera hora.",
+            "Suele ser la parte más ventosa del día.",
+            "El periodo más fuerte según la predicción.",
+            "A menudo amaina de noche, pero llegar a oscuras a una isla desconocida añade riesgo."
+          ],
+          "explanation": "Salga temprano para completar la travesía antes del máximo de la tarde."
+        },
+        {
+          "id": "q.pl.10b",
+          "kind": "single",
+          "prompt": "¿Dónde espera el viento más fuerte en la ruta?",
+          "options": [
+            "A sotavento de Kythnos al salir",
+            "En el canal abierto entre las islas y frente a los cabos",
+            "En el puerto de Syros",
+            "Es uniforme"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "A sotavento hay rachas pero menos viento en conjunto.",
+            "Correcto: efecto embudo entre islas y aceleración frente a los cabos.",
+            "Los puertos suelen estar abrigados.",
+            "Las islas lo hacen muy irregular."
+          ],
+          "explanation": "Cuente con un grado Beaufort o más de más en los canales y frente a los cabos."
+        },
+        {
+          "id": "q.pl.10c",
+          "kind": "single",
+          "prompt": "¿Qué fondeadero ofrece mejor abrigo para la noche?",
+          "options": [
+            "Una cala abierta al norte",
+            "Una cala en la cara sur, abierta al sur",
+            "Una rada abierta en la costa este",
+            "Cualquier cala, porque el viento cae de noche"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Abierta al meltemi y a su mar.",
+            "Correcto: pero cuente con rachas que bajan por las laderas a sotavento de montes altos.",
+            "Expuesta al mar de fondo que rodea la isla.",
+            "Puede no caer y soplar toda la noche."
+          ],
+          "explanation": "Elija abrigo del norte y tenga en cuenta las rachas que bajan por las laderas."
+        },
+        {
+          "id": "q.pl.10d",
+          "kind": "single",
+          "prompt": "El segundo día la predicción pasa a «Norte 7, localmente 8». Con dos principiantes a bordo, ¿qué hace?",
+          "options": [
+            "Navegar según lo previsto",
+            "Quedarse en puerto y esperar a que amaine el meltemi",
+            "Salir a mediodía para cruzar más rápido",
+            "Ir a motor directamente contra el viento"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Por encima de límites razonables para esta tripulación.",
+            "Correcto: las rachas de meltemi terminan; esperar solo cuesta tiempo.",
+            "La parte más fuerte del día.",
+            "Mar de proa y viento fuera de límites."
+          ],
+          "explanation": "Quédese en puerto cuando la predicción supere los límites de su tripulación."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.11",
+      "kind": "single",
+      "prompt": "Una lancha a motor (crucero a 18 nudos) y un velero (6 nudos) planean la misma travesía de 36 millas en una ventana de 4 horas antes de un frente. ¿Qué afirmación es correcta?",
+      "options": [
+        "Ambos van sobrados de tiempo",
+        "La lancha encaja en la ventana solo si mantiene su velocidad con la mar prevista",
+        "El velero es más seguro porque es más lento",
+        "Ninguno debe tener en cuenta la velocidad"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "El velero necesita unas 6 horas: no encaja.",
+        "Correcto: la mar de proa puede reducir a la mitad la velocidad de una planeadora.",
+        "Más lento significa más tiempo expuesto.",
+        "La velocidad realista es clave en la decisión."
+      ],
+      "explanation": "Planifique con velocidad realista en la mar prevista; el velero no encaja en esta ventana."
     }
   ]
 }

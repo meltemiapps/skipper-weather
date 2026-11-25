@@ -22,11 +22,11 @@
         {
           "heading": "Mature stage and movement",
           "paragraphs": [
-            "A mature depression in the Atlantic typically moves east or north-east at 20 to 30 knots, steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
-            "A depression that deepens by 24 hPa or more in 24 hours is said to be undergoing explosive deepening. Expect severe gales and very rapid pressure falls."
+            "A mature Atlantic depression often moves east or north-east at something like 20 to 30 knots, but speeds vary widely. It is steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
+            "Explosive (rapid) deepening is conventionally a fall in central pressure of 24 hPa in 24 hours at 60° latitude; the threshold scales with latitude and is about 21 hPa at 50° N. Expect severe gales and very rapid pressure falls."
           ],
           "keyPoints": [
-            "Typical speed 20–30 knots, moving east or north-east.",
+            "Often 20–30 knots east or north-east; speeds vary.",
             "Direction follows warm-sector isobars.",
             "Watch for secondary lows on trailing cold fronts."
           ],
@@ -208,7 +208,7 @@
         "tolerance": 0,
         "unit": "hPa"
       },
-      "explanation": "1000 minus 972 is 28 hPa in 24 hours, more than the 24 hPa threshold for explosive deepening: expect severe gales."
+      "explanation": "1000 minus 972 is 28 hPa in 24 hours, above the explosive-deepening threshold at UK latitudes (about 21 to 24 hPa): expect severe gales."
     },
     {
       "id": "q.sys.7",

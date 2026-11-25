@@ -225,6 +225,11 @@
    "id": "sirocco",
    "term": "Sirocco",
    "definition": "A hot southerly to south-easterly wind from North Africa, humid by the time it reaches Europe, often bringing dust and poor visibility."
+  },
+  {
+   "id": "wavePeriod",
+   "term": "Wave period",
+   "definition": "The time in seconds between successive crests passing a fixed point. Short periods mean steeper seas."
   }
  ],
  "diagramLabels": {
@@ -968,11 +973,11 @@
       {
        "heading": "Mature stage and movement",
        "paragraphs": [
-        "A mature depression in the Atlantic typically moves east or north-east at 20 to 30 knots, steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
-        "A depression that deepens by 24 hPa or more in 24 hours is said to be undergoing explosive deepening. Expect severe gales and very rapid pressure falls."
+        "A mature Atlantic depression often moves east or north-east at something like 20 to 30 knots, but speeds vary widely. It is steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
+        "Explosive (rapid) deepening is conventionally a fall in central pressure of 24 hPa in 24 hours at 60° latitude; the threshold scales with latitude and is about 21 hPa at 50° N. Expect severe gales and very rapid pressure falls."
        ],
        "keyPoints": [
-        "Typical speed 20–30 knots, moving east or north-east.",
+        "Often 20–30 knots east or north-east; speeds vary.",
         "Direction follows warm-sector isobars.",
         "Watch for secondary lows on trailing cold fronts."
        ],
@@ -1154,7 +1159,7 @@
       "tolerance": 0,
       "unit": "hPa"
      },
-     "explanation": "1000 minus 972 is 28 hPa in 24 hours, more than the 24 hPa threshold for explosive deepening: expect severe gales."
+     "explanation": "1000 minus 972 is 28 hPa in 24 hours, above the explosive-deepening threshold at UK latitudes (about 21 to 24 hPa): expect severe gales."
     },
     {
      "id": "q.sys.7",
@@ -1218,7 +1223,7 @@
        "heading": "Approach",
        "paragraphs": [
         "Warm air rides slowly up over the cold air ahead on a shallow slope, about 1 in 150. Its cloud therefore arrives long before the surface front: cirrus may appear several hundred miles ahead, typically 12 to 24 hours before the front.",
-        "The cloud thickens and lowers: cirrus, then cirrostratus with a halo around the sun or moon, then altostratus through which the sun looks watery, then nimbostratus with continuous rain. Pressure falls steadily and the wind backs and freshens. Visibility deteriorates in the rain and frontal fog can form."
+        "In the typical sequence the cloud thickens and lowers: cirrus, then cirrostratus with a halo around the sun or moon, then altostratus through which the sun looks watery, then nimbostratus with continuous rain. Pressure falls steadily and the wind backs and freshens. Visibility deteriorates in the rain and frontal fog can form. Real fronts vary with season, terrain, occlusion and showers, so treat this as a guide and check it against the forecast."
        ],
        "diagram": {
         "id": "frontSection",
@@ -1251,7 +1256,7 @@
        "heading": "A sharper boundary",
        "paragraphs": [
         "Cold air undercuts the warm air on a steeper slope, about 1 in 50 to 1 in 80, so the weather is concentrated in a narrower band, often only an hour or two of heavy rain. Cumulonimbus may be embedded, bringing squalls, hail and thunder; a line of squalls sometimes runs ahead of the front.",
-        "At the front the wind veers sharply, typically from south-west to west or north-west, often with a violent squall. Pressure, having been steady, rises sharply. Temperature and dew point fall."
+        "At a typical cold front the wind veers sharply, often from south-west to west or north-west, often with a violent squall. Pressure, having been steady, rises sharply. Temperature and dew point fall."
        ],
        "diagram": {
         "id": "frontSection",
@@ -2404,6 +2409,60 @@
         "id": "seaState",
         "variant": "6"
        }
+      },
+      {
+       "heading": "Races, overfalls and bars",
+       "paragraphs": [
+        "Tidal races form where a strong stream is squeezed round a headland or over an uneven bottom; overfalls are the steep, breaking seas this produces. Portland Bill, St Alban's Head and the Alderney Race are well-known examples. With wind against the stream they can be dangerous even in moderate winds, and a swell running in makes them worse.",
+        "Harbour bars break when an onshore swell meets shallow water, worst on the ebb when the outgoing stream steepens the waves. Cross a bar on the flood, near high water, and not at all if it is breaking. Use the pilot book or almanac for local timings and clearances: keep well off a race or take the recognised inshore passage at the right time."
+       ],
+       "keyPoints": [
+        "Races and overfalls: strong stream over headlands and uneven ground.",
+        "Bars break worst on the ebb with onshore swell.",
+        "Cross on the flood near high water; never when breaking."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "windAgainstTide"
+       }
+      }
+     ]
+    },
+    {
+     "id": "sea.reading",
+     "title": "Reading a wave forecast",
+     "segments": [
+      {
+       "heading": "Significant height and the bigger waves",
+       "paragraphs": [
+        "Wave forecasts and buoy reports give the significant wave height: the average height of the highest third of the waves, close to what an experienced observer would estimate. Many waves are lower, and some are much higher.",
+        "Over a few hours, expect occasional individual waves of up to about twice the significant height. A forecast of 2 m can therefore bring the odd wave of around 4 m, and that is the wave that fills a cockpit or knocks a boat down."
+       ],
+       "keyPoints": [
+        "Significant height: mean of the highest third.",
+        "Expect occasional waves near twice that height.",
+        "Plan for the big wave, not the average."
+       ],
+       "diagram": {
+        "id": "seaState",
+        "variant": "6"
+       }
+      },
+      {
+       "heading": "Period, swell and combined seas",
+       "paragraphs": [
+        "Wave period matters as much as height. In deep water the wavelength in metres is roughly 1.56 times the period squared: a 5-second sea is about 40 m long, a 12-second swell about 225 m. A 2 m wave at 5 seconds is short and steep and may break; the same height at 12 seconds is a long, gentle swell.",
+        "Forecasts may give wind sea and swell separately, each with its own height, period and direction, or a combined figure. When swell and wind sea come from different directions the result is a confused cross sea, which is uncomfortable and harder to steer through. Two forecasts with the same height can therefore mean very different conditions."
+       ],
+       "keyPoints": [
+        "Short period plus height means steep, breaking seas.",
+        "Read wind sea and swell separately: height, period, direction.",
+        "Cross seas from two directions are confused and tiring."
+       ],
+       "diagram": {
+        "id": "waves",
+        "variant": "swell"
+       }
       }
      ]
     }
@@ -2615,6 +2674,73 @@
       "It includes both wind sea and swell unless stated."
      ],
      "explanation": "Significant wave height approximates what an observer would estimate; occasional waves are much larger."
+    },
+    {
+     "id": "q.sea.9",
+     "kind": "single",
+     "prompt": "A forecast gives a significant wave height of 2 m. What is the largest individual wave you should prepare for over several hours?",
+     "options": [
+      "About 1 m",
+      "About 2 m",
+      "About 4 m",
+      "About 8 m"
+     ],
+     "answers": [
+      2
+     ],
+     "optionExplanations": [
+      "Many waves are lower, but that is not the risk.",
+      "That is the significant height, not the largest wave.",
+      "Correct: occasional waves near twice the significant height.",
+      "Far beyond what a 2 m sea produces."
+     ],
+     "explanation": "Plan for occasional waves of about twice the significant height."
+    },
+    {
+     "id": "q.sea.10",
+     "kind": "single",
+     "prompt": "Two seas are both 2 m high. Which is the more dangerous for a small yacht?",
+     "options": [
+      "2 m at a 5-second period",
+      "2 m at a 12-second period",
+      "They are the same",
+      "It depends only on wind strength"
+     ],
+     "answers": [
+      0
+     ],
+     "optionExplanations": [
+      "Correct: about 40 m long, steep and likely to break.",
+      "About 225 m long: a long, gentle swell.",
+      "Period changes steepness.",
+      "Period and height together set steepness."
+     ],
+     "explanation": "A short period means short, steep waves; the same height at a long period is gentle swell.",
+     "diagram": {
+      "id": "waves",
+      "variant": "swell"
+     }
+    },
+    {
+     "id": "q.sea.11",
+     "kind": "single",
+     "prompt": "You plan to enter a harbour over a bar with a moderate onshore swell. When should you cross?",
+     "options": [
+      "Mid-ebb, for the strongest stream",
+      "On the flood, near high water",
+      "At low water, when the bar is visible",
+      "Any time, if the engine is reliable"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "The ebb steepens the swell: worst time.",
+      "Correct: most depth and the stream with the swell.",
+      "Least depth: waves break most readily.",
+      "Engine reliability does not stop breaking seas."
+     ],
+     "explanation": "Cross bars on the flood near high water, and not at all if they are breaking."
     }
    ]
   },
@@ -2673,11 +2799,11 @@
        "heading": "Using GRIB data wisely",
        "paragraphs": [
         "GRIB files contain raw output from numerical weather models on a grid, such as wind, pressure, rain and waves at set time steps. They are compact and easy to download at sea, and they are excellent for timing systems and routing.",
-        "Their limits: they are mean winds, not gusts; they smooth out fronts, squalls, sea breezes and funnelling; and grid spacing may miss local effects entirely. Check the model run time, compare more than one model, and always read the official forecast and warnings, which forecasters have checked and corrected. Add a margin of at least a Beaufort force near fronts, showers and headlands."
+        "Their limits: many GRIB downloads show only the model's mean wind, and where a gust field is included it is still a model estimate. Models smooth out fronts, squalls, sea breezes and funnelling, and grid spacing may miss local effects entirely. Check the model run time, compare more than one model, and always read the official forecast and warnings, which forecasters have checked and corrected. Treat GRIB winds near fronts, showers and headlands as a floor, not as the worst you will meet."
        ],
        "keyPoints": [
-        "GRIB is model output: mean winds, no human check.",
-        "Misses gusts, squalls and local effects.",
+        "GRIB is unchecked model output, often mean wind only.",
+        "Smooths squalls, gusts and local effects.",
         "Compare models and read official forecasts and warnings."
        ],
        "diagram": {
@@ -2694,16 +2820,51 @@
        "heading": "Structure and timing",
        "paragraphs": [
         "Marine and shipping forecasts typically give gale warnings, a general synopsis, then for each area: wind direction and force, sea state, weather and visibility.",
-        "Timing words are counted from the time of issue: imminent means within 6 hours, soon 6 to 12 hours, later more than 12 hours. Gale warnings are issued for Force 8 or more, or gusts of 43 knots or more. 'Cyclonic' means considerable change of wind direction near a depression's centre. 'Becoming' signals a change, often in direction or strength.",
+        "Timing words are counted from the time of issue: imminent means within 6 hours, soon 6 to 12 hours, later more than 12 hours. In the UK, the Met Office issues gale warnings for mean winds of Force 8 (34 knots) or more, or gusts of 43 knots or more; other national services set their own criteria. 'Cyclonic' means considerable change of wind direction near a depression's centre. 'Becoming' signals a change, often in direction or strength.",
         "Write the forecast down, note the issue time and compare it with what you see. A forecast that is behind the observed weather is your cue to expect the next stage early."
        ],
        "keyPoints": [
         "Imminent < 6 h, soon 6–12 h, later > 12 h.",
-        "Gale warning: Force 8 or gusts 43 kn or more.",
+        "UK gale warning: mean Force 8+, or gusts 43 kn+.",
         "Log the issue time and compare with observations."
        ],
        "diagram": {
         "id": "forecastTimeline"
+       }
+      }
+     ]
+    },
+    {
+     "id": "forecasts.reconcile",
+     "title": "Putting the forecasts together",
+     "segments": [
+      {
+       "heading": "Which source for what",
+       "paragraphs": [
+        "Each source has a job. Warnings (gale, strong wind, storm) take priority over everything else. The official sea-area and inshore forecasts give the forecaster's judgement for the period ahead; synoptic charts explain why. GRIB and app data add timing and detail but are unchecked model output. Your own observations of sky, sea and barometer tell you whether all of it is right.",
+        "Note the issue time and the period each product covers. A forecast issued at 05:00 for the next 24 hours is older than a warning issued at 11:00. When sources disagree, plan to the more severe unless you can explain the difference, for example a local sea breeze the sea-area forecast does not mention."
+       ],
+       "keyPoints": [
+        "Warnings first, then official forecasts, then models.",
+        "Check issue time and validity of every product.",
+        "When sources disagree, plan to the more severe."
+       ],
+       "diagram": {
+        "id": "forecastTimeline"
+       }
+      },
+      {
+       "heading": "Confidence and uncertainty",
+       "paragraphs": [
+        "Forecast confidence varies. Words such as 'occasionally', 'perhaps' and 'later' signal uncertainty in timing or strength. When different models disagree, or successive runs keep changing, confidence is low and your margins should be wider.",
+        "Compare the forecast with what you observe. If the barometer is falling faster than expected or the wind has already shifted, the system is ahead of schedule or deeper than forecast: assume the next stage will arrive early."
+       ],
+       "keyPoints": [
+        "Model disagreement means low confidence: widen margins.",
+        "Weather ahead of forecast: expect the next stage early."
+       ],
+       "diagram": {
+        "id": "gribGrid"
        }
       }
      ]
@@ -2788,7 +2949,7 @@
       "Correct: local topography is smoothed.",
       "Models handle large systems well.",
       "Correct: often missed or underplayed.",
-      "Correct: GRIB winds are means."
+      "Correct: model gusts, where included, are estimates and miss squalls."
      ],
      "explanation": "GRIB data excels at large-scale timing and is weak on local, small-scale and gust effects."
     },
@@ -2896,12 +3057,12 @@
       1
      ],
      "optionExplanations": [
-      "GRIB gives smoothed mean winds.",
+      "GRIB winds are smoothed model output.",
       "Correct: plan for the squalls the model cannot resolve.",
       "Forecasters add the detail models miss.",
       "Averaging ignores the squall risk."
      ],
-     "explanation": "Plan for the official forecast's worst case; GRIB mean winds understate squalls."
+     "explanation": "Plan for the official forecast's worst case; GRIB winds understate squalls."
     },
     {
      "id": "q.fc.8",
@@ -2923,6 +3084,48 @@
       "Not in mid-latitude marine forecasts."
      ],
      "explanation": "Cyclonic warns that the wind direction will change considerably near a low's centre."
+    },
+    {
+     "id": "q.fc.9",
+     "kind": "single",
+     "prompt": "At 12:00 the GRIB shows 15 knots, the 05:00 inshore forecast says 'south-west 4 or 5, occasionally 6', and a strong wind warning for Force 7 was issued at 11:00. What do you plan for?",
+     "options": [
+      "15 knots",
+      "Force 4 to 5",
+      "Force 6",
+      "Force 7, from the latest warning"
+     ],
+     "answers": [
+      3
+     ],
+     "optionExplanations": [
+      "Model output, unchecked and the oldest view of the detail.",
+      "That ignores the newer warning.",
+      "That is the older forecast's upper limit.",
+      "Correct: the newest official product and the most severe."
+     ],
+     "explanation": "Warnings take priority, and the latest issue time wins."
+    },
+    {
+     "id": "q.fc.10",
+     "kind": "single",
+     "prompt": "Three model runs in a row have moved the arrival of a front by several hours each time. What does this tell you?",
+     "options": [
+      "The front will not arrive",
+      "Forecast confidence is low: widen your margins",
+      "The most recent run is certain",
+      "Average the three and plan to that"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "It will arrive; the timing is uncertain.",
+      "Correct.",
+      "Recent runs are better but not certain.",
+      "Averaging hides the uncertainty."
+     ],
+     "explanation": "Changing runs signal low confidence; plan with wider margins and a fallback."
     }
    ]
   },
@@ -2965,6 +3168,43 @@
      ]
     },
     {
+     "id": "planning.gonogo",
+     "title": "Go/no-go decisions",
+     "segments": [
+      {
+       "heading": "Set your limits before you look",
+       "paragraphs": [
+        "Decide your limits before reading the forecast, so the forecast cannot talk you into going. For this boat and crew: the strongest wind including gusts, the highest sea state, wind direction relative to the course, minimum visibility, and whether you will arrive in daylight. Lower the limits for a tired, inexperienced or small crew.",
+        "Then check the forecast against those limits for the whole passage plus a margin, not just the departure time. Identify fallback ports you can reach in the forecast wind, and the point beyond which turning back is no longer the safer option."
+       ],
+       "keyPoints": [
+        "Fix limits first: wind and gusts, sea, direction, visibility, daylight.",
+        "Check the whole passage plus a margin.",
+        "Name fallback ports and the point of no return."
+       ],
+       "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+       }
+      },
+      {
+       "heading": "Triggers, and motor versus sail",
+       "paragraphs": [
+        "Agree triggers for changing the plan before you leave: a new warning, the barometer falling faster than forecast, the wind or sea above your limits, slower progress than planned, or a tiring crew. When a trigger is met, act on it; do not wait for the next forecast.",
+        "Boat type changes the decision. A motor cruiser can use speed to fit a short window, but must slow right down in head seas, depends on fuel and on the engine, and can broach in steep following seas. A sailing yacht is slower, so stays exposed for longer, but can keep moving without the engine. Base the plan on realistic speed in the expected sea, not on flat-water speed."
+       ],
+       "keyPoints": [
+        "Agree triggers in advance and act when one is met.",
+        "Plan on realistic speed in the expected sea.",
+        "Motor: speed, fuel, head and following seas. Sail: longer exposure."
+       ],
+       "diagram": {
+        "id": "passagePlan"
+       }
+      }
+     ]
+    },
+    {
      "id": "planning.heavy",
      "title": "Heavy-weather preparation and tactics",
      "segments": [
@@ -2988,7 +3228,7 @@
        "heading": "Tactics",
        "paragraphs": [
         "Options include continuing under deeply reefed sail, heaving-to (backed headsail, eased main, helm lashed to windward) to rest the crew and ride the seas comfortably, running off under minimal sail with warps or a drogue to control speed, and in survival conditions a sea anchor from the bow.",
-        "The right choice depends on the boat, the crew, the sea room and the direction of the nearest danger. Steering at an angle to breaking crests, rather than square to them, reduces the risk of a knockdown. Whatever you choose, decide early while the crew still has energy."
+        "There is no universal tactic. The right choice depends on sail or power, hull form and stability, the size, shape and period of the seas, sea room, visibility, the crew and the builder's guidance. Better still, avoid it: divert or seek shelter early, reduce speed and reassess often, and decide while the crew still has energy."
        ],
        "diagram": {
         "id": "heavyWeather"
@@ -3221,6 +3461,210 @@
       "Act on what you see now."
      ],
      "explanation": "Changing plan in response to conditions is good seamanship."
+    },
+    {
+     "id": "q.pl.9",
+     "kind": "scenario",
+     "context": "In May you plan to sail west from Weymouth to Dartmouth, about 50 miles, rounding Portland Bill. Boat: 10 m yacht, crew of three. Your limits: Force 6, moderate sea, arrive in daylight. Forecast issued 05:00: 'West or south-west 4 or 5, occasionally 6 later. Moderate. Fair. Good.' Off the Bill the stream runs west from 10:00 to 16:00 and east from 16:00 to 22:00.",
+     "prompt": "Make the skipper's decisions.",
+     "diagram": {
+      "id": "passagePlan",
+      "variant": "refuge"
+     },
+     "explanation": "Time the race, keep well clear of it, set triggers, and turn back to shelter when a warning makes the rest of the passage a beat into a rising gale in the dark.",
+     "steps": [
+      {
+       "id": "q.pl.9a",
+       "kind": "single",
+       "prompt": "How do you deal with Portland Race?",
+       "options": [
+        "Go through the middle of the race at maximum westgoing stream",
+        "Keep well clear, or use the inshore passage at the time the pilot book gives",
+        "Go through at 16:00 whatever the wind",
+        "Ignore it: Force 4 to 5 is moderate"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Wind against a strong stream in the race: steep breaking seas.",
+        "Correct: follow the pilot book's timing and clearances.",
+        "Timing must suit both stream and wind.",
+        "Races can be dangerous in moderate winds."
+       ],
+       "explanation": "Keep well off a race or use the recognised inshore passage at the right time."
+      },
+      {
+       "id": "q.pl.9b",
+       "kind": "single",
+       "prompt": "At 11:00, abeam the Bill, a gale warning is broadcast: 'Westerly gale 8 expected later'. When is the gale expected?",
+       "options": [
+        "Within 6 hours",
+        "6 to 12 hours",
+        "More than 12 hours after issue",
+        "It is already blowing"
+       ],
+       "answers": [
+        2
+       ],
+       "optionExplanations": [
+        "That is 'imminent'.",
+        "That is 'soon'.",
+        "Correct: 'later' means more than 12 hours after issue.",
+        "Not yet."
+       ],
+       "explanation": "'Later' is more than 12 hours from the time of issue."
+      },
+      {
+       "id": "q.pl.9c",
+       "kind": "numeric",
+       "prompt": "Dartmouth is 42 miles on. Beating into the westerly your speed made good is 4 knots. How many hours to arrive?",
+       "numeric": {
+        "value": 10.5,
+        "tolerance": 0.5,
+        "unit": "h"
+       },
+       "explanation": "42 ÷ 4 is 10½ hours: arriving around 21:30, after dark, as the wind rises."
+      },
+      {
+       "id": "q.pl.9d",
+       "kind": "single",
+       "prompt": "What is the seamanlike decision?",
+       "options": [
+        "Press on: the gale is not due for 12 hours",
+        "Turn back to Weymouth, downwind and sheltered from the west",
+        "Heave to off the Bill and wait",
+        "Motor into it at full power to save time"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "You would beat into rising wind and arrive in the dark, beyond your limits.",
+        "Correct: a short, downwind run to a harbour sheltered from westerlies.",
+        "Close to the race and a lee shore in a rising westerly.",
+        "Head seas will slow you and tire the crew."
+       ],
+       "explanation": "Your daylight and wind limits will both be broken; the fallback port is close and downwind."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.10",
+     "kind": "scenario",
+     "context": "July, in the Cyclades. You plan to sail from Kythnos east to Syros, about 25 miles. The national forecast: 'North 5 to 6 Beaufort, locally 7 in the central Aegean from midday; similar for the next three days.' Your crew of four includes two beginners.",
+     "prompt": "Plan the passage.",
+     "diagram": {
+      "id": "medWinds"
+     },
+     "explanation": "The Meltemi usually builds through the day and is strongest in the channels and off capes. Leave early, expect funnelling and lee gusts, and choose shelter from the north.",
+     "steps": [
+      {
+       "id": "q.pl.10a",
+       "kind": "single",
+       "prompt": "When should you leave?",
+       "options": [
+        "At first light, before the wind builds",
+        "Mid-afternoon, when it is warmest",
+        "At midday, when the forecast says 7",
+        "At dusk, when it always drops"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correct: the Meltemi is usually lightest in the early morning.",
+        "Usually the windiest part of the day.",
+        "The forecast's strongest period.",
+        "It often eases at night, but arriving at an unfamiliar island in the dark adds risk."
+       ],
+       "explanation": "Leave early to complete the passage before the afternoon peak."
+      },
+      {
+       "id": "q.pl.10b",
+       "kind": "single",
+       "prompt": "Where on the route do you expect the strongest wind?",
+       "options": [
+        "In the lee of Kythnos at departure",
+        "In the open channel between the islands and off the capes",
+        "In Syros harbour",
+        "It is uniform"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "The lee is gusty but less wind overall.",
+        "Correct: funnelling between islands and acceleration off capes.",
+        "Harbours are usually sheltered.",
+        "Islands make it very uneven."
+       ],
+       "explanation": "Expect a force or more extra in the channels and off headlands."
+      },
+      {
+       "id": "q.pl.10c",
+       "kind": "single",
+       "prompt": "Which anchorage gives the best shelter for the night?",
+       "options": [
+        "A bay open to the north",
+        "A bay on the south side, open to the south",
+        "An open roadstead on the east coast",
+        "Any bay, since the wind drops at night"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Open to the Meltemi and its sea.",
+        "Correct: but expect gusts down the slopes in the lee of high ground.",
+        "Exposed to swell wrapping round.",
+        "It may not drop, and can blow all night."
+       ],
+       "explanation": "Choose shelter from the north, and allow for downslope gusts."
+      },
+      {
+       "id": "q.pl.10d",
+       "kind": "single",
+       "prompt": "On day two the forecast becomes 'North 7, locally 8'. With two beginners aboard, what do you do?",
+       "options": [
+        "Sail as planned",
+        "Stay in harbour and wait for the Meltemi to ease",
+        "Leave at noon to cross faster",
+        "Motor directly into it"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Above sensible limits for this crew.",
+        "Correct: Meltemi spells end; waiting costs only time.",
+        "The strongest part of the day.",
+        "Head seas and wind beyond limits."
+       ],
+       "explanation": "Stay put when the forecast exceeds your crew's limits."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.11",
+     "kind": "single",
+     "prompt": "A motor cruiser (cruising at 18 knots) and a sailing yacht (6 knots) plan the same 36-mile passage in a 4-hour window before a front. Which statement is right?",
+     "options": [
+      "Both have plenty of time",
+      "The motor cruiser fits the window only if it can keep its speed in the expected sea",
+      "The yacht is safer because it is slower",
+      "Neither should consider speed"
+     ],
+     "answers": [
+      1
+     ],
+     "optionExplanations": [
+      "The yacht needs about 6 hours: it does not fit.",
+      "Correct: head seas can halve a planing boat's speed.",
+      "Slower means longer exposure.",
+      "Realistic speed is central to the decision."
+     ],
+     "explanation": "Plan on realistic speed in the expected sea; the yacht does not fit this window at all."
     }
    ]
   }

@@ -53,11 +53,11 @@
           "heading": "Usar los datos GRIB con criterio",
           "paragraphs": [
             "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
-            "Sus limitaciones: dan vientos medios, no rachas; suavizan frentes, turbonadas, brisas marinas y efectos embudo; y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Añada un margen de al menos un grado Beaufort cerca de frentes, chubascos y cabos."
+            "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Cerca de frentes, chubascos y cabos, tome el viento del GRIB como un mínimo, no como lo peor que encontrará."
           ],
           "keyPoints": [
-            "El GRIB es salida de modelo: vientos medios sin revisión humana.",
-            "No refleja rachas, turbonadas ni efectos locales.",
+            "El GRIB es salida de modelo sin revisión humana, a menudo solo viento medio.",
+            "Suaviza turbonadas, rachas y efectos locales.",
             "Compare modelos y lea las predicciones y los avisos oficiales."
           ],
           "diagram": {
@@ -74,16 +74,51 @@
           "heading": "Estructura y plazos",
           "paragraphs": [
             "Las predicciones marítimas suelen dar primero los avisos de temporal, después una situación general y, para cada zona, la dirección y fuerza del viento, el estado de la mar, el tiempo y la visibilidad.",
-            "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. Los avisos de temporal se emiten para fuerza 8 o superior, o para rachas de 43 nudos o más. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
+            "Los términos de plazo se cuentan desde la hora de emisión: inminente significa en menos de 6 horas, pronto entre 6 y 12 horas y más tarde en más de 12 horas. En el Reino Unido, la Met Office emite avisos de temporal para viento medio de fuerza 8 (34 nudos) o superior, o rachas de 43 nudos o más; otros servicios nacionales aplican sus propios criterios. «Ciclónico» indica un cambio considerable de la dirección del viento cerca del centro de una borrasca. «Pasando a» señala un cambio, a menudo de dirección o de intensidad.",
             "Anote la predicción y la hora de emisión, y compárela con lo que observa. Si la predicción va retrasada respecto al tiempo observado, espere que la siguiente fase llegue antes de lo previsto."
           ],
           "keyPoints": [
             "Inminente < 6 h, pronto 6–12 h, más tarde > 12 h.",
-            "Aviso de temporal: fuerza 8 o rachas de 43 kn o más.",
+            "Reino Unido: viento medio fuerza 8+ o rachas de 43 kn+.",
             "Anote la hora de emisión y compárela con lo observado."
           ],
           "diagram": {
             "id": "forecastTimeline"
+          }
+        }
+      ]
+    },
+    {
+      "id": "forecasts.reconcile",
+      "title": "Cómo combinar las predicciones",
+      "segments": [
+        {
+          "heading": "Qué fuente para qué",
+          "paragraphs": [
+            "Cada fuente tiene su función. Los avisos (de temporal, de viento fuerte, de temporal muy duro) tienen prioridad sobre todo lo demás. Las predicciones oficiales para zonas marítimas y aguas costeras dan el criterio del predictor para el periodo siguiente; los mapas sinópticos explican el porqué. Los GRIB y las aplicaciones añaden horario y detalle, pero son salida de modelo sin revisar. Sus propias observaciones del cielo, la mar y el barómetro le dicen si todo ello se cumple.",
+            "Anote la hora de emisión y el periodo de validez de cada producto. Una predicción emitida a las 05:00 para las 24 horas siguientes es anterior a un aviso emitido a las 11:00. Cuando las fuentes discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
+          ],
+          "keyPoints": [
+            "Primero los avisos, luego las predicciones oficiales, luego los modelos.",
+            "Compruebe la hora de emisión y la validez de cada producto.",
+            "Si las fuentes discrepan, planifique para la más severa."
+          ],
+          "diagram": {
+            "id": "forecastTimeline"
+          }
+        },
+        {
+          "heading": "Confianza e incertidumbre",
+          "paragraphs": [
+            "La confianza de una predicción varía. Palabras como «ocasionalmente», «quizá» y «más tarde» indican incertidumbre en el momento o en la intensidad. Cuando distintos modelos discrepan, o las pasadas sucesivas cambian una y otra vez, la confianza es baja y sus márgenes deben ser mayores.",
+            "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el sistema va adelantado o es más profundo de lo previsto: suponga que la siguiente fase llegará antes."
+          ],
+          "keyPoints": [
+            "Discrepancia entre modelos: confianza baja, márgenes mayores.",
+            "Tiempo adelantado a la predicción: la siguiente fase llegará antes."
+          ],
+          "diagram": {
+            "id": "gribGrid"
           }
         }
       ]
@@ -168,7 +203,7 @@
         "Correcto: la topografía local queda suavizada.",
         "Los modelos tratan bien los grandes sistemas.",
         "Correcto: a menudo se omiten o se subestiman.",
-        "Correcto: los vientos GRIB son medios."
+        "Correcto: las rachas del modelo, si se incluyen, son estimaciones y no captan las turbonadas."
       ],
       "explanation": "Los datos GRIB son excelentes para los plazos a gran escala y flojos en efectos locales, de pequeña escala y en rachas."
     },
@@ -276,12 +311,12 @@
         1
       ],
       "optionExplanations": [
-        "El GRIB da vientos medios suavizados.",
+        "Los vientos GRIB son salida de modelo suavizada.",
         "Correcto: prepárese para las turbonadas que el modelo no puede resolver.",
         "Los predictores añaden el detalle que se les escapa a los modelos.",
         "Promediar ignora el riesgo de turbonadas."
       ],
-      "explanation": "Planifique para el peor caso de la predicción oficial; los vientos medios del GRIB subestiman las turbonadas."
+      "explanation": "Planifique para el peor caso de la predicción oficial; los vientos del GRIB subestiman las turbonadas."
     },
     {
       "id": "q.fc.8",
@@ -303,6 +338,48 @@
         "No en las predicciones marítimas de latitudes medias."
       ],
       "explanation": "«Ciclónico» advierte de que la dirección del viento cambiará considerablemente cerca del centro de una baja."
+    },
+    {
+      "id": "q.fc.9",
+      "kind": "single",
+      "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
+      "options": [
+        "15 nudos",
+        "Fuerza 4 a 5",
+        "Fuerza 6",
+        "Fuerza 7, por el aviso más reciente"
+      ],
+      "answers": [
+        3
+      ],
+      "optionExplanations": [
+        "Salida de modelo sin revisar.",
+        "Ignora el aviso más reciente.",
+        "Es el límite superior de la predicción anterior.",
+        "Correcto: el producto oficial más reciente y el más severo."
+      ],
+      "explanation": "Los avisos tienen prioridad y prevalece la hora de emisión más reciente."
+    },
+    {
+      "id": "q.fc.10",
+      "kind": "single",
+      "prompt": "Tres pasadas seguidas de un modelo han movido varias horas cada vez la llegada de un frente. ¿Qué le indica esto?",
+      "options": [
+        "El frente no llegará",
+        "La confianza es baja: amplíe sus márgenes",
+        "La pasada más reciente es segura",
+        "Promedie las tres y planifique con eso"
+      ],
+      "answers": [
+        1
+      ],
+      "optionExplanations": [
+        "Llegará; lo incierto es cuándo.",
+        "Correcto.",
+        "Las pasadas recientes son mejores, no seguras.",
+        "Promediar oculta la incertidumbre."
+      ],
+      "explanation": "Las pasadas cambiantes indican baja confianza; planifique con márgenes amplios y una alternativa."
     }
   ]
 }

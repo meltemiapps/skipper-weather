@@ -225,6 +225,11 @@
       "id": "sirocco",
       "term": "Sirocco",
       "definition": "A hot southerly to south-easterly wind from North Africa, humid by the time it reaches Europe, often bringing dust and poor visibility."
+    },
+    {
+      "id": "wavePeriod",
+      "term": "Wave period",
+      "definition": "The time in seconds between successive crests passing a fixed point. Short periods mean steeper seas."
     }
   ],
   "diagramLabels": {
