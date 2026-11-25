@@ -402,7 +402,7 @@
        "heading": "Cómo leer la tendencia",
        "paragraphs": [
         "Una lectura aislada del barómetro dice poco. La tendencia, es decir, la variación en las tres horas anteriores, dice mucho más. Durante la travesía, anote el barómetro cada hora en el cuaderno de bitácora y represéntelo en una gráfica.",
-        "Los términos normalizados para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (de 0,1 a 1,5 hPa), subiendo o bajando (de 1,6 a 3,5 hPa), rápidamente (de 3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
+        "Los términos que usan las predicciones marítimas británicas para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (0,1 a 1,5 hPa), subiendo o bajando (1,6 a 3,5 hPa), deprisa (3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
        ],
        "keyPoints": [
         "Anote el barómetro cada hora; lo que importa es la tendencia, no la cifra.",
@@ -473,7 +473,7 @@
       "«Rápidamente» corresponde a 3,6–6,0 hPa.",
       "Correcto: 7 hPa supera los 6,0 hPa en tres horas."
      ],
-     "explanation": "Un descenso de 7 hPa en tres horas es «bajando muy rápidamente» e indica con claridad que se acerca un temporal."
+     "explanation": "Una bajada de 7 hPa en tres horas es «bajando muy rápidamente»: un claro indicio de que se acerca una borrasca que se profundiza o un frente. Consulte la última predicción y los avisos."
     },
     {
      "id": "q.atm.2",
@@ -524,13 +524,13 @@
     {
      "id": "q.atm.4",
      "kind": "numeric",
-     "prompt": "A las 06:00 la presión era de 1016 hPa y está bajando a un ritmo constante de 2 hPa por hora. ¿Qué marcará a las 10:00, en hPa?",
+     "prompt": "Como ejercicio de cálculo: a las 06:00 la presión era de 1016 hPa y bajaba a un ritmo constante de 2 hPa por hora. Si siguiera a ese ritmo, ¿qué marcaría a las 10:00, en hPa?",
      "numeric": {
       "value": 1008,
       "tolerance": 0,
       "unit": "hPa"
      },
-     "explanation": "Cuatro horas a 2 hPa por hora suponen un descenso de 8 hPa: 1016 menos 8 da 1008 hPa. Eso está entre «bajando rápidamente» y «muy rápidamente»; prepárese para un viento fuerte."
+     "explanation": "Cuatro horas a 2 hPa por hora son 8 hPa: 1016 menos 8 son 1008 hPa. Las variaciones reales rara vez son constantes, pero una bajada tan rápida es una señal de alarma: consulte la predicción y los avisos."
     },
     {
      "id": "q.atm.5",
@@ -671,7 +671,7 @@
        "keyPoints": [
         "Sobre el mar: rolado a la izquierda 10–15°, con un 70–80 % de la velocidad geostrófica.",
         "Sobre tierra: rolado a la izquierda unos 30°, en torno al 50 % y más racheado.",
-        "El viento en superficie siempre cruza las isobaras hacia la baja."
+        "El viento en superficie suele cruzar las isobaras hacia la baja."
        ],
        "diagram": {
         "id": "windAngle",
@@ -699,7 +699,7 @@
        "heading": "Cómo localizar la baja",
        "paragraphs": [
         "Ley de Buys Ballot: en el hemisferio norte, si se pone de espaldas al viento real, la baja presión queda a su izquierda. En el hemisferio sur queda a su derecha.",
-        "Como la fricción hace rolar a la izquierda el viento en superficie, conviene afinar: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja quedará entonces a 90° a su izquierda. Con viento del suroeste en el mar, mire al 045°, gire al 060° y la baja estará aproximadamente al 330°."
+        "Como el viento en superficie rola a la izquierda por el rozamiento, afine la regla: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja queda entonces a unos 90° a su izquierda. Esto da el sector donde está la baja, no una demora precisa: con viento del suroeste en el mar, la baja queda aproximadamente al noroeste, hacia los 330°. Confírmelo con un mapa."
        ],
        "keyPoints": [
         "De espaldas al viento: baja a la izquierda (hemisferio norte).",
@@ -733,16 +733,16 @@
      "id": "q.wind.1",
      "kind": "numeric",
      "context": "Navega en el hemisferio norte. El viento real sopla del 225° (suroeste).",
-     "prompt": "Aplicando la ley de Buys Ballot con una corrección por fricción de 15°, ¿cuál es la demora aproximada del centro de bajas presiones, en grados verdaderos?",
+     "prompt": "Aplicando la ley de Buys Ballot con una corrección por rozamiento de 15°, ¿en qué dirección aproximada está la baja, en grados verdaderos?",
      "diagram": {
       "id": "buysBallot"
      },
      "numeric": {
       "value": 330,
-      "tolerance": 15,
+      "tolerance": 30,
       "unit": "°"
      },
-     "explanation": "De espaldas al viento mira al 045°. Gire 15° a la derecha hasta el 060°. La baja está 90° a su izquierda: 060° menos 90° da 330°."
+     "explanation": "De espaldas al viento mira a 045°. Gire 15° a la derecha hasta 060°. La baja está a unos 90° a su izquierda: hacia 330°, al noroeste. Es una estimación del sector, no una demora de navegación; confírmela con un mapa."
     },
     {
      "id": "q.wind.2",
@@ -973,12 +973,12 @@
       {
        "heading": "Madurez y desplazamiento",
        "paragraphs": [
-        "Una borrasca madura en el Atlántico se desplaza a menudo hacia el este o el nordeste a unos 20–30 nudos, aunque la velocidad varía mucho. Va guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
-        "Por convención, la ciclogénesis explosiva es una caída de la presión central de 24 hPa en 24 horas a 60° de latitud; el umbral varía con la latitud y a 50° N es de unos 21 hPa. Cuente con temporales muy duros y bajadas de presión muy rápidas."
+        "Una borrasca madura en el Atlántico se desplaza a menudo hacia el este o el nordeste a unos 20–30 nudos, aunque la velocidad varía mucho. Su trayectoria la marcan sobre todo los vientos en altura; como regla práctica se mueve más o menos en paralelo a las isobaras del sector cálido, pero las trayectorias cambian. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
+        "Por convención, la ciclogénesis explosiva es una caída de la presión central de 24 hPa en 24 horas a 60° de latitud; el umbral varía con la latitud y a 50° N es de unos 21 hPa. Mide lo deprisa que se desarrolla el sistema, no el viento en su posición: estas borrascas traen a menudo temporales muy duros, pero lo que encuentre dependerá del gradiente de presión, la trayectoria y su exposición. Consulte la predicción y los avisos oficiales."
        ],
        "keyPoints": [
         "A menudo 20–30 nudos hacia el E o NE; la velocidad varía.",
-        "La trayectoria sigue las isobaras del sector cálido.",
+        "Trayectoria: más o menos según las isobaras del sector cálido, como regla práctica.",
         "Vigile las bajas secundarias en la cola de los frentes fríos."
        ],
        "diagram": {
@@ -1159,7 +1159,7 @@
       "tolerance": 0,
       "unit": "hPa"
      },
-     "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de ciclogénesis explosiva en latitudes británicas (unos 21 a 24 hPa): cuente con temporales muy duros."
+     "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de ciclogénesis explosiva en latitudes británicas (unos 21 a 24 hPa). Las borrascas que se profundizan deprisa traen a menudo temporales muy duros; consulte los avisos para su zona."
     },
     {
      "id": "q.sys.7",
@@ -1836,11 +1836,11 @@
        "heading": "Convergencia y divergencia costeras",
        "paragraphs": [
         "La fricción hace rolar el viento a la izquierda más sobre tierra que sobre el mar. Cuando el viento sopla paralelo a la costa, esa diferencia hace que los flujos converjan o diverjan.",
-        "En el hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos convergen, con viento más fuerte y a menudo más nubes y lluvia a lo largo de la costa. Si la tierra queda a su izquierda, divergen y el viento costero es más flojo."
+        "En el caso idealizado del hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos tienden a converger, lo que suele dar más viento y más nubosidad a lo largo de la costa; si la tierra queda a su izquierda, tienden a divergir y el viento costero es más flojo. La forma de la costa, las brisas, la estabilidad y el relieve pueden ocultar o invertir el efecto, así que tómelo como una tendencia que buscar, no como una predicción."
        ],
        "keyPoints": [
-        "De espaldas al viento, tierra a la derecha: convergencia, viento más fuerte.",
-        "Tierra a la izquierda: divergencia, viento más flojo."
+        "Caso idealizado: de espaldas al viento, tierra a la derecha, la convergencia tiende a reforzar el viento.",
+        "Tierra a la izquierda: la divergencia tiende a debilitarlo. Los efectos locales pueden imponerse a ambos."
        ],
        "diagram": {
         "id": "coastalConvergence"
@@ -2386,7 +2386,7 @@
       {
        "heading": "Por qué se empina la mar",
        "paragraphs": [
-        "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede parecer un fuerza 7. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
+        "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede levantar una mar mucho más empinada de la que suele dar un fuerza 5. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
         "El efecto es máximo en los cabos, sobre bajos y en zonas de corrientes fuertes y escarceos. Planifique el paso por esos lugares en el repunte o con viento y corriente en el mismo sentido."
        ],
        "keyPoints": [
@@ -2414,12 +2414,12 @@
        "heading": "Zonas de corriente, escarceos y barras",
        "paragraphs": [
         "Las zonas de corriente fuerte (tidal races) se forman donde una corriente intensa se estrecha alrededor de un cabo o pasa sobre un fondo irregular; los escarceos son la mar corta, empinada y rompiente que producen. Portland Bill, St Alban's Head y el Alderney Race son ejemplos conocidos. Con viento contra corriente pueden ser peligrosos incluso con vientos moderados, y el mar de fondo los empeora.",
-        "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, sobre todo en la vaciante, cuando la corriente saliente empina las olas. Cruce una barra con la marea entrante, cerca de la pleamar, y nunca si está rompiendo. Consulte el derrotero o el almanaque náutico para los horarios y distancias locales: manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
+        "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, a menudo peor en la vaciante, cuando la corriente saliente empina las olas. Muchas barras son más seguras con marea entrante cerca de la pleamar, pero algunas tienen sus propias ventanas, corrientes de entrante fuertes o límites de mar de fondo. Consulte el derrotero, los avisos locales y la autoridad portuaria, compruebe el resguardo bajo la quilla, observe la barra antes de comprometerse y no cruce si rompe. Manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
        ],
        "keyPoints": [
         "Zonas de corriente y escarceos: corriente fuerte en cabos y fondos irregulares.",
-        "Las barras rompen más en la vaciante con mar de fondo.",
-        "Cruce con marea entrante cerca de la pleamar; nunca si rompe."
+        "Las barras suelen ser peores en la vaciante con mar de fondo.",
+        "Siga el derrotero local; nunca cruce una barra que rompe."
        ],
        "diagram": {
         "id": "waves",
@@ -2436,11 +2436,11 @@
        "heading": "Altura significativa y las olas mayores",
        "paragraphs": [
         "Las predicciones de oleaje y los datos de las boyas dan la altura significativa de ola: la media del tercio más alto de las olas, cercana a lo que estimaría un observador experimentado. Muchas olas son más bajas y algunas mucho más altas.",
-        "En unas pocas horas, cuente con olas individuales ocasionales de hasta aproximadamente el doble de la altura significativa. Una predicción de 2 m puede traer alguna ola de unos 4 m, y esa es la ola que llena la bañera o tumba un barco."
+        "En unas pocas horas, cuente con olas individuales ocasionales de aproximadamente el doble de la altura significativa, y rara vez más. Una predicción de 2 m puede traer alguna ola de 4 m o algo más, y esa es la ola que llena la bañera o tumba un barco."
        ],
        "keyPoints": [
         "Altura significativa: media del tercio más alto.",
-        "Cuente con olas ocasionales cercanas al doble.",
+        "Cuente con olas ocasionales de unas dos veces esa altura, rara vez más.",
         "Planifique para la ola grande, no para la media."
        ],
        "diagram": {
@@ -2740,7 +2740,7 @@
       "Mínima profundidad: las olas rompen con más facilidad.",
       "Un motor fiable no evita la rompiente."
      ],
-     "explanation": "Cruce las barras con marea entrante cerca de la pleamar, y nunca si rompen."
+     "explanation": "En general, cruce con marea entrante cerca de la pleamar, según el derrotero local, y nunca si la barra rompe."
     }
    ]
   },
@@ -2799,7 +2799,7 @@
        "heading": "Usar los datos GRIB con criterio",
        "paragraphs": [
         "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
-        "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Cerca de frentes, chubascos y cabos, tome el viento del GRIB como un mínimo, no como lo peor que encontrará."
+        "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, la resolución de la malla puede pasar por alto por completo los efectos locales y la propia predicción puede errar en cualquier sentido. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. No tome nunca el viento medio ni las rachas del modelo como un máximo: cuente con rachas y turbonadas no resueltas, aceleraciones locales y error de predicción."
        ],
        "keyPoints": [
         "El GRIB es salida de modelo sin revisión humana, a menudo solo viento medio.",
@@ -2842,11 +2842,11 @@
        "heading": "Qué fuente para qué",
        "paragraphs": [
         "Cada fuente tiene su función. Los avisos (de temporal, de viento fuerte, de temporal muy duro) tienen prioridad sobre todo lo demás. Las predicciones oficiales para zonas marítimas y aguas costeras dan el criterio del predictor para el periodo siguiente; los mapas sinópticos explican el porqué. Los GRIB y las aplicaciones añaden horario y detalle, pero son salida de modelo sin revisar. Sus propias observaciones del cielo, la mar y el barómetro le dicen si todo ello se cumple.",
-        "Anote la hora de emisión y el periodo de validez de cada producto. Una predicción emitida a las 05:00 para las 24 horas siguientes es anterior a un aviso emitido a las 11:00. Cuando las fuentes discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
+        "Anote la hora de emisión, la zona y el periodo que cubre cada producto, y si se ha modificado o anulado. Un aviso emitido a las 11:00 para su zona sustituye a una predicción de las 05:00 para esa misma zona; un aviso para una zona vecina no, aunque le indica lo que puede llegar. Cuando las fuentes para su ruta discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
        ],
        "keyPoints": [
         "Primero los avisos, luego las predicciones oficiales, luego los modelos.",
-        "Compruebe la hora de emisión y la validez de cada producto.",
+        "Compruebe hora de emisión, zona, validez y modificaciones.",
         "Si las fuentes discrepan, planifique para la más severa."
        ],
        "diagram": {
@@ -2857,11 +2857,11 @@
        "heading": "Confianza e incertidumbre",
        "paragraphs": [
         "La confianza de una predicción varía. Palabras como «ocasionalmente», «quizá» y «más tarde» indican incertidumbre en el momento o en la intensidad. Cuando distintos modelos discrepan, o las pasadas sucesivas cambian una y otra vez, la confianza es baja y sus márgenes deben ser mayores.",
-        "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el sistema va adelantado o es más profundo de lo previsto: suponga que la siguiente fase llegará antes."
+        "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el momento o el propio sistema pueden diferir de la predicción. Reevalúe de inmediato, cuente con un empeoramiento anticipado y consiga la última predicción oficial."
        ],
        "keyPoints": [
         "Discrepancia entre modelos: confianza baja, márgenes mayores.",
-        "Tiempo adelantado a la predicción: la siguiente fase llegará antes."
+        "Tiempo adelantado a la predicción: reevalúe y cuente con un empeoramiento anticipado."
        ],
        "diagram": {
         "id": "gribGrid"
@@ -3088,7 +3088,7 @@
     {
      "id": "q.fc.9",
      "kind": "single",
-     "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
+     "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 para su zona dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió para esa misma zona un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
      "options": [
       "15 nudos",
       "Fuerza 4 a 5",
@@ -3104,7 +3104,7 @@
       "Es el límite superior de la predicción anterior.",
       "Correcto: el producto oficial más reciente y el más severo."
      ],
-     "explanation": "Los avisos tienen prioridad y prevalece la hora de emisión más reciente."
+     "explanation": "Un aviso más reciente para su propia zona sustituye a la predicción anterior para esa zona."
     },
     {
      "id": "q.fc.10",
@@ -3227,7 +3227,7 @@
       {
        "heading": "Tácticas",
        "paragraphs": [
-        "Las opciones incluyen seguir navegando con la vela muy rizada, ponerse al pairo (foque acuartelado, mayor amollada y timón trincado a barlovento) para que la tripulación descanse y el barco aguante la mar con comodidad, correr el temporal con el mínimo de vela y estachas o un cono de arrastre a remolque para controlar la velocidad y, en condiciones de supervivencia, un ancla de capa por la proa.",
+        "Las opciones de un velero incluyen seguir con la vela muy rizada; ponerse al pairo, que en muchos barcos (foque acuartelado, mayor amollada, timón a barlovento) lo reduce a una deriva lenta a sotavento y deja descansar a la tripulación, aunque depende del barco y del aparejo, necesita resguardo y puede no servir con mar rompiente; correr el temporal con el mínimo de vela y estachas o un cono de arrastre para controlar la velocidad; y, en condiciones de supervivencia, un ancla de capa. Los conos y las anclas de capa requieren un equipo adecuado al barco y práctica antes de necesitarlos. Una lancha a motor tiene otras opciones, normalmente mantener un ángulo elegido respecto a la mar a velocidad reducida. Practique cualquier táctica primero con condiciones moderadas.",
         "No existe una táctica universal. La elección depende de si el barco es de vela o de motor, de su carena y estabilidad, del tamaño, la forma y el periodo de las olas, del resguardo, de la visibilidad, de la tripulación y de las indicaciones del fabricante. Mejor aún, evítelo: desvíese o busque abrigo pronto, reduzca la velocidad, reevalúe a menudo y decida mientras la tripulación aún tiene energía."
        ],
        "diagram": {
@@ -3309,10 +3309,10 @@
     {
      "id": "q.pl.4",
      "kind": "single",
-     "prompt": "¿Qué es ponerse al pairo?",
+     "prompt": "¿Qué es ponerse al pairo en un velero típico?",
      "options": [
       "Correr el temporal a palo seco",
-      "Foque acuartelado, mayor amollada y timón trincado a barlovento para que el barco quede tranquilo",
+      "Foque acuartelado, mayor amollada y timón a barlovento, de modo que el barco quede tranquilo con una deriva lenta a sotavento",
       "Navegar a motor proa al viento a toda máquina",
       "Fondear en aguas profundas"
      ],
@@ -3325,7 +3325,7 @@
       "Eso no es ponerse al pairo.",
       "Eso no es ponerse al pairo."
      ],
-     "explanation": "Ponerse al pairo detiene el barco en una posición cómoda, lo que da a la tripulación descanso y tiempo para resolver problemas."
+     "explanation": "En muchos veleros, ponerse al pairo reduce el barco a una deriva lenta y deja descansar a la tripulación. Necesita resguardo, depende del barco y del aparejo, puede no servir con mar rompiente y conviene practicarlo antes."
     },
     {
      "id": "q.pl.5",
@@ -3465,34 +3465,34 @@
     {
      "id": "q.pl.9",
      "kind": "scenario",
-     "context": "En mayo tiene previsto navegar hacia el oeste de Weymouth a Dartmouth, unas 50 millas, doblando Portland Bill. Barco: velero de 10 m, tripulación de tres. Sus límites: fuerza 6, marejada, llegada con luz de día. Predicción emitida a las 05:00: «Oeste o suroeste 4 o 5, ocasionalmente 6 más tarde. Marejada. Buen tiempo. Visibilidad buena.» Frente al cabo la corriente tira hacia el oeste de 10:00 a 16:00 y hacia el este de 16:00 a 22:00.",
+     "context": "En mayo tiene previsto navegar hacia el oeste de Weymouth a Dartmouth: unas 8 millas hasta Portland Bill y después unas 47 millas cruzando la bahía de Lyme. Barco: velero de 10 m, tripulación de tres. Sus límites: fuerza 6, marejada, llegar antes de que oscurezca (puesta de sol hacia las 21:00). La pleamar en Dover es a las 11:00. El almanaque aconseja doblar el cabo rumbo oeste por el paso costero, muy cerca, entre PM Dover −1 y +2 (de 10:00 a 13:00); después la corriente frente al cabo tira hacia el oeste hasta las 16:00 aproximadamente. Sale de Weymouth a las 09:00. Predicción para la zona, emitida a las 05:00: «Oeste o suroeste 4 o 5, ocasionalmente 6 más tarde. Marejada. Buen tiempo. Visibilidad buena.»",
      "prompt": "Tome las decisiones del patrón.",
      "diagram": {
       "id": "passagePlan",
       "variant": "refuge"
      },
-     "explanation": "Calcule el paso, manténgase lejos de la zona de corriente, fije criterios de cambio y vuelva a un refugio cuando un aviso convierta el resto de la travesía en una ceñida con viento en aumento y de noche.",
+     "explanation": "Lo que se evalúa es la capacidad de reevaluar: cuando un aviso nuevo y las cuentas muestran que se superarán sus límites, elija el refugio alcanzable más seguro en lugar de seguir.",
      "steps": [
       {
        "id": "q.pl.9a",
        "kind": "single",
-       "prompt": "¿Cómo afronta la zona de corriente de Portland (Portland Race)?",
+       "prompt": "¿Cómo planifica doblar Portland Bill?",
        "options": [
-        "Cruzando por el centro con la máxima corriente hacia el oeste",
-        "Manteniéndose bien separado, o usando el paso costero a la hora que indica el derrotero",
-        "Cruzando a las 16:00 haga el viento que haga",
-        "Ignorándola: fuerza 4 a 5 es moderado"
+        "Por la zona de corriente hacia las 14:00, con la corriente más fuerte hacia el oeste",
+        "Por el paso costero entre las 10:00 y las 13:00, como aconseja el almanaque, o bien por fuera de la zona de corriente",
+        "A las 16:00, haga el viento que haga",
+        "Ignorarla: fuerza 4 a 5 es moderado"
        ],
        "answers": [
         1
        ],
        "optionExplanations": [
-        "Viento contra una corriente fuerte: mar empinada y rompiente.",
-        "Correcto: siga los horarios y distancias del derrotero.",
-        "La hora debe convenir a la corriente y al viento.",
+        "Un viento del oeste sopla hacia el este, contra la fuerte corriente que tira al oeste: mar empinada y rompiente en la zona de corriente.",
+        "Correcto: la ventana recomendada, pegado a la costa, o bien bien separado por fuera.",
+        "Hacia esa hora cambia la corriente; la hora debe convenir a la corriente y al viento.",
         "Estas zonas pueden ser peligrosas con viento moderado."
        ],
-       "explanation": "Manténgase bien separado de la zona de corriente o use el paso costero reconocido a la hora adecuada."
+       "explanation": "Use la ventana del almanaque para el paso costero rumbo oeste, o manténgase bien por fuera de la zona de corriente."
       },
       {
        "id": "q.pl.9b",
@@ -3518,114 +3518,114 @@
       {
        "id": "q.pl.9c",
        "kind": "numeric",
-       "prompt": "Le quedan 42 millas hasta Dartmouth. Ciñendo contra el viento del oeste, su velocidad efectiva es de 4 nudos. ¿Cuántas horas tardará en llegar?",
+       "prompt": "Le quedan unas 47 millas hasta Dartmouth. Ciñendo contra el viento del oeste, su velocidad efectiva es de 4 nudos. ¿Cuántas horas tardará en llegar?",
        "numeric": {
-        "value": 10.5,
+        "value": 11.75,
         "tolerance": 0.5,
         "unit": "h"
        },
-       "explanation": "42 ÷ 4 son 10½ horas: llegada hacia las 21:30, ya de noche, con el viento arreciando."
+       "explanation": "47 ÷ 4 son unas 11¾ horas: llegada hacia las 22:45, bien entrada la noche, con el viento arreciando."
       },
       {
        "id": "q.pl.9d",
        "kind": "single",
-       "prompt": "¿Cuál es la decisión marinera?",
+       "prompt": "A las 11:00 acaba de pasar el cabo. ¿Qué decisión está mejor respaldada por los datos?",
        "options": [
-        "Seguir: el temporal no llega hasta dentro de 12 horas",
-        "Volver a Weymouth, con viento de popa y abrigado del oeste",
-        "Ponerse al pairo frente al cabo y esperar",
-        "Seguir a motor a toda máquina para ganar tiempo"
+        "Seguir: el temporal no llega hasta después de las 23:00",
+        "Reevaluar y dirigirse al refugio adecuado más cercano, probablemente Weymouth: unas 9 millas atrás, con viento de popa y abrigado del oeste",
+        "Ponerse al pairo frente al cabo y esperar una predicción posterior",
+        "Seguir a motor a toda máquina para llegar antes de que oscurezca"
        ],
        "answers": [
         1
        ],
        "optionExplanations": [
-        "Ceñiría con viento en aumento y llegaría de noche, fuera de sus límites.",
-        "Correcto: un corto tramo con viento de popa hasta un puerto abrigado de los ponientes.",
-        "Cerca de la zona de corriente y con costa a sotavento y viento del oeste en aumento.",
-        "La mar de proa le frenará y cansará a la tripulación."
+        "Puede que el temporal se retrase, pero ceñiría casi 12 horas con viento en aumento y llegaría bien entrada la noche, superando su límite de luz.",
+        "Correcto: se superará el límite de luz y se prevé que el viento aumente; compruebe la corriente y la zona de corriente antes de virar.",
+        "Cerca de la zona de corriente y con poniente en aumento; no resuelve el problema de la luz.",
+        "La mar de proa le frenará y cansará a la tripulación; llegar antes de que oscurezca no es realista."
        ],
-       "explanation": "Se superarían los límites de luz y de viento; el puerto de refugio está cerca y a favor del viento."
+       "explanation": "La hora del temporal por sí sola no decide: casi 12 horas ciñendo con viento en aumento y llegando de noche superan sus límites. El refugio más cercano abrigado del oeste es la mejor opción."
       }
      ]
     },
     {
      "id": "q.pl.10",
      "kind": "scenario",
-     "context": "Julio, en las Cícladas. Tiene previsto navegar de Kythnos hacia el este hasta Syros, unas 25 millas. La predicción nacional: «Norte 5 a 6 Beaufort, localmente 7 en el Egeo central a partir del mediodía; similar los próximos tres días.» Su tripulación de cuatro incluye dos principiantes.",
+     "context": "Julio, en las Cícladas. Tiene previsto navegar de Kythnos hacia el este hasta Syros, unas 25 millas, un largo de unas cinco horas. Su tripulación de cuatro incluye dos principiantes y su límite es fuerza 6. La predicción nacional para la zona: «Hoy: Norte 4 a 5 Beaufort, localmente 6 por la tarde. Mañana y pasado: Norte 6 a 7, localmente 8.»",
      "prompt": "Planifique la travesía.",
      "diagram": {
       "id": "medWinds"
      },
-     "explanation": "El meltemi suele arreciar a lo largo del día y es más fuerte en los canales y frente a los cabos. Salga temprano, cuente con efecto embudo y rachas a sotavento, y elija un refugio protegido del norte.",
+     "explanation": "Primero se decide si salir: hoy está dentro de sus límites y los días siguientes no. Salga temprano, cuente con aceleraciones y rachas a sotavento, evalúe cualquier fondeadero por algo más que la dirección del viento y quédese en puerto cuando la predicción supere sus límites.",
      "steps": [
       {
        "id": "q.pl.10a",
        "kind": "single",
-       "prompt": "¿Cuándo debe salir?",
+       "prompt": "La predicción de hoy está dentro de sus límites; la de los dos días siguientes no. ¿Cuál es el mejor plan?",
        "options": [
-        "Al amanecer, antes de que arrecie",
-        "A media tarde, cuando hace más calor",
-        "A mediodía, cuando la predicción da 7",
-        "Al anochecer, porque siempre amaina"
+        "Salir hoy al amanecer para llegar antes del viento de la tarde",
+        "Salir hoy después de comer",
+        "Esperar en Kythnos y salir mañana",
+        "Salir hoy al anochecer, cuando el viento suele bajar"
        ],
        "answers": [
         0
        ],
        "optionExplanations": [
-        "Correcto: el meltemi suele ser más flojo a primera hora.",
-        "Suele ser la parte más ventosa del día.",
-        "El periodo más fuerte según la predicción.",
-        "A menudo amaina de noche, pero llegar a oscuras a una isla desconocida añade riesgo."
+        "Correcto: dentro de límites y llegando antes del máximo habitual de la tarde.",
+        "Cruzaría en la parte más ventosa del día.",
+        "La predicción de mañana supera sus límites; esperar significa un retraso mayor.",
+        "Llegar de noche a una isla desconocida añade riesgo, y el viento puede no bajar."
        ],
-       "explanation": "Salga temprano para completar la travesía antes del máximo de la tarde."
+       "explanation": "Decida primero si sale; si sale, planifique la travesía para terminar antes del máximo de la tarde."
       },
       {
        "id": "q.pl.10b",
        "kind": "single",
-       "prompt": "¿Dónde espera el viento más fuerte en la ruta?",
+       "prompt": "¿Dónde debe esperar las rachas más fuertes en la ruta?",
        "options": [
-        "A sotavento de Kythnos al salir",
-        "En el canal abierto entre las islas y frente a los cabos",
-        "En el puerto de Syros",
-        "Es uniforme"
+        "En ningún sitio en particular: el meltemi es uniforme",
+        "En el canal entre las islas, frente a los cabos y en rachas que bajan de los montes a sotavento",
+        "Solo en el puerto de Syros",
+        "Solo en aguas abiertas lejos de las islas"
        ],
        "answers": [
         1
        ],
        "optionExplanations": [
-        "A sotavento hay rachas pero menos viento en conjunto.",
-        "Correcto: efecto embudo entre islas y aceleración frente a los cabos.",
-        "Los puertos suelen estar abrigados.",
-        "Las islas lo hacen muy irregular."
+        "Las islas lo hacen muy irregular.",
+        "Correcto: aceleración en canales y cabos, y rachas violentas que bajan por las laderas a sotavento.",
+        "Los puertos suelen estar abrigados, aunque las rachas pueden llegar.",
+        "Es junto a las islas donde el viento se estrecha y acelera."
        ],
-       "explanation": "Cuente con un grado Beaufort o más de más en los canales y frente a los cabos."
+       "explanation": "Cuente con un grado o más de más en canales y cabos; una calma al pie de una costa alta puede convertirse en rachas violentas."
       },
       {
        "id": "q.pl.10c",
        "kind": "single",
-       "prompt": "¿Qué fondeadero ofrece mejor abrigo para la noche?",
+       "prompt": "Llega a Syros. ¿Cuál es la forma más sensata de elegir abrigo para la noche?",
        "options": [
-        "Una cala abierta al norte",
-        "Una cala en la cara sur, abierta al sur",
-        "Una rada abierta en la costa este",
-        "Cualquier cala, porque el viento cae de noche"
+        "Cualquier cala abierta al norte, por la brisa",
+        "Un puerto o cala abrigados del norte, tras comprobar en el derrotero las rachas de ladera, el mar de fondo, el tenedero y una vía de escape",
+        "Cualquier cala, porque el viento cae de noche",
+        "Una rada abierta en la costa este"
        ],
        "answers": [
         1
        ],
        "optionExplanations": [
         "Abierta al meltemi y a su mar.",
-        "Correcto: pero cuente con rachas que bajan por las laderas a sotavento de montes altos.",
-        "Expuesta al mar de fondo que rodea la isla.",
-        "Puede no caer y soplar toda la noche."
+        "Correcto: el abrigo del norte es el punto de partida; después compruebe los peligros locales.",
+        "Puede no caer y soplar toda la noche.",
+        "Expuesta al mar de fondo que rodea la isla."
        ],
-       "explanation": "Elija abrigo del norte y tenga en cuenta las rachas que bajan por las laderas."
+       "explanation": "Un sotavento puede volverse insostenible con rachas violentas de ladera; un puerto puede ser mejor que un fondeadero."
       },
       {
        "id": "q.pl.10d",
        "kind": "single",
-       "prompt": "El segundo día la predicción pasa a «Norte 7, localmente 8». Con dos principiantes a bordo, ¿qué hace?",
+       "prompt": "A la mañana siguiente, en Syros, se confirma la predicción: «Norte 6 a 7, localmente 8». Con dos principiantes a bordo, ¿qué hace?",
        "options": [
         "Navegar según lo previsto",
         "Quedarse en puerto y esperar a que amaine el meltemi",
@@ -3665,6 +3665,265 @@
       "La velocidad realista es clave en la decisión."
      ],
      "explanation": "Planifique con velocidad realista en la mar prevista; el velero no encaja en esta ventana."
+    },
+    {
+     "id": "q.pl.12",
+     "kind": "scenario",
+     "context": "Barco: lancha a motor planeadora de 9 m, unos 20 nudos con mar llana, tripulación de dos. Tiene previsto ir del Hamble a Poole, unas 30 millas, saliendo del Solent por los estrechos de Hurst y el canal de las Needles. La pleamar en Portsmouth es a las 10:00. En los estrechos de Hurst la corriente tira al suroeste desde las 09:00 aproximadamente (PM Portsmouth −1) hasta las 15:15 aproximadamente (PM Portsmouth +5¼), hasta 4 nudos en mareas vivas. Predicción: «Suroeste 5 a 6, ocasionalmente 7 más tarde. Marejada o fuerte marejada.»",
+     "prompt": "Tome las decisiones del patrón.",
+     "diagram": {
+      "id": "passagePlan",
+      "variant": "refuge"
+     },
+     "explanation": "La velocidad de una lancha solo ayuda si la mar lo permite. Programe el paso de marea según el estado de la mar, planifique con velocidad realista y tenga los puertos del Solent como refugio.",
+     "steps": [
+      {
+       "id": "q.pl.12a",
+       "kind": "single",
+       "prompt": "¿Cuándo es probable que la mar en el canal de las Needles sea peor?",
+       "options": [
+        "Mientras la vaciante hacia el suroeste corre contra el viento del suroeste",
+        "Mientras la llenante hacia el nordeste corre con el viento",
+        "En el repunte",
+        "Da igual"
+       ],
+       "answers": [
+        0
+       ],
+       "optionExplanations": [
+        "Correcto: viento contra una corriente fuerte sobre fondos someros.",
+        "Viento y corriente juntos dan una mar más larga y fácil.",
+        "Suele ser el momento más fácil.",
+        "La dirección de la corriente cambia mucho la mar."
+       ],
+       "explanation": "Un viento del suroeste sopla hacia el nordeste, contra la vaciante que tira al suroeste: cuente con mar empinada y rompiente."
+      },
+      {
+       "id": "q.pl.12b",
+       "kind": "numeric",
+       "prompt": "Pasado Hurst, la mar de proa le obliga a dejar de planear y bajar a 8 nudos. ¿Cuántas horas tardará en las 15 millas que quedan hasta Poole?",
+       "numeric": {
+        "value": 1.9,
+        "tolerance": 0.25,
+        "unit": "h"
+       },
+       "explanation": "15 ÷ 8 es algo menos de 2 horas, frente a 45 minutos planeando. Compruebe el combustible y la hora de llegada con velocidad realista, no con la de mar llana."
+      },
+      {
+       "id": "q.pl.12c",
+       "kind": "single",
+       "prompt": "A las 10:30, acercándose a Hurst, ve que la mar rompe en el canal de las Needles. ¿Qué hace?",
+       "options": [
+        "Pasar a toda velocidad para acabar cuanto antes",
+        "Volver a Yarmouth o Lymington y esperar a que cambie la corriente, hacia las 15:15, y reevaluar con la última predicción",
+        "Reducir mucho y pasar de todos modos",
+        "Fondear frente al castillo de Hurst y observar"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "La velocidad contra mar empinada y rompiente arriesga daños y lesiones.",
+        "Correcto: refugios abrigados cerca; la mar amainará cuando cambie la corriente, si el viento lo permite.",
+        "El peligro es la mar rompiente en fondos someros, sea cual sea la velocidad.",
+        "Expuesto, con corriente fuerte y cerca del peligro."
+       ],
+       "explanation": "Use un refugio cercano y el horario de la marea en lugar de forzar un paso de marea con mar rompiente."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.13",
+     "kind": "scenario",
+     "context": "Finales de agosto. Tiene previsto llevar un velero de 12 m con una tripulación experta de cuatro de Chania al Pireo, unas 140 millas al norte, con Milos más o menos a mitad de camino. La predicción marítima nacional: «Mar de Creta y Egeo meridional: Norte 6 a 7 Beaufort, localmente 8, amainando a Norte 3 a 4 a partir de pasado mañana durante unos dos días.» Sus límites: fuerza 6 de proa y nada de llegadas nocturnas a puertos desconocidos.",
+     "prompt": "Planifique la travesía.",
+     "diagram": {
+      "id": "medWinds"
+     },
+     "explanation": "Ir al norte desde Creta en verano suele significar ir contra el meltemi. Espere la calma, divida la travesía, cuente con mar residual y vuelva a consultar la predicción en cada escala.",
+     "steps": [
+      {
+       "id": "q.pl.13a",
+       "kind": "single",
+       "prompt": "¿Qué hace ahora?",
+       "options": [
+        "Salir hoy y ceñir hacia el norte",
+        "Salir hoy e ir a motor directamente contra el viento",
+        "Esperar en Chania a la calma prevista",
+        "Salir esta noche, cuando quizá amaine"
+       ],
+       "answers": [
+        2
+       ],
+       "optionExplanations": [
+        "140 millas a barlovento con fuerza 6 a 7, localmente 8: fuera de sus límites.",
+        "Mar de proa y viento fuera de límites durante muchas horas.",
+        "Correcto: la calma está prevista dentro de dos días.",
+        "Puede amainar, pero la predicción es para todo el periodo y estaría en el mar de noche."
+       ],
+       "explanation": "Primero se decide si salir: la predicción supera sus límites y viene una calma."
+      },
+      {
+       "id": "q.pl.13b",
+       "kind": "single",
+       "prompt": "Llega la calma. ¿Qué plan encaja mejor en una ventana de dos días?",
+       "options": [
+        "Sin escalas, 140 millas",
+        "Dos etapas por Milos, de unas 70 millas cada una, con una escala para descansar y obtener una predicción nueva",
+        "Saltos de 20 millas de día",
+        "Por Citera"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Unas 24 horas o más en el mar, sin ocasión de volver a consultar la predicción.",
+        "Correcto: cada etapa cabe en horas de luz y ofrece un punto de decisión.",
+        "Demasiado lento para terminar dentro de la ventana.",
+        "Muy fuera de la ruta directa."
+       ],
+       "explanation": "Dividir la travesía permite descansar y tomar una nueva decisión de salida a mitad de camino."
+      },
+      {
+       "id": "q.pl.13c",
+       "kind": "single",
+       "prompt": "Al salir de Chania la primera mañana de calma, ¿qué mar espera?",
+       "options": [
+        "Mar en calma",
+        "Mar y mar de fondo residuales del norte, de proa, que amainan a lo largo del día",
+        "Mar de fondo del sur",
+        "Ninguna"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Varios días de norte fuerte dejan mar.",
+        "Correcto: las olas formadas con un fetch largo tardan en caer.",
+        "El viento ha sido del norte.",
+        "No después de días de viento fuerte."
+       ],
+       "explanation": "La mar va por detrás del viento: cuente con mar de proa durante unas horas después de que amaine."
+      },
+      {
+       "id": "q.pl.13d",
+       "kind": "single",
+       "prompt": "En Milos la nueva predicción adelanta el siguiente meltemi a la tarde-noche de su segunda etapa. ¿Qué hace?",
+       "options": [
+        "Seguir pase lo que pase",
+        "Salir al amanecer solo si puede llegar al Pireo con margen claro antes de que vuelva el viento; si no, esperar en Milos",
+        "Salir por la tarde",
+        "Ignorarla: las predicciones fallan a menudo"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "El plan se basaba en la predicción anterior.",
+        "Correcto: reevalúe frente a sus límites y el nuevo horario.",
+        "Encontraría el viento de vuelta en el mar, de noche.",
+        "Planifique con la predicción oficial y esté atento a sus cambios."
+       ],
+       "explanation": "Cada escala es una nueva decisión de salida con la última predicción."
+      }
+     ]
+    },
+    {
+     "id": "q.pl.14",
+     "kind": "scenario",
+     "context": "Principios de abril. Tiene previsto navegar con un velero de 10 m de Chania al noroeste hasta Citera, unas 60 millas, por las aguas abiertas entre el oeste de Creta y el Peloponeso. Una borrasca sobre el mar Jónico se desplaza hacia el este. Predicción: «Sureste 5 a 6, temporalmente 7, rolando a oeste 6 a 7 tras el paso de un frente frío mañana por la tarde. Fuerte marejada, localmente mar gruesa.» Tripulación de tres; límite fuerza 6.",
+     "prompt": "Tome las decisiones del patrón.",
+     "diagram": {
+      "id": "depression",
+      "variant": "coldFront"
+     },
+     "explanation": "Las dos fases del sistema superan los límites: siroco fuerte con gran mar de popa antes del frente, y poniente con mar cruzada después. Espere a que pase.",
+     "steps": [
+      {
+       "id": "q.pl.14a",
+       "kind": "single",
+       "prompt": "¿Dónde está hoy respecto al sistema?",
+       "options": [
+        "Detrás del frente frío",
+        "Delante del frente frío, en el flujo del sureste",
+        "Bajo un anticiclón",
+        "En un collado"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Todavía no ha rolado al oeste.",
+        "Correcto: sureste delante del frente, rolando al oeste cuando pase.",
+        "La presión baja con una borrasca acercándose.",
+        "Hay un gradiente claro."
+       ],
+       "explanation": "Vientos del sureste delante de un frente que se acerca, con un rolar al oeste después."
+      },
+      {
+       "id": "q.pl.14b",
+       "kind": "single",
+       "prompt": "¿Qué mar encontraría hoy en la travesía?",
+       "options": [
+        "Mar corta del norte",
+        "Gran mar de popa del sureste, formada con un fetch largo, con riesgo de atravesarse",
+        "Aguas tranquilas al abrigo de Creta",
+        "Solo mar del oeste"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "El viento es del sureste.",
+        "Correcto: la mar de popa empinada dificulta el gobierno y hace probable atravesarse.",
+        "Su ruta sale pronto del abrigo de Creta.",
+        "Eso llega después del frente."
+       ],
+       "explanation": "Un fetch largo y abierto al sureste levanta una mar grande que tendría por la popa."
+      },
+      {
+       "id": "q.pl.14c",
+       "kind": "single",
+       "prompt": "¿Cuál es la decisión marinera?",
+       "options": [
+        "Salir ya para llegar antes del frente",
+        "Esperar en Chania a que pase el frente y amaine la mar",
+        "Salir justo después del frente, contra el poniente",
+        "Salir esta noche"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "Fuerza 7 y mar gruesa de popa superan sus límites.",
+        "Correcto: ambas fases superan sus límites; el sistema pasará.",
+        "Poniente 6 a 7 sobre un gran mar de fondo residual del sureste da mar cruzada y confusa.",
+        "La noche añade riesgo sin resolver el tiempo."
+       ],
+       "explanation": "Ninguna hora de salida hace que esta travesía quepa en sus límites; espere a que pase el sistema."
+      },
+      {
+       "id": "q.pl.14d",
+       "kind": "single",
+       "prompt": "Cuando salga, ¿cómo debe elegir puerto en Citera?",
+       "options": [
+        "El más cercano, sea cual sea su exposición",
+        "Comprobar su exposición al viento y al mar de fondo previstos a la llegada y por la noche, y si se puede entrar con seguridad en esas condiciones",
+        "Cualquiera, porque el viento habrá amainado",
+        "Solo por sus servicios"
+       ],
+       "answers": [
+        1
+       ],
+       "optionExplanations": [
+        "El más cercano puede estar abierto al viento o al mar de fondo.",
+        "Correcto: deciden la exposición y las condiciones de entrada, según el derrotero.",
+        "El mar de fondo puede durar mucho después de que amaine el viento.",
+        "Los servicios no hacen seguro un puerto."
+       ],
+       "explanation": "Elija un refugio para el viento y el mar de fondo que espera, no solo por la distancia."
+      }
+     ]
     }
    ]
   }

@@ -55,11 +55,11 @@
           "heading": "Coastal convergence and divergence",
           "paragraphs": [
             "Friction backs the wind more over land than over sea. When the wind blows along a coast, this difference makes the flows converge or diverge.",
-            "In the Northern Hemisphere, stand with your back to the wind: if the land is on your right, the flows converge, giving stronger wind and often more cloud and rain along the coast. If the land is on your left, they diverge and the coastal wind is lighter."
+            "In the idealised Northern Hemisphere case, stand with your back to the wind: if the land is on your right, the flows tend to converge, often giving stronger wind and more cloud along the coast; if the land is on your left, they tend to diverge and the coastal wind is lighter. Coastline shape, sea breezes, stability and terrain can mask or reverse the effect, so treat it as a tendency to look for, not a forecast."
           ],
           "keyPoints": [
-            "Back to the wind, land on the right: convergence, stronger wind.",
-            "Land on the left: divergence, lighter wind."
+            "Idealised: back to the wind, land on the right, convergence tends to strengthen the wind.",
+            "Land on the left: divergence tends to lighten it. Local effects can override both."
           ],
           "diagram": {
             "id": "coastalConvergence"

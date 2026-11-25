@@ -22,12 +22,12 @@
         {
           "heading": "Mature stage and movement",
           "paragraphs": [
-            "A mature Atlantic depression often moves east or north-east at something like 20 to 30 knots, but speeds vary widely. It is steered roughly parallel to the isobars in the warm sector. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
-            "Explosive (rapid) deepening is conventionally a fall in central pressure of 24 hPa in 24 hours at 60° latitude; the threshold scales with latitude and is about 21 hPa at 50° N. Expect severe gales and very rapid pressure falls."
+            "A mature Atlantic depression often moves east or north-east at something like 20 to 30 knots, but speeds vary widely. Its track is set mainly by the winds aloft; as a rule of thumb it moves roughly parallel to the warm-sector isobars, but tracks change. Depressions can also slow, stall or swing north, and small, fast-moving secondary lows often form on a trailing cold front, sometimes deepening rapidly and bringing unexpected gales.",
+            "Explosive (rapid) deepening is conventionally a fall in central pressure of 24 hPa in 24 hours at 60° latitude; the threshold scales with latitude and is about 21 hPa at 50° N. It measures how fast the system is developing, not the wind at your position: such lows often bring severe gales, but what you get depends on the pressure gradient, the track and your exposure. Check the official forecast and warnings."
           ],
           "keyPoints": [
             "Often 20–30 knots east or north-east; speeds vary.",
-            "Direction follows warm-sector isobars.",
+            "Track: roughly along warm-sector isobars, as a rule of thumb.",
             "Watch for secondary lows on trailing cold fronts."
           ],
           "diagram": {
@@ -208,7 +208,7 @@
         "tolerance": 0,
         "unit": "hPa"
       },
-      "explanation": "1000 minus 972 is 28 hPa in 24 hours, above the explosive-deepening threshold at UK latitudes (about 21 to 24 hPa): expect severe gales."
+      "explanation": "1000 minus 972 is 28 hPa in 24 hours, above the explosive-deepening threshold at UK latitudes (about 21 to 24 hPa). Rapidly deepening lows often bring severe gales; check the warnings for your area."
     },
     {
       "id": "q.sys.7",

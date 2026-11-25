@@ -44,7 +44,7 @@
         {
           "heading": "Por qué se empina la mar",
           "paragraphs": [
-            "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede parecer un fuerza 7. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
+            "Cuando el viento sopla contra la corriente de marea, las olas quedan en la práctica comprimidas: la longitud de onda se acorta mientras la altura aumenta, de modo que la mar se empina y rompe. Un fuerza 5 contra una corriente de 3 nudos puede levantar una mar mucho más empinada de la que suele dar un fuerza 5. Cuando la marea cambia y corre a favor del viento, esa misma mar se alarga y se calma.",
             "El efecto es máximo en los cabos, sobre bajos y en zonas de corrientes fuertes y escarceos. Planifique el paso por esos lugares en el repunte o con viento y corriente en el mismo sentido."
           ],
           "keyPoints": [
@@ -72,12 +72,12 @@
           "heading": "Zonas de corriente, escarceos y barras",
           "paragraphs": [
             "Las zonas de corriente fuerte (tidal races) se forman donde una corriente intensa se estrecha alrededor de un cabo o pasa sobre un fondo irregular; los escarceos son la mar corta, empinada y rompiente que producen. Portland Bill, St Alban's Head y el Alderney Race son ejemplos conocidos. Con viento contra corriente pueden ser peligrosos incluso con vientos moderados, y el mar de fondo los empeora.",
-            "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, sobre todo en la vaciante, cuando la corriente saliente empina las olas. Cruce una barra con la marea entrante, cerca de la pleamar, y nunca si está rompiendo. Consulte el derrotero o el almanaque náutico para los horarios y distancias locales: manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
+            "Las barras de entrada a puerto rompen cuando el mar de fondo que entra encuentra aguas someras, a menudo peor en la vaciante, cuando la corriente saliente empina las olas. Muchas barras son más seguras con marea entrante cerca de la pleamar, pero algunas tienen sus propias ventanas, corrientes de entrante fuertes o límites de mar de fondo. Consulte el derrotero, los avisos locales y la autoridad portuaria, compruebe el resguardo bajo la quilla, observe la barra antes de comprometerse y no cruce si rompe. Manténgase bien separado de una zona de corriente o use el paso costero reconocido a la hora adecuada."
           ],
           "keyPoints": [
             "Zonas de corriente y escarceos: corriente fuerte en cabos y fondos irregulares.",
-            "Las barras rompen más en la vaciante con mar de fondo.",
-            "Cruce con marea entrante cerca de la pleamar; nunca si rompe."
+            "Las barras suelen ser peores en la vaciante con mar de fondo.",
+            "Siga el derrotero local; nunca cruce una barra que rompe."
           ],
           "diagram": {
             "id": "waves",
@@ -94,11 +94,11 @@
           "heading": "Altura significativa y las olas mayores",
           "paragraphs": [
             "Las predicciones de oleaje y los datos de las boyas dan la altura significativa de ola: la media del tercio más alto de las olas, cercana a lo que estimaría un observador experimentado. Muchas olas son más bajas y algunas mucho más altas.",
-            "En unas pocas horas, cuente con olas individuales ocasionales de hasta aproximadamente el doble de la altura significativa. Una predicción de 2 m puede traer alguna ola de unos 4 m, y esa es la ola que llena la bañera o tumba un barco."
+            "En unas pocas horas, cuente con olas individuales ocasionales de aproximadamente el doble de la altura significativa, y rara vez más. Una predicción de 2 m puede traer alguna ola de 4 m o algo más, y esa es la ola que llena la bañera o tumba un barco."
           ],
           "keyPoints": [
             "Altura significativa: media del tercio más alto.",
-            "Cuente con olas ocasionales cercanas al doble.",
+            "Cuente con olas ocasionales de unas dos veces esa altura, rara vez más.",
             "Planifique para la ola grande, no para la media."
           ],
           "diagram": {
@@ -398,7 +398,7 @@
         "Mínima profundidad: las olas rompen con más facilidad.",
         "Un motor fiable no evita la rompiente."
       ],
-      "explanation": "Cruce las barras con marea entrante cerca de la pleamar, y nunca si rompen."
+      "explanation": "En general, cruce con marea entrante cerca de la pleamar, según el derrotero local, y nunca si la barra rompe."
     }
   ]
 }

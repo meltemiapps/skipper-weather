@@ -22,12 +22,12 @@
         {
           "heading": "Madurez y desplazamiento",
           "paragraphs": [
-            "Una borrasca madura en el Atlántico se desplaza a menudo hacia el este o el nordeste a unos 20–30 nudos, aunque la velocidad varía mucho. Va guiada más o menos en paralelo a las isobaras del sector cálido. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
-            "Por convención, la ciclogénesis explosiva es una caída de la presión central de 24 hPa en 24 horas a 60° de latitud; el umbral varía con la latitud y a 50° N es de unos 21 hPa. Cuente con temporales muy duros y bajadas de presión muy rápidas."
+            "Una borrasca madura en el Atlántico se desplaza a menudo hacia el este o el nordeste a unos 20–30 nudos, aunque la velocidad varía mucho. Su trayectoria la marcan sobre todo los vientos en altura; como regla práctica se mueve más o menos en paralelo a las isobaras del sector cálido, pero las trayectorias cambian. Las borrascas también pueden frenarse, quedarse estacionarias o desviarse hacia el norte, y en la cola de un frente frío se forman a menudo pequeñas bajas secundarias muy rápidas que a veces se profundizan deprisa y traen temporales inesperados.",
+            "Por convención, la ciclogénesis explosiva es una caída de la presión central de 24 hPa en 24 horas a 60° de latitud; el umbral varía con la latitud y a 50° N es de unos 21 hPa. Mide lo deprisa que se desarrolla el sistema, no el viento en su posición: estas borrascas traen a menudo temporales muy duros, pero lo que encuentre dependerá del gradiente de presión, la trayectoria y su exposición. Consulte la predicción y los avisos oficiales."
           ],
           "keyPoints": [
             "A menudo 20–30 nudos hacia el E o NE; la velocidad varía.",
-            "La trayectoria sigue las isobaras del sector cálido.",
+            "Trayectoria: más o menos según las isobaras del sector cálido, como regla práctica.",
             "Vigile las bajas secundarias en la cola de los frentes fríos."
           ],
           "diagram": {
@@ -208,7 +208,7 @@
         "tolerance": 0,
         "unit": "hPa"
       },
-      "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de ciclogénesis explosiva en latitudes británicas (unos 21 a 24 hPa): cuente con temporales muy duros."
+      "explanation": "1000 menos 972 son 28 hPa en 24 horas, por encima del umbral de ciclogénesis explosiva en latitudes británicas (unos 21 a 24 hPa). Las borrascas que se profundizan deprisa traen a menudo temporales muy duros; consulte los avisos para su zona."
     },
     {
       "id": "q.sys.7",

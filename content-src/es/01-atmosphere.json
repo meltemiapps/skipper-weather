@@ -49,7 +49,7 @@
           "heading": "Cómo leer la tendencia",
           "paragraphs": [
             "Una lectura aislada del barómetro dice poco. La tendencia, es decir, la variación en las tres horas anteriores, dice mucho más. Durante la travesía, anote el barómetro cada hora en el cuaderno de bitácora y represéntelo en una gráfica.",
-            "Los términos normalizados para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (de 0,1 a 1,5 hPa), subiendo o bajando (de 1,6 a 3,5 hPa), rápidamente (de 3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
+            "Los términos que usan las predicciones marítimas británicas para la variación en tres horas son: estable (menos de 0,1 hPa), subiendo o bajando lentamente (0,1 a 1,5 hPa), subiendo o bajando (1,6 a 3,5 hPa), deprisa (3,6 a 6,0 hPa) y muy rápidamente (más de 6,0 hPa)."
           ],
           "keyPoints": [
             "Anote el barómetro cada hora; lo que importa es la tendencia, no la cifra.",
@@ -120,7 +120,7 @@
         "«Rápidamente» corresponde a 3,6–6,0 hPa.",
         "Correcto: 7 hPa supera los 6,0 hPa en tres horas."
       ],
-      "explanation": "Un descenso de 7 hPa en tres horas es «bajando muy rápidamente» e indica con claridad que se acerca un temporal."
+      "explanation": "Una bajada de 7 hPa en tres horas es «bajando muy rápidamente»: un claro indicio de que se acerca una borrasca que se profundiza o un frente. Consulte la última predicción y los avisos."
     },
     {
       "id": "q.atm.2",
@@ -171,13 +171,13 @@
     {
       "id": "q.atm.4",
       "kind": "numeric",
-      "prompt": "A las 06:00 la presión era de 1016 hPa y está bajando a un ritmo constante de 2 hPa por hora. ¿Qué marcará a las 10:00, en hPa?",
+      "prompt": "Como ejercicio de cálculo: a las 06:00 la presión era de 1016 hPa y bajaba a un ritmo constante de 2 hPa por hora. Si siguiera a ese ritmo, ¿qué marcaría a las 10:00, en hPa?",
       "numeric": {
         "value": 1008,
         "tolerance": 0,
         "unit": "hPa"
       },
-      "explanation": "Cuatro horas a 2 hPa por hora suponen un descenso de 8 hPa: 1016 menos 8 da 1008 hPa. Eso está entre «bajando rápidamente» y «muy rápidamente»; prepárese para un viento fuerte."
+      "explanation": "Cuatro horas a 2 hPa por hora son 8 hPa: 1016 menos 8 son 1008 hPa. Las variaciones reales rara vez son constantes, pero una bajada tan rápida es una señal de alarma: consulte la predicción y los avisos."
     },
     {
       "id": "q.atm.5",

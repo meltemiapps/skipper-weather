@@ -96,7 +96,7 @@
         {
           "heading": "Tactics",
           "paragraphs": [
-            "Options include continuing under deeply reefed sail, heaving-to (backed headsail, eased main, helm lashed to windward) to rest the crew and ride the seas comfortably, running off under minimal sail with warps or a drogue to control speed, and in survival conditions a sea anchor from the bow.",
+            "A sailing yacht's options include continuing under deeply reefed sail; heaving-to, which on many boats (backed headsail, eased main, helm to windward) slows her to a slow drift to leeward and lets the crew rest, but which depends on the boat and rig, needs sea room and may not suit breaking seas; running off under minimal sail, with warps or a drogue to control speed; and, in survival conditions, a sea anchor. Drogues and sea anchors need gear matched to the boat and practice before you need them. A motor boat's options are different, usually holding a chosen angle to the sea at reduced speed. Practise any tactic in moderate conditions first.",
             "There is no universal tactic. The right choice depends on sail or power, hull form and stability, the size, shape and period of the seas, sea room, visibility, the crew and the builder's guidance. Better still, avoid it: divert or seek shelter early, reduce speed and reassess often, and decide while the crew still has energy."
           ],
           "diagram": {
@@ -178,10 +178,10 @@
     {
       "id": "q.pl.4",
       "kind": "single",
-      "prompt": "What is heaving-to?",
+      "prompt": "What is heaving-to on a typical sailing yacht?",
       "options": [
         "Running downwind under bare poles",
-        "Backed headsail, eased mainsail and helm lashed to windward so the boat lies quietly",
+        "Backed headsail, eased mainsail and helm to windward, so the boat lies quietly with a slow drift to leeward",
         "Motoring into the wind at full power",
         "Anchoring in deep water"
       ],
@@ -194,7 +194,7 @@
         "Not heaving-to.",
         "Not heaving-to."
       ],
-      "explanation": "Heaving-to stops the boat in a comfortable attitude, giving the crew a rest and time to deal with problems."
+      "explanation": "On many yachts heaving-to slows the boat to a slow drift and lets the crew rest. It needs sea room, depends on the boat and rig, may not suit breaking seas, and should be practised first."
     },
     {
       "id": "q.pl.5",
@@ -334,34 +334,34 @@
     {
       "id": "q.pl.9",
       "kind": "scenario",
-      "context": "In May you plan to sail west from Weymouth to Dartmouth, about 50 miles, rounding Portland Bill. Boat: 10 m yacht, crew of three. Your limits: Force 6, moderate sea, arrive in daylight. Forecast issued 05:00: 'West or south-west 4 or 5, occasionally 6 later. Moderate. Fair. Good.' Off the Bill the stream runs west from 10:00 to 16:00 and east from 16:00 to 22:00.",
+      "context": "In May you plan to sail west from Weymouth to Dartmouth: about 8 miles to Portland Bill, then about 47 miles across Lyme Bay. Boat: 10 m yacht, crew of three. Your limits: Force 6, moderate sea, arrive before dark (sunset about 21:00). HW Dover is 11:00. The almanac advises rounding the Bill westbound, close in by the inshore passage, between HW Dover −1 and +2 (10:00 to 13:00); the stream off the Bill then sets west until about 16:00. You leave Weymouth at 09:00. Forecast for the sea area, issued 05:00: 'West or south-west 4 or 5, occasionally 6 later. Moderate. Fair. Good.'",
       "prompt": "Make the skipper's decisions.",
       "diagram": {
         "id": "passagePlan",
         "variant": "refuge"
       },
-      "explanation": "Time the race, keep well clear of it, set triggers, and turn back to shelter when a warning makes the rest of the passage a beat into a rising gale in the dark.",
+      "explanation": "The competence being tested is reassessment: when a new warning and the arithmetic show your limits will be broken, choose the safest reachable refuge rather than pressing on.",
       "steps": [
         {
           "id": "q.pl.9a",
           "kind": "single",
-          "prompt": "How do you deal with Portland Race?",
+          "prompt": "How do you plan the rounding of Portland Bill?",
           "options": [
-            "Go through the middle of the race at maximum westgoing stream",
-            "Keep well clear, or use the inshore passage at the time the pilot book gives",
-            "Go through at 16:00 whatever the wind",
-            "Ignore it: Force 4 to 5 is moderate"
+            "Through the race around 14:00, with the strongest westgoing stream",
+            "By the inshore passage between 10:00 and 13:00 as the almanac advises, or well outside the race",
+            "At 16:00, whatever the wind",
+            "Ignore the race: Force 4 to 5 is moderate"
           ],
           "answers": [
             1
           ],
           "optionExplanations": [
-            "Wind against a strong stream in the race: steep breaking seas.",
-            "Correct: follow the pilot book's timing and clearances.",
-            "Timing must suit both stream and wind.",
+            "A westerly wind blows towards the east, against the strong westgoing stream: steep breaking seas in the race.",
+            "Correct: the recommended window, close in, or a wide berth outside the race.",
+            "The stream turns about then; timing must suit both stream and wind.",
             "Races can be dangerous in moderate winds."
           ],
-          "explanation": "Keep well off a race or use the recognised inshore passage at the right time."
+          "explanation": "Use the almanac's westbound window for the inshore passage, or keep well outside the race."
         },
         {
           "id": "q.pl.9b",
@@ -387,114 +387,114 @@
         {
           "id": "q.pl.9c",
           "kind": "numeric",
-          "prompt": "Dartmouth is 42 miles on. Beating into the westerly your speed made good is 4 knots. How many hours to arrive?",
+          "prompt": "Dartmouth is about 47 miles on. Beating into the westerly your speed made good is 4 knots. How many hours to arrive?",
           "numeric": {
-            "value": 10.5,
+            "value": 11.75,
             "tolerance": 0.5,
             "unit": "h"
           },
-          "explanation": "42 ÷ 4 is 10½ hours: arriving around 21:30, after dark, as the wind rises."
+          "explanation": "47 ÷ 4 is about 11¾ hours: arriving around 22:45, well after dark, as the wind rises."
         },
         {
           "id": "q.pl.9d",
           "kind": "single",
-          "prompt": "What is the seamanlike decision?",
+          "prompt": "At 11:00 you are just past the Bill. Which decision is best supported by the evidence?",
           "options": [
-            "Press on: the gale is not due for 12 hours",
-            "Turn back to Weymouth, downwind and sheltered from the west",
-            "Heave to off the Bill and wait",
-            "Motor into it at full power to save time"
+            "Press on: the gale is not due until after 23:00",
+            "Reassess and head for the nearest suitable refuge, most likely Weymouth: about 9 miles back, downwind and sheltered from the west",
+            "Heave to off the Bill and wait for a later forecast",
+            "Motor into it at full power to arrive before dark"
           ],
           "answers": [
             1
           ],
           "optionExplanations": [
-            "You would beat into rising wind and arrive in the dark, beyond your limits.",
-            "Correct: a short, downwind run to a harbour sheltered from westerlies.",
-            "Close to the race and a lee shore in a rising westerly.",
-            "Head seas will slow you and tire the crew."
+            "The gale may hold off, but you would beat for nearly 12 hours into a rising wind and arrive well after dark, breaking your daylight limit.",
+            "Correct: your daylight limit will be broken and the wind is forecast to rise; check the stream and the race before turning.",
+            "Close to the race and with a rising westerly; it does not solve the daylight problem.",
+            "Head seas will slow you and tire the crew; arrival before dark is not realistic."
           ],
-          "explanation": "Your daylight and wind limits will both be broken; the fallback port is close and downwind."
+          "explanation": "The gale timing alone does not decide it: a beat of nearly 12 hours into a rising wind, arriving after dark, breaks your limits. The nearest refuge sheltered from the west is the better choice."
         }
       ]
     },
     {
       "id": "q.pl.10",
       "kind": "scenario",
-      "context": "July, in the Cyclades. You plan to sail from Kythnos east to Syros, about 25 miles. The national forecast: 'North 5 to 6 Beaufort, locally 7 in the central Aegean from midday; similar for the next three days.' Your crew of four includes two beginners.",
+      "context": "July, in the Cyclades. You plan to sail from Kythnos east to Syros, about 25 miles, a beam reach of about five hours. Your crew of four includes two beginners, and your limit is Force 6. The national forecast for the area: 'Today: North 4 to 5 Beaufort, locally 6 in the afternoon. Tomorrow and the following day: North 6 to 7, locally 8.'",
       "prompt": "Plan the passage.",
       "diagram": {
         "id": "medWinds"
       },
-      "explanation": "The Meltemi usually builds through the day and is strongest in the channels and off capes. Leave early, expect funnelling and lee gusts, and choose shelter from the north.",
+      "explanation": "Go/no-go comes first: today is within your limits and the next days are not. Leave early, expect acceleration and lee gusts, check any anchorage for more than wind direction, and stay put when the forecast exceeds your limits.",
       "steps": [
         {
           "id": "q.pl.10a",
           "kind": "single",
-          "prompt": "When should you leave?",
+          "prompt": "Today's forecast is within your limits; the next two days are not. What is the best plan?",
           "options": [
-            "At first light, before the wind builds",
-            "Mid-afternoon, when it is warmest",
-            "At midday, when the forecast says 7",
-            "At dusk, when it always drops"
+            "Go today, leaving at first light to arrive before the afternoon wind",
+            "Go today, leaving after lunch",
+            "Wait in Kythnos and sail tomorrow",
+            "Go today, leaving at dusk when the wind usually drops"
           ],
           "answers": [
             0
           ],
           "optionExplanations": [
-            "Correct: the Meltemi is usually lightest in the early morning.",
-            "Usually the windiest part of the day.",
-            "The forecast's strongest period.",
-            "It often eases at night, but arriving at an unfamiliar island in the dark adds risk."
+            "Correct: within limits, and arriving before the usual afternoon peak.",
+            "You would be crossing during the windiest part of the day.",
+            "Tomorrow's forecast is above your limits; waiting means a longer delay.",
+            "Arriving at an unfamiliar island in the dark adds risk, and the wind may not drop."
           ],
-          "explanation": "Leave early to complete the passage before the afternoon peak."
+          "explanation": "Decide go/no-go first; then, if you go, time the passage to finish before the afternoon peak."
         },
         {
           "id": "q.pl.10b",
           "kind": "single",
-          "prompt": "Where on the route do you expect the strongest wind?",
+          "prompt": "Where on the route should you expect the strongest gusts?",
           "options": [
-            "In the lee of Kythnos at departure",
-            "In the open channel between the islands and off the capes",
-            "In Syros harbour",
-            "It is uniform"
+            "Nowhere in particular: the Meltemi is uniform",
+            "In the channel between the islands, off the capes, and in gusts falling off high ground in the lee",
+            "Only in Syros harbour",
+            "Only in open water far from the islands"
           ],
           "answers": [
             1
           ],
           "optionExplanations": [
-            "The lee is gusty but less wind overall.",
-            "Correct: funnelling between islands and acceleration off capes.",
-            "Harbours are usually sheltered.",
-            "Islands make it very uneven."
+            "Islands make it very uneven.",
+            "Correct: channel and cape acceleration, plus violent downslope gusts in the lee.",
+            "Harbours are usually sheltered, though gusts can reach them.",
+            "The islands are where the wind is squeezed and accelerated."
           ],
-          "explanation": "Expect a force or more extra in the channels and off headlands."
+          "explanation": "Expect a force or more extra in channels and off capes, and a calm close under high ground can turn into violent gusts."
         },
         {
           "id": "q.pl.10c",
           "kind": "single",
-          "prompt": "Which anchorage gives the best shelter for the night?",
+          "prompt": "You reach Syros. Which is the soundest way to choose shelter for the night?",
           "options": [
-            "A bay open to the north",
-            "A bay on the south side, open to the south",
-            "An open roadstead on the east coast",
-            "Any bay, since the wind drops at night"
+            "Any bay open to the north, for the breeze",
+            "A harbour or bay sheltered from the north, after checking the pilot for downslope gusts, swell, holding and a way out",
+            "Any bay, since the wind drops at night",
+            "An open roadstead on the east coast"
           ],
           "answers": [
             1
           ],
           "optionExplanations": [
             "Open to the Meltemi and its sea.",
-            "Correct: but expect gusts down the slopes in the lee of high ground.",
-            "Exposed to swell wrapping round.",
-            "It may not drop, and can blow all night."
+            "Correct: shelter from the north is the start; then check the local hazards.",
+            "It may not drop, and can blow all night.",
+            "Exposed to swell working round the island."
           ],
-          "explanation": "Choose shelter from the north, and allow for downslope gusts."
+          "explanation": "A lee can be untenable in violent downslope gusts; a harbour may be better than an anchorage."
         },
         {
           "id": "q.pl.10d",
           "kind": "single",
-          "prompt": "On day two the forecast becomes 'North 7, locally 8'. With two beginners aboard, what do you do?",
+          "prompt": "Next morning in Syros the forecast is confirmed: 'North 6 to 7, locally 8'. With two beginners aboard, what do you do?",
           "options": [
             "Sail as planned",
             "Stay in harbour and wait for the Meltemi to ease",
@@ -534,6 +534,265 @@
         "Realistic speed is central to the decision."
       ],
       "explanation": "Plan on realistic speed in the expected sea; the yacht does not fit this window at all."
+    },
+    {
+      "id": "q.pl.12",
+      "kind": "scenario",
+      "context": "Boat: 9 m planing motor cruiser, about 20 knots in calm water, crew of two. You plan to go from the Hamble to Poole, about 30 miles, leaving the Solent through Hurst Narrows and the Needles Channel. HW Portsmouth is 10:00. In Hurst Narrows the stream sets south-west from about 09:00 (HW Portsmouth −1) to about 15:15 (HW Portsmouth +5¼), up to 4 knots at springs. Forecast: 'South-west 5 to 6, occasionally 7 later. Moderate or rough.'",
+      "prompt": "Make the skipper's decisions.",
+      "diagram": {
+        "id": "passagePlan",
+        "variant": "refuge"
+      },
+      "explanation": "A motor boat's speed only helps if the sea allows it. Time the tidal gate for the sea state, plan on realistic speed, and keep the Solent harbours as refuges.",
+      "steps": [
+        {
+          "id": "q.pl.12a",
+          "kind": "single",
+          "prompt": "When is the sea in the Needles Channel likely to be worst?",
+          "options": [
+            "While the south-west-going ebb runs against the south-westerly wind",
+            "While the north-east-going flood runs with the wind",
+            "At slack water",
+            "It makes no difference"
+          ],
+          "answers": [
+            0
+          ],
+          "optionExplanations": [
+            "Correct: wind against a strong stream over shallow ground.",
+            "Wind and stream together give a longer, easier sea.",
+            "Usually the easiest time.",
+            "Stream direction changes the sea a great deal."
+          ],
+          "explanation": "A south-westerly blows towards the north-east, against the south-west-going ebb: expect steep, breaking seas."
+        },
+        {
+          "id": "q.pl.12b",
+          "kind": "numeric",
+          "prompt": "Beyond Hurst, the head sea forces you off the plane to 8 knots. How long will the remaining 15 miles to Poole take, in hours?",
+          "numeric": {
+            "value": 1.9,
+            "tolerance": 0.25,
+            "unit": "h"
+          },
+          "explanation": "15 ÷ 8 is just under 2 hours, against 45 minutes at planing speed. Check fuel and arrival time on realistic speed, not calm-water speed."
+        },
+        {
+          "id": "q.pl.12c",
+          "kind": "single",
+          "prompt": "At 10:30, approaching Hurst, you see breaking seas in the Needles Channel. What do you do?",
+          "options": [
+            "Drive through at full speed to get it over quickly",
+            "Turn back to Yarmouth or Lymington and wait for the stream to turn, about 15:15, then reassess with the latest forecast",
+            "Slow right down and go through anyway",
+            "Anchor off Hurst Castle and watch"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Speed into steep breaking seas risks damage and injury.",
+            "Correct: sheltered refuges close by; the sea will ease when the stream turns, if the wind allows.",
+            "Breaking seas over shallow ground are the hazard, whatever the speed.",
+            "Exposed, in a strong stream, close to the hazard."
+          ],
+          "explanation": "Use a nearby refuge and the tidal timing rather than forcing a tidal gate in breaking seas."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.13",
+      "kind": "scenario",
+      "context": "Late August. You plan to take a 12 m yacht with an experienced crew of four from Chania to Piraeus, about 140 miles north, with Milos roughly halfway. The national marine forecast: 'Cretan Sea and southern Aegean: North 6 to 7 Beaufort, locally 8, easing to North 3 to 4 from the day after tomorrow for about two days.' Your limits: Force 6 on the nose, and no night arrivals in unfamiliar harbours.",
+      "prompt": "Plan the passage.",
+      "diagram": {
+        "id": "medWinds"
+      },
+      "explanation": "Heading north from Crete in summer usually means heading into the Meltemi. Wait for a lull, split the passage, expect leftover sea, and re-check the forecast at each stop.",
+      "steps": [
+        {
+          "id": "q.pl.13a",
+          "kind": "single",
+          "prompt": "What do you do now?",
+          "options": [
+            "Leave today and beat north",
+            "Leave today and motor straight into it",
+            "Wait in Chania for the forecast lull",
+            "Leave tonight, when the wind may ease"
+          ],
+          "answers": [
+            2
+          ],
+          "optionExplanations": [
+            "140 miles to windward in Force 6 to 7, locally 8: beyond your limits.",
+            "Head seas and wind beyond limits, for many hours.",
+            "Correct: the lull is forecast within two days.",
+            "It may ease, but the forecast is for the whole period and you would be at sea at night."
+          ],
+          "explanation": "Go/no-go first: the forecast exceeds your limits, and a lull is coming."
+        },
+        {
+          "id": "q.pl.13b",
+          "kind": "single",
+          "prompt": "The lull arrives. Which plan fits a two-day window best?",
+          "options": [
+            "Non-stop, 140 miles",
+            "Two legs via Milos, about 70 miles each, with a stop to rest and get a fresh forecast",
+            "Daylight hops of 20 miles",
+            "Via Kythira"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "About 24 hours or more at sea, with no chance to re-check the forecast.",
+            "Correct: each leg fits in daylight and gives a decision point.",
+            "Too slow to finish inside the window.",
+            "Well off the direct route."
+          ],
+          "explanation": "Splitting the passage gives rest and a fresh go/no-go decision halfway."
+        },
+        {
+          "id": "q.pl.13c",
+          "kind": "single",
+          "prompt": "Leaving Chania on the first morning of the lull, what sea do you expect?",
+          "options": [
+            "Flat calm",
+            "A leftover northerly sea and swell, on the nose, easing through the day",
+            "A southerly swell",
+            "None at all"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Several days of strong northerlies leave a sea behind.",
+            "Correct: waves built over a long fetch take time to die down.",
+            "The wind has been from the north.",
+            "Not after days of strong wind."
+          ],
+          "explanation": "The sea lags the wind: expect a head sea for some hours after the wind eases."
+        },
+        {
+          "id": "q.pl.13d",
+          "kind": "single",
+          "prompt": "At Milos the new forecast brings the next Meltemi forward to the evening of your planned second leg. What do you do?",
+          "options": [
+            "Press on regardless",
+            "Leave at first light only if you can reach Piraeus with a clear margin before the wind returns; otherwise wait in Milos",
+            "Leave in the afternoon",
+            "Ignore it: forecasts are often wrong"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The plan was built on the old forecast.",
+            "Correct: reassess against your limits and the new timing.",
+            "You would meet the returning wind at sea, at night.",
+            "Plan to the official forecast, and watch for it changing."
+          ],
+          "explanation": "Each stop is a new go/no-go decision against the latest forecast."
+        }
+      ]
+    },
+    {
+      "id": "q.pl.14",
+      "kind": "scenario",
+      "context": "Early April. You plan to sail a 10 m yacht from Chania north-west to Kythira, about 60 miles, across the open water between western Crete and the Peloponnese. A depression over the Ionian Sea is moving east. Forecast: 'South-east 5 to 6, increasing 7 for a time, veering west 6 to 7 after a cold front passes tomorrow afternoon. Rough, locally very rough.' Crew of three; limits Force 6.",
+      "prompt": "Make the skipper's decisions.",
+      "diagram": {
+        "id": "depression",
+        "variant": "coldFront"
+      },
+      "explanation": "Both phases of this system exceed the limits: a strong south-easterly and large following sea before the front, then a westerly and a cross sea after it. Wait for it to clear.",
+      "steps": [
+        {
+          "id": "q.pl.14a",
+          "kind": "single",
+          "prompt": "Where are you relative to the system today?",
+          "options": [
+            "Behind the cold front",
+            "Ahead of the cold front, in the south-easterly flow",
+            "Under an anticyclone",
+            "In a col"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The veer to the west has not happened yet.",
+            "Correct: south-easterly ahead of the front, veering west as it passes.",
+            "Pressure is falling with a depression approaching.",
+            "There is a clear gradient."
+          ],
+          "explanation": "South-easterly winds ahead of an approaching front, with a veer to the west to come."
+        },
+        {
+          "id": "q.pl.14b",
+          "kind": "single",
+          "prompt": "What sea would you meet on the passage today?",
+          "options": [
+            "A short northerly sea",
+            "A large following sea from the south-east, built over a long fetch, with a risk of broaching",
+            "Calm water in the lee of Crete",
+            "Only a westerly sea"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The wind is from the south-east.",
+            "Correct: steep following seas make steering hard and broaching likely.",
+            "Your route leaves the lee of Crete quickly.",
+            "That comes after the front."
+          ],
+          "explanation": "A long open fetch to the south-east builds a large sea that you would have astern."
+        },
+        {
+          "id": "q.pl.14c",
+          "kind": "single",
+          "prompt": "What is the seamanlike decision?",
+          "options": [
+            "Go now to arrive before the front",
+            "Wait in Chania until the front has passed and the sea has eased",
+            "Go just after the front, into the westerly",
+            "Go tonight"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "Force 7 and a very rough following sea are beyond your limits.",
+            "Correct: both phases exceed your limits; this system will pass.",
+            "Westerly 6 to 7 over a big leftover south-easterly swell gives a confused cross sea.",
+            "Night adds risk without solving the weather."
+          ],
+          "explanation": "No departure time makes this passage fit the limits; wait for the system to clear."
+        },
+        {
+          "id": "q.pl.14d",
+          "kind": "single",
+          "prompt": "When you do go, how should you choose the harbour on Kythira?",
+          "options": [
+            "The nearest one, whatever its exposure",
+            "Check its exposure to the wind and swell expected on arrival and overnight, and whether it can be entered safely in those conditions",
+            "Any harbour, since the wind will have eased",
+            "Only by its facilities"
+          ],
+          "answers": [
+            1
+          ],
+          "optionExplanations": [
+            "The nearest may be open to the wind or swell.",
+            "Correct: exposure and entry conditions decide it, using the pilot.",
+            "Swell can persist long after the wind eases.",
+            "Facilities do not make a harbour safe."
+          ],
+          "explanation": "Choose a refuge for the wind and swell you expect, not for distance alone."
+        }
+      ]
     }
   ]
 }

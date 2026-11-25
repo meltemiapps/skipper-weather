@@ -55,11 +55,11 @@
           "heading": "Convergencia y divergencia costeras",
           "paragraphs": [
             "La fricción hace rolar el viento a la izquierda más sobre tierra que sobre el mar. Cuando el viento sopla paralelo a la costa, esa diferencia hace que los flujos converjan o diverjan.",
-            "En el hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos convergen, con viento más fuerte y a menudo más nubes y lluvia a lo largo de la costa. Si la tierra queda a su izquierda, divergen y el viento costero es más flojo."
+            "En el caso idealizado del hemisferio norte, póngase de espaldas al viento: si la tierra queda a su derecha, los flujos tienden a converger, lo que suele dar más viento y más nubosidad a lo largo de la costa; si la tierra queda a su izquierda, tienden a divergir y el viento costero es más flojo. La forma de la costa, las brisas, la estabilidad y el relieve pueden ocultar o invertir el efecto, así que tómelo como una tendencia que buscar, no como una predicción."
           ],
           "keyPoints": [
-            "De espaldas al viento, tierra a la derecha: convergencia, viento más fuerte.",
-            "Tierra a la izquierda: divergencia, viento más flojo."
+            "Caso idealizado: de espaldas al viento, tierra a la derecha, la convergencia tiende a reforzar el viento.",
+            "Tierra a la izquierda: la divergencia tiende a debilitarlo. Los efectos locales pueden imponerse a ambos."
           ],
           "diagram": {
             "id": "coastalConvergence"

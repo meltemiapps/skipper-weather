@@ -44,7 +44,7 @@
         {
           "heading": "Why it steepens",
           "paragraphs": [
-            "When the wind blows against the tidal stream, the waves are effectively compressed: the wavelength shortens while height increases, so the sea becomes steep and breaks. A Force 5 against a 3-knot stream can feel like a Force 7. When the tide turns to run with the wind, the same sea lengthens and eases.",
+            "When the wind blows against the tidal stream, the waves are effectively compressed: the wavelength shortens while height increases, so the sea becomes steep and breaks. A Force 5 against a 3-knot stream can raise a sea far steeper than a Force 5 normally produces. When the tide turns to run with the wind, the same sea lengthens and eases.",
             "The effect is worst at headlands, over shoals and in tidal races and overfalls. Plan to pass such places at slack water or with wind and tide together."
           ],
           "keyPoints": [
@@ -72,12 +72,12 @@
           "heading": "Races, overfalls and bars",
           "paragraphs": [
             "Tidal races form where a strong stream is squeezed round a headland or over an uneven bottom; overfalls are the steep, breaking seas this produces. Portland Bill, St Alban's Head and the Alderney Race are well-known examples. With wind against the stream they can be dangerous even in moderate winds, and a swell running in makes them worse.",
-            "Harbour bars break when an onshore swell meets shallow water, worst on the ebb when the outgoing stream steepens the waves. Cross a bar on the flood, near high water, and not at all if it is breaking. Use the pilot book or almanac for local timings and clearances: keep well off a race or take the recognised inshore passage at the right time."
+            "Harbour bars break when an onshore swell meets shallow water, often worst on the ebb when the outgoing stream steepens the waves. Many bars are safest on the flood near high water, but some have their own windows, strong flood streams or swell limits. Use the pilot book, local notices and the harbour authority, check your under-keel clearance, watch the bar before committing, and do not cross if it is breaking. Keep well off a race or take the recognised inshore passage at the right time."
           ],
           "keyPoints": [
             "Races and overfalls: strong stream over headlands and uneven ground.",
-            "Bars break worst on the ebb with onshore swell.",
-            "Cross on the flood near high water; never when breaking."
+            "Bars are often worst on the ebb with onshore swell.",
+            "Follow local pilotage; never cross a breaking bar."
           ],
           "diagram": {
             "id": "waves",
@@ -94,11 +94,11 @@
           "heading": "Significant height and the bigger waves",
           "paragraphs": [
             "Wave forecasts and buoy reports give the significant wave height: the average height of the highest third of the waves, close to what an experienced observer would estimate. Many waves are lower, and some are much higher.",
-            "Over a few hours, expect occasional individual waves of up to about twice the significant height. A forecast of 2 m can therefore bring the odd wave of around 4 m, and that is the wave that fills a cockpit or knocks a boat down."
+            "Over a few hours, expect occasional individual waves of about twice the significant height, and rarely more. A forecast of 2 m can therefore bring the odd wave of 4 m or so, and that is the wave that fills a cockpit or knocks a boat down."
           ],
           "keyPoints": [
             "Significant height: mean of the highest third.",
-            "Expect occasional waves near twice that height.",
+            "Expect occasional waves of about twice that height, rarely more.",
             "Plan for the big wave, not the average."
           ],
           "diagram": {
@@ -398,7 +398,7 @@
         "Least depth: waves break most readily.",
         "Engine reliability does not stop breaking seas."
       ],
-      "explanation": "Cross bars on the flood near high water, and not at all if they are breaking."
+      "explanation": "Generally cross on the flood near high water, subject to local pilotage advice, and not at all if the bar is breaking."
     }
   ]
 }

@@ -49,7 +49,7 @@
           "heading": "Reading the tendency",
           "paragraphs": [
             "A single barometer reading says little. The tendency, the change over the previous three hours, says much more. On passage, log the barometer every hour and plot it.",
-            "Standard descriptors for the three-hour change are: steady (less than 0.1 hPa), rising or falling slowly (0.1 to 1.5 hPa), rising or falling (1.6 to 3.5 hPa), quickly (3.6 to 6.0 hPa) and very rapidly (more than 6.0 hPa)."
+            "The descriptors used in UK marine forecasts for the three-hour change are: steady (less than 0.1 hPa), rising or falling slowly (0.1 to 1.5 hPa), rising or falling (1.6 to 3.5 hPa), quickly (3.6 to 6.0 hPa) and very rapidly (more than 6.0 hPa)."
           ],
           "keyPoints": [
             "Log the barometer hourly; the trend matters, not the number.",
@@ -120,7 +120,7 @@
         "Quickly is 3.6 to 6.0 hPa.",
         "Correct: 7 hPa is more than 6.0 hPa in three hours."
       ],
-      "explanation": "A fall of 7 hPa in three hours is 'falling very rapidly' and strongly suggests a gale is approaching."
+      "explanation": "A fall of 7 hPa in three hours is 'falling very rapidly': a strong sign that a deepening low or a front is close. Check the latest forecast and warnings."
     },
     {
       "id": "q.atm.2",
@@ -171,13 +171,13 @@
     {
       "id": "q.atm.4",
       "kind": "numeric",
-      "prompt": "Pressure at 06:00 was 1016 hPa and is falling at a steady 2 hPa per hour. What will it read at 10:00, in hPa?",
+      "prompt": "As arithmetic practice: pressure at 06:00 was 1016 hPa and falling at a steady 2 hPa per hour. If that rate continued, what would it read at 10:00, in hPa?",
       "numeric": {
         "value": 1008,
         "tolerance": 0,
         "unit": "hPa"
       },
-      "explanation": "Four hours at 2 hPa per hour is an 8 hPa fall: 1016 minus 8 is 1008 hPa. That is 'falling quickly' to 'very rapidly'; prepare for a strong blow."
+      "explanation": "Four hours at 2 hPa per hour is an 8 hPa fall: 1016 minus 8 is 1008 hPa. Real pressure changes are rarely steady, but a fall this fast is a warning sign: check the forecast and warnings."
     },
     {
       "id": "q.atm.5",

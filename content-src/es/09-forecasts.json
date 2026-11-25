@@ -53,7 +53,7 @@
           "heading": "Usar los datos GRIB con criterio",
           "paragraphs": [
             "Los archivos GRIB contienen la salida bruta de los modelos numéricos de predicción en una malla, como viento, presión, lluvia y oleaje en pasos de tiempo fijos. Son ligeros y fáciles de descargar en el mar, y resultan excelentes para calcular la llegada de los sistemas y planificar rutas.",
-            "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, y la resolución de la malla puede pasar por alto por completo los efectos locales. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. Cerca de frentes, chubascos y cabos, tome el viento del GRIB como un mínimo, no como lo peor que encontrará."
+            "Sus limitaciones: muchos GRIB solo muestran el viento medio del modelo y, cuando incluyen rachas, estas siguen siendo una estimación del modelo. Los modelos suavizan frentes, turbonadas, brisas marinas y efectos embudo, la resolución de la malla puede pasar por alto por completo los efectos locales y la propia predicción puede errar en cualquier sentido. Compruebe la hora de la pasada del modelo, compare más de un modelo y lea siempre la predicción oficial y los avisos, que los predictores han revisado y corregido. No tome nunca el viento medio ni las rachas del modelo como un máximo: cuente con rachas y turbonadas no resueltas, aceleraciones locales y error de predicción."
           ],
           "keyPoints": [
             "El GRIB es salida de modelo sin revisión humana, a menudo solo viento medio.",
@@ -96,11 +96,11 @@
           "heading": "Qué fuente para qué",
           "paragraphs": [
             "Cada fuente tiene su función. Los avisos (de temporal, de viento fuerte, de temporal muy duro) tienen prioridad sobre todo lo demás. Las predicciones oficiales para zonas marítimas y aguas costeras dan el criterio del predictor para el periodo siguiente; los mapas sinópticos explican el porqué. Los GRIB y las aplicaciones añaden horario y detalle, pero son salida de modelo sin revisar. Sus propias observaciones del cielo, la mar y el barómetro le dicen si todo ello se cumple.",
-            "Anote la hora de emisión y el periodo de validez de cada producto. Una predicción emitida a las 05:00 para las 24 horas siguientes es anterior a un aviso emitido a las 11:00. Cuando las fuentes discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
+            "Anote la hora de emisión, la zona y el periodo que cubre cada producto, y si se ha modificado o anulado. Un aviso emitido a las 11:00 para su zona sustituye a una predicción de las 05:00 para esa misma zona; un aviso para una zona vecina no, aunque le indica lo que puede llegar. Cuando las fuentes para su ruta discrepen, planifique para la más severa salvo que pueda explicar la diferencia, por ejemplo una brisa marina local que la predicción de la zona no menciona."
           ],
           "keyPoints": [
             "Primero los avisos, luego las predicciones oficiales, luego los modelos.",
-            "Compruebe la hora de emisión y la validez de cada producto.",
+            "Compruebe hora de emisión, zona, validez y modificaciones.",
             "Si las fuentes discrepan, planifique para la más severa."
           ],
           "diagram": {
@@ -111,11 +111,11 @@
           "heading": "Confianza e incertidumbre",
           "paragraphs": [
             "La confianza de una predicción varía. Palabras como «ocasionalmente», «quizá» y «más tarde» indican incertidumbre en el momento o en la intensidad. Cuando distintos modelos discrepan, o las pasadas sucesivas cambian una y otra vez, la confianza es baja y sus márgenes deben ser mayores.",
-            "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el sistema va adelantado o es más profundo de lo previsto: suponga que la siguiente fase llegará antes."
+            "Compare la predicción con lo que observa. Si el barómetro baja más deprisa de lo previsto o el viento ya ha rolado, el momento o el propio sistema pueden diferir de la predicción. Reevalúe de inmediato, cuente con un empeoramiento anticipado y consiga la última predicción oficial."
           ],
           "keyPoints": [
             "Discrepancia entre modelos: confianza baja, márgenes mayores.",
-            "Tiempo adelantado a la predicción: la siguiente fase llegará antes."
+            "Tiempo adelantado a la predicción: reevalúe y cuente con un empeoramiento anticipado."
           ],
           "diagram": {
             "id": "gribGrid"
@@ -342,7 +342,7 @@
     {
       "id": "q.fc.9",
       "kind": "single",
-      "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
+      "prompt": "A las 12:00 el GRIB indica 15 nudos, la predicción costera de las 05:00 para su zona dice «suroeste 4 o 5, ocasionalmente 6» y a las 11:00 se emitió para esa misma zona un aviso de viento fuerte de fuerza 7. ¿Para qué planifica?",
       "options": [
         "15 nudos",
         "Fuerza 4 a 5",
@@ -358,7 +358,7 @@
         "Es el límite superior de la predicción anterior.",
         "Correcto: el producto oficial más reciente y el más severo."
       ],
-      "explanation": "Los avisos tienen prioridad y prevalece la hora de emisión más reciente."
+      "explanation": "Un aviso más reciente para su propia zona sustituye a la predicción anterior para esa zona."
     },
     {
       "id": "q.fc.10",

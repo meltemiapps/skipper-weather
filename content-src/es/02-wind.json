@@ -49,7 +49,7 @@
           "keyPoints": [
             "Sobre el mar: rolado a la izquierda 10–15°, con un 70–80 % de la velocidad geostrófica.",
             "Sobre tierra: rolado a la izquierda unos 30°, en torno al 50 % y más racheado.",
-            "El viento en superficie siempre cruza las isobaras hacia la baja."
+            "El viento en superficie suele cruzar las isobaras hacia la baja."
           ],
           "diagram": {
             "id": "windAngle",
@@ -77,7 +77,7 @@
           "heading": "Cómo localizar la baja",
           "paragraphs": [
             "Ley de Buys Ballot: en el hemisferio norte, si se pone de espaldas al viento real, la baja presión queda a su izquierda. En el hemisferio sur queda a su derecha.",
-            "Como la fricción hace rolar a la izquierda el viento en superficie, conviene afinar: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja quedará entonces a 90° a su izquierda. Con viento del suroeste en el mar, mire al 045°, gire al 060° y la baja estará aproximadamente al 330°."
+            "Como el viento en superficie rola a la izquierda por el rozamiento, afine la regla: en el mar, tras ponerse de espaldas al viento, gire unos 15° a la derecha (30° sobre tierra); la baja queda entonces a unos 90° a su izquierda. Esto da el sector donde está la baja, no una demora precisa: con viento del suroeste en el mar, la baja queda aproximadamente al noroeste, hacia los 330°. Confírmelo con un mapa."
           ],
           "keyPoints": [
             "De espaldas al viento: baja a la izquierda (hemisferio norte).",
@@ -111,16 +111,16 @@
       "id": "q.wind.1",
       "kind": "numeric",
       "context": "Navega en el hemisferio norte. El viento real sopla del 225° (suroeste).",
-      "prompt": "Aplicando la ley de Buys Ballot con una corrección por fricción de 15°, ¿cuál es la demora aproximada del centro de bajas presiones, en grados verdaderos?",
+      "prompt": "Aplicando la ley de Buys Ballot con una corrección por rozamiento de 15°, ¿en qué dirección aproximada está la baja, en grados verdaderos?",
       "diagram": {
         "id": "buysBallot"
       },
       "numeric": {
         "value": 330,
-        "tolerance": 15,
+        "tolerance": 30,
         "unit": "°"
       },
-      "explanation": "De espaldas al viento mira al 045°. Gire 15° a la derecha hasta el 060°. La baja está 90° a su izquierda: 060° menos 90° da 330°."
+      "explanation": "De espaldas al viento mira a 045°. Gire 15° a la derecha hasta 060°. La baja está a unos 90° a su izquierda: hacia 330°, al noroeste. Es una estimación del sector, no una demora de navegación; confírmela con un mapa."
     },
     {
       "id": "q.wind.2",

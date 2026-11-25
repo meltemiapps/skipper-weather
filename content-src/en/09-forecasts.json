@@ -53,7 +53,7 @@
           "heading": "Using GRIB data wisely",
           "paragraphs": [
             "GRIB files contain raw output from numerical weather models on a grid, such as wind, pressure, rain and waves at set time steps. They are compact and easy to download at sea, and they are excellent for timing systems and routing.",
-            "Their limits: many GRIB downloads show only the model's mean wind, and where a gust field is included it is still a model estimate. Models smooth out fronts, squalls, sea breezes and funnelling, and grid spacing may miss local effects entirely. Check the model run time, compare more than one model, and always read the official forecast and warnings, which forecasters have checked and corrected. Treat GRIB winds near fronts, showers and headlands as a floor, not as the worst you will meet."
+            "Their limits: many GRIB downloads show only the model's mean wind, and where a gust field is included it is still a model estimate. Models smooth out fronts, squalls, sea breezes and funnelling, grid spacing may miss local effects entirely, and the forecast itself can be wrong in either direction. Check the model run time, compare more than one model, and always read the official forecast and warnings, which forecasters have checked and corrected. Never treat a model's mean wind or gust as the maximum: allow for unresolved gusts, squalls, local acceleration and forecast error."
           ],
           "keyPoints": [
             "GRIB is unchecked model output, often mean wind only.",
@@ -96,11 +96,11 @@
           "heading": "Which source for what",
           "paragraphs": [
             "Each source has a job. Warnings (gale, strong wind, storm) take priority over everything else. The official sea-area and inshore forecasts give the forecaster's judgement for the period ahead; synoptic charts explain why. GRIB and app data add timing and detail but are unchecked model output. Your own observations of sky, sea and barometer tell you whether all of it is right.",
-            "Note the issue time and the period each product covers. A forecast issued at 05:00 for the next 24 hours is older than a warning issued at 11:00. When sources disagree, plan to the more severe unless you can explain the difference, for example a local sea breeze the sea-area forecast does not mention."
+            "Note the issue time, the area and the period each product covers, and whether it has been amended or cancelled. A warning issued at 11:00 for your sea area takes over from a 05:00 forecast for the same area; a warning for a neighbouring area does not, though it tells you what may be coming. When sources for your route disagree, plan to the more severe unless you can explain the difference, for example a local sea breeze the sea-area forecast does not mention."
           ],
           "keyPoints": [
             "Warnings first, then official forecasts, then models.",
-            "Check issue time and validity of every product.",
+            "Check issue time, area, validity and amendments.",
             "When sources disagree, plan to the more severe."
           ],
           "diagram": {
@@ -111,11 +111,11 @@
           "heading": "Confidence and uncertainty",
           "paragraphs": [
             "Forecast confidence varies. Words such as 'occasionally', 'perhaps' and 'later' signal uncertainty in timing or strength. When different models disagree, or successive runs keep changing, confidence is low and your margins should be wider.",
-            "Compare the forecast with what you observe. If the barometer is falling faster than expected or the wind has already shifted, the system is ahead of schedule or deeper than forecast: assume the next stage will arrive early."
+            "Compare the forecast with what you observe. If the barometer is falling faster than expected or the wind has already shifted, the timing or the system itself may differ from the forecast. Reassess at once, allow for earlier deterioration and get the latest official forecast."
           ],
           "keyPoints": [
             "Model disagreement means low confidence: widen margins.",
-            "Weather ahead of forecast: expect the next stage early."
+            "Weather ahead of forecast: reassess and allow for earlier deterioration."
           ],
           "diagram": {
             "id": "gribGrid"
@@ -342,7 +342,7 @@
     {
       "id": "q.fc.9",
       "kind": "single",
-      "prompt": "At 12:00 the GRIB shows 15 knots, the 05:00 inshore forecast says 'south-west 4 or 5, occasionally 6', and a strong wind warning for Force 7 was issued at 11:00. What do you plan for?",
+      "prompt": "At 12:00 the GRIB shows 15 knots, the 05:00 inshore forecast for your area says 'south-west 4 or 5, occasionally 6', and at 11:00 a strong wind warning for Force 7 was issued for the same area. What do you plan for?",
       "options": [
         "15 knots",
         "Force 4 to 5",
@@ -358,7 +358,7 @@
         "That is the older forecast's upper limit.",
         "Correct: the newest official product and the most severe."
       ],
-      "explanation": "Warnings take priority, and the latest issue time wins."
+      "explanation": "A newer warning for your own area takes over from the older forecast for that area."
     },
     {
       "id": "q.fc.10",

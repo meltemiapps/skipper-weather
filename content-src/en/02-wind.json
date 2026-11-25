@@ -49,7 +49,7 @@
           "keyPoints": [
             "Over sea: backed 10–15°, about 70–80% of geostrophic speed.",
             "Over land: backed about 30°, about 50%, gustier.",
-            "Surface wind always crosses isobars towards the low."
+            "Surface wind usually crosses isobars towards the low."
           ],
           "diagram": {
             "id": "windAngle",
@@ -77,7 +77,7 @@
           "heading": "Finding the low",
           "paragraphs": [
             "Buys Ballot's law: in the Northern Hemisphere, stand with your back to the true wind and low pressure is on your left. In the Southern Hemisphere it is on your right.",
-            "Because the surface wind is backed by friction, refine it: at sea, turn about 15° to your right after putting your back to the wind (30° over land); the low then lies at 90° on your left. For a south-westerly wind at sea, face 045°, turn to 060°, and the low bears roughly 330°."
+            "Because the surface wind is backed by friction, refine it: at sea, turn about 15° to your right after putting your back to the wind (30° over land); the low then lies roughly 90° on your left. This gives the sector the low lies in, not a precise bearing: for a south-westerly wind at sea, the low lies roughly north-west, around 330°. Confirm with a chart."
           ],
           "keyPoints": [
             "Back to the wind: low on your left (Northern Hemisphere).",
@@ -111,16 +111,16 @@
       "id": "q.wind.1",
       "kind": "numeric",
       "context": "You are at sea in the Northern Hemisphere. The true wind is from 225° (south-west).",
-      "prompt": "Using Buys Ballot's law with a 15° friction correction, what is the approximate bearing of the low-pressure centre, in degrees true?",
+      "prompt": "Using Buys Ballot's law with a 15° friction correction, roughly in which direction does the low lie, in degrees true?",
       "diagram": {
         "id": "buysBallot"
       },
       "numeric": {
         "value": 330,
-        "tolerance": 15,
+        "tolerance": 30,
         "unit": "°"
       },
-      "explanation": "Back to the wind you face 045°. Turn 15° right to 060°. The low is 90° to your left: 060° minus 90° is 330°."
+      "explanation": "Back to the wind you face 045°. Turn 15° right to 060°. The low is about 90° to your left: roughly 330°, north-west. This is an estimate of the sector, not a navigational bearing; confirm with a chart."
     },
     {
       "id": "q.wind.2",
