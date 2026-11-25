@@ -281,7 +281,7 @@ enum Diagrams {
             p.arrow(p.pt(0.05, 0.3), p.pt(0.95, 0.22), Palette.good.opacity(0.9), 2)
             p.arrow(p.pt(0.05, 0.85), p.pt(0.95, 0.85), Palette.amber.opacity(0.9), 2)
             p.label(.passesNorth, p.pt(0.5, 0.1), size: 11, color: Palette.good)
-            p.label(.passesSouth, p.pt(0.5, 0.95), size: 11, color: Palette.amber)
+            p.label(.passesSouth, p.pt(0.56, 0.95), size: 11, color: Palette.amber)
         default: break
         }
     }
@@ -305,7 +305,7 @@ enum Diagrams {
         switch v {
         case "cold":
             p.stroke([p.pt(0.38, 0.86), p.pt(0.66, 0.15)], blue, 3)
-            p.label(.coldAir, p.pt(0.8, 0.6)); p.label(.warmAir, p.pt(0.22, 0.5))
+            p.label(.coldAir, p.pt(0.8, 0.6)); p.label(.warmAir, p.pt(0.18, 0.5))
             p.cloud(p.pt(0.46, 0.3), p.u * 0.16); p.cloud(p.pt(0.42, 0.5), p.u * 0.14)
             p.label(.cumulonimbus, p.pt(0.36, 0.12), size: 11)
             for i in 0..<6 { let x = 0.33 + CGFloat(i) * 0.025; p.stroke([p.pt(x, 0.64), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
@@ -320,15 +320,15 @@ enum Diagrams {
             p.label(.occludedFront, p.pt(0.45, 0.92), size: 11, color: .white)
         default:
             p.stroke([p.pt(0.15, 0.86), p.pt(0.95, 0.12)], Palette.bad, 3)
-            p.label(.coldAir, p.pt(0.75, 0.72)); p.label(.warmAir, p.pt(0.25, 0.4))
-            let names: [(DiagramLabel, CGFloat, CGFloat)] = [(.cirrus, 0.88, 0.1), (.cirrostratus, 0.72, 0.24), (.altostratus, 0.54, 0.42), (.nimbostratus, 0.34, 0.62)]
+            p.label(.coldAir, p.pt(0.75, 0.72)); p.label(.warmAir, p.pt(0.17, 0.26))
+            let names: [(DiagramLabel, CGFloat, CGFloat)] = [(.cirrus, 0.88, 0.1), (.cirrostratus, 0.72, 0.24), (.altostratus, 0.54, 0.42), (.nimbostratus, 0.32, 0.62)]
             for (k, x, y) in names {
                 p.stroke([p.pt(x - 0.1, y + 0.02), p.pt(x + 0.08, y - 0.02)], .white.opacity(0.75), 5)
                 p.label(k, p.pt(x - 0.05, y - 0.07), size: 10)
             }
             for i in 0..<7 { let x = 0.2 + CGFloat(i) * 0.03; p.stroke([p.pt(x, 0.68), p.pt(x - 0.01, 0.84)], Palette.accent, 2) }
             p.label(.rain, p.pt(0.13, 0.76), size: 11, color: Palette.accent)
-            p.arrow(p.pt(0.02, 0.5), p.pt(0.16, 0.38), Palette.amber)
+            p.arrow(p.pt(0.04, 0.5), p.pt(0.16, 0.4), Palette.amber)
         }
     }
 
@@ -360,7 +360,7 @@ enum Diagrams {
         p.arrow(o, p.pt(0.62, 0.3), .white.opacity(0.5), 1.5)
         p.observer(o)
         p.arrow(o, p.pt(0.3, 0.47), Palette.amber, 2)
-        p.label(.backToWind, p.pt(0.7, 0.58), size: 11, anchor: .leading); p.label(.lowOnLeft, p.pt(0.42, 0.62), size: 11, color: Palette.amber, anchor: .trailing)
+        p.label(.backToWind, p.pt(0.67, 0.44), size: 11, anchor: .leading, maxWidth: p.size.width * 0.31); p.label(.lowOnLeft, p.pt(0.42, 0.62), size: 11, color: Palette.amber, anchor: .trailing)
     }
 
     static func globalCirculation(_ p: Painter) {

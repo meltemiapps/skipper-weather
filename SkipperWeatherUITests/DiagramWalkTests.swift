@@ -140,7 +140,8 @@ final class DiagramWalkTests: XCTestCase {
         let first = app.buttons["quiz.option.0"]
         if first.exists { if scrollTo(app, first) { first.tap() }; return }
         let field = app.textFields["quiz.number"]
-        if field.exists, scrollTo(app, field) { field.tap(); field.typeText("1"); app.keyboards.buttons.firstMatch.tapIfExists() }
+        if field.exists, scrollTo(app, field) { field.tap(); field.typeText("1"); app.keyboards.buttons.firstMatch.tapIfExists()
+            if app.keyboards.count > 0 { field.typeText("\n") } } // some layouts keep the keyboard up
     }
 
     private func snapScrolling(_ app: XCUIApplication, _ name: String) {
@@ -176,6 +177,7 @@ final class DiagramWalkTests: XCTestCase {
         func onScreen() -> Bool {
             let f = e.frame
             return fullyVisible(app, e) || (f.minY > 100 && f.minY < h - 260)
+                || (f.minY > 100 && f.maxY < h && e.isHittable) // bottom of content at large text sizes
         }
         var n = 0
         while !onScreen() && n < 40 {
