@@ -9,6 +9,7 @@ final class ScreenshotTests: XCTestCase {
         "en": ["Learn", "Quiz", "Tools", "Settings"],
         "el": ["Μάθηση", "Κουίζ", "Εργαλεία", "Ρυθμίσεις"],
         "ar": ["تعلّم", "اختبار", "أدوات", "الإعدادات"],
+        "es": ["Aprender", "Test", "Herramientas", "Ajustes"],
     ]
 
     override func setUp() async throws { continueAfterFailure = true }
@@ -16,6 +17,7 @@ final class ScreenshotTests: XCTestCase {
     func testEnglish() { capture("en") }
     func testGreek() { capture("el") }
     func testArabic() { capture("ar") }
+    func testSpanish() { capture("es") }
 
 
     private func capture(_ lang: String) {
@@ -27,11 +29,13 @@ final class ScreenshotTests: XCTestCase {
         snap(app, lang, "1-learn")
 
         tapTab(app, names[0])
-        if tap(app.buttons["module.wind"]) {
-            if tap(app.buttons["lesson.wind.buysballot"]) { sleep(1); snap(app, lang, "2-lesson-diagram") }
+        if tap(app.buttons["module.fronts"]) {
+            if tap(app.buttons["lesson.fronts.warm"]) { sleep(1); snap(app, lang, "2-lesson-diagram") }
         }
 
         tapTab(app, names[1]); snap(app, lang, "3-quiz")
+        if tap(app.buttons["quiz.scope.planning"]) { sleep(1); snap(app, lang, "3b-question") }
+        tapTab(app, names[1])
 
         tapTab(app, names[2])
         if tap(app.buttons["tool.beaufort"]) { snap(app, lang, "4-beaufort") }
