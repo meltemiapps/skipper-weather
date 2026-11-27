@@ -22,7 +22,8 @@ final class ScreenshotTests: XCTestCase {
 
     private func capture(_ lang: String) {
         let app = XCUIApplication()
-        app.launchArguments = ["-AppleLanguages", "(\(lang))", "-settings.language", lang]
+        let region = ["en": "en_GB", "el": "el_GR", "es": "es_ES", "ar": "ar_AE"][lang] ?? "en_GB"
+        app.launchArguments = ["-AppleLanguages", "(\(lang))", "-AppleLocale", region, "-settings.language", lang]
         app.launch()
         let names = tabs[lang]!
 
